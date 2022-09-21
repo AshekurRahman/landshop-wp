@@ -1,0 +1,1854 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Landshop\n"
+"POT-Creation-Date: 2022-09-21 15:03+0600\n"
+"PO-Revision-Date: 2022-09-03 13:29+0600\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.1.1\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e;esc_html__;esc_html_e;esc_attr__;esc_attr_e\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: assets\n"
+"X-Poedit-SearchPathExcluded-1: languages\n"
+
+#: 404.php:18 inc/theme-option.php:1679
+msgid "404 Error"
+msgstr ""
+
+#: 404.php:19 inc/theme-option.php:1685
+msgid "The Page You're Looking for Cannot Be Found!"
+msgstr ""
+
+#: 404.php:27
+msgid "404"
+msgstr ""
+
+#: 404.php:37
+msgid "Back To Home"
+msgstr ""
+
+#: blog-template-five.php:18 blog-template-four.php:18 blog-template-one.php:18
+#: blog-template-three.php:18 blog-template-two.php:18 case-studie-four.php:18
+#: case-studie-one.php:18 case-studie-three.php:18 case-studie-two.php:18
+#: case-studies-grid.php:18 components/post-formats/post-audio.php:21
+#: components/post-formats/post-gallery.php:21
+#: components/post-formats/post-video.php:21
+#: components/post-formats/post.php:21 inc/theme-option.php:1409
+#: inc/theme-option.php:1420
+msgid "Read More"
+msgstr ""
+
+#: blog-template-one.php:84 case-studie-four.php:76
+msgid "Load More"
+msgstr ""
+
+#: comments.php:28
+msgid "Comments are closed."
+msgstr ""
+
+#: comments.php:84
+msgid "Type your name..."
+msgstr ""
+
+#: comments.php:86
+msgid "Type your email..."
+msgstr ""
+
+#: comments.php:88
+msgid "Type your url..."
+msgstr ""
+
+#: comments.php:90
+msgid ""
+"Save my name, email, and website in this browser for the next time I comment."
+msgstr ""
+
+#: comments.php:95
+msgid "Type your comment..."
+msgstr ""
+
+#: comments.php:98
+msgid "Logged in as "
+msgstr ""
+
+#: comments.php:98
+msgid "Log out of this account"
+msgstr ""
+
+#: comments.php:98
+msgid "Log out?"
+msgstr ""
+
+#: comments.php:99
+msgid "Post Comment"
+msgstr ""
+
+#: components/layouts/nav_menu.php:11 inc/theme-option.php:1707
+msgid "Loading"
+msgstr ""
+
+#: components/layouts/nav_menu.php:12
+msgid "Donate Now"
+msgstr ""
+
+#: components/layouts/nav_menu.php:52
+msgid "Donation Icon"
+msgstr ""
+
+#: components/layouts/nav_menu.php:61
+msgid "Phone"
+msgstr ""
+
+#: components/post-formats/post-audio.php:93
+#: components/post-formats/post-audio.php:112
+#: components/post-formats/post-gallery.php:93
+#: components/post-formats/post-gallery.php:112
+#: components/post-formats/post-video.php:93
+#: components/post-formats/post-video.php:112
+#: components/post-formats/post.php:83 components/post-formats/post.php:102
+#, php-format
+msgid "Continue reading %s"
+msgstr ""
+
+#: components/post-formats/post-audio.php:98
+#: components/post-formats/post-gallery.php:98
+#: components/post-formats/post-page.php:5
+#: components/post-formats/post-video.php:98
+#: components/post-formats/post.php:88
+msgid "Pages:"
+msgstr ""
+
+#: components/post-formats/post-none.php:6
+msgid "Empty Space"
+msgstr ""
+
+#: components/post-formats/post-none.php:8
+msgid "Nothing Found"
+msgstr ""
+
+#: components/post-formats/post-none.php:10
+msgid "Ready to publish your first post? "
+msgstr ""
+
+#: components/post-formats/post-none.php:10
+msgid "Get started"
+msgstr ""
+
+#: components/post-formats/post-none.php:12
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: components/post-formats/post-none.php:19
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#: footer.php:8 inc/theme-option.php:1607
+msgid "&copy; 2022 Landshop - IT Solution Company . All Rights Reserved."
+msgstr ""
+
+#: functions.php:118
+msgid "Primary Menu"
+msgstr ""
+
+#: functions.php:216
+msgid "Sidebar"
+msgstr ""
+
+#: functions.php:218
+msgid "Add widgets here to appear in your sidebar."
+msgstr ""
+
+#: functions.php:227
+msgid "WooCommerce Sidebar"
+msgstr ""
+
+#: functions.php:229
+msgid "Add widgets here to appear in your woocommerce sidebar."
+msgstr ""
+
+#: functions.php:237
+msgid "Footer Widget"
+msgstr ""
+
+#: functions.php:239
+msgid "Add footer widgets."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:334
+msgid "Install Required Plugins"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:335
+msgid "Install Plugins"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:337
+#, php-format
+msgid "Installing Plugin: %s"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:339
+#, php-format
+msgid "Updating Plugin: %s"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:340
+msgid "Something went wrong with the plugin API."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:392
+msgid "Return to Required Plugins Installer"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:393
+#: inc/class-tgm-plugin-activation.php:912
+#: inc/class-tgm-plugin-activation.php:2618
+#: inc/class-tgm-plugin-activation.php:3665
+msgid "Return to the Dashboard"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:394
+#: inc/class-tgm-plugin-activation.php:3244
+msgid "Plugin activated successfully."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:395
+msgid "The following plugin was activated successfully:"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:397
+#, php-format
+msgid "No action taken. Plugin %1$s was already active."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:399
+#, php-format
+msgid ""
+"Plugin not activated. A higher version of %s is needed for this theme. "
+"Please update the plugin."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:401
+#, php-format
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:402
+msgid "Dismiss this notice"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:403
+msgid ""
+"There are one or more required or recommended plugins to install, update or "
+"activate."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:404
+msgid "Please contact the administrator of this site for help."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:607
+msgid "This plugin needs to be updated to be compatible with your theme."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:608
+msgid "Update Required"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:1019
+msgid ""
+"The remote plugin package does not contain a folder with the desired slug "
+"and renaming did not work."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:1019
+#: inc/class-tgm-plugin-activation.php:1022
+msgid ""
+"Please contact the plugin provider and ask them to package their plugin "
+"according to the WordPress guidelines."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:1022
+msgid ""
+"The remote plugin package consists of more than one file, but the files are "
+"not packaged in a folder."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2067
+#, php-format
+msgid "TGMPA v%s"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2358
+msgid "Required"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2361
+msgid "Recommended"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2377
+msgid "WordPress Repository"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2380
+msgid "External Source"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2383
+msgid "Pre-Packaged"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2400
+msgid "Not Installed"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2404
+msgid "Installed But Not Activated"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2406
+msgid "Active"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2412
+msgid "Required Update not Available"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2415
+msgid "Requires Update"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2418
+msgid "Update recommended"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2575
+msgid "Installed version:"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2583
+msgid "Minimum required version:"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2595
+msgid "Available version:"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2618
+msgid "No plugins to install, update or activate."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2632
+msgid "Plugin"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2633
+msgid "Source"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2634
+msgid "Type"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2638
+msgid "Version"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2639
+msgid "Status"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2688
+#, php-format
+msgid "Install %2$s"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2693
+#, php-format
+msgid "Update %2$s"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2699
+#, php-format
+msgid "Activate %2$s"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2769
+msgid "Upgrade message from the plugin author:"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2802
+msgid "Install"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2808
+msgid "Update"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2811
+msgid "Activate"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2842
+msgid "No plugins were selected to be installed. No action taken."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2844
+msgid "No plugins were selected to be updated. No action taken."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2885
+msgid "No plugins are available to be installed at this time."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2887
+msgid "No plugins are available to be updated at this time."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2993
+msgid "No plugins were selected to be activated. No action taken."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:3019
+msgid "No plugins are available to be activated at this time."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:3243
+msgid "Plugin activation failed."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:3583
+#, php-format
+msgid "Updating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:3586
+#, php-format
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:3588
+#, php-format
+msgid "The installation of %1$s failed."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:3592
+msgid ""
+"The installation and activation process is starting. This process may take a "
+"while on some hosts, so please be patient."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:3594
+#, php-format
+msgid "%1$s installed and activated successfully."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:3594
+#: inc/class-tgm-plugin-activation.php:3602
+msgid "Show Details"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:3594
+#: inc/class-tgm-plugin-activation.php:3602
+msgid "Hide Details"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:3595
+msgid "All installations and activations have been completed."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:3597
+#, php-format
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:3600
+msgid ""
+"The installation process is starting. This process may take a while on some "
+"hosts, so please be patient."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:3602
+#, php-format
+msgid "%1$s installed successfully."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:3603
+msgid "All installations have been completed."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:3605
+#, php-format
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: inc/theme-funtions.php:56
+msgid "Your Cart:"
+msgstr ""
+
+#: inc/theme-funtions.php:227
+msgid "Home V1"
+msgstr ""
+
+#: inc/theme-funtions.php:241
+msgid "Home V2"
+msgstr ""
+
+#: inc/theme-funtions.php:255
+msgid "Home V3"
+msgstr ""
+
+#: inc/theme-funtions.php:269
+msgid "Home V4"
+msgstr ""
+
+#: inc/theme-funtions.php:283
+msgid "Home V5"
+msgstr ""
+
+#: inc/theme-funtions.php:297
+msgid "Home V6"
+msgstr ""
+
+#: inc/theme-funtions.php:343
+msgid "Setup a menu"
+msgstr ""
+
+#: inc/theme-funtions.php:359
+msgid "Blog List"
+msgstr ""
+
+#: inc/theme-funtions.php:360 inc/theme-option.php:983
+msgid "Search"
+msgstr ""
+
+#: inc/theme-funtions.php:369
+msgid "Event"
+msgstr ""
+
+#: inc/theme-funtions.php:382
+msgid "Shop Page"
+msgstr ""
+
+#: inc/theme-funtions.php:387
+msgid "Error Page"
+msgstr ""
+
+#: inc/theme-funtions.php:437
+msgid "No comment"
+msgstr ""
+
+#: inc/theme-funtions.php:437
+msgid "1 Comment"
+msgstr ""
+
+#: inc/theme-funtions.php:437
+msgid "% Comments"
+msgstr ""
+
+#: inc/theme-funtions.php:465
+msgid "Default"
+msgstr ""
+
+#: inc/theme-option.php:31 inc/theme-option.php:32
+msgid "Theme Options"
+msgstr ""
+
+#: inc/theme-option.php:134 inc/theme-option.php:142
+msgid "Layout"
+msgstr ""
+
+#: inc/theme-option.php:143
+msgid "Controls the site layout."
+msgstr ""
+
+#: inc/theme-option.php:146
+msgid "Boxed Wrapper"
+msgstr ""
+
+#: inc/theme-option.php:147
+msgid "Wide Wrapper"
+msgstr ""
+
+#: inc/theme-option.php:152
+msgid "Site Width"
+msgstr ""
+
+#: inc/theme-option.php:153
+msgid "Controls the overall site width."
+msgstr ""
+
+#: inc/theme-option.php:160
+msgid ""
+"The value was changed in Landshop to include both the site-width & side-"
+"header width, ex: calc(90% + 300px). Leave this as is, or update it with a "
+"single percentage, ex: 95%"
+msgstr ""
+
+#: inc/theme-option.php:165
+msgid "Section Padding"
+msgstr ""
+
+#: inc/theme-option.php:166
+msgid "Controls the section height."
+msgstr ""
+
+#: inc/theme-option.php:173
+msgid "The value was changed in all section top and bottom space."
+msgstr ""
+
+#: inc/theme-option.php:191
+msgid "Boxed Mode Offset Top & Bottom"
+msgstr ""
+
+#: inc/theme-option.php:192
+msgid "Controls the top/bottom offset of the page background."
+msgstr ""
+
+#: inc/theme-option.php:211
+msgid "Boxed Mode Inner Padding Left & Right"
+msgstr ""
+
+#: inc/theme-option.php:212
+msgid "Controls the left and right padding of the boxed background."
+msgstr ""
+
+#: inc/theme-option.php:218
+msgid "Page Background"
+msgstr ""
+
+#: inc/theme-option.php:219
+msgid "Controls the background and opacity for the page."
+msgstr ""
+
+#: inc/theme-option.php:230
+msgid "Global Color"
+msgstr ""
+
+#: inc/theme-option.php:238
+msgid "IMPORTANT NOTE:"
+msgstr ""
+
+#: inc/theme-option.php:240
+msgid ""
+"This tab contains general color options. Additional color options for "
+"specific areas, can be found within other tabs. Example: For menu color "
+"options go to the menu tab."
+msgstr ""
+
+#: inc/theme-option.php:245
+msgid "Primary Color"
+msgstr ""
+
+#: inc/theme-option.php:246
+msgid "Controls the main highlight color throughout the theme."
+msgstr ""
+
+#: inc/theme-option.php:253
+msgid "Black Text"
+msgstr ""
+
+#: inc/theme-option.php:254
+msgid "Controls the body black text color throughout the theme."
+msgstr ""
+
+#: inc/theme-option.php:261
+msgid "White Color"
+msgstr ""
+
+#: inc/theme-option.php:262
+msgid "Controls the body white color throughout the theme."
+msgstr ""
+
+#: inc/theme-option.php:269 inc/theme-option.php:1638
+msgid "Text Color"
+msgstr ""
+
+#: inc/theme-option.php:270
+msgid "Controls the body light text color throughout the theme."
+msgstr ""
+
+#: inc/theme-option.php:277
+msgid "Gray Background"
+msgstr ""
+
+#: inc/theme-option.php:278
+msgid "Controls the all gray color border and line throughout the theme."
+msgstr ""
+
+#: inc/theme-option.php:285
+msgid "Black Background"
+msgstr ""
+
+#: inc/theme-option.php:286
+msgid "Controls the dark background color throughout the theme."
+msgstr ""
+
+#: inc/theme-option.php:293
+msgid "Body Background"
+msgstr ""
+
+#: inc/theme-option.php:294
+msgid "Controls the body background color throughout the theme."
+msgstr ""
+
+#: inc/theme-option.php:302
+msgid "Navbar"
+msgstr ""
+
+#: inc/theme-option.php:308
+msgid "Wrapper width"
+msgstr ""
+
+#: inc/theme-option.php:309
+msgid "Controls the navbar container width."
+msgstr ""
+
+#: inc/theme-option.php:319
+msgid "Navbar Height"
+msgstr ""
+
+#: inc/theme-option.php:320
+msgid "Controls the navbar height."
+msgstr ""
+
+#: inc/theme-option.php:331
+msgid "Navbar Style"
+msgstr ""
+
+#: inc/theme-option.php:333
+msgid "Static"
+msgstr ""
+
+#: inc/theme-option.php:334
+msgid "Dark Transparent"
+msgstr ""
+
+#: inc/theme-option.php:335
+msgid "Light Transparent"
+msgstr ""
+
+#: inc/theme-option.php:342
+msgid "Sticky Navbar"
+msgstr ""
+
+#: inc/theme-option.php:343
+msgid "On"
+msgstr ""
+
+#: inc/theme-option.php:344
+msgid "Off"
+msgstr ""
+
+#: inc/theme-option.php:348
+msgid "Sticky Offset"
+msgstr ""
+
+#: inc/theme-option.php:349
+msgid "Controls the navbar sticky offset."
+msgstr ""
+
+#: inc/theme-option.php:361 inc/theme-option.php:1182
+msgid "Background Color"
+msgstr ""
+
+#: inc/theme-option.php:369 inc/theme-option.php:484 inc/theme-option.php:580
+#: inc/theme-option.php:687 inc/theme-option.php:801 inc/theme-option.php:1191
+msgid "Border"
+msgstr ""
+
+#: inc/theme-option.php:370 inc/theme-option.php:485 inc/theme-option.php:581
+#: inc/theme-option.php:688 inc/theme-option.php:802
+msgid "Control the button border/line."
+msgstr ""
+
+#: inc/theme-option.php:377
+msgid "Sticky Background"
+msgstr ""
+
+#: inc/theme-option.php:378
+msgid "Control the nav sticky background with image, color, etc."
+msgstr ""
+
+#: inc/theme-option.php:383
+msgid "Logo"
+msgstr ""
+
+#: inc/theme-option.php:389
+msgid "Light Logo"
+msgstr ""
+
+#: inc/theme-option.php:390
+msgid "Upload here a image file for your logo"
+msgstr ""
+
+#: inc/theme-option.php:398
+msgid "Dark Logo"
+msgstr ""
+
+#: inc/theme-option.php:406
+msgid "Logo dimensions"
+msgstr ""
+
+#: inc/theme-option.php:407
+msgid "Set a custom height width for your upload logo."
+msgstr ""
+
+#: inc/theme-option.php:414 inc/theme-option.php:496 inc/theme-option.php:592
+#: inc/theme-option.php:699 inc/theme-option.php:815 inc/theme-option.php:1172
+msgid "Padding"
+msgstr ""
+
+#: inc/theme-option.php:415
+msgid ""
+"Padding around the logo. Input the padding as clockwise (Top Right Bottom "
+"Left)"
+msgstr ""
+
+#: inc/theme-option.php:429
+msgid "Shop Toggle"
+msgstr ""
+
+#: inc/theme-option.php:435 inc/theme-option.php:531 inc/theme-option.php:626
+#: inc/theme-option.php:733
+msgid "Button Visibility"
+msgstr ""
+
+#: inc/theme-option.php:437
+msgid ""
+"Do you want to show the shop toggle button at header nav area? Please choose "
+"your option."
+msgstr ""
+
+#: inc/theme-option.php:439 inc/theme-option.php:535 inc/theme-option.php:630
+#: inc/theme-option.php:737 inc/theme-option.php:861 inc/theme-option.php:965
+msgid "Yes"
+msgstr ""
+
+#: inc/theme-option.php:440 inc/theme-option.php:536 inc/theme-option.php:631
+#: inc/theme-option.php:738 inc/theme-option.php:862 inc/theme-option.php:966
+msgid "No"
+msgstr ""
+
+#: inc/theme-option.php:444 inc/theme-option.php:540 inc/theme-option.php:647
+#: inc/theme-option.php:1614
+msgid "Style"
+msgstr ""
+
+#: inc/theme-option.php:445 inc/theme-option.php:541 inc/theme-option.php:648
+msgid "You can change your button style from here."
+msgstr ""
+
+#: inc/theme-option.php:452 inc/theme-option.php:548 inc/theme-option.php:655
+#: inc/theme-option.php:765 inc/theme-option.php:1735
+msgid "Color"
+msgstr ""
+
+#: inc/theme-option.php:453 inc/theme-option.php:549 inc/theme-option.php:656
+#: inc/theme-option.php:766
+msgid "Control the button text color."
+msgstr ""
+
+#: inc/theme-option.php:459 inc/theme-option.php:555 inc/theme-option.php:662
+#: inc/theme-option.php:773
+msgid "Hover Color"
+msgstr ""
+
+#: inc/theme-option.php:460 inc/theme-option.php:556 inc/theme-option.php:663
+#: inc/theme-option.php:774
+msgid "Control the button hover text color."
+msgstr ""
+
+#: inc/theme-option.php:466 inc/theme-option.php:562 inc/theme-option.php:669
+#: inc/theme-option.php:781
+msgid "BG Color"
+msgstr ""
+
+#: inc/theme-option.php:467 inc/theme-option.php:563 inc/theme-option.php:670
+#: inc/theme-option.php:782
+msgid "Control the button background color."
+msgstr ""
+
+#: inc/theme-option.php:474 inc/theme-option.php:570 inc/theme-option.php:677
+#: inc/theme-option.php:790
+msgid "Hover BG Color"
+msgstr ""
+
+#: inc/theme-option.php:475 inc/theme-option.php:571 inc/theme-option.php:678
+#: inc/theme-option.php:791
+msgid "Control the button hover background color."
+msgstr ""
+
+#: inc/theme-option.php:491 inc/theme-option.php:587 inc/theme-option.php:694
+#: inc/theme-option.php:809
+msgid "Hover Border"
+msgstr ""
+
+#: inc/theme-option.php:492 inc/theme-option.php:588 inc/theme-option.php:695
+#: inc/theme-option.php:810
+msgid "Control the button hover border/line."
+msgstr ""
+
+#: inc/theme-option.php:497 inc/theme-option.php:593 inc/theme-option.php:700
+#: inc/theme-option.php:816
+msgid "Control the button inner padding/space."
+msgstr ""
+
+#: inc/theme-option.php:506 inc/theme-option.php:602 inc/theme-option.php:709
+#: inc/theme-option.php:837
+msgid "Button Radius"
+msgstr ""
+
+#: inc/theme-option.php:507 inc/theme-option.php:603 inc/theme-option.php:710
+#: inc/theme-option.php:838
+msgid ""
+"Radius around the button. Input the radius as clockwise (Top Right Bottom "
+"Left)"
+msgstr ""
+
+#: inc/theme-option.php:525
+msgid "Search Toggle"
+msgstr ""
+
+#: inc/theme-option.php:533
+msgid ""
+"Do you want to show the search button at header nav area? Please choose your "
+"option."
+msgstr ""
+
+#: inc/theme-option.php:620
+msgid "Mobile Toggle"
+msgstr ""
+
+#: inc/theme-option.php:628
+msgid ""
+"Do you want to show the mobile toggle button at header nav area? Please "
+"choose your option."
+msgstr ""
+
+#: inc/theme-option.php:637
+msgid "Mobile Menu Active"
+msgstr ""
+
+#: inc/theme-option.php:638
+msgid "Controls the main menu active width."
+msgstr ""
+
+#: inc/theme-option.php:727
+msgid "Primary Button"
+msgstr ""
+
+#: inc/theme-option.php:735
+msgid ""
+"Do you want to show the action button at header nav area? Please choose your "
+"option."
+msgstr ""
+
+#: inc/theme-option.php:742
+msgid "Button Label"
+msgstr ""
+
+#: inc/theme-option.php:743
+msgid "Enter type your action button text/label."
+msgstr ""
+
+#: inc/theme-option.php:746
+msgid "Get Started Now"
+msgstr ""
+
+#: inc/theme-option.php:750
+msgid "Button URL"
+msgstr ""
+
+#: inc/theme-option.php:752
+msgid "Enter type your action button URL/Link."
+msgstr ""
+
+#: inc/theme-option.php:761 inc/theme-option.php:885
+msgid "Upload Icon"
+msgstr ""
+
+#: inc/theme-option.php:826 inc/theme-option.php:1162 inc/theme-option.php:1324
+#: inc/theme-option.php:1392
+msgid "Margin"
+msgstr ""
+
+#: inc/theme-option.php:827
+msgid "Control the button inner margin/space."
+msgstr ""
+
+#: inc/theme-option.php:851
+msgid "Phone Number"
+msgstr ""
+
+#: inc/theme-option.php:857
+msgid "Number Visibility"
+msgstr ""
+
+#: inc/theme-option.php:859
+msgid ""
+"Do you want to show the phone number at header nav area? Please choose your "
+"option."
+msgstr ""
+
+#: inc/theme-option.php:866
+msgid "Number"
+msgstr ""
+
+#: inc/theme-option.php:867
+msgid "Enter type your phone number."
+msgstr ""
+
+#: inc/theme-option.php:870
+msgid "+161 94 32 141"
+msgstr ""
+
+#: inc/theme-option.php:874
+msgid "Link"
+msgstr ""
+
+#: inc/theme-option.php:876
+msgid "Enter type your URL/Link."
+msgstr ""
+
+#: inc/theme-option.php:892
+msgid "Site Header"
+msgstr ""
+
+#: inc/theme-option.php:894
+msgid "You can change global page header options and styles!"
+msgstr ""
+
+#: inc/theme-option.php:900
+msgid "Page Header"
+msgstr ""
+
+#: inc/theme-option.php:908 inc/theme-option.php:1623 inc/theme-option.php:1713
+msgid "Background"
+msgstr ""
+
+#: inc/theme-option.php:909
+msgid "Control the page header background with image, color, etc."
+msgstr ""
+
+#: inc/theme-option.php:915
+msgid "Background Overlay"
+msgstr ""
+
+#: inc/theme-option.php:936
+msgid "Header Padding"
+msgstr ""
+
+#: inc/theme-option.php:937
+msgid "Site Header Spacing Define"
+msgstr ""
+
+#: inc/theme-option.php:938
+msgid "To define Top, Right, Bottom, Left padding"
+msgstr ""
+
+#: inc/theme-option.php:943
+msgid "Alignment"
+msgstr ""
+
+#: inc/theme-option.php:946
+msgid "Left"
+msgstr ""
+
+#: inc/theme-option.php:947
+msgid "Center"
+msgstr ""
+
+#: inc/theme-option.php:948
+msgid "Right"
+msgstr ""
+
+#: inc/theme-option.php:955
+msgid "Page Title"
+msgstr ""
+
+#: inc/theme-option.php:961 inc/theme-option.php:1279
+msgid "Title Visibility"
+msgstr ""
+
+#: inc/theme-option.php:963
+msgid ""
+"Do you want to show the page title at header area? Please choose your option."
+msgstr ""
+
+#: inc/theme-option.php:972
+msgid "Blog Page Title"
+msgstr ""
+
+#: inc/theme-option.php:973
+msgid "Control the post page title."
+msgstr ""
+
+#: inc/theme-option.php:974
+msgid "You can update your blog page title from here!."
+msgstr ""
+
+#: inc/theme-option.php:975
+msgid "Blog & Article"
+msgstr ""
+
+#: inc/theme-option.php:980
+msgid "Search Page Title"
+msgstr ""
+
+#: inc/theme-option.php:981
+msgid "Control the search page title."
+msgstr ""
+
+#: inc/theme-option.php:982
+msgid "You can update your search page title from here!."
+msgstr ""
+
+#: inc/theme-option.php:988 inc/theme-option.php:1305
+msgid "Title Typography"
+msgstr ""
+
+#: inc/theme-option.php:999 inc/theme-option.php:1085
+msgid "Typography option with each property can be called individually."
+msgstr ""
+
+#: inc/theme-option.php:1017
+msgid "Title Space"
+msgstr ""
+
+#: inc/theme-option.php:1018
+msgid "Page title spacing."
+msgstr ""
+
+#: inc/theme-option.php:1019
+msgid ""
+"You can define spacing for page title at Top, Right, Bottom, Left, or Units."
+msgstr ""
+
+#: inc/theme-option.php:1025
+msgid "Page Sub Title"
+msgstr ""
+
+#: inc/theme-option.php:1033
+msgid "Display Format"
+msgstr ""
+
+#: inc/theme-option.php:1034
+msgid "Page header subtitle format."
+msgstr ""
+
+#: inc/theme-option.php:1035
+msgid "Please select subtitle display format."
+msgstr ""
+
+#: inc/theme-option.php:1038
+msgid "Site Description"
+msgstr ""
+
+#: inc/theme-option.php:1039 inc/theme-option.php:1117
+msgid "Breadcrumb"
+msgstr ""
+
+#: inc/theme-option.php:1040
+msgid "Custom Subtitle"
+msgstr ""
+
+#: inc/theme-option.php:1047 inc/theme-option.php:1125
+msgid "Breadcrumb Home"
+msgstr ""
+
+#: inc/theme-option.php:1048 inc/theme-option.php:1126
+msgid "Breadcrumbs menu home name."
+msgstr ""
+
+#: inc/theme-option.php:1049 inc/theme-option.php:1127
+msgid "To set breadcrumb home text."
+msgstr ""
+
+#: inc/theme-option.php:1050 inc/theme-option.php:1128
+msgid "Home"
+msgstr ""
+
+#: inc/theme-option.php:1056 inc/theme-option.php:1134
+msgid "Breadcrumb Separator"
+msgstr ""
+
+#: inc/theme-option.php:1057 inc/theme-option.php:1135
+msgid "Breadcrumbs menu item separator."
+msgstr ""
+
+#: inc/theme-option.php:1058 inc/theme-option.php:1136
+msgid "To set breadcrumb separator."
+msgstr ""
+
+#: inc/theme-option.php:1065
+msgid "Custom Sub Title"
+msgstr ""
+
+#: inc/theme-option.php:1066
+msgid "To set custom page subtitle."
+msgstr ""
+
+#: inc/theme-option.php:1067
+msgid "Enter your custom page subtitle."
+msgstr ""
+
+#: inc/theme-option.php:1068
+msgid "Welcome to our website."
+msgstr ""
+
+#: inc/theme-option.php:1074
+msgid "Sub Title Typography"
+msgstr ""
+
+#: inc/theme-option.php:1097
+msgid "Subtitle Space"
+msgstr ""
+
+#: inc/theme-option.php:1098
+msgid "Allow your users to choose the spacing or margin they want."
+msgstr ""
+
+#: inc/theme-option.php:1099
+msgid ""
+"You can enable or disable any piece of this field. Top, Right, Bottom, Left, "
+"or Units."
+msgstr ""
+
+#: inc/theme-option.php:1105 inc/theme-option.php:1113
+msgid "Bottom Action"
+msgstr ""
+
+#: inc/theme-option.php:1116 inc/theme-option.php:1355
+msgid "None"
+msgstr ""
+
+#: inc/theme-option.php:1118
+msgid "Scroll Down"
+msgstr ""
+
+#: inc/theme-option.php:1144
+msgid "Blog Settings"
+msgstr ""
+
+#: inc/theme-option.php:1146
+msgid "Control the blog post all option from here!"
+msgstr ""
+
+#: inc/theme-option.php:1151
+msgid "Post Box"
+msgstr ""
+
+#: inc/theme-option.php:1156
+msgid "Box Style"
+msgstr ""
+
+#: inc/theme-option.php:1163
+msgid ""
+"Control the margin around the post box. Input the margin as clockwise (Top "
+"Right Bottom Left)"
+msgstr ""
+
+#: inc/theme-option.php:1173
+msgid ""
+"Padding around the post box. Input the padding as clockwise (Top Right "
+"Bottom Left)"
+msgstr ""
+
+#: inc/theme-option.php:1204 inc/theme-option.php:1221
+#: woocommerce/cart/cart.php:28 woocommerce/cart/cart.php:50
+msgid "Thumbnail"
+msgstr ""
+
+#: inc/theme-option.php:1211
+msgid "Image Visibility"
+msgstr ""
+
+#: inc/theme-option.php:1212 inc/theme-option.php:1280
+#: inc/theme-option.php:1410 inc/theme-option.php:1435
+#: inc/theme-option.php:1443 inc/theme-option.php:1452
+#: inc/theme-option.php:1461 inc/theme-option.php:1470
+#: inc/theme-option.php:1479 inc/theme-option.php:1488
+#: inc/theme-option.php:1698 inc/theme-option.php:1730
+msgid "Show"
+msgstr ""
+
+#: inc/theme-option.php:1213 inc/theme-option.php:1281
+#: inc/theme-option.php:1411 inc/theme-option.php:1436
+#: inc/theme-option.php:1444 inc/theme-option.php:1453
+#: inc/theme-option.php:1462 inc/theme-option.php:1471
+#: inc/theme-option.php:1480 inc/theme-option.php:1489
+#: inc/theme-option.php:1699 inc/theme-option.php:1731
+msgid "Hide"
+msgstr ""
+
+#: inc/theme-option.php:1219
+msgid "Image Size"
+msgstr ""
+
+#: inc/theme-option.php:1222
+msgid "Medium"
+msgstr ""
+
+#: inc/theme-option.php:1223 inc/theme-option.php:1224
+msgid "Large"
+msgstr ""
+
+#: inc/theme-option.php:1225 inc/theme-option.php:1352
+msgid "Full"
+msgstr ""
+
+#: inc/theme-option.php:1226
+msgid "landshop_770x450"
+msgstr ""
+
+#: inc/theme-option.php:1232
+msgid "Update Style"
+msgstr ""
+
+#: inc/theme-option.php:1239
+msgid "Image Margin"
+msgstr ""
+
+#: inc/theme-option.php:1240
+msgid ""
+"Margin around the post Image. Input the margin as clockwise (Top Right "
+"Bottom Left)"
+msgstr ""
+
+#: inc/theme-option.php:1249
+msgid "Image Padding"
+msgstr ""
+
+#: inc/theme-option.php:1250
+msgid ""
+"Padding around the post Image. Input the padding as clockwise (Top Right "
+"Bottom Left)"
+msgstr ""
+
+#: inc/theme-option.php:1261
+msgid "Image Border"
+msgstr ""
+
+#: inc/theme-option.php:1272
+msgid "Post Title"
+msgstr ""
+
+#: inc/theme-option.php:1287
+msgid "Title Length"
+msgstr ""
+
+#: inc/theme-option.php:1288
+msgid "Min:1, max: 100, step: 1, default value: 15"
+msgstr ""
+
+#: inc/theme-option.php:1296
+msgid "Title Style"
+msgstr ""
+
+#: inc/theme-option.php:1317
+msgid "Title Hover Color"
+msgstr ""
+
+#: inc/theme-option.php:1318
+msgid "Post title color on hover."
+msgstr ""
+
+#: inc/theme-option.php:1325
+msgid ""
+"Margin around the post title. Input the margin as clockwise (Top Right "
+"Bottom Left)"
+msgstr ""
+
+#: inc/theme-option.php:1341
+msgid "Post Content"
+msgstr ""
+
+#: inc/theme-option.php:1348
+msgid "Description Format"
+msgstr ""
+
+#: inc/theme-option.php:1349
+msgid ""
+"Controls if the blog content displays an excerpt or full content or is "
+"completely disabled for the assigned blog page in \"settings > reading\" or "
+"blog archive pages."
+msgstr ""
+
+#: inc/theme-option.php:1353
+msgid "Excerpt"
+msgstr ""
+
+#: inc/theme-option.php:1354
+msgid "Custom"
+msgstr ""
+
+#: inc/theme-option.php:1362
+msgid "Excerpt Length"
+msgstr ""
+
+#: inc/theme-option.php:1363
+msgid "Min:10, max: 150, step: 1, default value: 30"
+msgstr ""
+
+#: inc/theme-option.php:1371
+msgid "Content Style"
+msgstr ""
+
+#: inc/theme-option.php:1380
+msgid "Typography"
+msgstr ""
+
+#: inc/theme-option.php:1393
+msgid ""
+"Margin around the post content. Input the margin as clockwise (Top Right "
+"Bottom Left)"
+msgstr ""
+
+#: inc/theme-option.php:1417
+msgid "Button Text"
+msgstr ""
+
+#: inc/theme-option.php:1418
+msgid "This is a post button text."
+msgstr ""
+
+#: inc/theme-option.php:1419
+msgid "Enter button text. HTML tag supported."
+msgstr ""
+
+#: inc/theme-option.php:1427 inc/theme-option.php:1434
+msgid "Post Meta"
+msgstr ""
+
+#: inc/theme-option.php:1442
+msgid "Author"
+msgstr ""
+
+#: inc/theme-option.php:1451
+msgid "Date"
+msgstr ""
+
+#: inc/theme-option.php:1460
+msgid "Comments"
+msgstr ""
+
+#: inc/theme-option.php:1469
+msgid "Tags"
+msgstr ""
+
+#: inc/theme-option.php:1478
+msgid "Category"
+msgstr ""
+
+#: inc/theme-option.php:1487
+msgid "View Count"
+msgstr ""
+
+#: inc/theme-option.php:1494
+msgid "Meta Style"
+msgstr ""
+
+#: inc/theme-option.php:1503
+msgid "Meta Typography"
+msgstr ""
+
+#: inc/theme-option.php:1515
+msgid "Meta Icon Color"
+msgstr ""
+
+#: inc/theme-option.php:1516
+msgid "Meta icon color."
+msgstr ""
+
+#: inc/theme-option.php:1522
+msgid "Meta Hover Color"
+msgstr ""
+
+#: inc/theme-option.php:1523
+msgid "Meta color on hover."
+msgstr ""
+
+#: inc/theme-option.php:1530
+msgid "Meta Spacing"
+msgstr ""
+
+#: inc/theme-option.php:1531
+msgid ""
+"Margin around the post meta item. Input the margin as clockwise (Top Right "
+"Bottom Left)"
+msgstr ""
+
+#: inc/theme-option.php:1549
+msgid "Post Details"
+msgstr ""
+
+#: inc/theme-option.php:1556
+msgid "Releted Tags?"
+msgstr ""
+
+#: inc/theme-option.php:1562
+msgid "Social Share?"
+msgstr ""
+
+#: inc/theme-option.php:1568
+msgid "Next Post Navigation?"
+msgstr ""
+
+#: inc/theme-option.php:1574
+msgid "Author Info?"
+msgstr ""
+
+#: inc/theme-option.php:1581
+msgid "Footer"
+msgstr ""
+
+#: inc/theme-option.php:1583
+msgid "You can edit all of footer option."
+msgstr ""
+
+#: inc/theme-option.php:1588
+msgid "Footer Template"
+msgstr ""
+
+#: inc/theme-option.php:1589
+msgid "At first create a elementor template footer and select form here."
+msgstr ""
+
+#: inc/theme-option.php:1598
+msgid "Warning"
+msgstr ""
+
+#: inc/theme-option.php:1599
+msgid ""
+"You have selected a Custom Footer template. Now, all the Footer Settings "
+"will not apply. Edit your Footer template with Footer Elementor."
+msgstr ""
+
+#: inc/theme-option.php:1605
+msgid "Copyright Text"
+msgstr ""
+
+#: inc/theme-option.php:1606
+msgid "Please type your copyright text. You can use all HTML tags."
+msgstr ""
+
+#: inc/theme-option.php:1624
+msgid "Footer background with image, color, etc."
+msgstr ""
+
+#: inc/theme-option.php:1630
+msgid "Title Color"
+msgstr ""
+
+#: inc/theme-option.php:1631
+msgid "Controls the footer heading text color throughout the theme."
+msgstr ""
+
+#: inc/theme-option.php:1639
+msgid "Controls the footer text color throughout the theme."
+msgstr ""
+
+#: inc/theme-option.php:1646
+msgid "Border Color"
+msgstr ""
+
+#: inc/theme-option.php:1647
+msgid "Controls the footer border color throughout the theme."
+msgstr ""
+
+#: inc/theme-option.php:1654
+msgid "white Color"
+msgstr ""
+
+#: inc/theme-option.php:1655
+msgid "Controls the footer white color throughout the theme."
+msgstr ""
+
+#: inc/theme-option.php:1661
+msgid "404 page"
+msgstr ""
+
+#: inc/theme-option.php:1663
+msgid "You can edit error page option."
+msgstr ""
+
+#: inc/theme-option.php:1671
+msgid "Error image"
+msgstr ""
+
+#: inc/theme-option.php:1672
+msgid "Error page side image."
+msgstr ""
+
+#: inc/theme-option.php:1678
+msgid "Title"
+msgstr ""
+
+#: inc/theme-option.php:1684
+msgid "Description"
+msgstr ""
+
+#: inc/theme-option.php:1690
+msgid "Preloader"
+msgstr ""
+
+#: inc/theme-option.php:1697
+msgid "loader Switch"
+msgstr ""
+
+#: inc/theme-option.php:1703
+msgid "Loder Text"
+msgstr ""
+
+#: inc/theme-option.php:1704
+msgid "Enter maximum of 7 letters."
+msgstr ""
+
+#: inc/theme-option.php:1714
+msgid "Controls the preloader background."
+msgstr ""
+
+#: inc/theme-option.php:1722
+msgid "ScrollUp"
+msgstr ""
+
+#: inc/theme-option.php:1729
+msgid "Display Button"
+msgstr ""
+
+#: inc/theme-option.php:1745
+msgid "Custom CSS"
+msgstr ""
+
+#: inc/theme-option.php:1752
+msgid "Custom CSS Code"
+msgstr ""
+
+#: inc/theme-option.php:1753
+msgid "Type your custom CSS code here."
+msgstr ""
+
+#: searchform.php:6
+msgid "Search Here..."
+msgstr ""
+
+#: single.php:61
+msgid "About"
+msgstr ""
+
+#: single.php:95
+msgid "Previous Story"
+msgstr ""
+
+#: single.php:105
+msgid "Next Story"
+msgstr ""
+
+#: woocommerce/cart/cart-totals.php:25
+msgid "Cart totals"
+msgstr ""
+
+#: woocommerce/cart/cart-totals.php:30 woocommerce/cart/cart-totals.php:31
+#: woocommerce/cart/cart.php:32 woocommerce/cart/cart.php:97
+#: woocommerce/cart/mini-cart.php:77
+msgid "Subtotal"
+msgstr ""
+
+#: woocommerce/cart/cart-totals.php:52 woocommerce/cart/cart-totals.php:53
+msgid "Shipping"
+msgstr ""
+
+#: woocommerce/cart/cart-totals.php:72
+#, php-format
+msgid "(estimated for %s)"
+msgstr ""
+
+#: woocommerce/cart/cart-totals.php:98 woocommerce/cart/cart-totals.php:99
+msgid "Total"
+msgstr ""
+
+#: woocommerce/cart/cart.php:29 woocommerce/cart/cart.php:60
+#: woocommerce/single-product-reviews.php:59
+msgid "Name"
+msgstr ""
+
+#: woocommerce/cart/cart.php:30 woocommerce/cart/cart.php:76
+#: woocommerce/global/quantity-input.php:28
+#: woocommerce/global/quantity-input.php:32
+msgid "Quantity"
+msgstr ""
+
+#: woocommerce/cart/cart.php:31 woocommerce/cart/cart.php:92
+msgid "Price"
+msgstr ""
+
+#: woocommerce/cart/cart.php:45
+msgid "Remove"
+msgstr ""
+
+#: woocommerce/cart/cart.php:47 woocommerce/cart/mini-cart.php:44
+msgid "Remove this item"
+msgstr ""
+
+#: woocommerce/cart/cart.php:72
+msgid "Available on backorder"
+msgstr ""
+
+#: woocommerce/cart/cart.php:113
+msgid "Coupon:"
+msgstr ""
+
+#: woocommerce/cart/cart.php:113
+msgid "Coupon code"
+msgstr ""
+
+#: woocommerce/cart/cart.php:113
+msgid "Apply coupon"
+msgstr ""
+
+#: woocommerce/cart/cart.php:118
+msgid "Update cart"
+msgstr ""
+
+#: woocommerce/cart/mini-cart.php:85
+msgid "No products in the cart."
+msgstr ""
+
+#: woocommerce/checkout/form-billing.php:23
+msgid "Billing &amp; Shipping"
+msgstr ""
+
+#: woocommerce/checkout/form-billing.php:25
+msgid "Billing details"
+msgstr ""
+
+#: woocommerce/checkout/form-billing.php:43
+msgid "Create an account?"
+msgstr ""
+
+#: woocommerce/checkout/form-checkout.php:26
+msgid "You must be logged in to checkout."
+msgstr ""
+
+#: woocommerce/checkout/form-checkout.php:46
+msgid "Your order"
+msgstr ""
+
+#: woocommerce/checkout/form-shipping.php:25
+msgid "Ship to a different address?"
+msgstr ""
+
+#: woocommerce/checkout/form-shipping.php:46
+msgid "Additional information"
+msgstr ""
+
+#: woocommerce/global/quantity-input.php:28
+#, php-format
+msgid "%s quantity"
+msgstr ""
+
+#: woocommerce/loop/sale-flash.php:28
+#: woocommerce/single-product/sale-flash.php:28
+msgid "Sale!"
+msgstr ""
+
+#: woocommerce/product-searchform.php:27
+msgid "Search products&hellip;"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:43
+msgid "There are no reviews yet."
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:53
+msgid "Add a review"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:53
+#, php-format
+msgid "Be the first to review &ldquo;%s&rdquo;"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:54
+#, php-format
+msgid "Leave a Reply to %s"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:61
+msgid "Email"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:64
+msgid "Submit"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:69
+#, php-format
+msgid "You must be <a href=\"%s\">logged in</a> to post a review."
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:72
+msgid "Your rating"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:73
+msgid "Rate&hellip;"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:74
+msgid "Perfect"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:75
+msgid "Good"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:76
+msgid "Average"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:77
+msgid "Not that bad"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:78
+msgid "Very poor"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:81
+msgid "Your review"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:88
+msgid ""
+"Only logged in customers who have purchased this product may leave a review."
+msgstr ""
+
+#: woocommerce/single-product/add-to-cart/grouped.php:67
+msgid "Buy one of this item"
+msgstr ""
+
+#: woocommerce/single-product/meta.php:28
+msgid "SKU:"
+msgstr ""
+
+#: woocommerce/single-product/meta.php:28
+msgid "N/A"
+msgstr ""
+
+#: woocommerce/single-product/related.php:24
+msgid "Related Products"
+msgstr ""

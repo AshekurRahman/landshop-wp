@@ -69,7 +69,10 @@ if($landshop_opt['is_preloader'] == '1'): ?>
     <!-- preloader  -->
     <div id="preloader" class="preloader">
         <div class="animation-preloader">
-            <div class="spinner"></div>
+            <div class="loader">
+                <div class="shadow"></div>
+                <div class="box"></div>
+            </div>
             <?php if($landshop_opt['loader_text']): ?>
                 <?php $loader_text = str_split(esc_html($landshop_opt['loader_text'])); ?>
                 <div class="txt-loading">
@@ -143,7 +146,7 @@ if($landshop_opt['nav_search_display'] == '1'): ?>
 
             <!--Nav_Tools-Start-->
             <div class="nav_tools <?php echo esc_attr(($ndata ? 'mobile_menu_toggle' : '')); ?>">
-				<?php echo $data; ?>
+				<?php echo wp_kses_post($data); ?>
             </div>
             <!--Nav_Tools-End-->
         </div>

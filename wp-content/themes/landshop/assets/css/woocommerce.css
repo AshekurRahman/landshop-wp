@@ -1,13 +1,13 @@
 .nav_tools .tools_icon .shop_count {
     position: absolute;
-    right: -5px;
-    top: -5px;
-    height: 15px;
-    min-width: 15px;
+    right: -10px;
+    top: -10px;
+    height: 20px;
+    min-width: 20px;
     padding: 0;
     background-color: rgba(var(--primary-color), 1);
     color: rgb(var(--white-color));
-    line-height: 15px;
+    line-height: 20px;
     font-size: 10px;
     border-radius: 20px;
     text-align: center;
@@ -91,7 +91,7 @@
     opacity: 1;
 }
 
-.product-box .product-image .hover-content > .button {
+.product-box .product-image .hover-content>.button {
     padding: 0;
     width: 48px;
     height: 48px;
@@ -101,13 +101,17 @@
     color: rgb(var(--primary-color));
 }
 
-.product-box .product-image .hover-content > .button:hover {
+.product-box .product-image .hover-content>.button:hover {
     background-color: rgb(var(--primary-color));
     color: rgb(var(--white-color));
 }
 
-.product-box .product-image .hover-content > .button:last-child {
+.product-box .product-image .hover-content>.button:last-child {
     margin-right: 0;
+}
+
+.product-box .product-image .hover-content>.button i {
+    margin: 0;
 }
 
 .product-box .product-image .hover-content .button:after {
@@ -187,7 +191,7 @@
     line-height: 1;
 }
 
-.product-box .woocommerce-LoopProduct-link:hover > .woocommerce-loop-product__title {
+.product-box .woocommerce-LoopProduct-link:hover>.woocommerce-loop-product__title {
     color: rgb(var(--primary-color));
 }
 
@@ -362,7 +366,7 @@
     background-color: transparent;
 }
 
-.single-price > * {
+.single-price>* {
     display: inline-block;
 }
 
@@ -1040,14 +1044,14 @@ legend {
     -ms-flex-order: 3;
     order: 3;
     margin-left: auto;
-    min-width: 16px;
-    min-height: 16px;
-    line-height: 17px;
+    min-width: 24px;
+    min-height: 24px;
+    line-height: 24px;
     background-color: #ffffff;
     color: rgb(var(--primary-color));
     text-align: center;
     border-radius: 100px;
-    font-size: 10px;
+    font-size: 16px;
     position: absolute;
     right: -6px;
     top: -6px;
@@ -1073,9 +1077,12 @@ legend {
     font-size: 18px;
 }
 
-
 .product_list_widget .mini_cart_item .desc a:hover .title {
     color: rgb(var(--primary-color));
+}
+
+td.woocommerce-grouped-product-list-item__quantity {
+    min-width: 200px;
 }
 
 .product_list_widget .mini_cart_item .desc .quantity,
@@ -1124,6 +1131,10 @@ body .product-box .primary_button {
 
 .woocommerce form .form-row textarea {
     min-height: 120px;
+}
+
+.woocommerce div.product form.cart .group_table td {
+    vertical-align: middle;
 }
 
 /*-- Single-Product --*/
@@ -1243,7 +1254,7 @@ button[name="update_cart"]:hover {
     display: none;
 }
 
-.landshop-cart_totals > h2 {
+.landshop-cart_totals>h2 {
     font-size: 24px;
     text-align: center;
 }
@@ -1399,6 +1410,15 @@ button[name="update_cart"]:hover {
     padding: 8px 24px;
 }
 
+.woocommerce-variation-price {
+    margin-bottom: 15px;
+}
+
+.woocommerce div.product p.price,
+.woocommerce div.product span.price {
+    color: rgb(var(--primary-color));
+}
+
 @media only screen and (min-width: 768px) {
 
     .woocommerce-Message,
@@ -1448,7 +1468,7 @@ button[name="update_cart"]:hover {
     .woocommerce a.button,
     .woocommerce button.button,
     .woocommerce input.button {
-        padding: 18px 40px;
+        padding: 10px 40px;
     }
 
     .woocommerce table.shop_table .product-thumb {
@@ -1471,10 +1491,6 @@ button[name="update_cart"]:hover {
     .woocommerce-cart table.cart td .product-thumb {
         margin-right: 0;
         margin-left: 15px;
-    }
-
-    .product-image-area {
-        padding: 30px;
     }
 
     .product-top-bar.item-centered,
@@ -1541,8 +1557,28 @@ button[name="update_cart"]:hover {
         flex-wrap: wrap;
     }
 
-    .woocommerce div.product form.cart .before-extra .tinvwl-shortcode-add-to-cart {
+    .woocommerce div.product form.cart .group_table tr.woocommerce-grouped-product-list-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #ededed;
+        padding: 30px;
+        border-radius: 5px;
+        margin-bottom: 30px;
+    }
+
+    .woocommerce div.product form.cart .group_table tr.woocommerce-grouped-product-list-item td.woocommerce-grouped-product-list-item__quantity {
+        margin: 0;
+        padding: 0;
         width: 100%;
     }
 
+    .woocommerce div.product form.cart .group_table tr.woocommerce-grouped-product-list-item td.woocommerce-grouped-product-list-item__price {
+        padding: 0;
+    }
+
+    .woocommerce div.product form.cart .group_table tr.woocommerce-grouped-product-list-item td.woocommerce-grouped-product-list-item__label {
+        padding: 20px;
+    }
 }

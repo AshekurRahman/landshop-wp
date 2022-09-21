@@ -261,12 +261,46 @@ function landshop_content_width() {
 }
 add_action( 'after_setup_theme', 'landshop_content_width', 0 );
 
+
+
+
+
+if ( !function_exists( 'landshop_fonts_url' ) ) {
+    /**
+     * Register Google fonts for landshop.
+     *
+     * Create your own landshop_fonts_url() function to override in a child theme.
+     *
+     * @since landshop 1.0
+     *
+     * @return string Google fonts URL for the theme.
+     */
+    
+    function landshop_fonts_url() {
+        $fonts_url = '';
+        $fonts     = array();
+        $subsets   = 'latin,latin-ext';
+        /* translators: If there are characters in your language that are not supported by Roboto, translate this to 'off'. Do not translate into your own language. */
+        $fonts[] = 'Manrope:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap';
+
+        if ( $fonts ) {
+            $fonts_url = add_query_arg( array(
+                'family' =>  implode( '|', $fonts ),
+                'subset' =>  $subsets,
+            ), 'https://fonts.googleapis.com/css2' );
+        }
+        return esc_url_raw($fonts_url);
+    }
+}
+
 /**
  * Enqueue scripts and styles.
  */
 function landshop_scripts() {
+	// Add google fonts, used in the main stylesheet.
+	wp_enqueue_style( 'landshop-custom-fonts', landshop_fonts_url(), array(), null );   
 	// Add Theme-custom-fonts.
-	wp_enqueue_style( 'landshop_fonts', get_theme_file_uri('/assets/css/theme-fonts.css'), array(), '1.0.0' );   
+	wp_enqueue_style( 'landshop-google-fonts', get_theme_file_uri('/assets/css/theme-fonts.css'), array(), '1.0.0' );   
 	// Add Bootstrap, Used for default grid system.
 	wp_enqueue_style( 'bootstrap', get_theme_file_uri('/assets/css/bootstrap-min.css'), array(), '5.1.1' );                  
 	// Add Normalizer, Used for remove default tag style.
@@ -323,12 +357,12 @@ function landshop_scripts() {
 		$landshop_opt['section-padding'] = array('height' => '136');
 		$landshop_opt['navbar_height'] = array('height' => '120');
         
-		$landshop_opt['primary_color'] = '#F1554C';
-		$landshop_opt['heading_color'] = '#10131F';
-		$landshop_opt['text_color'] = '#6E6E78';
+		$landshop_opt['primary_color'] = '#FF6B31';
+		$landshop_opt['heading_color'] = '#131313';
+		$landshop_opt['text_color'] = '#696969';
 		$landshop_opt['white_color'] = '#ffffff';
 		$landshop_opt['gray_color'] = '#f7f7f7';
-		$landshop_opt['dark_color'] = '#10131F';
+		$landshop_opt['dark_color'] = '#131313';
 		$landshop_opt['footer_heading_color'] = '#ffffff';
 		$landshop_opt['footer_text_color'] = '#9FA1A5';
 		$landshop_opt['footer_gray_color'] = '#1E212C';
@@ -477,7 +511,7 @@ function landshop_load_ajax_callback() {
                         <ul>
                           <?php if(get_the_category()): ?>
                            <li class="category">
-                               <a href="<?php echo home_url( get_the_category()[0]->taxonomy.'/'.get_the_category()[0]->slug); ?>"><?php echo get_the_category()[0]->name; ?></a>
+                               <a href="<?php echo get_category_link(get_the_category()[0]->cat_ID); ?>"><?php echo get_the_category()[0]->name; ?></a>
                            </li>
                            <?php endif; ?>
                             <?php if(landshop_get_post_date()): ?>

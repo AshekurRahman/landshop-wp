@@ -22,7 +22,7 @@
     <section class="error_page">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-md-7 col-lg-5">
+                <div class="col-md-7">
                     <div class="error_image">
                         <img src="<?php echo esc_url($landshop_opt['error_image']['url']); ?>" alt="<?php esc_attr_e('404','landshop'); ?>">
                     </div>

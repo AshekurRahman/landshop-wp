@@ -40,7 +40,7 @@
 		}
 	?>
 	<div class="content">     
-		<?php if($landshop_opt['post_meta'] == '1'): ?>
+		<?php if($landshop_opt['post_meta'] == '1' and get_post_type() !== 'product'): ?>
 		<div class="meta_list">
 			<ul>
 				<?php if(get_the_author() && $landshop_opt['post_meta_author'] == '1'): ?>
@@ -71,12 +71,6 @@
 				<li class="tag">
 					<svg class="svg-icon icon"><use xlink:href="<?php echo get_theme_file_uri( 'assets/images/symble.svg' ); ?>#ic-folder"></use></svg>
 					<?php echo get_the_category_list( ', ', ' ' ); ?>
-				</li>
-				<?php endif; ?>
-				<?php if(current_user_can('edit_posts')): ?>
-				<li class="edit">
-					<svg class="svg-icon icon"><use xlink:href="<?php echo get_theme_file_uri( 'assets/images/symble.svg' ); ?>#ic-pen"></use></svg>
-					<a href="<?php echo get_edit_post_link(); ?>"><?php esc_html_e('Edit','landshop'); ?></a>
 				</li>
 				<?php endif; ?>
 				<?php if(function_exists('landshop_get_post_views') && $landshop_opt['post_meta_view'] == '1'): ?>
@@ -125,7 +119,7 @@
 			   }                
            ?>
 		</div>
-        <?php if($landshop_opt['post_read_more'] == '1' and !is_single() and !empty($landshop_opt['post_read_more_txt'])): ?>
+        <?php if($landshop_opt['post_read_more'] == '1' and !is_single() and !empty($landshop_opt['post_read_more_txt']) and get_post_type() !== 'product' ): ?>
         <a href="<?php echo get_the_permalink(); ?>" class="read-more-button"><?php echo wp_kses_post($landshop_opt['post_read_more_txt']); ?></a>
         <?php endif; ?>
 	</div>

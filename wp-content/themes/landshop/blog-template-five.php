@@ -55,7 +55,7 @@ get_template_part('components/layouts/site_header'); ?>
                                     <ul class="header-meta">
                                       <?php if(get_the_category()): ?>
                                        <li class="category">
-                                           <a href="<?php echo home_url( get_the_category()[0]->taxonomy.'/'.get_the_category()[0]->slug); ?>"><?php echo get_the_category()[0]->name; ?></a>
+                                           <a href="<?php echo get_category_link(get_the_category()[0]->cat_ID); ?>"><?php echo get_the_category()[0]->name; ?></a>
                                        </li>
                                         <?php endif; ?>
                                     </ul>

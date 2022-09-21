@@ -244,7 +244,7 @@ Redux::setSection($opt_name , array(
            'type'  => 'color',
            'title' => esc_html__('Primary Color', 'landshop'),
            'subtitle' => esc_html__('Controls the main highlight color throughout the theme.', 'landshop'),
-           'default'   => '#F1554C',
+           'default'   => '#FF6B31',
            'validate' => 'color',
         ),
          'heading_color' => array(
@@ -252,7 +252,7 @@ Redux::setSection($opt_name , array(
 			'type'  => 'color',
 			'title' => esc_html__('Black Text', 'landshop'),
 			'subtitle' => esc_html__('Controls the body black text color throughout the theme.', 'landshop'),
-			'default'   => '#10131F',			
+			'default'   => '#131313',			
         	'validate' => 'color',
 		 ),
          'white_color' => array(
@@ -268,7 +268,7 @@ Redux::setSection($opt_name , array(
 			'type'  => 'color',
 			'title' => esc_html__('Text Color', 'landshop'),
 			'subtitle' => esc_html__('Controls the body light text color throughout the theme.', 'landshop'),
-			'default'   => '#6E6E78',			
+			'default'   => '#696969',			
         	'validate' => 'color',
 		 ),
          'gray_color' => array(
@@ -284,7 +284,7 @@ Redux::setSection($opt_name , array(
 			'type'  => 'color',
 			'title' => esc_html__('Black Background', 'landshop'),
 			'subtitle' => esc_html__('Controls the dark background color throughout the theme.', 'landshop'),
-			'default'   => '#10131F',			
+			'default'   => '#131313',			
         	'validate' => 'color',
 		 ),
          'body_color' => array(

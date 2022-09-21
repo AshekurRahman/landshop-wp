@@ -17,13 +17,13 @@ if ( class_exists( 'WooCommerce' ) ) {
     add_action( 'wp_footer', 'landshop_quantity_plus_minus' );
     function landshop_quantity_plus_minus() {
     // To run this on the single product page
-    if ( ! is_product() ) return;
+    if ( !is_product() ) return;
     ?>
     <script type="text/javascript">
         jQuery(document).ready(function($) {
-            $('form.cart').on('click', 'button.plus, button.minus', function() {
+            $('.quantity').on('click', 'button.plus, button.minus', function() {
                 // Get current quantity values
-                var qty = $(this).closest('form.cart').find('.qty');
+                var qty = $(this).siblings('.qty');
                 var val = parseFloat(qty.val());
                 var max = parseFloat(qty.attr('max'));
                 var min = parseFloat(qty.attr('min'));
@@ -38,7 +38,7 @@ if ( class_exists( 'WooCommerce' ) ) {
                 } else {
                     if (min && (min >= val)) {
                         qty.val(min);
-                    } else if (val > 1) {
+                    } else if (val > min) {
                         qty.val(val - step);
                     }
                 }
@@ -143,6 +143,40 @@ if ( class_exists( 'WooCommerce' ) ) {
         add_action( 'woocommerce_before_shop_loop_item_title','landshop_template_loop_product_thumbnail',10 );
     });
 }
+
+
+/*----------------
+WP_Kses-SVG-Tags-Allowed
+-----------------*/
+if(!function_exists('landshop_kses_svg_allowed')){
+    function landshop_kses_svg_allowed( $tags ) {
+        $args = array(
+            'svg'   => array(
+                'class'           => true,
+                'aria-hidden'     => true,
+                'aria-labelledby' => true,
+                'role'            => true,
+                'xmlns'           => true,
+                'width'           => true,
+                'height'          => true,
+                'viewbox'         => true // <= Must be lower case!
+            ),
+            'g'     => array( 'fill' => true ),
+            'title' => array( 'title' => true ),
+            'path'  => array(
+                'd'               => true, 
+                'fill'            => true
+            ),
+            'use'  => array(
+                'xlink:href' => true,
+            )
+        );
+        $allowed = array_merge( $tags, $args );
+        return $allowed;
+    }
+    add_filter( 'wp_kses_allowed_html', 'landshop_kses_svg_allowed', 10, 2 );
+}
+
 
 /*----------------
 Add-Body-Class
@@ -379,16 +413,16 @@ if ( !function_exists( 'landshop_post_thumbnail' ) ) :
     }
 endif;
 
+
 /*----- Post_Date_Function_Modify -----*/
 if( !function_exists('landshop_get_post_date') ){
 	function landshop_get_post_date($format = 'j F, Y'){
 		$time_string = sprintf( wp_kses( '<time class="entry-date published updated" datetime="%1$s">%2$s</time>', wp_kses_allowed_html('post')),
 			esc_attr( get_the_date( 'c' ) ),
 			esc_html( get_the_date($format) )
-		);
-		$date_format = get_the_date('Y/m/d');
-		if($date_format){
-			$data = '<a href="'.esc_url(home_url($date_format)).'">'.$time_string.'</a>';		
+		);        
+		if(get_the_date('Y/m/d')){
+			$data = '<a href="'.get_day_link(get_the_date('Y'),get_the_date('m'),get_the_date('d')).'">'.$time_string.'</a>';		
 			return $data;
 		}else {
 			return false;
