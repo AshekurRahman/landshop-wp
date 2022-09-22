@@ -50,11 +50,11 @@ if ( class_exists( 'WooCommerce' ) ) {
 	function landshop_shop_mini_cart() {
 		ob_start();
 		echo '<div class="nav_actions">';
-			echo '<button type="button" class="tools_icon cart_toggle" data-bs-toggle="collapse" data-bs-target="#nav_mini_cart"><i class="far fa-shopping-bag"></i><span class="shop_count">'.WC()->cart->get_cart_contents_count().'</span></button>';
+			echo '<button type="button" class="tools_icon cart_toggle" data-bs-toggle="collapse" data-bs-target="#nav_mini_cart"><svg class="svg-icon icon"><use xlink:href="'.get_theme_file_uri( 'assets/images/symble.svg#ic-buy' ).'"></use></svg><span class="shop_count">'.WC()->cart->get_cart_contents_count().'</span></button>';
             echo '<div class="nav_mini_cart collapse woocommerce" id="nav_mini_cart">';
                 echo '<div class="cart_header">';
                   echo '<h4 class="header_title">'.esc_html__('Your Cart:','landshop').' <span class="shop_count">'.WC()->cart->get_cart_contents_count().'</span></h4>';
-                  echo '<button type="button" class="cart_close" data-bs-toggle="collapse" data-bs-target="#nav_mini_cart"><i class="fal fa-times"></i></button>';
+                  echo '<button type="button" class="cart_close" data-bs-toggle="collapse" data-bs-target="#nav_mini_cart"><svg class="svg-icon icon"><use xlink:href="'.get_theme_file_uri( 'assets/images/symble.svg#ic-close' ).'"></use></svg></button>';
                 echo '</div>';
                 echo '<div class="cart_body">';
                     woocommerce_mini_cart();

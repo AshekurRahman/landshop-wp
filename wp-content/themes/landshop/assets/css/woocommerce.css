@@ -1,7 +1,7 @@
 .nav_tools .tools_icon .shop_count {
     position: absolute;
-    right: -10px;
-    top: -10px;
+    right: -5px;
+    top: 0px;
     height: 20px;
     min-width: 20px;
     padding: 0;
@@ -396,7 +396,7 @@
 }
 
 .woocommerce div.product form.cart div.quantity button:hover {
-    background-color: rgb(var(--dark-color));
+    background-color: rgb(var(--primary-color));
     color: rgb(var(--white-color));
 }
 
@@ -1417,6 +1417,12 @@ button[name="update_cart"]:hover {
 .woocommerce div.product p.price,
 .woocommerce div.product span.price {
     color: rgb(var(--primary-color));
+}
+
+.woocommerce ul.order_details {
+    margin: 1rem 0 3em;
+    list-style: none;
+    padding: 0;
 }
 
 @media only screen and (min-width: 768px) {

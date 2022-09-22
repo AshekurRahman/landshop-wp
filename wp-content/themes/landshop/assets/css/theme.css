@@ -544,7 +544,7 @@ h6 {
 }
 
 .nav_area .nav_actions {
-    margin-left: 25px;
+    margin-left: 15px;
 }
 
 .nav_area .nav_actions:first-child {
@@ -700,10 +700,10 @@ h6 {
     outline: none;
     padding: 0;
     right: 30px;
-    bottom: -30px;
-    width: 60px;
-    height: 60px;
-    line-height: 58px;
+    bottom: -23px;
+    width: 46px;
+    height: 46px;
+    line-height: 0px;
     border-radius: 100px;
     border: 1px solid rgb(var(--gray-color));
 }
@@ -716,9 +716,9 @@ h6 {
 }
 
 #nav_mini_cart .cart_header .cart_close {
-    top: 55px;
+    top: 62px;
     bottom: auto;
-    right: 15px;
+    right: 30px;
 }
 
 /*----- 10. Site_Header_CSS -----*/
@@ -1570,7 +1570,7 @@ h6 {
     content: "";
     position: absolute;
     left: 0;
-    top: calc(50% - 10px);
+    top: 5px;
     width: 20px;
     height: 20px;
     border-radius: 4px;
@@ -1590,9 +1590,10 @@ h6 {
     font-weight: 500;
     position: absolute;
     left: 0;
-    top: calc(50% - 10px);
+    top: 5px;
     width: 20px;
     height: 20px;
+    line-height: 22px;
     border-radius: 4px;
     display: block;
     font-size: 12px;

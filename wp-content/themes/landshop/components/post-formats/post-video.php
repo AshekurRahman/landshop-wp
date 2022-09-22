@@ -57,7 +57,7 @@
 				<?php endif; ?>
 				<?php if(landshop_get_comment_count() && $landshop_opt['post_meta_comment'] == '1'): ?>
 				<li class="comment">
-					<svg class="svg-icon icon"><use xlink:href="<?php echo get_theme_file_uri( 'assets/images/symble.svg' ); ?>#ic-chat"></use></svg>
+					<svg class="svg-icon icon"><use xlink:href="<?php echo get_theme_file_uri( 'assets/images/symble.svg' ); ?>#ic-comment"></use></svg>
 					<?php echo landshop_get_comment_count(); ?>
 				</li>
 				<?php endif; ?>
