@@ -1,0 +1,30 @@
+2022-09-22T10:27:09+00:00 CRITICAL Uncaught Error: Function name must be a string in C:\wamp64\www\landshop\wp-content\themes\landshop\components\layouts\nav_menu.php:167
+Stack trace:
+#0 C:\wamp64\www\landshop\wp-includes\template.php(772): require()
+#1 C:\wamp64\www\landshop\wp-includes\template.php(716): load_template('C:\\wamp64\\www\\l...', false, Array)
+#2 C:\wamp64\www\landshop\wp-includes\general-template.php(204): locate_template(Array, true, false, Array)
+#3 C:\wamp64\www\landshop\wp-content\themes\landshop\header.php(29): get_template_part('components/layo...')
+#4 C:\wamp64\www\landshop\wp-includes\template.php(770): require_once('C:\\wamp64\\www\\l...')
+#5 C:\wamp64\www\landshop\wp-includes\template.php(716): load_template('C:\\wamp64\\www\\l...', true, Array)
+#6 C:\wamp64\www\landshop\wp-includes\general-template.php(48): locate_template(Array, true, true, Array)
+#7 C:\wamp64\www\landshop\wp-content\themes\landshop\index.php(1): get_header()
+#8 C:\wamp64\www\landshop\wp-includes\template-loader.php(106): include('C:\\wamp64\\www\\l in C:\wamp64\www\landshop\wp-content\themes\landshop\components\layouts\nav_menu.php on line 167
+
+2022-09-22T13:29:01+00:00 CRITICAL Uncaught Error: Call to undefined function wp_register_form() in C:\wamp64\www\landshop\wp-content\themes\landshop\components\layouts\nav_menu.php:182
+Stack trace:
+#0 C:\wamp64\www\landshop\wp-includes\template.php(772): require()
+#1 C:\wamp64\www\landshop\wp-includes\template.php(716): load_template('C:\\wamp64\\www\\l...', false, Array)
+#2 C:\wamp64\www\landshop\wp-includes\general-template.php(204): locate_template(Array, true, false, Array)
+#3 C:\wamp64\www\landshop\wp-content\themes\landshop\header.php(29): get_template_part('components/layo...')
+#4 C:\wamp64\www\landshop\wp-includes\template.php(770): require_once('C:\\wamp64\\www\\l...')
+#5 C:\wamp64\www\landshop\wp-includes\template.php(716): load_template('C:\\wamp64\\www\\l...', true, Array)
+#6 C:\wamp64\www\landshop\wp-includes\general-template.php(48): locate_template(Array, true, true, Array)
+#7 C:\wamp64\www\landshop\wp-content\themes\landshop\woocommerce\archive-product.php(20): get_header('shop')
+#8 C:\wamp64\www\landshop\wp-includes\template- in C:\wamp64\www\landshop\wp-content\themes\landshop\components\layouts\nav_menu.php on line 182
+
+2022-09-22T14:03:21+00:00 CRITICAL syntax error, unexpected ')' in C:\wamp64\www\landshop\wp-content\themes\landshop\inc\theme-funtions.php on line 612
+
+2022-09-22T14:25:48+00:00 CRITICAL syntax error, unexpected end of file in C:\wamp64\www\landshop\wp-content\themes\landshop\components\layouts\nav_menu.php on line 191
+
+2022-09-22T14:26:14+00:00 CRITICAL syntax error, unexpected end of file in C:\wamp64\www\landshop\wp-content\themes\landshop\components\layouts\nav_menu.php on line 194
+

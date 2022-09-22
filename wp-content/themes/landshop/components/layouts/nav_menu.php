@@ -40,7 +40,7 @@
 	endif;
 
     $data .= '<div class="nav_actions login_toggle">';
-        $data .= '<button type="button" class="tools_icon" id="login_toggle"><svg class="svg-icon"><use xlink:href="'.get_theme_file_uri( 'assets/images/symble.svg#ic-profile' ).'"></use></svg></button>';
+        $data .= '<button type="button" class="tools_icon" data-bs-toggle="collapse" data-bs-target="#login_popup"><svg class="svg-icon"><use xlink:href="'.get_theme_file_uri( 'assets/images/symble.svg#ic-profile' ).'"></use></svg></button>';
     $data .= '</div>';
 
 	if($landshop_opt['toggle_menu_display'] == '1'):
@@ -157,3 +157,46 @@ if($landshop_opt['nav_search_display'] == '1'): ?>
     </div>
 </div>
 <div class="navbar-height"></div>
+
+<div class="collapse fade landshop-login-popup" id="login_popup">
+<div class="popup-close-overlay" data-bs-toggle="collapse" data-bs-target="#login_popup"></div>
+    <div class="popup-middle">
+        <button type="button" class="popup-close" data-bs-toggle="collapse" data-bs-target="#login_popup"><svg class="svg-icon"><use xlink:href="<?php echo get_theme_file_uri( 'assets/images/symble.svg#ic-close' ); ?>"></use></svg></button>      
+        <?php if ( !is_user_logged_in() ): ?>
+        <ul class="nav tab-items" role="tablist">
+            <li class="tab-item" role="presentation">
+                <button class="nav-link active" id="landshop-login-tab" data-bs-toggle="pill" data-bs-target="#tab-login" type="button" role="tab" aria-controls="tab-login" aria-selected="true"><?php esc_html_e('Login','landshop'); ?></button>
+            </li>
+            <li class="tab-item" role="presentation">
+                <button class="nav-link" id="landshop-register-tab" data-bs-toggle="pill" data-bs-target="#tab-register" type="button" role="tab" aria-controls="tab-register" aria-selected="false"><?php esc_html_e('Registration','landshop'); ?></button>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane fade show active" id="tab-login" role="tabpanel" aria-labelledby="landshop-login-tab">
+                <?php
+                    landshop_login_form();    
+                ?>
+            </div>
+            <div class="tab-pane fade" id="tab-register" role="tabpanel" aria-labelledby="landshop-register-tab">
+                <?php
+                    landshop_registration_form(); 
+                ?>
+            </div>
+        </div>
+        <?php else: ?>
+            <div class="popup-author-info">                
+                <?php 
+                    if(!empty(get_avatar(wp_get_current_user()->ID, '200'))){
+                        printf( '<figure class="author_pic">%s</figure>', get_avatar(wp_get_current_user()->ID, '200') );  
+                    }
+                ?>
+                <?php if(!empty(get_user_meta( wp_get_current_user()->ID)['nickname']['0'])): ?>
+                    <h3 class="title"><?php echo str_replace("_"," ",esc_html(get_user_meta( wp_get_current_user()->ID)['nickname']['0'])); ?></h3>
+                <?php endif; ?>
+                <?php if(!empty(get_user_meta( wp_get_current_user()->ID)['description']['0'])): ?>
+                    <p class="description"><?php echo esc_html(get_user_meta( wp_get_current_user()->ID)['description']['0']); ?></p>
+                <?php endif; ?>
+            </div>
+        <?php endif; ?>
+    </div>
+</div>
