@@ -33,15 +33,19 @@
 	if($landshop_opt['nav_search_display'] == '1'):
 		$data .= '<div class="nav_actions">';
 		$data .= '<button type="button" class="tools_icon search_toggle" data-bs-toggle="collapse" data-bs-target="#header_search_form">';
-		$data .= '<svg class="svg-icon"><use xlink:href="'.get_theme_file_uri( 'assets/images/symble.svg' ).'#ic-search"></use></svg>';
+		$data .= '<svg class="svg-icon"><use xlink:href="'.get_theme_file_uri( 'assets/images/symble.svg#ic-search' ).'"></use></svg>';
 		$data .= '</button>';
 		$data .= '</div>';
         $ndata = false;
 	endif;
 
+    $data .= '<div class="nav_actions login_toggle">';
+        $data .= '<button type="button" class="tools_icon" id="login_toggle"><svg class="svg-icon"><use xlink:href="'.get_theme_file_uri( 'assets/images/symble.svg#ic-profile' ).'"></use></svg></button>';
+    $data .= '</div>';
+
 	if($landshop_opt['toggle_menu_display'] == '1'):
         $data .= '<div class="nav_actions mobile_menu_toggle">';
-        $data .= '<button type="button" class="tools_icon" id="nav_mobile_toggle"><i class="far fa-bars"></i></button>';
+        $data .= '<button type="button" class="tools_icon" id="nav_mobile_toggle"><svg class="svg-icon"><use xlink:href="'.get_theme_file_uri( 'assets/images/symble.svg#ic-menu-toggle' ).'"></use></svg></button>';
         $data .= '</div>';
 	endif;
 
@@ -106,7 +110,7 @@ if($landshop_opt['nav_search_display'] == '1'): ?>
     <div class="container">
         <?php get_search_form(); ?>
     </div>
-    <button type="button" class="close_action" data-bs-toggle="collapse" data-bs-target="#header_search_form"><i class="far fa-long-arrow-up"></i></button>
+    <button type="button" class="close_action" data-bs-toggle="collapse" data-bs-target="#header_search_form"><svg class="svg-icon"><use xlink:href="<?php echo get_theme_file_uri( 'assets/images/symble.svg#ic-close' ); ?>"></use></svg></button>
 </div>
 <?php endif; ?>
 <div class="nav_area" <?php echo esc_attr($landshop_opt['navbar_sticky'] ? 'data-sticky='.(!empty($landshop_opt['sticky_offset']['height']) ? esc_attr($landshop_opt['sticky_offset']['height']): '100') : '');?>>
