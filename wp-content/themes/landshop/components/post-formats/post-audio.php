@@ -4,7 +4,7 @@
 	}else{
 		$landshop_opt = array();
 		$landshop_opt['post_thumbnail'] = '1';
-		$landshop_opt['post_thumb_size'] = 'landshop_770x450';
+		$landshop_opt['post_thumb_size'] = 'full';
 		$landshop_opt['post_author'] = '1';
 		$landshop_opt['post_title'] = '1';
 		$landshop_opt['title_length'] = '15';

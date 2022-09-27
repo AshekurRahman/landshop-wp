@@ -99,7 +99,7 @@ if ( class_exists( 'WooCommerce' ) ) {
 		return $args;
 	}
     
-	function landshop_template_loop_product_thumbnail( $size = 'landshop_370x278', $deprecated1 = 0, $deprecated2 = 0 ) {
+	function landshop_template_loop_product_thumbnail( $size = 'full', $deprecated1 = 0, $deprecated2 = 0 ) {
 		global $product;
 		$image_size = apply_filters( 'single_product_archive_thumbnail_size', $size );
 		echo wp_kses_post($product ? $product->get_image( $image_size ) : '');

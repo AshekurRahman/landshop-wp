@@ -58,7 +58,7 @@ get_template_part('components/layouts/site_header');
                                 }
                             ?>
                             <div class="author_content">
-                                <h4 class="author_name"><?php esc_html_e('About','landshop'); echo ' '; the_author(); ?></h4>
+                                <h4 class="author_name"><?php esc_html_e('About','landshop'); echo ' '; echo str_replace('_',' ', get_the_author()); ?></h4>
                                 <div class="author_desc">
                                     <?php echo wpautop(esc_html(get_the_author_meta('description'))); ?>
                                 </div>

@@ -1223,9 +1223,9 @@ Redux::setSection( $opt_name, array(
                 'large' => esc_html__( 'Large','landshop' ),
                 'large' => esc_html__( 'Large','landshop' ),
                 'full' => esc_html__( 'Full','landshop' ),
-                'landshop_770x450' => esc_html__( 'landshop_770x450','landshop' ),
+                'full' => esc_html__( 'full','landshop' ),
             ),
-            'default'  => 'landshop_770x450',             
+            'default'  => 'full',             
             'required' => array( 'post_thumbnail', '=', true )
         ),
         array(

@@ -48,7 +48,7 @@ get_template_part('components/layouts/site_header'); ?>
                             <div class="case_studie_box box-4">
                              <?php if(has_post_thumbnail()): ?>
                               <figure class="photo">
-                                <?php the_post_thumbnail('landshop_370x425'); ?>
+                                <?php the_post_thumbnail('full'); ?>
                               </figure>
                               <?php endif; ?>
                               <div class="case_studie_content">

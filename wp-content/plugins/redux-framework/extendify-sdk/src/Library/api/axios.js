@@ -35,7 +35,6 @@ function addDefaults(request) {
         request.data.remaining_imports = remainingImports
         request.data.entry_point = userState.entryPoint
         request.data.total_imports = userState.imports
-        request.data.participating_tests = userState.activeTestGroups()
     }
     return request
 }
@@ -67,6 +66,7 @@ Axios.interceptors.response.use(
 
 Axios.interceptors.request.use(
     (request) => {
+        // Thiis is here to limit network requests when encountering aggressive rate limiting
         const q = new URLSearchParams(window.location.search)
         if (['onboarding'].includes(q.get('extendify'))) {
             throw new axios.Cancel(

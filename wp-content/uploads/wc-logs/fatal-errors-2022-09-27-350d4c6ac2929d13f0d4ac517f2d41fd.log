@@ -1,0 +1,2 @@
+2022-09-27T14:43:32+00:00 CRITICAL Cannot declare class Elementor\Modify_Widget_Image_Gallery, because the name is already in use in C:\wamp64\www\landshop\wp-content\plugins\landshopcore\addons\widgets\image-gallery.php on line 0
+

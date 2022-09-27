@@ -554,7 +554,6 @@ h6 {
     position: relative;
     border: none;
     color: rgb(var(--heading-color));
-    background: none;
     min-width: 12px;
     text-align: center;
     display: flex;
@@ -565,6 +564,7 @@ h6 {
     line-height: 40px;
     border-radius: 100px;
     box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.07);
+    background-color: #ffffff;
 }
 
 .nav_area .nav_tools .tools_icon .txt {
@@ -1226,36 +1226,22 @@ h6 {
     border-radius: 6px;
     color: rgba(var(--text-color), 1);
     overflow: hidden;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+    padding: 30px;;
 
     --heading-color: 255, 255, 255;
     --text-color: 159, 161, 165;
 }
 
 .single_author_info .author_pic {
-    width: 170px;
-    min-width: 170px;
-    margin: 0;
-    height: 100%;
-    min-height: 226px;
-    overflow: hidden;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+    width: 100px;
+    min-width: 100px;
+    margin: 0 30px 10px 0;
+    min-height: 100px;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
+    border-radius: 5px;
+    float: left;
 }
 
 .single_author_info .author_pic .avatar {
@@ -1263,16 +1249,17 @@ h6 {
     max-width: inherit;
 }
 
-.single_author_info .author_content {
-    padding: 30px 40px;
-}
-
 .single_author_info .author_name {
     margin-bottom: 12px;
+    margin-top: -6px;
 }
 
 .single_author_info .author_desc {
-    margin-bottom: 24px;
+    margin-bottom: 0px;
+}
+
+.single_author_info .social-link {
+    margin-top: 24px;
 }
 
 .single_author_info .social-link a {

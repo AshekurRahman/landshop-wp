@@ -14,6 +14,7 @@ export const useTelemetry = () => {
         feedbackMissingSiteType,
         feedbackMissingGoal,
         siteTypeSearch,
+        exitFeedback,
     } = useUserSelectionStore()
     const { orderId, setOrderId, generating } = useGlobalStore()
     const { pages, currentPageIndex } = usePagesStore()
@@ -58,8 +59,10 @@ export const useTelemetry = () => {
     useEffect(() => {
         if (!url || orderId?.length) return
         // Create a order that persists over local storage
-        createOrder().then((response) => {
-            setOrderId(response.data.id)
+        createOrder()?.then((response) => {
+            if (response.data?.id) {
+                setOrderId(response.data.id)
+            }
         })
     }, [url, setOrderId, orderId])
 
@@ -90,6 +93,8 @@ export const useTelemetry = () => {
                     perfStyles: getPerformance('style'),
                     perfPages: getPerformance('page'),
                     insightsId: window.extOnbData?.insightsId,
+                    activeTests: JSON.stringify(window.extOnbData?.activeTests),
+                    exitFeedback,
                 }),
             })
         }, 1000)
@@ -108,12 +113,15 @@ export const useTelemetry = () => {
         feedbackMissingSiteType,
         feedbackMissingGoal,
         siteTypeSearch,
+        exitFeedback,
     ])
 }
 
 const getPerformance = (type) => {
     return performance
-        .getEntriesByType('measure')
-        .filter((m) => m.detail.extendify && m.detail.context.type === type)
-        .map((m) => ({ [m.name]: m.duration }))
+        ?.getEntriesByType('measure')
+        ?.filter(
+            (m) => m?.detail?.extendify && m?.detail?.context?.type === type,
+        )
+        ?.map((m) => ({ [m.name]: m.duration }))
 }

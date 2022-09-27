@@ -34,6 +34,8 @@ export const SiteTypeSelect = () => {
     const [showExamples, setShowExamples] = useState(true)
     const searchRef = useRef(null)
     const { data: siteTypes, loading } = useFetch(fetchData, fetcher)
+    const showMissingInput = () =>
+        window.extOnbData?.activeTests?.['remove-dont-see-inputs'] === 'A'
 
     useEffect(() => {
         state.setState({ ready: !loading })
@@ -64,6 +66,7 @@ export const SiteTypeSelect = () => {
     useEffect(() => {
         if (loading) return
         if (search?.length > 0) {
+            if (!Array.isArray(siteTypes)) return
             setVisibleSiteTypes(
                 siteTypes?.filter((option) => {
                     const { title, keywords } = option
@@ -79,7 +82,7 @@ export const SiteTypeSelect = () => {
             return
         }
         // If search = '' then show the examples
-        setVisibleSiteTypes(siteTypes?.filter((i) => i.featured))
+        setVisibleSiteTypes(siteTypes?.filter((i) => i?.featured))
         setShowExamples(true)
     }, [siteTypes, search, loading])
 
@@ -87,8 +90,8 @@ export const SiteTypeSelect = () => {
         if (loading) return
         setVisibleSiteTypes(
             showExamples
-                ? siteTypes.filter((i) => i.featured)
-                : siteTypes.sort((a, b) => a.title.localeCompare(b.title)),
+                ? siteTypes?.filter((i) => i?.featured)
+                : siteTypes?.sort((a, b) => a.title.localeCompare(b.title)),
         )
     }, [siteTypes, showExamples, loading])
 
@@ -119,17 +122,20 @@ export const SiteTypeSelect = () => {
         <PageLayout>
             <div>
                 <h1 className="text-3xl text-partner-primary-text mb-4 mt-0">
-                    {__('What is your site about?', 'extendify')}
+                    {__('Welcome to your WordPress site', 'extendify')}
                 </h1>
                 <p className="text-base opacity-70 mb-0">
-                    {__('Search for your site industry.', 'extendify')}
+                    {__(
+                        'Design and launch your site with this guided experience, or head right into the WordPress dashboard if you know your way around.',
+                        'extendify',
+                    )}
                 </p>
             </div>
             <div className="w-full relative max-w-onboarding-sm mx-auto">
                 <div className="sticky bg-white top-10 z-40 pt-9 pb-3 mb-2">
                     <div className="mx-auto flex justify-between mb-4">
                         <h2 className="text-lg m-0 text-gray-900">
-                            {__('Choose an industry', 'extendify')}
+                            {__('What is your site about?', 'extendify')}
                         </h2>
                         {search?.length > 0 ? null : (
                             <button
@@ -142,7 +148,7 @@ export const SiteTypeSelect = () => {
                                 {showExamples
                                     ? sprintf(
                                           __('Show all %s', 'extendify'),
-                                          loading ? '...' : siteTypes.length,
+                                          loading ? '...' : siteTypes?.length,
                                       )
                                     : __('Show less', 'extendify')}
                             </button>
@@ -185,34 +191,38 @@ export const SiteTypeSelect = () => {
                                 }}>
                                 {sprintf(
                                     __('Show all %s', 'extendify'),
-                                    loading ? '...' : siteTypes.length,
+                                    loading ? '...' : siteTypes?.length,
                                 )}
                             </button>
                         </div>
-                        <h2 className="text-lg mt-12 mb-4 text-gray-900">
-                            {__(
-                                "Don't see what you're looking for?",
-                                'extendify',
-                            )}
-                        </h2>
-                        <div className="search-panel flex items-center justify-center relative">
-                            <input
-                                type="text"
-                                className="w-full bg-gray-100 h-12 pl-4 input-focus rounded-none ring-offset-0 focus:bg-white"
-                                value={feedback}
-                                onChange={(e) =>
-                                    useUserSelectionStore
-                                        .getState()
-                                        .setFeedbackMissingSiteType(
-                                            e.target.value,
-                                        )
-                                }
-                                placeholder={__(
-                                    'Describe your site...',
-                                    'extendify',
-                                )}
-                            />
-                        </div>
+                        {showMissingInput() && (
+                            <>
+                                <h2 className="text-lg mt-12 mb-4 text-gray-900">
+                                    {__(
+                                        "Don't see what you're looking for?",
+                                        'extendify',
+                                    )}
+                                </h2>
+                                <div className="search-panel flex items-center justify-center relative">
+                                    <input
+                                        type="text"
+                                        className="w-full bg-gray-100 h-12 pl-4 input-focus rounded-none ring-offset-0 focus:bg-white"
+                                        value={feedback}
+                                        onChange={(e) =>
+                                            useUserSelectionStore
+                                                .getState()
+                                                .setFeedbackMissingSiteType(
+                                                    e.target.value,
+                                                )
+                                        }
+                                        placeholder={__(
+                                            'Describe your site...',
+                                            'extendify',
+                                        )}
+                                    />
+                                </div>
+                            </>
+                        )}
                     </div>
                 )}
             </div>
@@ -241,7 +251,7 @@ const SelectButton = ({ option, selectSiteType }) => {
             onMouseLeave={() => {
                 window.clearTimeout(hoveringTimeout.current)
             }}
-            className="flex border border-gray-800 hover:text-partner-primary-bg focus:text-partner-primary-bg items-center justify-between mb-3 p-4 py-3 relative w-full button-focus">
+            className="flex border border-gray-800 hover:text-partner-primary-bg focus:text-partner-primary-bg items-center justify-between mb-3 p-4 py-3 relative w-full button-focus bg-transparent">
             <span className="text-left">{option.title}</span>
             <LeftArrowIcon />
         </button>

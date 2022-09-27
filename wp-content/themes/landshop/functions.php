@@ -92,26 +92,8 @@ if( !function_exists('landshop_setup_theme') ){
 		* @link https://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
 		*/
 		add_theme_support( 'post-thumbnails' );
-        add_image_size( 'landshop_370x266', 570, 410, true );
-        add_image_size( 'landshop_540x430', 740, 590, true );
-        add_image_size( 'landshop_405x470', 605, 702, true );
-        add_image_size( 'landshop_370x320', 570, 492, true );
-        add_image_size( 'landshop_560x470', 760, 638, true );
-        add_image_size( 'landshop_370x465', 570, 716, true );
-        add_image_size( 'landshop_560x380', 760, 516, true );
-        add_image_size( 'landshop_550x500', 750, 680, true );
-        add_image_size( 'landshop_570x520', 770, 702, true );
-        add_image_size( 'landshop_560x597', 760, 810, true );
-        add_image_size( 'landshop_1170x570', 1370, 660, true );
-        add_image_size( 'landshop_770x600', 970, 756, true );
-        add_image_size( 'landshop_770x600', 970, 756, true );
-        add_image_size( 'landshop_230x223', 330, 320, true );
-        add_image_size( 'landshop_370x425', 570, 656, true );
-        add_image_size( 'landshop_370x240', 570, 370, true );
-        add_image_size( 'landshop_770x450', 970, 566, true );
-        add_image_size( 'landshop_560x430', 760, 584, true );
-        add_image_size( 'landshop_370x350', 570, 540, true );
-        add_image_size( 'landshop_370x278', 570, 428, true );
+        // add_image_size( 'full', 570, 410, true );
+
 
 		// This theme uses wp_nav_menu() in two locations.
 		register_nav_menus( array(
@@ -502,7 +484,7 @@ function landshop_load_ajax_callback() {
         <div class="col-lg-4 col-md-6">
            <div <?php post_class('post-box box-style-2'); ?>>
                 <?php
-                    the_post_thumbnail('landshop_370x266');
+                    the_post_thumbnail('full');
                 ?>
                 <div class="content"> 
                     <h4 class="title"><a href="<?php echo get_the_permalink(); ?>"><?php the_title(); ?></a></h4>
@@ -560,7 +542,7 @@ function landshop_load_posts_ajax_callback() {
             <div class="case_studie_box box-4">
              <?php if(has_post_thumbnail()): ?>
               <figure class="photo">
-                <?php the_post_thumbnail('landshop_370x425'); ?>
+                <?php the_post_thumbnail('full'); ?>
               </figure>
               <?php endif; ?>
               <div class="case_studie_content">

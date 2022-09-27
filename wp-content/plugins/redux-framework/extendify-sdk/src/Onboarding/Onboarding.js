@@ -5,25 +5,25 @@ import { RetryNotice } from '@onboarding/components/RetryNotice'
 import { useDisableWelcomeGuide } from '@onboarding/hooks/useDisableWelcomeGuide'
 import { useBodyScrollLock } from '@onboarding/hooks/useScrollLock'
 import { CreatingSite } from '@onboarding/pages/CreatingSite'
-import { Finished } from '@onboarding/pages/Finished'
 import { useGlobalStore } from '@onboarding/state/Global'
 import { usePagesStore } from '@onboarding/state/Pages'
 import { updateOption } from './api/WPApi'
+import { ExitModal } from './components/ExitModal'
 import { useSentry } from './hooks/useSentry'
 import { useTelemetry } from './hooks/useTelemetry'
 import { NeedsTheme } from './pages/NeedsTheme'
 
 export const Onboarding = () => {
     const [retrying, setRetrying] = useState(false)
-    const { component: CurrentPage } = usePagesStore((state) =>
-        state.currentPageData(),
-    )
+    const CurrentPage = usePagesStore((state) => {
+        const pageData = state.currentPageData()
+        return pageData?.component
+    })
     const { fetcher, fetchData } = usePagesStore((state) =>
         state.nextPageData(),
     )
     const { mutate } = useSWRConfig()
-    const generating = useGlobalStore((state) => state.generating)
-    const generatedPages = useGlobalStore((state) => state.generatedPages)
+    const { generating } = useGlobalStore()
     const [show, setShow] = useState(false)
     const [needsTheme, setNeedsTheme] = useState(false)
     const theme = useSelect((select) => select('core').getCurrentTheme())
@@ -34,8 +34,8 @@ export const Onboarding = () => {
 
     const page = () => {
         if (needsTheme) return <NeedsTheme />
-        if (Object.keys(generatedPages)?.length) return <Finished />
         if (generating) return <CreatingSite />
+        if (!CurrentPage) return null
         return <CurrentPage />
     }
 
@@ -59,11 +59,8 @@ export const Onboarding = () => {
     }, [show])
 
     useEffect(() => {
-        const q = new URLSearchParams(window.location.search)
-        if (['onboarding'].includes(q.get('extendify'))) {
-            setShow(true)
-            updateOption('extendify_launch_loaded', new Date().toISOString())
-        }
+        setShow(true)
+        updateOption('extendify_launch_loaded', new Date().toISOString())
     }, [])
 
     useEffect(() => {
@@ -119,6 +116,7 @@ export const Onboarding = () => {
                 {page()}
             </div>
             {retrying && <RetryNotice />}
+            <ExitModal />
         </SWRConfig>
     )
 }

@@ -48,7 +48,7 @@ get_template_part('components/layouts/site_header'); ?>
                            <div <?php post_class('post-box-simple'); ?>>
                                 <a href="<?php the_permalink(); ?>" class="thumb">
                                     <?php
-                                        the_post_thumbnail('landshop_370x266');
+                                        the_post_thumbnail('full');
                                     ?>
                                 </a>
                                 <div class="content">

@@ -1311,7 +1311,7 @@ msgid "Full"
 msgstr ""
 
 #: inc/theme-option.php:1226
-msgid "landshop_770x450"
+msgid "full"
 msgstr ""
 
 #: inc/theme-option.php:1232
