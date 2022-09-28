@@ -448,7 +448,7 @@ class landshop_Arrow_Button extends Widget_Base {
                     ]
                 ],
                 'selectors' => [
-                    '{{WRAPPER}} .primary_button' => 'text-align: {{VALUE}};',
+                    '{{WRAPPER}} .elementor-widget-container' => 'text-align: {{VALUE}};',
                 ],
                 'separator' =>'before',
             ]

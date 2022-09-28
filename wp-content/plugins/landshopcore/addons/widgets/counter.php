@@ -264,6 +264,40 @@ class landshop_Counter_Widget extends Widget_Base {
 			]
 		);
 
+		
+		$this->add_control(
+			'rating_switch',
+			[
+				'label' => __( 'Rating Switch', 'landshopcore' ),
+				'type' => Controls_Manager::SWITCHER,
+				'default' => 'no',
+				'label_on' => __( 'Show', 'landshopcore' ),
+				'label_off' => __( 'Hide', 'landshopcore' ),
+			]
+		);
+
+		
+		$this->add_control(
+			'feed_rating',
+			[
+				'label' => __( 'Rating', 'landshopcore' ),
+				'type' => Controls_Manager::SLIDER,
+				'default' => [
+					'size' => 3,
+				],
+				'condition' => [
+					'rating_switch' => 'yes',
+				],
+				'range' => [
+					'px' => [
+						'max' => 5,
+						'step' => 0.1,
+					],
+				],
+			]
+		);
+	
+
 		$this->add_control(
 			'view',
 			[
@@ -272,6 +306,7 @@ class landshop_Counter_Widget extends Widget_Base {
 				'default' => 'traditional',
 			]
 		);
+		
 
 		$this->end_controls_section();
 
@@ -915,6 +950,8 @@ class landshop_Counter_Widget extends Widget_Base {
         $this->end_controls_tab(); // Hover Style tab end
         $this->end_controls_tabs();// Box Style tabs end  
         $this->end_controls_section();
+		
+		
 		$this->start_controls_section(
 			'section_number',
 			[
@@ -1009,8 +1046,94 @@ class landshop_Counter_Widget extends Widget_Base {
         $this->end_controls_tab();
         $this->end_controls_tabs();
 		$this->end_controls_section();
-		
-		
+				
+		$this->start_controls_section(
+			'section_star_rating',
+			[
+				'label' => __( 'Rating', 'landshopcore' ),
+				'tab' => Controls_Manager::TAB_STYLE,
+                'condition' => [
+                    'rating_switch' => 'yes',
+                ]
+			]
+		);
+        $this->start_controls_tabs('star_rating_tabs');
+        $this->start_controls_tab( 'star_rating_tab',
+			[
+				'label' => __( 'Normal', 'landshopcore' ),
+			]
+		);
+		$this->add_control(
+			'star_rating_color',
+			[
+				'label' => __( 'Text Color', 'landshopcore' ),
+				'type' => Controls_Manager::COLOR,
+				'selectors' => [
+					'{{WRAPPER}} .feed-rating' => 'color: {{VALUE}};',
+				],
+			]
+		);
+
+        $this->add_responsive_control(
+            'star_rating_margin',
+            [
+                'label' => __( 'Margin', 'landshopcore' ),
+                'type' => Controls_Manager::DIMENSIONS,
+                'size_units' => [ 'px', '%', 'em' ],
+                'selectors' => [
+                    '{{WRAPPER}} .feed-rating' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                ],
+            ]
+        );
+        $this->add_responsive_control(
+            'star_rating_padding',
+            [
+                'label' => __( 'Padding', 'landshopcore' ),
+                'type' => Controls_Manager::DIMENSIONS,
+                'size_units' => [ 'px', '%', 'em' ],
+                'selectors' => [
+                    '{{WRAPPER}} .feed-rating' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                ],
+            ]
+        );      
+		$this->add_control(
+			'star_rating_transition',
+			[
+				'label' => __( 'Transition Duration', 'landshopcore' ),
+				'type' => Controls_Manager::SLIDER,
+				'default' => [
+					'size' => 0.3,
+				],
+				'range' => [
+					'px' => [
+						'max' => 3,
+						'step' => 0.1,
+					],
+				],
+				'selectors' => [
+					'{{WRAPPER}} .feed-rating' => 'transition-duration: {{SIZE}}s',
+				],
+			]
+		);
+        $this->end_controls_tab();
+        $this->start_controls_tab( 'star_rating_tab_hover',
+			[
+				'label' => __( 'Hover', 'landshopcore' ),
+			]
+		);
+		$this->add_control(
+			'star_rating_color_hover',
+			[
+				'label' => __( 'Color', 'landshopcore' ),
+				'type' => Controls_Manager::COLOR,
+				'selectors' => [
+					'{{WRAPPER}}:hover .feed-rating' => 'color: {{VALUE}};',
+				],
+			]
+		);
+        $this->end_controls_tab();
+        $this->end_controls_tabs();
+		$this->end_controls_section();
 		
 		
 		$this->start_controls_section(
@@ -1145,6 +1268,12 @@ class landshop_Counter_Widget extends Widget_Base {
                 <h3 class="landshop-counter-number-wrapper">
                     <span class="landshop-counter-number-prefix"><?php echo $settings['prefix']; ?></span><span <?php echo $this->get_render_attribute_string( 'counter' ); ?>><?php echo $settings['starting_number']; ?></span><span class="landshop-counter-number-suffix"><?php echo $settings['suffix']; ?></span>
                 </h3>
+				<?php if($settings['rating_switch'] == 'yes'): ?>
+					<div class="feed-rating">
+						<span class="star front"></span>
+						<span class="star back" style="width: <?php echo ($settings['feed_rating']['size']*20); ?>%"></span>
+					</div>
+				<?php endif; ?>
                 <?php if ( $settings['title'] ) : ?>
                 <div class="landshop-counter-title">
                     <?php echo $settings['title']; ?>

@@ -926,25 +926,25 @@ Popular-post-widget
 
 
 /*--- Testimonial-Slider ---*/
-.testimonial-box .feed-rating {
+.feed-rating {
     display: inline-block;
     position: relative;
     color: #FDB12E;
 }
 
-.testimonial-box .feed-rating .star {
+.feed-rating .star {
     font-family: star;
 }
 
-.testimonial-box .feed-rating .star.front:before {
+.feed-rating .star.front:before {
     content: "s s s s s";
 }
 
-.testimonial-box .feed-rating .star.back:before {
+.feed-rating .star.back:before {
     content: "S S S S S";
 }
 
-.testimonial-box .feed-rating .back {
+.feed-rating .back {
     position: absolute;
     left: 0;
     top: 0;

@@ -1,0 +1,174 @@
+2022-09-28T06:58:18+00:00 CRITICAL Allowed memory size of 134217728 bytes exhausted (tried to allocate 638976 bytes) in C:\wamp64\www\landshop\wp-includes\wp-db.php on line 2135
+
+2022-09-28T06:58:47+00:00 CRITICAL Allowed memory size of 134217728 bytes exhausted (tried to allocate 638976 bytes) in C:\wamp64\www\landshop\wp-includes\wp-db.php on line 2135
+
+2022-09-28T07:03:42+00:00 CRITICAL Allowed memory size of 134217728 bytes exhausted (tried to allocate 638976 bytes) in C:\wamp64\www\landshop\wp-includes\wp-db.php on line 2135
+
+2022-09-28T07:06:09+00:00 CRITICAL Allowed memory size of 134217728 bytes exhausted (tried to allocate 638976 bytes) in C:\wamp64\www\landshop\wp-includes\wp-db.php on line 2135
+
+2022-09-28T07:06:20+00:00 CRITICAL Allowed memory size of 134217728 bytes exhausted (tried to allocate 638976 bytes) in C:\wamp64\www\landshop\wp-includes\wp-db.php on line 2135
+
+2022-09-28T07:07:57+00:00 CRITICAL Allowed memory size of 134217728 bytes exhausted (tried to allocate 638976 bytes) in C:\wamp64\www\landshop\wp-includes\wp-db.php on line 2135
+
+2022-09-28T07:08:04+00:00 CRITICAL Allowed memory size of 134217728 bytes exhausted (tried to allocate 638976 bytes) in C:\wamp64\www\landshop\wp-includes\wp-db.php on line 2135
+
+2022-09-28T07:09:10+00:00 CRITICAL Allowed memory size of 134217728 bytes exhausted (tried to allocate 638976 bytes) in C:\wamp64\www\landshop\wp-includes\wp-db.php on line 2135
+
+2022-09-28T08:27:14+00:00 CRITICAL syntax error, unexpected '.' in C:\wamp64\www\landshop\wp-content\plugins\landshopcore\addons\widgets\product.php on line 1073
+
+2022-09-28T08:33:06+00:00 CRITICAL Uncaught Error: Call to a member function have_posts() on null in C:\wamp64\www\landshop\wp-content\plugins\landshopcore\addons\widgets\product.php:826
+Stack trace:
+#0 C:\wamp64\www\landshop\wp-content\plugins\elementor\includes\base\controls-stack.php(2249): Elementor\landshop_product_Widget->render()
+#1 C:\wamp64\www\landshop\wp-content\plugins\elementor\includes\base\widget-base.php(609): Elementor\Controls_Stack->render_by_mode()
+#2 C:\wamp64\www\landshop\wp-content\plugins\elementor\core\base\document.php(292): Elementor\Widget_Base->render_content()
+#3 C:\wamp64\www\landshop\wp-content\plugins\elementor\includes\managers\widgets.php(426): Elementor\Core\Base\Document->render_element(Array)
+#4 [internal function]: Elementor\Widgets_Manager->ajax_render_widget(Array, Object(Elementor\Core\Common\Modules\Ajax\Module))
+#5 C:\wamp64\www\landshop\wp-content\plugins\elementor\core\common\modules\ajax\module.php(171): call_user_func(Array, Array, Object(Elementor\Core\Common\Modules\Ajax\Module))
+#6 C:\wamp64\w in C:\wamp64\www\landshop\wp-content\plugins\landshopcore\addons\widgets\product.php on line 826
+
+2022-09-28T08:33:24+00:00 CRITICAL Allowed memory size of 134217728 bytes exhausted (tried to allocate 638976 bytes) in C:\wamp64\www\landshop\wp-includes\wp-db.php on line 2135
+
+2022-09-28T08:34:08+00:00 CRITICAL Uncaught Error: Call to a member function have_posts() on null in C:\wamp64\www\landshop\wp-content\plugins\landshopcore\addons\widgets\product.php:826
+Stack trace:
+#0 C:\wamp64\www\landshop\wp-content\plugins\elementor\includes\base\controls-stack.php(2249): Elementor\landshop_product_Widget->render()
+#1 C:\wamp64\www\landshop\wp-content\plugins\elementor\includes\base\widget-base.php(609): Elementor\Controls_Stack->render_by_mode()
+#2 C:\wamp64\www\landshop\wp-content\plugins\elementor\includes\base\widget-base.php(673): Elementor\Widget_Base->render_content()
+#3 C:\wamp64\www\landshop\wp-content\plugins\elementor\includes\db.php(202): Elementor\Widget_Base->render_plain_content()
+#4 C:\wamp64\www\landshop\wp-content\plugins\elementor\includes\db.php(208): Elementor\DB->render_element_plain_content(Array)
+#5 C:\wamp64\www\landshop\wp-content\plugins\elementor\includes\db.php(208): Elementor\DB->render_element_plain_content(Array)
+#6 C:\wamp64\www\landshop\wp-content\plugins\elementor\includes\db.php(558): E in C:\wamp64\www\landshop\wp-content\plugins\landshopcore\addons\widgets\product.php on line 826
+
+2022-09-28T08:34:49+00:00 CRITICAL Allowed memory size of 134217728 bytes exhausted (tried to allocate 638976 bytes) in C:\wamp64\www\landshop\wp-includes\wp-db.php on line 2135
+
+2022-09-28T08:34:54+00:00 CRITICAL Uncaught Error: Call to a member function have_posts() on null in C:\wamp64\www\landshop\wp-content\plugins\landshopcore\addons\widgets\product.php:826
+Stack trace:
+#0 C:\wamp64\www\landshop\wp-content\plugins\elementor\includes\base\controls-stack.php(2249): Elementor\landshop_product_Widget->render()
+#1 C:\wamp64\www\landshop\wp-content\plugins\elementor\includes\base\widget-base.php(609): Elementor\Controls_Stack->render_by_mode()
+#2 C:\wamp64\www\landshop\wp-content\plugins\elementor\includes\base\widget-base.php(673): Elementor\Widget_Base->render_content()
+#3 C:\wamp64\www\landshop\wp-content\plugins\elementor\includes\db.php(202): Elementor\Widget_Base->render_plain_content()
+#4 C:\wamp64\www\landshop\wp-content\plugins\elementor\includes\db.php(208): Elementor\DB->render_element_plain_content(Array)
+#5 C:\wamp64\www\landshop\wp-content\plugins\elementor\includes\db.php(208): Elementor\DB->render_element_plain_content(Array)
+#6 C:\wamp64\www\landshop\wp-content\plugins\elementor\includes\db.php(558): E in C:\wamp64\www\landshop\wp-content\plugins\landshopcore\addons\widgets\product.php on line 826
+
+2022-09-28T08:35:16+00:00 CRITICAL Uncaught Error: Call to a member function have_posts() on null in C:\wamp64\www\landshop\wp-content\plugins\landshopcore\addons\widgets\product.php:826
+Stack trace:
+#0 C:\wamp64\www\landshop\wp-content\plugins\elementor\includes\base\controls-stack.php(2249): Elementor\landshop_product_Widget->render()
+#1 C:\wamp64\www\landshop\wp-content\plugins\elementor\includes\base\widget-base.php(609): Elementor\Controls_Stack->render_by_mode()
+#2 C:\wamp64\www\landshop\wp-content\plugins\elementor\includes\base\widget-base.php(673): Elementor\Widget_Base->render_content()
+#3 C:\wamp64\www\landshop\wp-content\plugins\elementor\includes\db.php(202): Elementor\Widget_Base->render_plain_content()
+#4 C:\wamp64\www\landshop\wp-content\plugins\elementor\includes\db.php(208): Elementor\DB->render_element_plain_content(Array)
+#5 C:\wamp64\www\landshop\wp-content\plugins\elementor\includes\db.php(208): Elementor\DB->render_element_plain_content(Array)
+#6 C:\wamp64\www\landshop\wp-content\plugins\elementor\includes\db.php(558): E in C:\wamp64\www\landshop\wp-content\plugins\landshopcore\addons\widgets\product.php on line 826
+
+2022-09-28T08:35:17+00:00 CRITICAL Uncaught Error: Call to a member function have_posts() on null in C:\wamp64\www\landshop\wp-content\plugins\landshopcore\addons\widgets\product.php:826
+Stack trace:
+#0 C:\wamp64\www\landshop\wp-content\plugins\elementor\includes\base\controls-stack.php(2249): Elementor\landshop_product_Widget->render()
+#1 C:\wamp64\www\landshop\wp-content\plugins\elementor\includes\base\widget-base.php(609): Elementor\Controls_Stack->render_by_mode()
+#2 C:\wamp64\www\landshop\wp-content\plugins\elementor\includes\base\widget-base.php(673): Elementor\Widget_Base->render_content()
+#3 C:\wamp64\www\landshop\wp-content\plugins\elementor\includes\db.php(202): Elementor\Widget_Base->render_plain_content()
+#4 C:\wamp64\www\landshop\wp-content\plugins\elementor\includes\db.php(208): Elementor\DB->render_element_plain_content(Array)
+#5 C:\wamp64\www\landshop\wp-content\plugins\elementor\includes\db.php(208): Elementor\DB->render_element_plain_content(Array)
+#6 C:\wamp64\www\landshop\wp-content\plugins\elementor\includes\db.php(558): E in C:\wamp64\www\landshop\wp-content\plugins\landshopcore\addons\widgets\product.php on line 826
+
+2022-09-28T09:10:02+00:00 CRITICAL Uncaught Error: Call to a member function have_posts() on null in C:\wamp64\www\landshop\wp-content\plugins\landshopcore\addons\widgets\product.php:826
+Stack trace:
+#0 C:\wamp64\www\landshop\wp-content\plugins\elementor\includes\base\controls-stack.php(2249): Elementor\landshop_product_Widget->render()
+#1 C:\wamp64\www\landshop\wp-content\plugins\elementor\includes\base\widget-base.php(609): Elementor\Controls_Stack->render_by_mode()
+#2 C:\wamp64\www\landshop\wp-content\plugins\elementor\includes\base\widget-base.php(733): Elementor\Widget_Base->render_content()
+#3 C:\wamp64\www\landshop\wp-content\plugins\elementor\includes\base\element-base.php(534): Elementor\Widget_Base->get_raw_data(true)
+#4 C:\wamp64\www\landshop\wp-content\plugins\elementor\includes\base\element-base.php(534): Elementor\Element_Base->get_raw_data(true)
+#5 C:\wamp64\www\landshop\wp-content\plugins\elementor\core\base\document.php(957): Elementor\Element_Base->get_raw_data(true)
+#6 C:\wamp64\www\landshop\wp-content\plugins\elementor\core in C:\wamp64\www\landshop\wp-content\plugins\landshopcore\addons\widgets\product.php on line 826
+
+2022-09-28T09:11:53+00:00 CRITICAL Allowed memory size of 134217728 bytes exhausted (tried to allocate 638976 bytes) in C:\wamp64\www\landshop\wp-includes\wp-db.php on line 2135
+
+2022-09-28T09:12:40+00:00 CRITICAL Allowed memory size of 134217728 bytes exhausted (tried to allocate 638976 bytes) in C:\wamp64\www\landshop\wp-includes\wp-db.php on line 2135
+
+2022-09-28T09:13:52+00:00 CRITICAL Uncaught Error: Call to undefined function Elementor\has_product_thumbnail() in C:\wamp64\www\landshop\wp-content\plugins\landshopcore\addons\widgets\product.php:894
+Stack trace:
+#0 C:\wamp64\www\landshop\wp-content\plugins\landshopcore\addons\widgets\product.php(866): Elementor\landshop_product_Widget->blog_style_1(Array)
+#1 C:\wamp64\www\landshop\wp-content\plugins\elementor\includes\base\controls-stack.php(2249): Elementor\landshop_product_Widget->render()
+#2 C:\wamp64\www\landshop\wp-content\plugins\elementor\includes\base\widget-base.php(609): Elementor\Controls_Stack->render_by_mode()
+#3 C:\wamp64\www\landshop\wp-content\plugins\elementor\includes\base\widget-base.php(750): Elementor\Widget_Base->render_content()
+#4 C:\wamp64\www\landshop\wp-content\plugins\elementor\includes\base\element-base.php(447): Elementor\Widget_Base->print_content()
+#5 C:\wamp64\www\landshop\wp-content\plugins\elementor\includes\base\element-base.php(787): Elementor\Element_Base->print_element()
+#6 C:\wamp64\www\landshop\wp-con in C:\wamp64\www\landshop\wp-content\plugins\landshopcore\addons\widgets\product.php on line 894
+
+2022-09-28T09:14:23+00:00 CRITICAL Uncaught Error: Call to undefined function Elementor\has_product_thumbnail() in C:\wamp64\www\landshop\wp-content\plugins\landshopcore\addons\widgets\product.php:898
+Stack trace:
+#0 C:\wamp64\www\landshop\wp-content\plugins\landshopcore\addons\widgets\product.php(870): Elementor\landshop_product_Widget->blog_style_1(Array)
+#1 C:\wamp64\www\landshop\wp-content\plugins\elementor\includes\base\controls-stack.php(2249): Elementor\landshop_product_Widget->render()
+#2 C:\wamp64\www\landshop\wp-content\plugins\elementor\includes\base\widget-base.php(609): Elementor\Controls_Stack->render_by_mode()
+#3 C:\wamp64\www\landshop\wp-content\plugins\elementor\includes\base\widget-base.php(750): Elementor\Widget_Base->render_content()
+#4 C:\wamp64\www\landshop\wp-content\plugins\elementor\includes\base\element-base.php(447): Elementor\Widget_Base->print_content()
+#5 C:\wamp64\www\landshop\wp-content\plugins\elementor\includes\base\element-base.php(787): Elementor\Element_Base->print_element()
+#6 C:\wamp64\www\landshop\wp-con in C:\wamp64\www\landshop\wp-content\plugins\landshopcore\addons\widgets\product.php on line 898
+
+2022-09-28T09:15:54+00:00 CRITICAL Uncaught Error: Call to undefined function Elementor\the_product_thumbnail() in C:\wamp64\www\landshop\wp-content\plugins\landshopcore\addons\widgets\product.php:899
+Stack trace:
+#0 C:\wamp64\www\landshop\wp-content\plugins\landshopcore\addons\widgets\product.php(870): Elementor\landshop_product_Widget->blog_style_1(Array)
+#1 C:\wamp64\www\landshop\wp-content\plugins\elementor\includes\base\controls-stack.php(2249): Elementor\landshop_product_Widget->render()
+#2 C:\wamp64\www\landshop\wp-content\plugins\elementor\includes\base\widget-base.php(609): Elementor\Controls_Stack->render_by_mode()
+#3 C:\wamp64\www\landshop\wp-content\plugins\elementor\includes\base\widget-base.php(750): Elementor\Widget_Base->render_content()
+#4 C:\wamp64\www\landshop\wp-content\plugins\elementor\includes\base\element-base.php(447): Elementor\Widget_Base->print_content()
+#5 C:\wamp64\www\landshop\wp-content\plugins\elementor\includes\base\element-base.php(787): Elementor\Element_Base->print_element()
+#6 C:\wamp64\www\landshop\wp-con in C:\wamp64\www\landshop\wp-content\plugins\landshopcore\addons\widgets\product.php on line 899
+
+2022-09-28T09:19:07+00:00 CRITICAL Allowed memory size of 134217728 bytes exhausted (tried to allocate 643072 bytes) in C:\wamp64\www\landshop\wp-includes\wp-db.php on line 2135
+
+2022-09-28T09:20:13+00:00 CRITICAL Allowed memory size of 134217728 bytes exhausted (tried to allocate 638976 bytes) in C:\wamp64\www\landshop\wp-includes\wp-db.php on line 2135
+
+2022-09-28T09:26:03+00:00 CRITICAL Allowed memory size of 134217728 bytes exhausted (tried to allocate 638976 bytes) in C:\wamp64\www\landshop\wp-includes\wp-db.php on line 2135
+
+2022-09-28T09:26:28+00:00 CRITICAL Allowed memory size of 134217728 bytes exhausted (tried to allocate 638976 bytes) in C:\wamp64\www\landshop\wp-includes\wp-db.php on line 2135
+
+2022-09-28T09:37:19+00:00 CRITICAL Uncaught Error: Call to undefined function Elementor\get_price_html() in C:\wamp64\www\landshop\wp-content\plugins\landshopcore\addons\widgets\product.php:907
+Stack trace:
+#0 C:\wamp64\www\landshop\wp-content\plugins\landshopcore\addons\widgets\product.php(868): Elementor\landshop_product_Widget->blog_style_1(Array)
+#1 C:\wamp64\www\landshop\wp-content\plugins\elementor\includes\base\controls-stack.php(2249): Elementor\landshop_product_Widget->render()
+#2 C:\wamp64\www\landshop\wp-content\plugins\elementor\includes\base\widget-base.php(609): Elementor\Controls_Stack->render_by_mode()
+#3 C:\wamp64\www\landshop\wp-content\plugins\elementor\includes\base\widget-base.php(750): Elementor\Widget_Base->render_content()
+#4 C:\wamp64\www\landshop\wp-content\plugins\elementor\includes\base\element-base.php(447): Elementor\Widget_Base->print_content()
+#5 C:\wamp64\www\landshop\wp-content\plugins\elementor\includes\base\element-base.php(787): Elementor\Element_Base->print_element()
+#6 C:\wamp64\www\landshop\wp-content\pl in C:\wamp64\www\landshop\wp-content\plugins\landshopcore\addons\widgets\product.php on line 907
+
+2022-09-28T09:38:17+00:00 CRITICAL Uncaught Error: Call to a member function get_price_html() on null in C:\wamp64\www\landshop\wp-content\plugins\landshopcore\addons\widgets\product.php:907
+Stack trace:
+#0 C:\wamp64\www\landshop\wp-content\plugins\landshopcore\addons\widgets\product.php(868): Elementor\landshop_product_Widget->blog_style_1(Array)
+#1 C:\wamp64\www\landshop\wp-content\plugins\elementor\includes\base\controls-stack.php(2249): Elementor\landshop_product_Widget->render()
+#2 C:\wamp64\www\landshop\wp-content\plugins\elementor\includes\base\widget-base.php(609): Elementor\Controls_Stack->render_by_mode()
+#3 C:\wamp64\www\landshop\wp-content\plugins\elementor\includes\base\widget-base.php(750): Elementor\Widget_Base->render_content()
+#4 C:\wamp64\www\landshop\wp-content\plugins\elementor\includes\base\element-base.php(447): Elementor\Widget_Base->print_content()
+#5 C:\wamp64\www\landshop\wp-content\plugins\elementor\includes\base\element-base.php(787): Elementor\Element_Base->print_element()
+#6 C:\wamp64\www\landshop\wp-content\plugi in C:\wamp64\www\landshop\wp-content\plugins\landshopcore\addons\widgets\product.php on line 907
+
+2022-09-28T09:38:30+00:00 CRITICAL Uncaught Error: Call to a member function get_price_html() on null in C:\wamp64\www\landshop\wp-content\plugins\landshopcore\addons\widgets\product.php:907
+Stack trace:
+#0 C:\wamp64\www\landshop\wp-content\plugins\landshopcore\addons\widgets\product.php(868): Elementor\landshop_product_Widget->blog_style_1(Array)
+#1 C:\wamp64\www\landshop\wp-content\plugins\elementor\includes\base\controls-stack.php(2249): Elementor\landshop_product_Widget->render()
+#2 C:\wamp64\www\landshop\wp-content\plugins\elementor\includes\base\widget-base.php(609): Elementor\Controls_Stack->render_by_mode()
+#3 C:\wamp64\www\landshop\wp-content\plugins\elementor\includes\base\widget-base.php(750): Elementor\Widget_Base->render_content()
+#4 C:\wamp64\www\landshop\wp-content\plugins\elementor\includes\base\element-base.php(447): Elementor\Widget_Base->print_content()
+#5 C:\wamp64\www\landshop\wp-content\plugins\elementor\includes\base\element-base.php(787): Elementor\Element_Base->print_element()
+#6 C:\wamp64\www\landshop\wp-content\plugi in C:\wamp64\www\landshop\wp-content\plugins\landshopcore\addons\widgets\product.php on line 907
+
+2022-09-28T09:40:52+00:00 CRITICAL Uncaught Error: Call to a member function get_price_html() on null in C:\wamp64\www\landshop\wp-content\themes\landshop\woocommerce\loop\price.php:51
+Stack trace:
+#0 C:\wamp64\www\landshop\wp-content\plugins\woocommerce\includes\wc-core-functions.php(345): include()
+#1 C:\wamp64\www\landshop\wp-content\plugins\woocommerce\includes\wc-template-functions.php(1389): wc_get_template('loop/price.php')
+#2 C:\wamp64\www\landshop\wp-content\plugins\landshopcore\addons\widgets\product.php(907): woocommerce_template_loop_price()
+#3 C:\wamp64\www\landshop\wp-content\plugins\landshopcore\addons\widgets\product.php(868): Elementor\landshop_product_Widget->blog_style_1(Array)
+#4 C:\wamp64\www\landshop\wp-content\plugins\elementor\includes\base\controls-stack.php(2249): Elementor\landshop_product_Widget->render()
+#5 C:\wamp64\www\landshop\wp-content\plugins\elementor\includes\base\widget-base.php(609): Elementor\Controls_Stack->render_by_mode()
+#6 C:\wamp64\www\landshop\wp-content\plugins\elementor\includes\base\widget-base in C:\wamp64\www\landshop\wp-content\themes\landshop\woocommerce\loop\price.php on line 51
+
+2022-09-28T09:41:13+00:00 CRITICAL Uncaught Error: Call to a member function get_price_html() on null in C:\wamp64\www\landshop\wp-content\themes\landshop\woocommerce\loop\price.php:51
+Stack trace:
+#0 C:\wamp64\www\landshop\wp-content\plugins\woocommerce\includes\wc-core-functions.php(345): include()
+#1 C:\wamp64\www\landshop\wp-content\plugins\woocommerce\includes\wc-template-functions.php(1389): wc_get_template('loop/price.php')
+#2 C:\wamp64\www\landshop\wp-content\plugins\landshopcore\addons\widgets\product.php(907): woocommerce_template_loop_price()
+#3 C:\wamp64\www\landshop\wp-content\plugins\landshopcore\addons\widgets\product.php(868): Elementor\landshop_product_Widget->product_style_1(Array)
+#4 C:\wamp64\www\landshop\wp-content\plugins\elementor\includes\base\controls-stack.php(2249): Elementor\landshop_product_Widget->render()
+#5 C:\wamp64\www\landshop\wp-content\plugins\elementor\includes\base\widget-base.php(609): Elementor\Controls_Stack->render_by_mode()
+#6 C:\wamp64\www\landshop\wp-content\plugins\elementor\includes\base\widget-b in C:\wamp64\www\landshop\wp-content\themes\landshop\woocommerce\loop\price.php on line 51
+

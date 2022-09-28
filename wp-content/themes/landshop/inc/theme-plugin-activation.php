@@ -56,11 +56,6 @@ function landshop_register_required_plugins() {
             'required'  => false
         ),
        array(
-            'name'      => 'TI WooCommerce Wishlist',
-            'slug'      => 'ti-woocommerce-wishlist',
-            'required'  => false
-        ),
-       array(
             'name'      => 'WooCommerce',
             'slug'      => 'woocommerce',
             'required'  => false

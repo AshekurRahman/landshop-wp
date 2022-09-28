@@ -9,9 +9,6 @@ if ( class_exists( 'WooCommerce' ) ) {
         if(!empty($button_label) && !empty($button_url)){
             echo '<a class="primary_button gray_button" target="_blank" href="'.esc_url($button_url).'">'.esc_html($button_label).'</a>';
         }
-        if(shortcode_exists('ti_wishlists_addtowishlist')){
-            echo do_shortcode('[ti_wishlists_addtowishlist]');
-        }        
         echo '</div>';
     }
     add_action( 'wp_footer', 'landshop_quantity_plus_minus' );

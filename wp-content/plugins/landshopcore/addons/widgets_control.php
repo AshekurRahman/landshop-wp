@@ -52,6 +52,10 @@
                 require_once __DIR__ . '/widgets/post-slider.php';
             }
             
+            if ( file_exists( __DIR__ . '/widgets/product.php' ) ) {
+                require_once __DIR__ . '/widgets/product.php';
+            }
+            
             if ( file_exists( __DIR__ . '/widgets/team.php' ) ) {
                 require_once __DIR__ . '/widgets/team.php';
             }
