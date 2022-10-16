@@ -1,0 +1,399 @@
+@media (min-width:1200px) {
+
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl {
+        max-width: 1170px;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .sticky.admin-bar .nav_area {
+        top: 30px;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .left-align.post-box {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+
+    .small-box.post-box .post_media {
+        margin-bottom: 23px;
+        max-height: 186px;
+    }
+
+    .left-align.post-box .post_media {
+        min-width: 170px;
+        height: 160px;
+        margin-right: 30px;
+        margin-bottom: 0px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+
+    .left-align.post-box .post_media img {
+        max-width: inherit;
+        height: 100%;
+        width: auto;
+
+    }
+
+    .left-align.post-box .title,
+    .small-box.post-box .title {
+        font-size: calc(var(--body-font-size) * 1.1);
+        line-height: 1.4em;
+        margin-bottom: 10px;
+    }
+
+    .small-box.post-box .title a {
+        line-height: 1.4em;
+    }
+
+    .left-align.post-box .desc,
+    .small-box.post-box .desc {
+        font-size: calc(var(--body-font-size) - 4px);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
+
+    .big-box.post-box .desc {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 5;
+        -webkit-line-clamp: 5;
+        -webkit-box-orient: vertical;
+    }
+}
+
+
+@media only screen and (min-width: 1400px) {
+    .left-align.post-box .post_media {
+        height: 185px;
+        min-width: 200px;
+    }
+}
+
+@media only screen and (max-width: 1500px) {
+    :root {
+        --section-padding: 150px;
+    }
+
+    .nav_area .nav_menu .nav > li {
+        padding: 0 18px;
+    }
+
+    .nav_area .primary_button {
+        min-height: 48px;
+    }
+}
+
+@media only screen and (max-width: 1300px) {
+    :root {
+        --body-font-size: 18px;
+    }
+
+    .nav_area .nav_menu .nav > li {
+        padding: 0 16px;
+    }
+
+    .page-links .page-numbers,
+    .nav-links .page-numbers {
+        width: 40px;
+        height: 40px;
+        line-height: 38px;
+    }
+
+    .header_search_form form {
+        padding: 100px 0;
+    }
+
+    .error_page .error_desc {
+        font-size: 56px;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+
+    .button,
+    .primary_button {
+        padding: 18px 40px;
+    }
+
+
+    #nav_mini_cart .cart_header .cart_close,
+    .header_search_form .close_action {
+        width: 40px;
+        height: 40px;
+        line-height: 38px;
+        font-size: 14px;
+        bottom: -20px;
+    }
+
+    #nav_mini_cart .cart_header .cart_close {
+        bottom: 50px;
+        left: -20px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    :root {
+        --body-font-size: 16px;
+        --section-padding: 120px;
+    }
+
+    .has-post-thumbnail .event-sidebar {
+        margin-top: 60px;
+    }
+
+    .error_page .error_desc {
+        font-size: 46px;
+    }
+
+    .header_search_form form {
+        padding: 80px 0;
+    }
+
+    .nav_area .nav-phone {
+        font-size: 16px;
+    }
+
+    .nav_area .nav-phone img {
+        width: 28px;
+    }
+
+    .nav_tools {
+        margin-right: -20px;
+    }
+
+    .nav_tools > * {
+        margin-right: 20px;
+    }
+
+    .navbar-style-3 .nav_area {
+        max-width: calc(100% - 30px);
+        top: 10px;
+    }
+
+    .empty-space-page .empty-title {
+        font-size: calc(var(--body-font-size) * 3);
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    :root {
+        --navbar-height: 100px;
+    }
+
+    .site-header .page_title {
+        font-size: calc(var(--body-font-size) * 2);
+    }
+
+    /*----- Nav_Area_Action_Button -----*/
+    .product_list_widget .mini_cart_item a img {
+        max-width: 80px;
+        min-width: 80px;
+    }
+
+    .header_search_form .form_control {
+        font-size: 22px;
+        line-height: 40px;
+    }
+
+    .header_search_form .search_submit {
+        right: 10px;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+    }
+
+    /*----- post-box -----*/
+    .single_navigation .content {
+        display: none;
+    }
+
+    .single_navigation .nav-previous a {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start;
+    }
+
+    .single_navigation .nav-next a {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: end;
+        -ms-flex-align: end;
+        align-items: flex-end;
+    }
+
+    .single_navigation .icon {
+        margin-bottom: 0px;
+    }
+
+    .comments_list .comment-body {
+        padding-left: 0;
+        margin-bottom: 25px;
+    }
+
+    .comments_list .comment-body .comment-meta .comment-author img {
+        position: static;
+        display: block;
+        margin-bottom: 15px;
+    }
+
+    .comments_list .children {
+        padding-left: 30px;
+        margin-left: 0;
+    }
+
+    .single_navigation {
+        padding: 30px 0;
+    }
+
+    .single_navigation .title {
+        font-size: 16px;
+    }
+
+    .single_navigation .nav-links {
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start;
+    }
+
+    .single_navigation .label {
+        font-size: 12px;
+    }
+
+    .single_navigation a .icon {
+        width: 50px;
+        min-width: 50px;
+        height: 50px;
+        line-height: 50px;
+    }
+
+    .event-details .title {
+        font-size: 26px;
+    }
+
+    .event-details .cats {
+        font-size: 12px;
+    }
+
+    .event-widget .widget-title {
+        font-size: 18px;
+    }
+
+    .comment-respond .comment-reply-title,
+    .comment_list_area .comments_title {
+        font-size: 24px;
+    }
+
+    .nav_area .nav-phone {
+        display: none;
+    }
+
+    .nav_area .nav_logo {
+        font-size: 24px;
+    }
+
+    .nav_area .nav_logo .main_logo {
+        width: 150px;
+    }
+
+    .nav_tools {
+        margin-right: -15px;
+    }
+
+    .nav_tools > * {
+        margin-right: 15px;
+    }
+
+    .nav_tools .tools_icon .shop_count {
+        font-size: 8px;
+    }
+
+    .nav_tools .tools_icon .txt {
+        display: none;
+    }
+
+    .post-box .title {
+        font-size: calc(var(--body-font-size) * 1.4);
+    }
+
+    .empty-space-page .empty-title {
+        font-size: calc(var(--body-font-size) * 2);
+    }
+
+    .preloader .animation-preloader .txt-loading,
+    .preloader .animation-preloader .txt-loading .letters-loading:before {
+        font-size: 52px;
+        line-height: 52px;
+    }
+}
+
+
+@media only screen and (max-width: 580px) {
+    .single_navigation .title {
+        font-size: 16px;
+    }
+
+    .single_author_info {
+        padding: 20px;
+    }
+
+    .single_author_info .header_info {
+        margin-bottom: 15px;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start;
+    }
+
+    .single_author_info .author_pic {
+        margin-bottom: 15px;
+        width: 80px;
+        height: 80px;
+    }
+
+    .single_author_info .author_name {
+        font-size: 16px;
+    }
+
+    .main-sidebar .widget {
+        margin-bottom: 25px;
+        padding: 25px;
+    }
+
+    .wp-block-group h2 {
+        margin-bottom: 15px;
+    }
+
+    .nav_area .primary_button {
+        display: none;
+    }
+}

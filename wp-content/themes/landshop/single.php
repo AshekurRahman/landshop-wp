@@ -32,8 +32,8 @@ get_template_part('components/layouts/site_header');
                          // End the loop.
 
                         //Populer post view count function
-                        if( function_exists('landshop_set_post_views') ){
-                            landshop_set_post_views(get_the_ID());
+                        if( function_exists('codexse_set_post_views') ){
+                            codexse_set_post_views(get_the_ID());
                         }
                     ?>
                         <div class="single_tags_share">

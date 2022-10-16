@@ -630,10 +630,10 @@ h6 {
 
 .search_form .search_submit {
     position: absolute;
-    right: 6px;
-    top: 6px;
-    width: 52px;
-    height: 52px;
+    right: 5px;
+    top: 5px;
+    width: 50px;
+    height: 50px;
     line-height: 0px;
     text-align: center;
     color: rgb(var(--text-color));
@@ -1226,7 +1226,8 @@ h6 {
     border-radius: 6px;
     color: rgba(var(--text-color), 1);
     overflow: hidden;
-    padding: 30px;;
+    padding: 30px;
+    ;
 
     --heading-color: 255, 255, 255;
     --text-color: 159, 161, 165;
@@ -1609,8 +1610,9 @@ h6 {
 /*----- 16. Sidebar_Widget_CSS -----*/
 .main-sidebar .widget:not(.widget_search) {
     padding: 40px 35px;
-    background-color: rgb(var(--gray-color));
+    background-color: rgb(var(--white-color));
     border-radius: 6px;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.03);
 }
 
 .main-sidebar .widget {

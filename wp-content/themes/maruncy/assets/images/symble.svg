@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" id="ic-eye">
+        <path d="M15.5799 11.9999C15.5799 13.9799 13.9799 15.5799 11.9999 15.5799C10.0199 15.5799 8.41992 13.9799 8.41992 11.9999C8.41992 10.0199 10.0199 8.41992 11.9999 8.41992C13.9799 8.41992 15.5799 10.0199 15.5799 11.9999Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M11.9998 20.2697C15.5298 20.2697 18.8198 18.1897 21.1098 14.5897C22.0098 13.1797 22.0098 10.8097 21.1098 9.39973C18.8198 5.79973 15.5298 3.71973 11.9998 3.71973C8.46984 3.71973 5.17984 5.79973 2.88984 9.39973C1.98984 10.8097 1.98984 13.1797 2.88984 14.5897C5.17984 18.1897 8.46984 20.2697 11.9998 20.2697Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" id="ic-tags">
+        <path d="M18.63 7.15014C18.67 7.76014 18.62 8.45014 18.5 9.22014L17.77 13.9101C17.15 17.8201 15.34 19.1401 11.43 18.5301L6.73999 17.7901C5.38999 17.5801 4.34999 17.2201 3.58999 16.6801C2.13999 15.6701 1.71999 14.0101 2.11999 11.4501L2.85999 6.76014C3.47999 2.85014 5.28999 1.53014 9.19999 2.14014L13.89 2.88014C17.03 3.37014 18.5 4.65014 18.63 7.15014Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M20.4998 13.4704L18.9998 17.9804C17.7498 21.7404 15.7498 22.7404 11.9898 21.4904L7.47984 19.9904C5.20984 19.2404 3.94984 18.2004 3.58984 16.6804C4.34984 17.2204 5.38984 17.5804 6.73984 17.7904L11.4298 18.5304C15.3398 19.1404 17.1498 17.8204 17.7698 13.9104L18.4998 9.22039C18.6198 8.45039 18.6698 7.76039 18.6298 7.15039C21.0198 8.42039 21.5398 10.3404 20.4998 13.4704Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M8.24 8.98C9.20098 8.98 9.98 8.20098 9.98 7.24C9.98 6.27902 9.20098 5.5 8.24 5.5C7.27902 5.5 6.5 6.27902 6.5 7.24C6.5 8.20098 7.27902 8.98 8.24 8.98Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" id="ic-clock">
+        <path d="M22 12C22 17.52 17.52 22 12 22C6.48 22 2 17.52 2 12C2 6.48 6.48 2 12 2C17.52 2 22 6.48 22 12Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M15.7109 15.1798L12.6109 13.3298C12.0709 13.0098 11.6309 12.2398 11.6309 11.6098V7.50977" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" id="ic-edit">
+        <path d="M13.2594 3.60022L5.04936 12.2902C4.73936 12.6202 4.43936 13.2702 4.37936 13.7202L4.00936 16.9602C3.87936 18.1302 4.71936 18.9302 5.87936 18.7302L9.09936 18.1802C9.54936 18.1002 10.1794 17.7702 10.4894 17.4302L18.6994 8.74022C20.1194 7.24022 20.7594 5.53022 18.5494 3.44022C16.3494 1.37022 14.6794 2.10022 13.2594 3.60022Z" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M11.8906 5.0498C12.3206 7.8098 14.5606 9.9198 17.3406 10.1998" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M3 22H21" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" id="ic-folder">
+        <path d="M22 11V17C22 21 21 22 17 22H7C3 22 2 21 2 17V7C2 3 3 2 7 2H8.5C10 2 10.33 2.44 10.9 3.2L12.4 5.2C12.78 5.7 13 6 14 6H17C21 6 22 7 22 11Z" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" />
+        <path d="M8 2H17C19 2 20 3 20 5V6.38" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" id="ic-user">
+        <path d="M12.1605 10.87C12.0605 10.86 11.9405 10.86 11.8305 10.87C9.45055 10.79 7.56055 8.84 7.56055 6.44C7.56055 3.99 9.54055 2 12.0005 2C14.4505 2 16.4405 3.99 16.4405 6.44C16.4305 8.84 14.5405 10.79 12.1605 10.87Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M7.1607 14.56C4.7407 16.18 4.7407 18.82 7.1607 20.43C9.9107 22.27 14.4207 22.27 17.1707 20.43C19.5907 18.81 19.5907 16.17 17.1707 14.56C14.4307 12.73 9.9207 12.73 7.1607 14.56Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" id="ic-comment">
+        <path d="M8.5 19H8C4 19 2 18 2 13V8C2 4 4 2 8 2H16C20 2 22 4 22 8V13C22 17 20 19 16 19H15.5C15.19 19 14.89 19.15 14.7 19.4L13.2 21.4C12.54 22.28 11.46 22.28 10.8 21.4L9.3 19.4C9.14 19.18 8.77 19 8.5 19Z" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M7 8H17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M7 13H13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" id="ic-home">
+        <path d="M11.2003 22H12.8015C15.8003 22 17.2997 22 18.3511 21.2361C18.6907 20.9893 18.9893 20.6907 19.2361 20.3511C20 19.2997 20 17.7998 20 14.8V13.427C20 11.9327 20 11.1855 19.75 10.5121C19.6675 10.2898 19.5655 10.0753 19.445 9.8711C19.0799 9.25242 18.5 8.78127 17.3403 7.83897L12 3.5L6.65973 7.83897C5.49998 8.78127 4.9201 9.25242 4.55503 9.8711C4.43455 10.0753 4.33245 10.2898 4.24996 10.5121C4 11.1855 4 11.9327 4 13.427V14.8C4 17.7998 4 19.2997 4.76393 20.3511C5.01065 20.6907 5.30928 20.9893 5.64886 21.2361C6.70032 22 8.2003 22 11.2003 22Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+        <line x1="0.8" y1="-0.8" x2="13.7173" y2="-0.8" transform="matrix(-0.757719 0.652581 -0.757719 -0.652581 12 2)" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+        <line x1="0.8" y1="-0.8" x2="13.7173" y2="-0.8" transform="matrix(0.757719 0.652581 0.757719 -0.652581 12 2)" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+        <line x1="10" y1="17.8418" x2="13.5" y2="17.8418" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+    </svg>
+    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" id="ic-behance">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M7 11H11.5C14 11 15 12 15 14V14.2C15 14.7 14.8 15.5 13.5 16C14.5 16 16 17 16 19C16 20.5 15.1 21.9 12.3 22H12H7V11ZM20.5 14C23.5 14 24.5 15.8 24.5 18V18.2V18.5H18.6C18.7 20.1 19.6 20.5 20.6 20.5C21.3 20.5 21.9 20.3 22.3 19.6L22.4 19.5H24.5C23.9 21 22.8 22 20.5 22C17.5 22 16.5 20.2 16.5 18C16.5 15.8 17.5 14 20.5 14ZM11.5 17H9.5V20H11.5C12.5 20 13.5 19.7 13.5 18.5C13.5 17.3 12.5 17 11.5 17ZM20.5 15.5C19.7 15.5 19 15.8 18.7 16.8V17H22.5C22.1 15.8 21.4 15.5 20.5 15.5ZM11.7 13H9.5V15H11.7C12.3 15 13 14.9 13 14C13 13.1 12.3 13 11.7 13ZM22.5 12V13.5H18.5V12H22.5Z" fill="currentColor" />
+    </svg>
+    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" id="ic-dribbble">
+        <path d="M18.3 17.3C19.2 20.1 19.9 23.3 20.1 26.4V26.7C18.8 27.2 17.4 27.5 15.9 27.5C13.2 27.5 10.8 26.6 8.9 25.1L9 25C11.3 21.3 14.6 18.5 18.3 17.3ZM22 16.8C23.7 16.8 26 17.1 27.4 17.5C26.9 21.2 24.7 24.4 21.6 26.1C21.3 23 20.7 19.8 19.7 17C20.5 16.8 21.3 16.8 22 16.8ZM16.8 13.6L16.9 13.9L17.1 14.4C17.3 14.9 17.6 15.4 17.8 15.9C13.8 17.2 10.2 20.2 7.8 24.1C5.8 22 4.5 19.2 4.5 16C4.5 15.8 4.5 15.7 4.5 15.5C5.3 15.6 6.4 15.7 7.4 15.7H7.8H8.5C11.3 15.8 14.1 15 16.8 13.6ZM27.5 15.3V15.8C25.9 15.4 23.7 15.2 22 15.2C21.1 15.2 20.2 15.3 19.3 15.5C19 14.8 18.8 14.2 18.5 13.6L18.3 13.2L18.1 12.9C20.1 11.7 22 10.2 23.7 8.3L24.1 7.8C26.1 9.8 27.3 12.4 27.5 15.3ZM11.6 5.4C13 6.8 14.1 8.5 15.4 11.1L15.6 11.5L16 12.3C13.6 13.5 11 14.2 8.4 14.2C7.2 14.2 5.6 14.1 4.6 14C5.3 10.1 8 6.9 11.6 5.4ZM16 4.5C18.6 4.5 21.1 5.4 23 6.9V7C21.4 8.7 19.7 10.2 17.9 11.4L17.4 11.7V11.6L16.9 10.7C15.5 8.1 14.4 6.4 13.1 5C14 4.6 15 4.5 16 4.5Z" fill="currentColor" />
+    </svg>
+    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" id="ic-facebook">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M11.4 27V18.4H9V13.5H11.4V11.1C11.4 7.7 14.1 5 17.5 5H21.2V9.9H18.8C17.4 9.9 16.4 11 16.4 12.3V13.5H21.3L20 18.4H16.3V27H11.4Z" fill="currentColor" stroke="currentColor" stroke-linejoin="round" />
+    </svg>
+    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" id="ic-instagram">
+        <path d="M23 4.5C25.5 4.5 27.5 6.5 27.5 9V23C27.5 25.5 25.5 27.5 23 27.5H9C6.5 27.5 4.5 25.5 4.5 23V9C4.5 6.5 6.5 4.5 9 4.5H23ZM16 9.8C12.5 9.8 9.8 12.6 9.8 16C9.8 19.5 12.6 22.2 16 22.2C19.5 22.2 22.2 19.4 22.2 16C22.2 12.5 19.5 9.8 16 9.8ZM16 11.2C18.6 11.2 20.8 13.3 20.8 16C20.8 18.6 18.7 20.8 16 20.8C13.4 20.8 11.2 18.7 11.2 16C11.2 13.4 13.4 11.2 16 11.2ZM23 7.5C22.2 7.5 21.5 8.2 21.5 9C21.5 9.8 22.2 10.5 23 10.5C23.8 10.5 24.5 9.8 24.5 9C24.5 8.2 23.8 7.5 23 7.5Z" fill="currentColor" />
+    </svg>
+    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" id="ic-linkedin">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M15.5 12.3V14C17 11.1 22.8 11 23 15.3V15.5V23H20V17C20 12.8 15.7 14 15.5 16.8V17V23H12.5V12.3H15.5V14V12.3ZM11 12.5V23H8V12.5H11ZM9.5 9C10.3 9 11 9.7 11 10.5C11 11.3 10.3 12 9.5 12C8.7 12 8 11.3 8 10.5C8 9.7 8.7 9 9.5 9Z" fill="currentColor" />
+    </svg>
+    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" id="ic-twitter">
+        <path d="M25.3002 8.89999L26.8002 8.19999C27.1002 8.09999 27.5002 8.29999 27.5002 8.69999C27.5002 9.29999 27.3002 10.4 26.6002 12.1C26.4002 15 25.1002 19.2 22.7002 22.1C19.0002 26.6 13.3002 27.8 5.50021 24.5C5.00021 24.3 5.10021 23.5 5.70021 23.5C7.70021 23.5 9.60021 23 11.3002 22.2C9.60021 21.8 8.30021 20.5 7.60021 18.8V18.7L7.40021 18.6C5.70021 17.5 4.50021 15.5 4.60021 13.2L5.00021 13C4.10021 11.3 4.50021 9.09999 5.70021 7.99999C5.90021 7.79999 6.10021 7.79999 6.30021 7.99999C9.20021 10.1 11.1002 11.1 14.5002 12C15.0002 6.69999 21.1002 4.49999 25.3002 8.89999Z" fill="currentColor" />
+    </svg>
+    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" id="ic-yoututbe">
+        <path d="M14.8004 7.5H16.5004H17.2004C25.8004 7.6 27.3004 8.9 27.4004 15.2V15.9V16.7C27.3004 23.3 25.7004 24.4 16.1004 24.4H14.7004H13.7004C5.80039 24.3 4.50039 22.9 4.40039 16.4V15.6V15.1C4.60039 8.7 6.20039 7.6 14.8004 7.5ZM14.0004 13V19L19.0004 16L14.0004 13Z" fill="currentColor" />
+    </svg>
+</svg>

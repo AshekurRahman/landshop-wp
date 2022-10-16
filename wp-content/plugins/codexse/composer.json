@@ -1,0 +1,25 @@
+{
+    "name": "ashekurrahman/codexse",
+    "description": "This is a simplate wordpress plugin",
+    "type": "wordpress-plugin",
+    "license": "GPLv2",
+    "autoload": {
+        "psr-4": {
+            "Ashekurrahman\\Codexse\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Ashekur Rahman",
+            "email": "ashekur@peymynt.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Codexse\\": "includes/"
+        },
+        "files": [ "includes/functions.php" ]
+    }
+}

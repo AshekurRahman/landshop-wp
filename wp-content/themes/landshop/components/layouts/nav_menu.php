@@ -19,7 +19,6 @@
 		$landshop_opt['is_preloader'] = '1';
 		$landshop_opt['navbar_transparent'] = '';
 	}
-    $menu_transparent = get_post_meta( get_the_ID(), '_landshop_transparent_menu', true );   
 
 	$data = '';
 	$ndata = true;

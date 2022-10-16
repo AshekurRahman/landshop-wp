@@ -167,13 +167,12 @@ if( !function_exists('landshop_setup_theme') ){
         // Used for OnePage Template Back Link 
         if( !function_exists('landshop_detect_homepage') ){
             function landshop_detect_homepage() {
-                $onepage = '';
-                $onepage = get_post_meta( get_the_ID(), '_landshop_one_page_scroll', true );
+                $onepage = get_post_meta( get_the_ID(), '_codexse_one_page_scrolling_effect', true );
                 /*If front page is set to display a static page, get the URL of the posts page.*/
                 $homepage_id = get_option( 'page_on_front' );
                 /*current page id*/
                 $current_page_id = ( is_page( get_the_ID() ) ) ? get_the_ID() : '';
-                if( $homepage_id == $current_page_id or $onepage == 'on'  ) {
+                if( $homepage_id == $current_page_id or $onepage === 'no'  ) {
                     return true;
                 } else {
                     return false;
@@ -413,9 +412,9 @@ function landshop_scripts() {
             }
         }
     ';
-    if('page' == get_post_type() && !empty(get_post_meta( get_the_ID(), '_landshop_page_background', 1 ))){
+    if('page' == get_post_type() && !empty(get_post_meta( get_the_ID(), '_codexse_page_background', 1 ))){
         $custom_css .= '.page-section { 
-            background-image: url("'.esc_url(get_post_meta( get_the_ID(), '_landshop_page_background', 1 )).'");
+            background-image: url("'.esc_url(get_post_meta( get_the_ID(), '_codexse_page_background', 1 )).'");
         }';
     }
     if( isset( $landshop_opt['nav_button_radius'] ) and !empty($landshop_opt['nav_button_radius']['top']) or !empty($landshop_opt['nav_button_radius']['bottom']) or !empty($landshop_opt['nav_button_radius']['left']) or !empty($landshop_opt['nav_button_radius']['right'])){

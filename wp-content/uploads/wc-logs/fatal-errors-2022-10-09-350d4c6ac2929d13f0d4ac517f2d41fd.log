@@ -1,0 +1,30 @@
+2022-10-09T06:41:43+00:00 CRITICAL Uncaught Error: Call to undefined function Codexse\Frontend\render_button_wishlist() in C:\wamp64\www\landshop\wp-content\plugins\codexse\includes\Frontend\Wishlist.php:20
+Stack trace:
+#0 C:\wamp64\www\landshop\wp-includes\class-wp-hook.php(307): Codexse\Frontend\Wishlist->woocommerce_wishlist_button('')
+#1 C:\wamp64\www\landshop\wp-includes\class-wp-hook.php(331): WP_Hook->apply_filters('', Array)
+#2 C:\wamp64\www\landshop\wp-includes\plugin.php(476): WP_Hook->do_action(Array)
+#3 C:\wamp64\www\landshop\wp-content\themes\landshop\woocommerce\content-product.php(50): do_action('product_items_a...')
+#4 C:\wamp64\www\landshop\wp-includes\template.php(772): require('C:\\wamp64\\www\\l...')
+#5 C:\wamp64\www\landshop\wp-content\plugins\woocommerce\includes\wc-core-functions.php(284): load_template('C:\\wamp64\\www\\l...', false)
+#6 C:\wamp64\www\landshop\wp-content\themes\landshop\woocommerce\archive-product.php(76): wc_get_template_part('content', 'product')
+#7 C:\wamp64\www\landshop\wp-includes\template-loader.ph in C:\wamp64\www\landshop\wp-content\plugins\codexse\includes\Frontend\Wishlist.php on line 20
+
+2022-10-09T08:38:59+00:00 CRITICAL syntax error, unexpected ':', expecting ',' or ')' in C:\wamp64\www\landshop\wp-content\plugins\codexse\includes\Frontend\Wishlist.php on line 15
+
+2022-10-09T10:27:54+00:00 CRITICAL Uncaught Error: Class 'Codexse\Codexse\Frontend\Wishlist' not found in C:\wamp64\www\landshop\wp-content\plugins\codexse\includes\Frontend.php:9
+Stack trace:
+#0 C:\wamp64\www\landshop\wp-content\plugins\codexse\codexse.php(61): Codexse\Frontend->__construct()
+#1 C:\wamp64\www\landshop\wp-includes\class-wp-hook.php(307): Codexse->init_plugin('')
+#2 C:\wamp64\www\landshop\wp-includes\class-wp-hook.php(331): WP_Hook->apply_filters(NULL, Array)
+#3 C:\wamp64\www\landshop\wp-includes\plugin.php(476): WP_Hook->do_action(Array)
+#4 C:\wamp64\www\landshop\wp-settings.php(461): do_action('plugins_loaded')
+#5 C:\wamp64\www\landshop\wp-config.php(96): require_once('C:\\wamp64\\www\\l...')
+#6 C:\wamp64\www\landshop\wp-load.php(50): require_once('C:\\wamp64\\www\\l...')
+#7 C:\wamp64\www\landshop\wp-admin\admin-ajax.php(22): require_once('C:\\wamp64\\www\\l...')
+#8 {main}
+  thrown in C:\wamp64\www\landshop\wp-content\plugins\codexse\includes\Frontend.php on line 9
+
+2022-10-09T15:28:54+00:00 CRITICAL syntax error, unexpected '=' in C:\wamp64\www\landshop\wp-content\plugins\codexse\includes\Frontend\Wishlist\table.php on line 34
+
+2022-10-09T15:29:13+00:00 CRITICAL syntax error, unexpected '=' in C:\wamp64\www\landshop\wp-content\plugins\codexse\includes\Frontend\Wishlist\table.php on line 34
+

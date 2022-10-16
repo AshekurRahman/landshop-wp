@@ -1,0 +1,112 @@
+@font-face {
+    font-family: 'maruncy';
+    src: url('../fonts/theme-icon/maruncy.eot?h5img0');
+    src: url('../fonts/theme-icon/maruncy.eot?h5img0#iefix') format('embedded-opentype'),
+        url('../fonts/theme-icon/maruncy.ttf?h5img0') format('truetype'),
+        url('../fonts/theme-icon/maruncy.woff?h5img0') format('woff'),
+        url('../fonts/theme-icon/maruncy.svg?h5img0#maruncy') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+[class^="mr-"],
+[class*=" mr-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'maruncy' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1em;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.mr-arrow-left-icon:before {
+    content: "\e900";
+    font-size: 60%;
+}
+
+.mr-arrow-right-icon:before {
+    content: "\e901";
+    font-size: 60%;
+}
+
+.mr-list-shape:before {
+    content: "\e902";
+}
+
+.mr-call-icon:before {
+    content: "\e903";
+}
+
+.mr-chart-icon:before {
+    content: "\e904";
+}
+
+.mr-facebook-icon:before {
+    content: "\e905";
+}
+
+.mr-filter-icon:before {
+    content: "\e906";
+}
+
+.mr-home-icon:before {
+    content: "\e907";
+}
+
+.mr-instagram-icon:before {
+    content: "\e908";
+}
+
+.mr-layer-icon:before {
+    content: "\e909";
+}
+
+.mr-minus-icon:before {
+    content: "\e90a";
+}
+
+.mr-play-icon:before {
+    content: "\e90b";
+}
+
+.mr-plus-icon:before {
+    content: "\e90c";
+}
+
+.mr-presentation-icon:before {
+    content: "\e90d";
+}
+
+.mr-reply-icon:before {
+    content: "\e90e";
+}
+
+.mr-search-icon:before {
+    content: "\e90f";
+}
+
+.mr-sms-icon:before {
+    content: "\e910";
+}
+
+.mr-trend-icon:before {
+    content: "\e911";
+}
+
+.mr-twitter-icon:before {
+    content: "\e912";
+}
+
+.mr-user-icon:before {
+    content: "\e913";
+}
+
+.mr-youtube-icon:before {
+    content: "\e914";
+}

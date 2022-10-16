@@ -1,0 +1,100 @@
+.slicknav_menu > a {
+	display: inline-block;
+}
+
+.mobile_menu_toggle {
+	display: none;
+}
+
+.slicknav_menu {
+	z-index: 99999;
+	width: 100%;
+	display: none;
+}
+
+.slicknav_menu .slicknav_nav {
+	padding: 20px 30px;
+	background-color: rgb(var(--body-bg));
+	border: 1px solid rgb(var(--gray-bg));
+	margin-bottom: 15px;
+    border-radius: 8px;
+	max-height: 70vh;
+	overflow: auto;
+}
+
+.slicknav_menu .slicknav_nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+.slicknav_menu .slicknav_nav ul ul {
+	padding-left: 10px;
+	padding-right: 0;
+}
+
+.slicknav_menu .slicknav_nav ul.nav > li {
+	border-bottom: 0px solid rgba(0, 0, 0, 0.1);
+}
+
+.slicknav_menu .slicknav_nav ul.nav li {
+	padding: 6px 0;
+	position: relative;
+	width: 100%;
+	display: block;
+}
+
+.slicknav_menu .slicknav_nav ul.nav li li {
+	padding: 0 0 8px 8px;
+}
+
+.slicknav_menu .slicknav_nav ul.nav li li:first-child {
+	padding-top: 8px;
+}
+
+.slicknav_menu .slicknav_nav ul.nav li:last-child {
+	border-bottom: none;
+}
+
+.slicknav_menu .slicknav_nav ul li a {
+	position: relative;
+	font-weight: 400;
+	font-family: var(--body-font-family);
+	font-size: var(--body-font-size);
+	color: rgba(var(--heading-color), 1);
+	background: none;
+	text-transform: capitalize;
+	display: block;
+}
+
+.slicknav_menu .slicknav_nav li.current-menu-item > a,
+.slicknav_menu .slicknav_nav li.current-menu-item > a a,
+.slicknav_menu .slicknav_nav li.slicknav_open > a,
+.slicknav_menu .slicknav_nav li.slicknav_open > a a,
+.slicknav_menu .slicknav_nav li:hover > a,
+.slicknav_menu .slicknav_nav li:hover > a a,
+.slicknav_menu .slicknav_nav ul li a:focus {
+	color: rgba(var(--primary-color), 1);
+}
+
+.slicknav_menu .slicknav_nav ul li > a {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+
+.slicknav_menu .slicknav_nav ul li > a .slicknav_arrow {
+	width: 14px;
+	height: 14px;
+	line-height: 10px;
+	text-align: center;
+	float: right;
+	-webkit-transition: 0.3s;
+	transition: 0.3s;
+	margin-top: 5px;
+	margin-left: auto;
+}

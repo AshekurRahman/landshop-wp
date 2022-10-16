@@ -223,9 +223,6 @@
             'type' => 'text_url',
         ) );
         
-
-
-
     }
     
     if( !function_exists("landshop_gallery_photo_list") ){

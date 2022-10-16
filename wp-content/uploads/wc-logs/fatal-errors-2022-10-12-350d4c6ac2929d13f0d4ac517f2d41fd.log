@@ -1,0 +1,26 @@
+2022-10-12T07:49:50+00:00 CRITICAL Uncaught Error: Call to undefined function Codexse\the_posts() in C:\wamp64\www\landshop\wp-content\plugins\codexse\includes\Metabox.php:9
+Stack trace:
+#0 C:\wamp64\www\landshop\wp-content\plugins\codexse\codexse.php(62): Codexse\Metabox->__construct()
+#1 C:\wamp64\www\landshop\wp-includes\class-wp-hook.php(307): Codexse->init_plugin('')
+#2 C:\wamp64\www\landshop\wp-includes\class-wp-hook.php(331): WP_Hook->apply_filters(NULL, Array)
+#3 C:\wamp64\www\landshop\wp-includes\plugin.php(476): WP_Hook->do_action(Array)
+#4 C:\wamp64\www\landshop\wp-settings.php(461): do_action('plugins_loaded')
+#5 C:\wamp64\www\landshop\wp-config.php(96): require_once('C:\\wamp64\\www\\l...')
+#6 C:\wamp64\www\landshop\wp-load.php(50): require_once('C:\\wamp64\\www\\l...')
+#7 C:\wamp64\www\landshop\wp-admin\admin-ajax.php(22): require_once('C:\\wamp64\\www\\l...')
+#8 {main}
+  thrown in C:\wamp64\www\landshop\wp-content\plugins\codexse\includes\Metabox.php on line 9
+
+2022-10-12T07:49:51+00:00 CRITICAL Uncaught Error: Call to undefined function Codexse\the_posts() in C:\wamp64\www\landshop\wp-content\plugins\codexse\includes\Metabox.php:9
+Stack trace:
+#0 C:\wamp64\www\landshop\wp-content\plugins\codexse\codexse.php(62): Codexse\Metabox->__construct()
+#1 C:\wamp64\www\landshop\wp-includes\class-wp-hook.php(307): Codexse->init_plugin('')
+#2 C:\wamp64\www\landshop\wp-includes\class-wp-hook.php(331): WP_Hook->apply_filters(NULL, Array)
+#3 C:\wamp64\www\landshop\wp-includes\plugin.php(476): WP_Hook->do_action(Array)
+#4 C:\wamp64\www\landshop\wp-settings.php(461): do_action('plugins_loaded')
+#5 C:\wamp64\www\landshop\wp-config.php(96): require_once('C:\\wamp64\\www\\l...')
+#6 C:\wamp64\www\landshop\wp-load.php(50): require_once('C:\\wamp64\\www\\l...')
+#7 C:\wamp64\www\landshop\wp-admin\admin-ajax.php(22): require_once('C:\\wamp64\\www\\l...')
+#8 {main}
+  thrown in C:\wamp64\www\landshop\wp-content\plugins\codexse\includes\Metabox.php on line 9
+

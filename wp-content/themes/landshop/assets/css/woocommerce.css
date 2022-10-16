@@ -657,14 +657,6 @@ strong.woocommerce-review__author {
     font-family: var(--heading-font-family);
 }
 
-.woocommerce table.shop_table thead th:first-child {
-    border-radius: 8px 0 0 8px;
-}
-
-.woocommerce table.shop_table thead th:last-child {
-    border-radius: 0 8px 8px 0;
-}
-
 .woocommerce table.shop_table .product-close .close-item {
     width: 32px;
     height: 32px;
@@ -675,6 +667,7 @@ strong.woocommerce-review__author {
     border-radius: 32px;
     font-size: 16px;
     color: rgb(var(--white-color));
+    border: none;
 }
 
 .woocommerce table.shop_table .product-thumb {
@@ -1423,6 +1416,10 @@ button[name="update_cart"]:hover {
     margin: 1rem 0 3em;
     list-style: none;
     padding: 0;
+}
+
+.woocommerce .added_to_cart.wc-forward {
+    margin-left: 10px;
 }
 
 @media only screen and (min-width: 768px) {

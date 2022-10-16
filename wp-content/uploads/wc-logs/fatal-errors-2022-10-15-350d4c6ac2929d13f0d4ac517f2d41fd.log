@@ -1,0 +1,2 @@
+2022-10-15T17:46:34+00:00 CRITICAL require_once(): Failed opening required 'C:\wamp64\www\landshop\wp-content\plugins\dokan-lite/deprecated/deprecated-functions.php' (include_path='.;C:\php\pear') in C:\wamp64\www\landshop\wp-content\plugins\dokan-lite\dokan.php on line 314
+

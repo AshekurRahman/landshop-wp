@@ -63,10 +63,10 @@
 					<?php echo get_the_category_list( ', ', ' ' ); ?>
 				</li>
 				<?php endif; ?>
-				<?php if(function_exists('landshop_get_post_views') && $landshop_opt['post_meta_view'] == '1'): ?>
+				<?php if(function_exists('codexse_get_post_views') && $landshop_opt['post_meta_view'] == '1'): ?>
 				<li class="views">
 					<svg class="svg-icon icon"><use xlink:href="<?php echo get_theme_file_uri( 'assets/images/symble.svg' ); ?>#ic-eye"></use></svg>
-					<?php echo landshop_get_post_views(get_the_ID()); ?>
+					<?php echo codexse_get_post_views(get_the_ID()); ?>
 				</li>
 				<?php endif; ?>
 			</ul>

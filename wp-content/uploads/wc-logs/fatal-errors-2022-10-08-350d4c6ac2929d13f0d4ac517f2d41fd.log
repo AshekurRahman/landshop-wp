@@ -1,0 +1,11 @@
+2022-10-08T16:43:07+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function wp_enqueue_script(), 0 passed in C:\wamp64\www\landshop\wp-content\plugins\codexse\includes\Frontend\Wishlist.php on line 14 and at least 1 expected in C:\wamp64\www\landshop\wp-includes\functions.wp-scripts.php:346
+Stack trace:
+#0 C:\wamp64\www\landshop\wp-content\plugins\codexse\includes\Frontend\Wishlist.php(14): wp_enqueue_script()
+#1 C:\wamp64\www\landshop\wp-includes\class-wp-hook.php(307): Codexse\Frontend\Wishlist->enqueue_scripts('')
+#2 C:\wamp64\www\landshop\wp-includes\class-wp-hook.php(331): WP_Hook->apply_filters(NULL, Array)
+#3 C:\wamp64\www\landshop\wp-includes\plugin.php(476): WP_Hook->do_action(Array)
+#4 C:\wamp64\www\landshop\wp-includes\script-loader.php(2156): do_action('wp_enqueue_scri...')
+#5 C:\wamp64\www\landshop\wp-includes\class-wp-hook.php(307): wp_enqueue_scripts('')
+#6 C:\wamp64\www\landshop\wp-includes\class-wp-hook.php(331): WP_Hook->apply_filters(NULL, Array)
+#7 C:\wamp64\www\landshop\wp-includes\plugin.php(476): WP_Hoo in C:\wamp64\www\landshop\wp-includes\functions.wp-scripts.php on line 346
+

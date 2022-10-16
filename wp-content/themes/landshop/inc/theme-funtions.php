@@ -1,16 +1,6 @@
 <?php
 
 if ( class_exists( 'WooCommerce' ) ) {
-    add_action( 'woocommerce_before_add_to_cart_quantity', 'landshop_quantity_before_extra', 0);
-    function landshop_quantity_before_extra() {
-        $button_label = get_post_meta( get_the_ID(), '_landshop_wc_ex_button_label', true );   
-        $button_url = get_post_meta( get_the_ID(), '_landshop_wc_ex_button_url', true );
-        echo '<div class="before-extra">';
-        if(!empty($button_label) && !empty($button_url)){
-            echo '<a class="primary_button gray_button" target="_blank" href="'.esc_url($button_url).'">'.esc_html($button_label).'</a>';
-        }
-        echo '</div>';
-    }
     add_action( 'wp_footer', 'landshop_quantity_plus_minus' );
     function landshop_quantity_plus_minus() {
     // To run this on the single product page
@@ -101,22 +91,7 @@ if ( class_exists( 'WooCommerce' ) ) {
 		$image_size = apply_filters( 'single_product_archive_thumbnail_size', $size );
 		echo wp_kses_post($product ? $product->get_image( $image_size ) : '');
 	}
-    
-    function woocommerce_template_more_single_meta(){
-        $entries = get_post_meta( get_the_ID(), '_landshop_wc_meta_repeat_group', true );
         
-        if(!empty($entries)){
-            echo '<ul class="product_meta">';
-            foreach( $entries as $entrie){
-                echo '<li><span class="title">'.wp_kses_post($entrie['_landshop_wc_meta_title']).': </span> <span class="value">'.wp_kses_post($entrie['_landshop_wc_meta_value']).'</span></li>';
-            }
-            echo '</ul>';
-        }else {
-            return false;
-        }
-        
-    }
-    
     add_action('init',function(){        
         /*-- Remove-Action ---*/
         remove_action( 'woocommerce_before_main_content','woocommerce_breadcrumb',20 );    
@@ -134,13 +109,12 @@ if ( class_exists( 'WooCommerce' ) ) {
         add_action( 'woocommerce_single_product_summary','woocommerce_template_single_price', 10 );
         add_action( 'woocommerce_single_product_summary','woocommerce_template_single_excerpt', 20 );
         add_action( 'woocommerce_single_product_summary','woocommerce_template_single_meta', 30 );
-        add_action( 'woocommerce_single_product_summary','woocommerce_template_more_single_meta', 35 );
         add_action( 'woocommerce_single_product_summary','woocommerce_template_single_add_to_cart', 40 );
         add_action( 'woocommerce_single_product_summary','woocommerce_template_single_sharing', 50 );
         add_action( 'woocommerce_before_shop_loop_item_title','landshop_template_loop_product_thumbnail',10 );
+        add_action( 'product_items_actions', 'woocommerce_template_loop_add_to_cart', '20' );
     });
 }
-
 
 /*----------------
 WP_Kses-SVG-Tags-Allowed

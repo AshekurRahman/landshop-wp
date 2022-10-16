@@ -96,7 +96,7 @@
         --section-padding: 150px;
     }
 
-    .nav_area .nav_menu .nav > li {
+    .nav_area .nav_menu .nav>li {
         padding: 0 18px;
     }
 }
@@ -106,7 +106,7 @@
         --body-font-size: 16px;
     }
 
-    .nav_area .nav_menu .nav > li {
+    .nav_area .nav_menu .nav>li {
         padding: 0 16px;
     }
 
@@ -209,6 +209,10 @@
 
 
     /*----- post-box -----*/
+    .post-box:not(.no-shadow) .content {
+        padding: 30px;
+    }
+
     .single_navigation .content {
         display: none;
     }
@@ -356,7 +360,7 @@
         font-size: 52px;
         line-height: 52px;
     }
-    
+
     .header-actions .breadcumbs {
         width: calc(100vw - 80px);
     }
@@ -367,7 +371,6 @@
     .single_navigation .title {
         font-size: 16px;
     }
-
 
     .main-sidebar .widget {
         margin-bottom: 25px;

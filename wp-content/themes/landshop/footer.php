@@ -7,7 +7,7 @@
 		$landshop_opt['footer_template'] = '';
 		$landshop_opt['copyright_text'] = esc_html__('&copy; 2022 Landshop - IT Solution Company . All Rights Reserved.','landshop');
 	}
-    $remove_widget = get_post_meta( get_the_ID(), '_landshop_footer_widget', true );
+    $remove_widget = get_post_meta( get_the_ID(), '_codexse_remove_page_footer', true );
 	$footer_template = '';
 	if(!empty($landshop_opt['footer_template'])) {
 		$footer_template = new WP_Query(array(
@@ -17,7 +17,7 @@
 		));
 	}
 ?>
-<?php if( $remove_widget != 'on' ): ?>
+<?php if( $remove_widget === 'no' ): ?>
 <!--Footer_Area-Start-->
 <footer class="footer_wrapper">
 	<?php if($footer_template && $footer_template->have_posts()): ?>

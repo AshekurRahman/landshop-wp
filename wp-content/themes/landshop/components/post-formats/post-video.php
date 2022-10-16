@@ -20,20 +20,24 @@
 		$landshop_opt['post_read_more'] = true;
 		$landshop_opt['post_read_more_txt'] = esc_html__('Read More','landshop');
 	}	
+	
+	wp_enqueue_style( 'codexse-post' );
+	wp_enqueue_script( 'codexse-post' );
 ?>
 
 
 <div <?php post_class([ (!is_single() ? 'post-box' : 'post-single-box'), 'video_post' ,get_post_type()]); ?>>
 	<?php 
 		if($landshop_opt['post_thumbnail'] == '1'){			
-            if(get_post_meta( get_the_ID(), '_landshop_post_video_embed', true )){
-                $video_url = get_post_meta( get_the_ID(), '_landshop_post_video_embed', true );
+            if(get_post_meta( get_the_ID(), '_codexse_embed_video', true )){
+                $video_url = get_post_meta( get_the_ID(), '_codexse_embed_video', true );
             }else{
                 $video_url = '';
             }
-			if( !empty($video_url) && function_exists('landshop_video_embed_content') ):
+
+			if( !empty($video_url) && function_exists('codexse_video_embed') ):
 				// Video Post Content Function
-				echo landshop_video_embed_content(esc_url($video_url));
+				echo codexse_video_embed(esc_url($video_url));
 			else:   
 				landshop_post_thumbnail($landshop_opt['post_thumb_size']); 
 			endif;
@@ -73,10 +77,10 @@
 					<?php echo get_the_category_list( ', ', ' ' ); ?>
 				</li>
 				<?php endif; ?>
-				<?php if(function_exists('landshop_get_post_views') && $landshop_opt['post_meta_view'] == '1'): ?>
+				<?php if(function_exists('codexse_get_post_views') && $landshop_opt['post_meta_view'] == '1'): ?>
 				<li class="views">
 					<svg class="svg-icon icon"><use xlink:href="<?php echo get_theme_file_uri( 'assets/images/symble.svg' ); ?>#ic-eye"></use></svg>
-					<?php echo landshop_get_post_views(get_the_ID()); ?>
+					<?php echo codexse_get_post_views(get_the_ID()); ?>
 				</li>
 				<?php endif; ?>
 			</ul>

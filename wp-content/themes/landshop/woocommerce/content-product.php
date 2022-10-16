@@ -47,7 +47,7 @@ if( wc_get_loop_prop( 'columns' ) == 4 ){
        <div class="product-image">
            <?php do_action( 'woocommerce_before_shop_loop_item_title' ); ?>
            <div class="hover-content">
-               <?php woocommerce_template_loop_add_to_cart(); ?>
+               <?php do_action( 'product_items_actions' ); ?>
            </div>
        </div>
        <div class="product-content">

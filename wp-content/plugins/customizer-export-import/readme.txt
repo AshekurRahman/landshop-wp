@@ -102,3 +102,6 @@ Please visit our blog for more info on the [Customizer Export/Import plugin](htt
 
 = Version 0.9.4 =
 - Added callout for Assistant
+
+= Version 0.9.5 =
+- Fixed minor security issue
