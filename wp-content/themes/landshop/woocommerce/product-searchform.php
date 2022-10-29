@@ -24,7 +24,7 @@ add_filter('get_product_search_form','landshop_get_product_search_form');
 if( !function_exists('landshop_get_product_search_form') ){
     function landshop_get_product_search_form(){            
         $data = '<form role="search" method="get" class="search_form" action="'.esc_url(home_url("/")).'">';
-        $data .= '<input type="search" id="woocommerce-product-search-field-'.(isset( $index ) ? absint( $index ) : 0).'" class="form_control" placeholder="'.esc_attr__( 'Search products&hellip;', 'woocommerce' ).'" value="'.get_search_query().'" name="s" />';
+        $data .= '<input type="search" id="woocommerce-product-search-field-'.(isset( $index ) ? absint( $index ) : 0).'" class="form_control" placeholder="'.esc_attr__( 'Search products&hellip;', 'landshop' ).'" value="'.get_search_query().'" name="s" />';
         $data .= '<button type="submit" class="search_submit">';
 		$data .= '<svg class="svg-icon"><use xlink:href="'.get_theme_file_uri( 'assets/images/symble.svg' ).'#ic-search"></use></svg>';
         $data .= '</button>';         

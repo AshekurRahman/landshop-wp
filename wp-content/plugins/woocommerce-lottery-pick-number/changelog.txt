@@ -1,0 +1,191 @@
+** Version 2.3.0 ** 22nd Sep 2022
+- Add: instant win lotteries
+
+** Version 2.2.7 ** 1st Jul 2022
+- Fix: ticket reservation when using randomly assign ticket numbers
+
+** Version 2.2.6 ** 2nd Jun 2022
+- Add: filter for my tickets sort woocommerce_lottery_my_tickets_endpoint_query_args 
+and woocommerce_lottery_my_tickets_past_endpoint_query_args 
+usage https://pastebin.com/6iuzQ2bR
+ 
+** Version 2.2.5 ** 5th May 2022
+- Fix: caching
+- Fix: letters on entry list page
+- Add: new filters for entry lists page
+
+** Version 2.2.4 ** 4th Apr 2022
+- Add: login at later stage of checkout
+
+** Version 2.2.3 ** 16th Mar 2022
+- Fix: duplicate queries
+
+** Version 2.2.2 ** 1st Mar 2022
+- Fix: elementor lucky dip button name
+- Fix: alphabet in my tickets
+- Add: show / hide my tickets in settings
+
+** Version 2.2.1 ** 13th Jan 2022
+- Fix: modal lucky dip problem
+- Add: new filter wc_lottery_generate_random_ticket_numbers
+
+** Version 2.2.0 ** 9th Dec 2021
+- Add: automatic relist of lotteries (finished and failed) with CSV export of data for previous lotteries
+- Fix: pot file update
+
+** Version 2.1.0 **
+- Add: Entry lists
+
+** Version 2.0.7 **
+- Add: My Tickets (active and past) in My Account menu
+
+** Version 2.0.6 **
+- Fix: peformance
+
+** Version 2.0.5 **
+- Fix: notice for reserved ticket option problem
+- Fix: fatal error if WooCommerce Lottery is deactivated
+- Fix: modal popup fix for mobile viewports
+- Fix: code cleanup
+
+** Version 2.0.4 **
+- Fix: fatal error when manually adding user to WP
+- Fix: JS problem when selecting and deselecting tickets
+- Fix: problem with multiple winners, email display bug
+- Add: shortcode for lucky dip with quantity example [lottery_lucky_dip_buton qty="5" label="buy 5 tickets"]
+- Add: Elementor widget for shortcode lucky dip with quantity example
+- Add: fully tested with PHP8 and WooCommerce 5.0
+
+** Version 2.0.3 **
+- Fix: max quantity per user problem
+
+** Version 2.0.2 **
+- Fix: reserved ticket message
+- Fix: reserve ticket guest checkout problem
+
+** Version 2.0.1 **
+- Fix: small bugs
+- Fix: translation string, POT translation file updated
+- Fix: when enabled ticket reservation and login during checkout tickets would be removed from cart
+
+** Version 2.0.0 **
+- Add: Elementor support
+- Add: updated POT translation file
+
+** Version 1.3.5 **
+- Fix: bug with removing number from true answers
+- Fix: JS bug in tabs
+- Fix: on hold problem due to duplicated tickets when "allow ticket numbers" is not enabled
+- Add: export only visible columns in CSV / Excel export
+
+** Version 1.3.4 **
+- Fix: lucky dip error message
+- Fix: performance and optimizations
+
+** Version 1.3.3 **
+- Fix: additional check for duplicate tickets
+
+** Version 1.3.2 **
+- Fix: notice
+- Fix: escaped text in CSV / Excel history table
+- Fix: additional check for duplicate tickets
+
+** Version 1.3.1 **
+- Fix: lucky dip log in message
+- Fix: too many messages when adding tickets via lucky dip
+- Add: option to checkout but without assigning number for wrong answer
+- Add: option to have answers as dropdown menu
+- Add: participant phone number in CSV / Excel lottery history table
+- Add: if you allow to checkout with wrong answer and enable option "Remove 
+ticket numbers from orders with wrong answer." this message "Your answers is 
+not correct. In order to participate you will need to select right answer, 
+pick your ticket(s) and checkout again." will be displayed in order email if
+"Show notice for wrong answer in user order email" option is enabled.
+
+** Version 1.3.0 **
+- Add: Option to use alphabet partitioning for ticket numbers
+- Add: Lucky dip option with quantity selector
+- Fix: small fixes and translations
+
+** Version 1.2.10 **
+- Fix: bug when lottery failed with manually pick winners
+- Fix: bug when relisting lottery with manually pick winners
+- Fix: quantity selector issue
+- Fix: bug with ticket numbers starting with 0
+- Fix: spelling and translations
+
+** Version 1.2.9 **
+- Add: CSV and Excel export for single lottery history with sortable columns
+- Fix: performance improvement
+
+** Version 1.2.8 **
+- Fix: bug when clicking tickets fast only some were added to cart
+- Fix: css bug
+
+** Version 1.2.7 **
+- Fix: bug when picking same ticket number on random
+- Fix: bug when randomly assigning only 1 ticket
+
+** Version 1.2.6 **
+- Fix: manual pick winner problem
+
+** Version 1.2.5 **
+- Fix: JS issue
+
+** Version 1.2.4 **
+- Fix: Update woocommerce_quantity_input function 
+- Add: Randomly generate ticket number(s) on checkout without picker
+
+** Version 1.2.3 **
+- Fix: Bug in frontend with force correct answer and adding to cart
+- Fix: Ability to add 0 when manually picking winner without ticket numbers
+
+** Version 1.2.2 **
+- Fix: Datetime format taken from WP settings for timestamp in lottery history tab
+
+** Version 1.2.1 **
+- Fix: Delete ticket from product admin
+- Add: Ticket number and answer in admin history
+
+** Version 1.2.0 **
+- Add: Sort ticket numbers in tabs and select number of ticket per tab
+- Add: Frontend validation messages for ticket numbers
+- Fix: PHP notices
+
+** Version 1.1.9 **
+- Fix: Manual tampering with ticket numbers and quantity during checkout
+- Fix: Winners template unclosed spans
+
+** Version 1.1.8 **
+- Fix: Manual pick numbers bug when lottery is closed and saved in backend
+
+** Version 1.1.7 **
+- Fix: Enable login at checkout for lottery with no max ticket per user
+
+** Version 1.1.6 **
+- Fix: Sending emails after lottery is closed bug for manually picked winners
+
+** Version 1.1.5 **
+- Fix: Text domain bug
+
+** Version 1.1.4 **
+- Fix: localization bug
+- Fix: Error message on order recieved page
+
+** Version 1.1.3 **
+- Add: Manual winner picking
+- Add: Allow only true answers
+- Fix: Relist bug
+
+** Version 1.1.2 **
+- Fix: Problem with creating database on activation
+
+** Version 1.1.1 **
+- Add: Alert for guest users to login when tring to pick number / ticket
+- Fix: Replaced woocommerce_get_page_id with wc_get_page_id
+
+** Version 1.1.0 **
+- Add: Reservation of ticket numbers
+
+** Version 1.0.0 **
+- Initial release

@@ -1,0 +1,83 @@
+/*-- Circle-Progress-Style --*/
+.cirlce-progress {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    line-height: 0;
+}
+
+.cirlce-progress .percent {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    margin: 0;
+    color: rgb(var(--secondary-color));
+}
+
+.swiper-pagination {
+    position: static !important;
+    margin-top: 30px;
+}
+
+.swiper-pagination-bullets .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    margin: 10px;
+    position: relative;
+    background-color: rgba(var(--primary-color), 0.5);
+    opacity: 1;
+}
+
+.swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background-color: rgba(var(--primary-color), 1);
+}
+
+.swiper-pagination .swiper-pagination-bullet svg {
+    position: absolute;
+    left: calc(50% + 2px);
+    top: calc(50% + 2px);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 26px;
+    height: 26px;
+}
+
+.swiper-pagination svg circle {
+    fill: none;
+    stroke: rgba(var(--primary-color), 1);
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-dasharray: 125;
+    stroke-dashoffset: 125;
+}
+
+.swiper-pagination-bullet-active svg circle {
+    -webkit-animation: slide-progress linear forwards;
+    animation: slide-progress linear forwards;
+}
+
+.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 8px;
+}
+
+@-webkit-keyframes slide-progress {
+    0% {
+        stroke-dashoffset: 125;
+    }
+
+    100% {
+        stroke-dashoffset: 63;
+    }
+}
+
+@keyframes slide-progress {
+    0% {
+        stroke-dashoffset: 125;
+    }
+
+    100% {
+        stroke-dashoffset: 63;
+    }
+}

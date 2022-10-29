@@ -1,0 +1,180 @@
+/* 
+  * Button Style 
+  */
+.codexse-button .cdx-btn:focus,
+.codexse-button .cdx-btn:active {
+    box-shadow: none !important;
+}
+
+.codexse-button .cdx-btn-outline-light {
+    border-color: #c8c8c8;
+    color: #c8c8c8;
+}
+
+.codexse-button {
+    display: inline-block;
+}
+
+.codexse-button .codexse-btn-effect-5,
+.codexse-button .codexse-btn-effect-6,
+.codexse-button .codexse-btn-effect-10 {
+    overflow: hidden;
+}
+
+.codexse_button_icon {
+    display: inline-block;
+}
+
+.codexse_button_icon svg {
+    width: 20px;
+}
+
+.codexse-button .cdx-btn {
+    border-radius: 0;
+    position: relative;
+    border: none;
+    z-index: 1;
+    overflow: hidden;
+    transition: all 0.4s ease-in-out 0s;
+    display: inline-block;
+}
+
+.button-align-icon-left span.codexse_button_icon {
+    float: left;
+}
+
+.button-align-icon-left span.codexse_button_txt {
+    float: right;
+}
+
+.button-align-icon-right span.codexse_button_icon {
+    float: right;
+}
+
+.button-align-icon-right span.codexse_button_txt {
+    float: left;
+}
+
+.button-align-icon-top span.codexse_button_icon,
+.button-align-icon-bottom span.codexse_button_icon {
+    display: block;
+}
+
+.button-align-icon-top span.codexse_button_txt,
+.button-align-icon-bottom span.codexse_button_txt {
+    display: block;
+}
+
+.button-align-icon-top a.cdx-btn {
+    display: flex;
+    flex-flow: column-reverse nowrap;
+}
+
+/* Button Size */
+.codexse-btn-size-xl {
+    padding: 35px 50px !important;
+}
+
+.codexse-btn-size-lg {
+    padding: 25px 50px !important;
+}
+
+.codexse-btn-size-md {
+    padding: 16px 43px !important;
+}
+
+.codexse-btn-size-sm {
+    padding: 8px 40px !important;
+}
+
+.codexse-btn-size-xs {
+    padding: 3px 10px !important;
+}
+
+/* Button Style */
+
+.codexse-button .cdx-btn:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #FF6B31;
+    transition: 0.5s;
+    z-index: -1;
+}
+
+.codexse-btn-style-1 .cdx-btn:before {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+.codexse-btn-style-1 .cdx-btn:hover:before {
+    opacity: 1;
+}
+
+.codexse-btn-style-2 .cdx-btn:before {
+    width: 0%;
+    height: 100%;
+}
+
+.codexse-btn-style-2 .cdx-btn:hover:before {
+    width: 100%;
+}
+
+.codexse-btn-style-3 .cdx-btn:before {
+    width: 0%;
+    height: 100%;
+    left: auto;
+    right: 0;
+}
+
+.codexse-btn-style-3 .cdx-btn:hover:before {
+    width: 100%;
+}
+
+.codexse-btn-style-4 .cdx-btn:before {
+    width: 100%;
+    height: 0%;
+}
+
+.codexse-btn-style-4 .cdx-btn:hover:before {
+    height: 100%;
+}
+
+.codexse-btn-style-5 .cdx-btn:before {
+    width: 100%;
+    height: 0%;
+    top: auto;
+    bottom: 0;
+}
+
+.codexse-btn-style-5 .cdx-btn:hover:before {
+    height: 100%;
+}
+
+.codexse-btn-style-6 .cdx-btn:before {
+    width: 0%;
+    height: 100%;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.codexse-btn-style-6 .cdx-btn:hover:before {
+    width: 100%;
+}
+
+.codexse-btn-style-7 .cdx-btn:before {
+    width: 0px;
+    height: 0px;
+    border-radius: 100px;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.codexse-btn-style-7 .cdx-btn:hover:before {
+    width: 300px;
+    height: 300px;
+}

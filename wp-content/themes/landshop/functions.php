@@ -172,7 +172,7 @@ if( !function_exists('landshop_setup_theme') ){
                 $homepage_id = get_option( 'page_on_front' );
                 /*current page id*/
                 $current_page_id = ( is_page( get_the_ID() ) ) ? get_the_ID() : '';
-                if( $homepage_id == $current_page_id or $onepage === 'no'  ) {
+                if( $homepage_id == $current_page_id or $onepage !== 'yes'  ) {
                     return true;
                 } else {
                     return false;

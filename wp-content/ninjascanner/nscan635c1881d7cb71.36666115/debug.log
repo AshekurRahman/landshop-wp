@@ -1,0 +1,211 @@
+1667005355~~1~~Processing step 1/14
+1667005355~~1~~Skipping NinjaScanner files integrity check
+1667005355~~8~~Process executed in 0.0003 seconds and used 81.50 MB of memory (NinjaScanner additional memory: 0.00 MB).
+1667005356~~1~~Processing step 2/14
+1667005356~~1~~Building file's list
+1667005357~~1~~Total files found: 13,689
+1667005357~~1~~Building database posts and pages checksum
+1667005357~~1~~Found 51 posts and 28 pages in the database
+1667005357~~8~~Process executed in 1.0106 seconds and used 92.70 MB of memory (NinjaScanner additional memory: 11.20 MB).
+1667005358~~1~~Processing step 3/14
+1667005358~~1~~Checking WordPress core files integrity
+1667005358~~8~~Downloading wordpress-6.0.2.zip from wordpress.org
+1667005381~~8~~Building files list from ZIP archive
+1667005382~~8~~Using sha1 algo
+1667005382~~2~~Checksum mismatch: /opt/lampp/htdocs/landshop/wp-config-sample.php
+1667005382~~2~~Checksum mismatch: /opt/lampp/htdocs/landshop/license.txt
+1667005382~~2~~Checksum mismatch: /opt/lampp/htdocs/landshop/wp-includes/images/crystal/license.txt
+1667005382~~2~~Checksum mismatch: /opt/lampp/htdocs/landshop/wp-includes/js/dist/components.js
+1667005382~~2~~Checksum mismatch: /opt/lampp/htdocs/landshop/wp-includes/js/dist/blocks.js
+1667005382~~2~~Checksum mismatch: /opt/lampp/htdocs/landshop/wp-includes/js/dist/edit-site.js
+1667005382~~2~~Checksum mismatch: /opt/lampp/htdocs/landshop/wp-includes/js/dist/block-editor.js
+1667005383~~2~~Total modified core files: 7
+1667005383~~8~~Process executed in 24.9124 seconds and used 92.48 MB of memory (NinjaScanner additional memory: 0.00 MB).
+1667005384~~1~~Processing step 4/14
+1667005384~~1~~Building plugins list
+1667005384~~8~~Total plugins found: 20
+1667005384~~8~~Process executed in 0.0130 seconds and used 92.16 MB of memory (NinjaScanner additional memory: 0.00 MB).
+1667005385~~1~~Processing step 5/14
+1667005385~~1~~Checking plugin files integrity
+1667005385~~8~~classic-editor 1.6.2
+1667005385~~8~~Attempting to download it from wordpress.org
+1667005387~~8~~Building files list from ZIP archive
+1667005387~~8~~Using sha1 algo
+1667005387~~2~~Checksum mismatch: /opt/lampp/htdocs/landshop/wp-content/plugins/classic-editor/classic-editor.php
+1667005387~~2~~Checksum mismatch: /opt/lampp/htdocs/landshop/wp-content/plugins/classic-editor/readme.txt
+1667005387~~8~~cmb2 2.10.1
+1667005387~~8~~Attempting to download it from wordpress.org
+1667005388~~8~~Not found. Attempting to download it from the trunk folder instead
+1667005390~~8~~Building files list from ZIP archive
+1667005391~~8~~Using sha1 algo
+1667005391~~8~~codexse 
+1667005391~~8~~Attempting to download it from wordpress.org
+1667005392~~8~~Not found. Attempting to download it from the trunk folder instead
+1667005393~~2~~HTTP Error 404. Skipping codexse , it may not be available in the repo
+1667005393~~8~~contact-form-7 5.6.4
+1667005393~~8~~Attempting to download it from wordpress.org
+1667005395~~8~~Building files list from ZIP archive
+1667005395~~8~~Using sha1 algo
+1667005395~~8~~customizer-export-import 0.9.5
+1667005395~~8~~Attempting to download it from wordpress.org
+1667005396~~8~~Not found. Attempting to download it from the trunk folder instead
+1667005397~~8~~Building files list from ZIP archive
+1667005397~~8~~Using sha1 algo
+1667005397~~8~~elementor 3.7.8
+1667005397~~8~~Attempting to download it from wordpress.org
+1667005407~~8~~Building files list from ZIP archive
+1667005407~~8~~Using sha1 algo
+1667005408~~8~~envato-theme-check-master 1.0.0
+1667005408~~8~~Attempting to download it from wordpress.org
+1667005409~~8~~Not found. Attempting to download it from the trunk folder instead
+1667005410~~2~~HTTP Error 404. Skipping envato-theme-check-master 1.0.0, it may not be available in the repo
+1667005410~~8~~ht-mega-for-elementor 1.9.7
+1667005410~~8~~Attempting to download it from wordpress.org
+1667005411~~8~~Not found. Attempting to download it from the trunk folder instead
+1667005418~~8~~Building files list from ZIP archive
+1667005418~~8~~Using sha1 algo
+1667005418~~8~~landshopcore 1.0.0
+1667005418~~8~~Attempting to download it from wordpress.org
+1667005419~~8~~Not found. Attempting to download it from the trunk folder instead
+1667005420~~2~~HTTP Error 404. Skipping landshopcore 1.0.0, it may not be available in the repo
+1667005420~~8~~mailchimp-for-wp 4.8.10
+1667005420~~8~~Attempting to download it from wordpress.org
+1667005422~~8~~Building files list from ZIP archive
+1667005422~~8~~Using sha1 algo
+1667005423~~2~~Checksum mismatch: /opt/lampp/htdocs/landshop/wp-content/plugins/mailchimp-for-wp/LICENSE
+1667005423~~8~~ninjascanner 3.0.11
+1667005423~~8~~Attempting to download it from wordpress.org
+1667005425~~8~~Building files list from ZIP archive
+1667005425~~8~~Using sha1 algo
+1667005425~~8~~one-click-demo-import 3.1.2
+1667005425~~8~~Attempting to download it from wordpress.org
+1667005427~~8~~Building files list from ZIP archive
+1667005427~~8~~Using sha1 algo
+1667005427~~8~~redux-framework 4.3.19
+1667005427~~8~~Attempting to download it from wordpress.org
+1667005434~~8~~Building files list from ZIP archive
+1667005434~~8~~Using sha1 algo
+1667005435~~8~~widget-importer-exporter 1.6
+1667005435~~8~~Attempting to download it from wordpress.org
+1667005436~~8~~Building files list from ZIP archive
+1667005436~~8~~Using sha1 algo
+1667005436~~8~~woocommerce 7.0.0
+1667005436~~8~~Attempting to download it from wordpress.org
+1667005448~~8~~Building files list from ZIP archive
+1667005449~~8~~Using sha1 algo
+1667005451~~8~~woocommerce-lottery 2.1.9
+1667005451~~8~~Attempting to download it from wordpress.org
+1667005453~~8~~Not found. Attempting to download it from the trunk folder instead
+1667005454~~2~~HTTP Error 404. Skipping woocommerce-lottery 2.1.9, it may not be available in the repo
+1667005454~~8~~woocommerce-lottery-pick-number 2.3.0
+1667005454~~8~~Attempting to download it from wordpress.org
+1667005455~~8~~Not found. Attempting to download it from the trunk folder instead
+1667005456~~2~~HTTP Error 404. Skipping woocommerce-lottery-pick-number 2.3.0, it may not be available in the repo
+1667005456~~8~~woocommerce-payments 4.9.0
+1667005456~~8~~Attempting to download it from wordpress.org
+1667005463~~8~~Building files list from ZIP archive
+1667005463~~8~~Using sha1 algo
+1667005464~~8~~wordpress-importer 0.8
+1667005464~~8~~Attempting to download it from wordpress.org
+1667005465~~8~~Building files list from ZIP archive
+1667005465~~8~~Using sha1 algo
+1667005465~~8~~wp-reset 1.95
+1667005465~~8~~Attempting to download it from wordpress.org
+1667005468~~8~~Building files list from ZIP archive
+1667005468~~8~~Using sha1 algo
+1667005468~~2~~Checksum mismatch: /opt/lampp/htdocs/landshop/wp-content/plugins/wp-reset/css/index.php
+1667005468~~2~~Checksum mismatch: /opt/lampp/htdocs/landshop/wp-content/plugins/wp-reset/css/sweetalert2.min.css
+1667005468~~2~~Checksum mismatch: /opt/lampp/htdocs/landshop/wp-content/plugins/wp-reset/css/wp-reset.css
+1667005468~~2~~Checksum mismatch: /opt/lampp/htdocs/landshop/wp-content/plugins/wp-reset/img/index.php
+1667005468~~2~~Checksum mismatch: /opt/lampp/htdocs/landshop/wp-content/plugins/wp-reset/index.php
+1667005468~~2~~Checksum mismatch: /opt/lampp/htdocs/landshop/wp-content/plugins/wp-reset/js/index.php
+1667005468~~2~~Checksum mismatch: /opt/lampp/htdocs/landshop/wp-content/plugins/wp-reset/js/wp-reset.js
+1667005468~~2~~Checksum mismatch: /opt/lampp/htdocs/landshop/wp-content/plugins/wp-reset/js/wp-reset-libs.min.js
+1667005468~~2~~Checksum mismatch: /opt/lampp/htdocs/landshop/wp-content/plugins/wp-reset/js/wp-reset-pointers.js
+1667005468~~2~~Checksum mismatch: /opt/lampp/htdocs/landshop/wp-content/plugins/wp-reset/libs/diff/Renderer/Abstract.php
+1667005468~~2~~Checksum mismatch: /opt/lampp/htdocs/landshop/wp-content/plugins/wp-reset/libs/diff/Renderer/Html/Array.php
+1667005468~~2~~Checksum mismatch: /opt/lampp/htdocs/landshop/wp-content/plugins/wp-reset/libs/diff/Renderer/Html/Inline.php
+1667005468~~2~~Checksum mismatch: /opt/lampp/htdocs/landshop/wp-content/plugins/wp-reset/libs/diff/Renderer/Html/SideBySide.php
+1667005468~~2~~Checksum mismatch: /opt/lampp/htdocs/landshop/wp-content/plugins/wp-reset/libs/diff/Renderer/Text/Context.php
+1667005468~~2~~Checksum mismatch: /opt/lampp/htdocs/landshop/wp-content/plugins/wp-reset/libs/diff/Renderer/Text/Unified.php
+1667005468~~2~~Checksum mismatch: /opt/lampp/htdocs/landshop/wp-content/plugins/wp-reset/libs/diff/SequenceMatcher.php
+1667005468~~2~~Checksum mismatch: /opt/lampp/htdocs/landshop/wp-content/plugins/wp-reset/libs/dumper.php
+1667005468~~2~~Checksum mismatch: /opt/lampp/htdocs/landshop/wp-content/plugins/wp-reset/libs/index.php
+1667005468~~2~~Checksum mismatch: /opt/lampp/htdocs/landshop/wp-content/plugins/wp-reset/readme.txt
+1667005468~~2~~Checksum mismatch: /opt/lampp/htdocs/landshop/wp-content/plugins/wp-reset/wf-flyout/config.php
+1667005468~~2~~Checksum mismatch: /opt/lampp/htdocs/landshop/wp-content/plugins/wp-reset/wf-flyout/wf-flyout.css
+1667005468~~2~~Checksum mismatch: /opt/lampp/htdocs/landshop/wp-content/plugins/wp-reset/wf-flyout/wf-flyout.js
+1667005468~~2~~Checksum mismatch: /opt/lampp/htdocs/landshop/wp-content/plugins/wp-reset/wf-flyout/wf-flyout.php
+1667005468~~2~~Checksum mismatch: /opt/lampp/htdocs/landshop/wp-content/plugins/wp-reset/wp-reset-cli.php
+1667005468~~2~~Checksum mismatch: /opt/lampp/htdocs/landshop/wp-content/plugins/wp-reset/wp-reset.php
+1667005468~~2~~Checksum mismatch: /opt/lampp/htdocs/landshop/wp-content/plugins/wp-reset/wp-reset-utility.php
+1667005468~~2~~Total modified plugin files: 29
+1667005468~~8~~Process executed in 82.5181 seconds and used 92.16 MB of memory (NinjaScanner additional memory: 0.00 MB).
+1667005469~~1~~Processing step 6/14
+1667005469~~1~~Building themes list
+1667005469~~8~~Total themes found: 5
+1667005469~~8~~Process executed in 0.0158 seconds and used 90.66 MB of memory (NinjaScanner additional memory: 0.00 MB).
+1667005471~~1~~Processing step 7/14
+1667005471~~1~~Checking theme files integrity
+1667005471~~8~~landshop 1.0.0
+1667005471~~8~~Attempting to download it from wordpress.org
+1667005472~~2~~HTTP Error 404. Skipping landshop 1.0.0, it may not be available in the repo
+1667005472~~8~~maruncy 1.0.0
+1667005472~~8~~Attempting to download it from wordpress.org
+1667005472~~2~~HTTP Error 404. Skipping maruncy 1.0.0, it may not be available in the repo
+1667005472~~8~~twentytwenty 2.0
+1667005472~~8~~Attempting to download it from wordpress.org
+1667005479~~8~~Building files list from ZIP archive
+1667005479~~8~~Using sha1 algo
+1667005479~~8~~twentytwentyone 1.6
+1667005479~~8~~Attempting to download it from wordpress.org
+1667005483~~8~~Building files list from ZIP archive
+1667005483~~8~~Using sha1 algo
+1667005483~~8~~twentytwentytwo 1.2
+1667005483~~8~~Attempting to download it from wordpress.org
+1667005490~~8~~Building files list from ZIP archive
+1667005490~~8~~Using sha1 algo
+1667005491~~2~~Additional/suspicious files: 4
+1667005491~~1~~Theme files integrity is O.K
+1667005491~~8~~Process executed in 19.9448 seconds and used 90.66 MB of memory (NinjaScanner additional memory: 0.00 MB).
+1667005492~~1~~Processing step 8/14
+1667005492~~1~~Skipping snapshots comparison, no older files shapshot found
+1667005492~~8~~Process executed in 0.0138 seconds and used 90.52 MB of memory (NinjaScanner additional memory: 0.00 MB).
+1667005493~~1~~Processing step 9/14
+1667005493~~1~~Skipping snapshots comparison, no older database shapshot found
+1667005493~~8~~Process executed in 0.0133 seconds and used 90.52 MB of memory (NinjaScanner additional memory: 0.00 MB).
+1667005494~~1~~Processing step 10/14
+1667005494~~1~~Skipping Google Safe Browsing: no API key found
+1667005494~~8~~Process executed in 0.0090 seconds and used 90.52 MB of memory (NinjaScanner additional memory: 0.00 MB).
+1667005495~~1~~Processing step 11/14
+1667005495~~1~~Skipping binary files scan
+1667005495~~8~~Process executed in 0.0144 seconds and used 90.52 MB of memory (NinjaScanner additional memory: 0.00 MB).
+1667005496~~1~~Processing step 12/14
+1667005496~~1~~Running anti-malware scanner
+1667005496~~1~~Building the list of files to check
+1667005496~~8~~Checking user-defined exclusion lists
+1667005496~~8~~Creating files/folders exclusion list
+1667005496~~8~~Limiting search to files smaller than 1,048,576 bytes
+1667005496~~8~~Files ignored based on user-defined exclusion lists: 43
+1667005496~~1~~Retrieving signatures lists
+1667005496~~8~~Checking built-in signatures list
+1667005496~~8~~Downloading the latest version
+1667005497~~8~~Verifying digital signature with public key
+1667005497~~8~~Verifying signatures
+1667005497~~8~~Verified signatures: 883
+1667005497~~8~~Process executed in 1.4474 seconds and used 91.57 MB of memory (NinjaScanner additional memory: 1.05 MB).
+1667005499~~1~~Processing step 13/14
+1667005499~~2~~Potentially unsafe files: /opt/lampp/htdocs/landshop/wp-content/plugins/envato-theme-check-master/checks/themeforest.php
+1667005515~~1~~Scanned files: 9,396/13,646
+1667005515~~8~~Process executed in 15.4404 seconds and used 96.02 MB of memory (NinjaScanner additional memory: 5.50 MB).
+1667005516~~1~~Processing step 13/14
+1667005532~~1~~Scanned files: 10,097/13,646
+1667005532~~8~~Process executed in 15.7808 seconds and used 92.27 MB of memory (NinjaScanner additional memory: 1.75 MB).
+1667005533~~1~~Processing step 13/14
+1667005546~~2~~Total potentially unsafe files: 1
+1667005546~~8~~Process executed in 13.6618 seconds and used 91.26 MB of memory (NinjaScanner additional memory: 0.74 MB).
+1667005548~~1~~Processing step 14/14
+1667005548~~1~~Performing various checks
+1667005548~~8~~Process executed in 0.0122 seconds and used 90.52 MB of memory (NinjaScanner additional memory: 0.00 MB).
+1667005548~~8~~Sending email report
+1667005548~~1~~Exiting scanning process

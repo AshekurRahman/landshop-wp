@@ -26,17 +26,17 @@
 <div <?php post_class([ (!is_single() ? 'post-box' : 'post-single-box'), 'gallery_post' ,get_post_type()]); ?>>
 	<?php 
 		if($landshop_opt['post_thumbnail'] == '1'){			
-            if(get_post_meta( get_the_ID(), '_landshop_post_gallery', false )){
-                $gallery_images = get_post_meta( get_the_ID(), '_landshop_post_gallery', false );
+            if(get_post_meta( get_the_ID(), '_codexse_image_gallery_id', true )){
+                $gallery_images = get_post_meta( get_the_ID(), '_codexse_image_gallery_id', true );
             }else{
                 $gallery_images = array();
             }
-            if(function_exists('landshop_gallery_photo_list')): 
+            if(function_exists('codexse_gallery_embed')): 
                 // Gallery Post Content Function
-                echo landshop_gallery_photo_list( $gallery_images, $landshop_opt['post_thumb_size'] );    
+                echo codexse_gallery_embed( $gallery_images, $landshop_opt['post_thumb_size'] );    
             else:
                 landshop_post_thumbnail($landshop_opt['post_thumb_size']); 
-            endif; 
+            endif;
 		}
 	?>
 	<div class="content">     

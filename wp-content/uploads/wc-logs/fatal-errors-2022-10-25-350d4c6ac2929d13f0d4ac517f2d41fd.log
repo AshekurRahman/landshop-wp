@@ -1,0 +1,61 @@
+2022-10-25T07:57:45+00:00 CRITICAL require_once(): Failed opening required '/opt/lampp/htdocs/landshop/wp-content/plugins/codexseincludes/widgets/Button.php' (include_path='.:/opt/lampp/lib/php') in /opt/lampp/htdocs/landshop/wp-content/plugins/codexse/includes/Addons.php on line 53
+
+2022-10-25T07:58:37+00:00 CRITICAL Uncaught Error: Class '\Elementor\HTMega_Elementor_Widget_Button' not found in /opt/lampp/htdocs/landshop/wp-content/plugins/codexse/includes/Addons.php:56
+Stack trace:
+#0 /opt/lampp/htdocs/landshop/wp-includes/class-wp-hook.php(307): Codexse\Addons->init_widgets(Object(Elementor\Widgets_Manager))
+#1 /opt/lampp/htdocs/landshop/wp-includes/class-wp-hook.php(331): WP_Hook->apply_filters(NULL, Array)
+#2 /opt/lampp/htdocs/landshop/wp-includes/plugin.php(476): WP_Hook->do_action(Array)
+#3 /opt/lampp/htdocs/landshop/wp-content/plugins/elementor/includes/managers/widgets.php(119): do_action('elementor/widge...', Object(Elementor\Widgets_Manager))
+#4 /opt/lampp/htdocs/landshop/wp-content/plugins/elementor/includes/managers/widgets.php(310): Elementor\Widgets_Manager->init_widgets()
+#5 /opt/lampp/htdocs/landshop/wp-content/plugins/elementor/includes/elements/column.php(1044): Elementor\Widgets_Manager->get_widget_types('image')
+#6 /opt/lampp/htdocs/landshop/wp-content/plugins/elementor/includes/base/element-base.php(8 in /opt/lampp/htdocs/landshop/wp-content/plugins/codexse/includes/Addons.php on line 56
+
+2022-10-25T07:59:06+00:00 CRITICAL Uncaught Error: Class '\Elementor\Codexse_Elementor_Widget_Button' not found in /opt/lampp/htdocs/landshop/wp-content/plugins/codexse/includes/Addons.php:56
+Stack trace:
+#0 /opt/lampp/htdocs/landshop/wp-includes/class-wp-hook.php(307): Codexse\Addons->init_widgets(Object(Elementor\Widgets_Manager))
+#1 /opt/lampp/htdocs/landshop/wp-includes/class-wp-hook.php(331): WP_Hook->apply_filters(NULL, Array)
+#2 /opt/lampp/htdocs/landshop/wp-includes/plugin.php(476): WP_Hook->do_action(Array)
+#3 /opt/lampp/htdocs/landshop/wp-content/plugins/elementor/includes/managers/widgets.php(119): do_action('elementor/widge...', Object(Elementor\Widgets_Manager))
+#4 /opt/lampp/htdocs/landshop/wp-content/plugins/elementor/includes/managers/widgets.php(310): Elementor\Widgets_Manager->init_widgets()
+#5 /opt/lampp/htdocs/landshop/wp-content/plugins/elementor/includes/elements/column.php(1044): Elementor\Widgets_Manager->get_widget_types('image')
+#6 /opt/lampp/htdocs/landshop/wp-content/plugins/elementor/includes/base/element-base.php( in /opt/lampp/htdocs/landshop/wp-content/plugins/codexse/includes/Addons.php on line 56
+
+2022-10-25T08:18:35+00:00 CRITICAL Uncaught Error: Call to undefined function Elementor\Codexse_kses_desc() in /opt/lampp/htdocs/landshop/wp-content/plugins/codexse/includes/Addons/Widgets/Button.php:675
+Stack trace:
+#0 /opt/lampp/htdocs/landshop/wp-content/plugins/elementor/includes/base/controls-stack.php(2249): Elementor\Codexse_Elementor_Widget_Button->render()
+#1 /opt/lampp/htdocs/landshop/wp-content/plugins/elementor/includes/base/widget-base.php(609): Elementor\Controls_Stack->render_by_mode()
+#2 /opt/lampp/htdocs/landshop/wp-content/plugins/elementor/core/base/document.php(292): Elementor\Widget_Base->render_content()
+#3 /opt/lampp/htdocs/landshop/wp-content/plugins/elementor/includes/managers/widgets.php(426): Elementor\Core\Base\Document->render_element(Array)
+#4 [internal function]: Elementor\Widgets_Manager->ajax_render_widget(Array, Object(Elementor\Core\Common\Modules\Ajax\Module))
+#5 /opt/lampp/htdocs/landshop/wp-content/plugins/elementor/core/common/modules/ajax/module.php(171): call_user_func(Array, Array, Object(Elementor\Cor in /opt/lampp/htdocs/landshop/wp-content/plugins/codexse/includes/Addons/Widgets/Button.php on line 675
+
+2022-10-25T08:18:44+00:00 CRITICAL Uncaught Error: Call to undefined function Elementor\Codexse_kses_desc() in /opt/lampp/htdocs/landshop/wp-content/plugins/codexse/includes/Addons/Widgets/Button.php:675
+Stack trace:
+#0 /opt/lampp/htdocs/landshop/wp-content/plugins/elementor/includes/base/controls-stack.php(2249): Elementor\Codexse_Elementor_Widget_Button->render()
+#1 /opt/lampp/htdocs/landshop/wp-content/plugins/elementor/includes/base/widget-base.php(609): Elementor\Controls_Stack->render_by_mode()
+#2 /opt/lampp/htdocs/landshop/wp-content/plugins/elementor/includes/base/widget-base.php(673): Elementor\Widget_Base->render_content()
+#3 /opt/lampp/htdocs/landshop/wp-content/plugins/elementor/includes/db.php(202): Elementor\Widget_Base->render_plain_content()
+#4 /opt/lampp/htdocs/landshop/wp-content/plugins/elementor/includes/db.php(208): Elementor\DB->render_element_plain_content(Array)
+#5 /opt/lampp/htdocs/landshop/wp-content/plugins/elementor/includes/db.php(208): Elementor\DB->render_element_plain_content(Array)
+#6 /opt/lampp/htdocs/landshop in /opt/lampp/htdocs/landshop/wp-content/plugins/codexse/includes/Addons/Widgets/Button.php on line 675
+
+2022-10-25T08:18:55+00:00 CRITICAL Uncaught Error: Call to undefined function Elementor\Codexse_kses_desc() in /opt/lampp/htdocs/landshop/wp-content/plugins/codexse/includes/Addons/Widgets/Button.php:675
+Stack trace:
+#0 /opt/lampp/htdocs/landshop/wp-content/plugins/elementor/includes/base/controls-stack.php(2249): Elementor\Codexse_Elementor_Widget_Button->render()
+#1 /opt/lampp/htdocs/landshop/wp-content/plugins/elementor/includes/base/widget-base.php(609): Elementor\Controls_Stack->render_by_mode()
+#2 /opt/lampp/htdocs/landshop/wp-content/plugins/elementor/includes/base/widget-base.php(733): Elementor\Widget_Base->render_content()
+#3 /opt/lampp/htdocs/landshop/wp-content/plugins/elementor/includes/base/element-base.php(534): Elementor\Widget_Base->get_raw_data(true)
+#4 /opt/lampp/htdocs/landshop/wp-content/plugins/elementor/includes/base/element-base.php(534): Elementor\Element_Base->get_raw_data(true)
+#5 /opt/lampp/htdocs/landshop/wp-content/plugins/elementor/core/base/document.php(957): Elementor\Element_Base->get_raw_data(true)
+#6 /opt/la in /opt/lampp/htdocs/landshop/wp-content/plugins/codexse/includes/Addons/Widgets/Button.php on line 675
+
+2022-10-25T08:47:57+00:00 CRITICAL Uncaught Error: Call to undefined function Elementor\codexse_kses_desc() in /opt/lampp/htdocs/landshop/wp-content/plugins/codexse/includes/Addons/Widgets/Button.php:675
+Stack trace:
+#0 /opt/lampp/htdocs/landshop/wp-content/plugins/elementor/includes/base/controls-stack.php(2249): Elementor\Codexse_Elementor_Widget_Button->render()
+#1 /opt/lampp/htdocs/landshop/wp-content/plugins/elementor/includes/base/widget-base.php(609): Elementor\Controls_Stack->render_by_mode()
+#2 /opt/lampp/htdocs/landshop/wp-content/plugins/elementor/includes/base/widget-base.php(733): Elementor\Widget_Base->render_content()
+#3 /opt/lampp/htdocs/landshop/wp-content/plugins/elementor/includes/base/element-base.php(534): Elementor\Widget_Base->get_raw_data(true)
+#4 /opt/lampp/htdocs/landshop/wp-content/plugins/elementor/includes/base/element-base.php(534): Elementor\Element_Base->get_raw_data(true)
+#5 /opt/lampp/htdocs/landshop/wp-content/plugins/elementor/core/base/document.php(957): Elementor\Element_Base->get_raw_data(true)
+#6 /opt/la in /opt/lampp/htdocs/landshop/wp-content/plugins/codexse/includes/Addons/Widgets/Button.php on line 675
+

@@ -167,18 +167,18 @@ if($landshop_opt['nav_search_display'] == '1'): ?>
                 <button class="nav-link active" id="landshop-login-tab" data-bs-toggle="pill" data-bs-target="#tab-login" type="button" role="tab" aria-controls="tab-login" aria-selected="true"><?php esc_html_e('Login','landshop'); ?></button>
             </li>
             <li class="tab-item" role="presentation">
-                <button class="nav-link" id="landshop-register-tab" data-bs-toggle="pill" data-bs-target="#tab-register" type="button" role="tab" aria-controls="tab-register" aria-selected="false"><?php esc_html_e('Registration','landshop'); ?></button>
+                <button class="nav-link" id="landshop-register-tab" data-bs-toggle="pill" data-bs-target="#tab-register" type="button" role="tab" aria-controls="tab-register" aria-selected="false"><?php esc_html_e('Register','landshop'); ?></button>
             </li>
         </ul>
         <div class="tab-content">
             <div class="tab-pane fade show active" id="tab-login" role="tabpanel" aria-labelledby="landshop-login-tab">
                 <?php
-                    landshop_login_form();    
+                    wp_login_form();    
                 ?>
             </div>
             <div class="tab-pane fade" id="tab-register" role="tabpanel" aria-labelledby="landshop-register-tab">
                 <?php
-                    landshop_registration_form(); 
+                    landshop_registration_function(); 
                 ?>
             </div>
         </div>

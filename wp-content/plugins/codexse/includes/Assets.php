@@ -21,14 +21,34 @@ class Assets {
                 'src' => CODEXSE_ASSETS . '/css/main.css',
                 'version' => filemtime(  CODEXSE_PATH . '/assets/css/main.css')
             ], 
-            'codexse-post' => [
-                'src' => CODEXSE_ASSETS . '/css/post-style.css',
-                'version' => filemtime(  CODEXSE_PATH . '/assets/css/post-style.css')
+            'codexse-post-gallery' => [
+                'src' => CODEXSE_ASSETS . '/css/post-gallery.css',
+                'version' => filemtime(  CODEXSE_PATH . '/assets/css/post-gallery.css')
+            ],  
+            'codexse-post-video' => [
+                'src' => CODEXSE_ASSETS . '/css/post-video.css',
+                'version' => filemtime(  CODEXSE_PATH . '/assets/css/post-video.css')
             ],            
             'PopulerPosts' => [
                 'src' => CODEXSE_ASSETS . '/css/PopulerPosts.css',
                 'version' => filemtime(  CODEXSE_PATH . '/assets/css/PopulerPosts.css')
-            ]
+            ],            
+            'swiper-slider' => [
+                'src' => CODEXSE_ASSETS . '/css/swiper-bundle-min.css',
+                'version' => filemtime(  CODEXSE_PATH . '/assets/css/swiper-bundle-min.css')
+            ],           
+            'codexse-button' => [
+                'src' => CODEXSE_ASSETS . '/css/addons/button.css',
+                'version' => filemtime(  CODEXSE_PATH . '/assets/css/addons/button.css')
+            ],         
+            'codexse-carousel' => [
+                'src' => CODEXSE_ASSETS . '/css/addons/carousel.css',
+                'version' => filemtime(  CODEXSE_PATH . '/assets/css/addons/carousel.css')
+            ],       
+            'codexse-icon-box' => [
+                'src' => CODEXSE_ASSETS . '/css/addons/Icon_Box.css',
+                'version' => filemtime(  CODEXSE_PATH . '/assets/css/addons/Icon_Box.css')
+            ],
         ];
     }
 
@@ -47,10 +67,28 @@ class Assets {
                 'ver' => filemtime(  CODEXSE_PATH . '/assets/js/wishlist.js'),
                 'footer' => true
             ],
-            'codexse-post' => [
-                'src' => CODEXSE_ASSETS . '/js/post-script.js',
+            'codexse-post-gallery' => [
+                'src' => CODEXSE_ASSETS . '/js/post-gallery.js',
                 'deps' => ['jquery'],
-                'ver' => filemtime(  CODEXSE_PATH . '/assets/js/post-script.js'),
+                'ver' => filemtime(  CODEXSE_PATH . '/assets/js/post-gallery.js'),
+                'footer' => true
+            ],
+            'codexse-post-video' => [
+                'src' => CODEXSE_ASSETS . '/js/post-video.js',
+                'deps' => ['jquery'],
+                'ver' => filemtime(  CODEXSE_PATH . '/assets/js/post-video.js'),
+                'footer' => true
+            ],
+            'swiper-slider' => [
+                'src' => CODEXSE_ASSETS . '/js/swiper-bundle-min.js',
+                'deps' => ['jquery'],
+                'ver' => filemtime(  CODEXSE_PATH . '/assets/js/swiper-bundle-min.js'),
+                'footer' => true
+            ],
+            'codexse-carousel' => [
+                'src' => CODEXSE_ASSETS . '/js/addons/carousel.js',
+                'deps' => ['jquery'],
+                'ver' => filemtime(  CODEXSE_PATH . '/assets/js/addons/carousel.js'),
                 'footer' => true
             ]
         ];

@@ -21,8 +21,6 @@
 		$landshop_opt['post_read_more_txt'] = esc_html__('Read More','landshop');
 	}	
 	
-	wp_enqueue_style( 'codexse-post' );
-	wp_enqueue_script( 'codexse-post' );
 ?>
 
 

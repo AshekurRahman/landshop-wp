@@ -5,14 +5,14 @@ Template Name: Page Left Sidebar
     get_header();
     $remove_header = get_post_meta( get_the_ID(), '_codexse_remove_page_header', true );
     $elementor_ready = get_post_meta( get_the_ID(), '_codexse_ready_for_elementor', true );
-    if( $remove_header === 'yes' ){
+    if( $remove_header !== 'yes' ){
         get_template_part('components/layouts/site_header');
     }
 ?>
 <!-- Post_List_Area-Start -->
 <?php if( have_posts() ){ ?>
-<section class="<?php echo ( ($elementor_ready === 'no') ? 'single_page_area section-padding' : '' ); ?> page-section">
-    <div class="<?php echo ( ($elementor_ready === 'no') ? 'container' : '' ); ?>">
+<section class="<?php echo ( ($elementor_ready !== 'yes') ? 'single_page_area section-padding' : '' ); ?> page-section">
+    <div class="<?php echo ( ($elementor_ready !== 'yes') ? 'container' : '' ); ?>">
         <div class="row flex-row-reverse">
             <div class="col-sm-12 <?php echo ( is_active_sidebar( 'main_sidebar' ) ? 'col-lg-8' : '' ); ?>">
                 <div class="<?php echo ( is_active_sidebar( 'main_sidebar' ) ? 'pe-lg-4' : '' ); ?>">
@@ -28,7 +28,7 @@ Template Name: Page Left Sidebar
                             get_template_part( 'components/post-formats/post', 'page' );
                              // End the loop.
                             /* If comments are open or we have at least one comment, load up the comment template.*/
-                            if ( get_post_type() && comments_open() || get_comments_number() and $elementor_ready === 'no' ) :
+                            if ( get_post_type() && comments_open() || get_comments_number() and $elementor_ready !== 'yes' ) :
                                 comments_template();
                             endif;
                         }

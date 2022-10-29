@@ -1,0 +1,123 @@
+/*-- Circle-Progress-Style --*/
+.cirlce-progress {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    line-height: 0;
+}
+
+.cirlce-progress .percent {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    margin: 0;
+    color: rgb(var(--secondary-color));
+}
+
+.swiper-container-horizontal>.swiper-pagination-bullets,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+    bottom: 0;
+    background-color: #ffffff;
+    border-radius: 100px;
+    display: inline-block;
+    width: inherit;
+    padding: 15px 15px;
+    line-height: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 24px;
+}
+
+.swiper-pagination-bullets .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    margin: 10px;
+    position: relative;
+    background-color: rgba(var(--primary-color), 0.5);
+    opacity: 1;
+}
+
+.swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background-color: rgba(var(--primary-color), 1);
+}
+
+.swiper-pagination .swiper-pagination-bullet svg {
+    position: absolute;
+    left: calc(50% + 2px);
+    top: calc(50% + 2px);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 26px;
+    height: 26px;
+}
+
+.swiper-pagination svg circle {
+    fill: none;
+    stroke: rgba(var(--primary-color), 1);
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-dasharray: 125;
+    stroke-dashoffset: 125;
+}
+
+.swiper-pagination-bullet-active svg circle {
+    -webkit-animation: slide-progress linear forwards;
+    animation: slide-progress linear forwards;
+}
+
+.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 8px;
+}
+
+.codexse-custom-carousel .slide-item {
+    overflow: hidden;
+}
+
+@-webkit-keyframes slide-progress {
+    0% {
+        stroke-dashoffset: 125;
+    }
+
+    100% {
+        stroke-dashoffset: 63;
+    }
+}
+
+@keyframes slide-progress {
+    0% {
+        stroke-dashoffset: 125;
+    }
+
+    100% {
+        stroke-dashoffset: 63;
+    }
+}
+
+.swiper-navigation .swiper-arrow {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 9;
+    width: 50px;
+    height: 50px;
+    background-color: #ffffff;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 100px;
+    color: rgb(var(--primary-color));
+    transition: 0.3s;
+}
+
+.swiper-navigation .swiper-arrow:hover {
+    color: #ffffff;
+    background-color: rgb(var(--primary-color));
+}
+
+.swiper-navigation .swiper-arrow.swiper-next {
+    left: auto;
+    right: 15px;
+}

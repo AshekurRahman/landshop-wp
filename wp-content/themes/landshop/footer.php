@@ -17,7 +17,7 @@
 		));
 	}
 ?>
-<?php if( $remove_widget === 'no' ): ?>
+<?php if( $remove_widget !== 'yes' ): ?>
 <!--Footer_Area-Start-->
 <footer class="footer_wrapper">
 	<?php if($footer_template && $footer_template->have_posts()): ?>

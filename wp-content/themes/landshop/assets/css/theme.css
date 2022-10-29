@@ -2388,8 +2388,8 @@ WP-Login-Popup
 }
 
 .landshop-login-popup .popup-middle .popup-close .svg-icon {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
 }
 
 .landshop-login-popup .popup-close-overlay {
@@ -2449,9 +2449,10 @@ WP-Login-Popup
     color: #fff;
 }
 
-.landshop-login-popup .popup-middle .row {
+.landshop-login-popup .popup-middle .registration-form {
     max-height: 355px;
-    overflow-y: auto;
+    overflow: auto;
+    padding: 0 15px;
 }
 
 .popup-author-info {
