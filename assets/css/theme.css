@@ -1,0 +1,62 @@
+/* --------------------------
+Table of Contents
+-----------------------------
+1. Navbar__Area
+
+   
+*/
+
+
+/* --- 1. Navbar__Area --- */
+.navbar__area {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 9;
+    min-height: var(--navbar-height);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,.05);
+    background-color: white;
+}
+
+.admin-bar .navbar__area {
+    top: 30px;
+}
+
+body.sticky {
+    --navbar-height: 80px
+}
+
+.sticky .navbar__area {
+    position: fixed;
+    background-color: white;
+}
+
+.navbar__height {
+    height: var(--navbar-height);
+    width: 100%;
+    display: block;
+}
+
+.navbar__area .row {
+    min-height: var(--navbar-height);
+}
+
+.navbar__area .sticky__logo {
+    display: none;
+}
+
+body.sticky .navbar__area .sticky__logo {
+    display: block;
+}
+
+body.sticky .navbar__area .main__logo {
+    display: none;
+}
+
+.navbar__area .nav_menu .nav {
+    margin-right: calc(0px - var(--bs-nav-link-padding-y) * 2);
+}
+
+
+

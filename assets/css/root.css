@@ -1,0 +1,51 @@
+/*----- Root-Variable -----*/
+:root {
+    --primary-color: #131313;
+    --text-color: #505050;
+    --accent-color: #FF6B31;
+    --border-color: #ededed;
+
+    --body-font-family: 'Manrope', sans-serif;
+    --heading-font-family: 'Inter', sans-serif;
+
+    --navbar-height: 120px;
+    --section-padding: 120px;
+
+    --bs-link-color: var(--primary-color);
+    --bs-link-hover-color: var(--accent-color);
+}
+
+/* --- 1. Helper__Classes --- */
+.section__padding {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+
+
+/* --- 1. Primary__button --- */
+.primary__button {
+    background-color: white;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    padding: 12px 24px;
+    border-radius: 6px;
+    display: inline-block;
+    transition: .3s;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.primary__button:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.primary__button:not(.outline) {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.primary__button:not(.outline):hover {
+    background-color: var(--accent-color);
+    border: 1px solid var(--accent-color);
+}

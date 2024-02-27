@@ -1,0 +1,100 @@
+.navbar__area .slicknav_menu > a {
+	display: inline-block;
+}
+
+.nav_mobile_toggle {
+	display: none !important;
+}
+
+.navbar__area .slicknav_menu {
+	z-index: 99999;
+	width: 100%;
+	display: none;
+}
+
+.navbar__area .slicknav_menu .slicknav_nav {
+	padding: 12px 24px;
+	background-color: rgb(var(--white-color));
+	border: 1px solid rgb(var(--gray-bg));
+	margin-bottom: 15px;
+    border-radius: 8px;
+	max-height: 70vh;
+	overflow: auto;
+}
+
+.navbar__area .slicknav_menu .slicknav_nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+.navbar__area .slicknav_menu .slicknav_nav ul ul {
+	padding-left: 10px;
+	padding-right: 0;
+}
+
+.navbar__area .slicknav_menu .slicknav_nav ul.nav > li {
+	border-bottom: 0px solid rgba(0, 0, 0, 0.1);
+}
+
+.navbar__area .slicknav_menu .slicknav_nav ul.nav li {
+	padding: 6px 0;
+	position: relative;
+	width: 100%;
+	display: block;
+}
+
+.navbar__area .slicknav_menu .slicknav_nav ul.nav li li {
+	padding: 0 0 8px 8px;
+}
+
+.navbar__area .slicknav_menu .slicknav_nav ul.nav li li:first-child {
+	padding-top: 8px;
+}
+
+.navbar__area .slicknav_menu .slicknav_nav ul.nav li:last-child {
+	border-bottom: none;
+}
+
+.navbar__area .slicknav_menu .slicknav_nav ul li a {
+	position: relative;
+	font-weight: 500;
+	font-family: var(--body-font-family);
+	font-size: var(--body-font-size);
+	color: rgba(var(--dark-color), 1);
+	background: none;
+	display: block;
+}
+
+.navbar__area .slicknav_menu .slicknav_nav li.current-menu-item > a,
+.navbar__area .slicknav_menu .slicknav_nav li.current-menu-item > a a,
+.navbar__area .slicknav_menu .slicknav_nav li.slicknav_open > a,
+.navbar__area .slicknav_menu .slicknav_nav li.slicknav_open > a a,
+.navbar__area .slicknav_menu .slicknav_nav li:hover > a,
+.navbar__area .slicknav_menu .slicknav_nav li:hover > a a,
+.navbar__area .slicknav_menu .slicknav_nav ul li a:focus {
+	color: var(--accent-color);
+}
+
+.navbar__area .slicknav_menu .slicknav_nav ul li > a {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	line-height: 1.4em;
+}
+
+.navbar__area .slicknav_menu .slicknav_nav ul li > a .slicknav_arrow {
+	width: 14px;
+	height: 14px;
+	line-height: 10px;
+	text-align: center;
+	float: right;
+	-webkit-transition: 0.3s;
+	transition: 0.3s;
+	margin-top: 5px;
+	margin-left: auto;
+}
