@@ -17,13 +17,16 @@ Table of Contents
     min-height: var(--navbar-height);
     box-shadow: 0 4px 8px 0 rgba(0,0,0,.05);
     background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .admin-bar .navbar__area {
     top: 30px;
 }
 
-body.sticky {
+body.sticky .navbar__area {
     --navbar-height: 80px
 }
 

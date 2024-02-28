@@ -1,6 +1,9 @@
 <?php
 class Landshop_Customize {
    public static function register ( $wp_customize ) {
+      $wp_customize->get_setting( 'blogname' )->transport = 'postMessage';
+      $wp_customize->get_setting( 'blogdescription' )->transport = 'postMessage';
+
       // Add setting for the sticky logo
       $wp_customize->add_setting('landshop_sticky_logo', array(
          'default' => '', // Default value for the sticky logo
@@ -23,41 +26,191 @@ class Landshop_Customize {
          )
       );
 
-
-
-
-
-
-
       // Section for Typography Settings
       $wp_customize->add_section( 'landshop_typography_settings',
          array(
-            'title'       => __( 'Typography Settings', 'landshop' ),
+            'title'       => __( 'Typography', 'landshop' ),
             'priority'    => 10,
             'capability'  => 'edit_theme_options',
             'panel'       => 'landshop_theme_options_panel',
          )
       );
+      // Body Font Size Setting
+      $wp_customize->add_setting( 'body_font_size_setting',
+         array(
+            'default'           => '16px',
+            'sanitize_callback' => 'sanitize_text_field',
+         )
+      );
 
-      // Create setting for selected font
-      $wp_customize->add_setting('selected_google_font', array(
-         'default'           => 'Inter',
-         'sanitize_callback' => 'sanitize_text_field',
-      ));
+      $wp_customize->add_control( 'body_font_size_control',
+         array(
+            'label'       => __( 'Body Font Size (px)', 'landshop' ),
+            'section'     => 'landshop_typography_settings',
+            'settings'    => 'body_font_size_setting',
+            'type'        => 'text',
+            'description' => __( 'Enter a value in px units, e.g., 16px', 'landshop' ),
+         )
+      );
+      // H1 Font Size Setting
+      $wp_customize->add_setting( 'h1_font_size_setting',
+         array(
+            'default'           => '5.61em',
+            'sanitize_callback' => 'sanitize_text_field',
+         )
+      );
 
-      $wp_customize->add_control('selected_google_font', array(
-         'label'    => __('Select Google Font', 'landshop'),
-         'section'  => 'landshop_typography_settings',
-         'type'     => 'select',
-         'choices'  => landshop_get_google_fonts(),
-      ));
+      $wp_customize->add_control( 'h1_font_size_control',
+         array(
+            'label'       => __( 'H1 Font Size (em)', 'landshop' ),
+            'section'     => 'landshop_typography_settings',
+            'settings'    => 'h1_font_size_setting',
+            'type'        => 'text',
+            'description' => __( 'Enter a value in em units, e.g., 5.61em', 'landshop' ),
+         )
+      );
 
-     
+      // H2 Font Size Setting
+      $wp_customize->add_setting( 'h2_font_size_setting',
+         array(
+            'default'           => '4.209em',
+            'sanitize_callback' => 'sanitize_text_field',
+         )
+      );
 
+      $wp_customize->add_control( 'h2_font_size_control',
+         array(
+            'label'       => __( 'H2 Font Size (em)', 'landshop' ),
+            'section'     => 'landshop_typography_settings',
+            'settings'    => 'h2_font_size_setting',
+            'type'        => 'text',
+            'description' => __( 'Enter a value in em units, e.g., 4.209em', 'landshop' ),
+         )
+      );
 
+      // H3 Font Size Setting
+      $wp_customize->add_setting( 'h3_font_size_setting',
+         array(
+            'default'           => '3.157em',
+            'sanitize_callback' => 'sanitize_text_field',
+         )
+      );
 
+      $wp_customize->add_control( 'h3_font_size_control',
+         array(
+            'label'       => __( 'H3 Font Size (em)', 'landshop' ),
+            'section'     => 'landshop_typography_settings',
+            'settings'    => 'h3_font_size_setting',
+            'type'        => 'text',
+            'description' => __( 'Enter a value in em units, e.g., 3.157em', 'landshop' ),
+         )
+      );
 
+      // H4 Font Size Setting
+      $wp_customize->add_setting( 'h4_font_size_setting',
+         array(
+            'default'           => '2.369em',
+            'sanitize_callback' => 'sanitize_text_field',
+         )
+      );
 
+      $wp_customize->add_control( 'h4_font_size_control',
+         array(
+            'label'       => __( 'H4 Font Size (em)', 'landshop' ),
+            'section'     => 'landshop_typography_settings',
+            'settings'    => 'h4_font_size_setting',
+            'type'        => 'text',
+            'description' => __( 'Enter a value in em units, e.g., 2.369em', 'landshop' ),
+         )
+      );
+
+      // H5 Font Size Setting
+      $wp_customize->add_setting( 'h5_font_size_setting',
+         array(
+            'default'           => '1.777em',
+            'sanitize_callback' => 'sanitize_text_field',
+         )
+      );
+
+      $wp_customize->add_control( 'h5_font_size_control',
+         array(
+            'label'       => __( 'H5 Font Size (em)', 'landshop' ),
+            'section'     => 'landshop_typography_settings',
+            'settings'    => 'h5_font_size_setting',
+            'type'        => 'text',
+            'description' => __( 'Enter a value in em units, e.g., 1.777em', 'landshop' ),
+         )
+      );
+
+      // H6 Font Size Setting
+      $wp_customize->add_setting( 'h6_font_size_setting',
+         array(
+            'default'           => '1.333em',
+            'sanitize_callback' => 'sanitize_text_field',
+         )
+      );
+
+      $wp_customize->add_control( 'h6_font_size_control',
+         array(
+            'label'       => __( 'H6 Font Size (em)', 'landshop' ),
+            'section'     => 'landshop_typography_settings',
+            'settings'    => 'h6_font_size_setting',
+            'type'        => 'text',
+            'description' => __( 'Enter a value in em units, e.g., 1.333em', 'landshop' ),
+         )
+      );
+
+      // Additional Typography Settings
+      $wp_customize->add_setting( 'paragraph_font_size_setting',
+         array(
+            'default'           => '1em',
+            'sanitize_callback' => 'sanitize_text_field',
+         )
+      );
+
+      $wp_customize->add_control( 'paragraph_font_size_control',
+         array(
+            'label'       => __( 'Paragraph Font Size (rem)', 'landshop' ),
+            'section'     => 'landshop_typography_settings',
+            'settings'    => 'paragraph_font_size_setting',
+            'type'        => 'text',
+            'description' => __( 'Enter a value in rem units, e.g., 1em', 'landshop' ),
+         )
+      );
+
+      $wp_customize->add_setting( 'small_font_size_setting',
+         array(
+            'default'           => '0.75em',
+            'sanitize_callback' => 'sanitize_text_field',
+         )
+      );
+
+      $wp_customize->add_control( 'small_font_size_control',
+         array(
+            'label'       => __( 'Small Font Size (em)', 'landshop' ),
+            'section'     => 'landshop_typography_settings',
+            'settings'    => 'small_font_size_setting',
+            'type'        => 'text',
+            'description' => __( 'Enter a value in em units, e.g., 0.75em', 'landshop' ),
+         )
+      );
+
+      $wp_customize->add_setting( 'sup_sub_font_size_setting',
+         array(
+            'default'           => '0.563em',
+            'sanitize_callback' => 'sanitize_text_field',
+         )
+      );
+
+      $wp_customize->add_control( 'sup_sub_font_size_control',
+         array(
+            'label'       => __( 'Superscript/Subscript Font Size (em)', 'landshop' ),
+            'section'     => 'landshop_typography_settings',
+            'settings'    => 'sup_sub_font_size_setting',
+            'type'        => 'text',
+            'description' => __( 'Enter a value in em units, e.g., 0.563em', 'landshop' ),
+         )
+      );
 
 
       
@@ -65,7 +218,7 @@ class Landshop_Customize {
       // Section for General Settings
       $wp_customize->add_section( 'landshop_color_settings',
          array(
-            'title'       => __( 'Color Settings', 'landshop' ),
+            'title'       => __( 'Color scheme', 'landshop' ),
             'priority'    => 10,
             'capability'  => 'edit_theme_options',
             'panel'       => 'landshop_theme_options_panel',
@@ -147,20 +300,82 @@ class Landshop_Customize {
 
 
 
+      // Add a new section for Navbar Settings
+      $wp_customize->add_section( 'landshop_navbar_settings',
+         array(
+            'title'       => __( 'Navbar', 'landshop' ),
+            'priority'    => 15,  // Adjust the priority as needed
+            'capability'  => 'edit_theme_options',
+            'panel'       => 'landshop_theme_options_panel',
+         )
+      );
 
 
+      // Add control for Elementor Template
+      $wp_customize->add_setting( 'navbar_elementor_template_setting',
+         array(
+            'default'           => 'default',
+            'sanitize_callback' => 'sanitize_text_field',
+         )
+      );
 
+      $wp_customize->add_control( 'navbar_elementor_template_control',
+         array(
+            'label'      => __( 'Elementor Template for Navbar', 'landshop' ),
+            'settings'   => 'navbar_elementor_template_setting',
+            'priority'   => 40,
+            'section'    => 'landshop_navbar_settings',
+            'type'       => 'select',
+            'choices'    => landshop_get_post_title('elementor_library'), // Call your function to get Elementor library templates
+            'description' => __( 'Select an Elementor template for your Navbar.', 'landshop' ),
+         )
+      );
 
+        // Sticky Menu Setting
+        $wp_customize->add_setting( 'sticky_menu_setting',
+            array(
+                'default'           => 'enable',
+                'sanitize_callback' => 'sanitize_key', // Use sanitize_key for a select control
+            )
+        );
 
+        $wp_customize->add_control( 'sticky_menu_control',
+            array(
+                'label'      => __( 'Sticky Menu', 'landshop' ),
+                'settings'   => 'sticky_menu_setting',
+                'priority'   => 50,
+                'section'    => 'landshop_navbar_settings',
+                'type'       => 'select',
+                'choices'    => array(
+                    'enable'  => __( 'Enable', 'landshop' ),
+                    'disable' => __( 'Disable', 'landshop' ),
+                ),
+                'description' => __( 'Select to enable or disable the sticky menu.', 'landshop' ),
+            )
+        );
 
+        // Sticky Offset Setting
+        $wp_customize->add_setting( 'sticky_offset_setting',
+            array(
+                'default'           => 100, // Set default value as needed
+                'sanitize_callback' => 'absint', // Use absint to ensure the value is a positive integer
+            )
+        );
 
+        $wp_customize->add_control( 'sticky_offset_control',
+            array(
+                'label'      => __( 'Sticky Offset', 'landshop' ),
+                'settings'   => 'sticky_offset_setting',
+                'priority'   => 60,
+                'section'    => 'landshop_navbar_settings',
+                'type'       => 'number',
+                'input_type' => 'text', // Use 'text' to allow entering numeric values
+                'description' => __( 'Enter the sticky offset in pixels.', 'landshop' ),
+            )
+        );
 
-
-      
-      
-      $wp_customize->get_setting( 'blogname' )->transport = 'postMessage';
-      $wp_customize->get_setting( 'blogdescription' )->transport = 'postMessage';
    }
+
 
    public static function header_output() {
       ?>
@@ -173,7 +388,16 @@ class Landshop_Customize {
             <?php self::generate_custom_property('--border-color', 'border_color'); ?>
          }
          
-         <?php /* self::generate_custom_property('body', '--border-color', 'border_color'); */ ?>
+         <?php self::generate_css('body', 'font-size', 'body_font_size_setting'); ?>
+        <?php self::generate_css('h1', 'font-size', 'h1_font_size_setting'); ?>
+        <?php self::generate_css('h2', 'font-size', 'h2_font_size_setting'); ?>
+        <?php self::generate_css('h3', 'font-size', 'h3_font_size_setting'); ?>
+        <?php self::generate_css('h4', 'font-size', 'h4_font_size_setting'); ?>
+        <?php self::generate_css('h5', 'font-size', 'h5_font_size_setting'); ?>
+        <?php self::generate_css('h6', 'font-size', 'h6_font_size_setting'); ?>
+        <?php self::generate_css('p', 'font-size', 'paragraph_font_size_setting'); ?>
+        <?php self::generate_css('small', 'font-size', 'small_font_size_setting'); ?>
+        <?php self::generate_css('sup, sub', 'font-size', 'sup_sub_font_size_setting'); ?>
       </style> 
       <!--/Customizer CSS-->
       <?php

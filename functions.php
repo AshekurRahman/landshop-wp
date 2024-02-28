@@ -212,38 +212,33 @@ if( !function_exists('landshop_widgets_init') ){
 }
 add_action( 'widgets_init', 'landshop_widgets_init' );
 
-/**
- * Set the content width in pixels, based on the theme's design and stylesheet.
- *
- * Priority 0 to make it available to lower priority callbacks.
- *
- * @global int $content_width Content width.
- */
-function landshop_content_width() {
-	// This variable is intended to be overruled from themes.
-	// Open WPCS issue: {@link https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/issues/1043}.
-	// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
-	$GLOBALS['content_width'] = apply_filters( 'landshop_content_width', 850 );
-}
-add_action( 'after_setup_theme', 'landshop_content_width', 0 );
 
-function landshop_fonts_url() {
-    $fonts_url = '';
-    $fonts     = array();
-    $subsets   = 'latin,latin-ext';
+if ( !function_exists( 'landshop_fonts_url' ) ) {
+    /**
+     * Register Google fonts for landshop.
+     *
+     * Create your own landshop_fonts_url() function to override in a child theme.
+     *
+     * @since landshop 1.0
+     *
+     * @return string Google fonts URL for the theme.
+     */
+    
+    function landshop_fonts_url() {
+        $fonts_url = '';
+        $fonts     = array();
+        $subsets   = 'latin,latin-ext';
+        /* translators: If there are characters in your language that are not supported by Roboto, translate this to 'off'. Do not translate into your own language. */
+        $fonts[] = 'Inter:wght@500;600;700;800&family=Manrope:wght@300;400;500;600;700&display=swap';
 
-    // Get the selected font from Customizer setting
-    $selected_font = get_theme_mod('selected_google_font', 'Inter');
-
-    // Add the selected font to the $fonts array
-    $fonts[] = $selected_font . ':wght@500;600;700;800&display=swap';
-    if ( $fonts ) {
-        $fonts_url = add_query_arg( array(
-            'family' => implode( '|', $fonts ),
-            'subset' => $subsets,
-        ), 'https://fonts.googleapis.com/css2' );
+        if ( $fonts ) {
+            $fonts_url = add_query_arg( array(
+                'family' =>  implode( '|', $fonts ),
+                'subset' =>  $subsets,
+            ), 'https://fonts.googleapis.com/css2' );
+        }
+        return esc_url_raw($fonts_url);
     }
-    return esc_url_raw($fonts_url);
 }
 
 /**
