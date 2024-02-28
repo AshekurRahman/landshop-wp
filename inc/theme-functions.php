@@ -186,27 +186,23 @@ if( !function_exists('landshop_get_comment_count') ){
 // Remove issues with prefetching adding extra views
 remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0);
 
-
 // Post title array
-if( !function_exists('landshop_get_postTitleArray') ){
-	function landshop_get_post_title($postType = 'post') {
-		$post_type_query  = new WP_Query(
-			array (
-				'post_type'      => $postType,
-				'posts_per_page' => -1
-			)
-		);
-		// we need the array of posts
-		$posts_array      = $post_type_query->posts;
-		// the key equals the ID, the value is the post_title
-		if( $posts_array ) {
-			$post_title_array = wp_list_pluck($posts_array, 'post_title', 'ID');
-		} else {
-			$post_title_array['default'] = esc_html__('Default', 'landshop');
-		}
+if (!function_exists('landshop_get_post_title')) {
+    function landshop_get_post_title($postType = 'post') {
+        $post_type_query = new WP_Query(array('post_type' => $postType, 'posts_per_page' => -1));
 
-		return $post_title_array;
-	}
+        $post_title_array = array();
+
+        if ($post_type_query->have_posts()) {
+            $posts_array = $post_type_query->posts;
+            $post_title_array = wp_list_pluck($posts_array, 'post_title', 'ID');
+        }
+
+        // Add "Default" as the first option
+        $post_title_array = array('default' => esc_html__('Default', 'landshop')) + $post_title_array;
+
+        return $post_title_array;
+    }
 }
 
 

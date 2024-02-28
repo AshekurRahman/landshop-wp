@@ -14,12 +14,15 @@ Table of Contents
     top: 0;
     width: 100%;
     z-index: 9;
-    min-height: var(--navbar-height);
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,.05);
-    background-color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    min-height: var(--navbar-height);
+    background-color: white;
+}
+
+.navbar__area.default__navbar {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,.05);
 }
 
 .admin-bar .navbar__area {
@@ -27,12 +30,13 @@ Table of Contents
 }
 
 body.sticky .navbar__area {
-    --navbar-height: 80px
-}
-
-.sticky .navbar__area {
     position: fixed;
     background-color: white;
+    min-height: calc(var(--navbar-height) / 1.4);
+}
+
+body.sticky .navbar__area {
+    position: fixed;
 }
 
 .navbar__height {
@@ -41,8 +45,11 @@ body.sticky .navbar__area {
     display: block;
 }
 
-.navbar__area .row {
-    min-height: var(--navbar-height);
+.logo__text {
+    font-family: var(--heading-font-family);
+    font-weight: 700;
+    font-size: 2.4em;
+    line-height: 1.2em;
 }
 
 .navbar__area .sticky__logo {

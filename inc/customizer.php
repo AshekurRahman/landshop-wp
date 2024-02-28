@@ -374,6 +374,80 @@ class Landshop_Customize {
             )
         );
 
+        // Navbar Height Setting
+        $wp_customize->add_setting( 'navbar_height_setting',
+            array(
+                'default'           => 60, // Set default value as needed
+                'sanitize_callback' => 'absint', // Use absint to ensure the value is a positive integer
+            )
+        );
+
+        $wp_customize->add_control( 'navbar_height_control',
+            array(
+                'label'      => __( 'Navbar Height', 'landshop' ),
+                'settings'   => 'navbar_height_setting',
+                'priority'   => 70,
+                'section'    => 'landshop_navbar_settings',
+                'type'       => 'number',
+                'input_type' => 'text', // Use 'text' to allow entering numeric values
+                'description' => __( 'Enter the navbar height in pixels.', 'landshop' ),
+            )
+        );
+
+         // Navbar Background Color Setting
+         $wp_customize->add_setting( 'navbar_background_color_setting',
+         array(
+            'default'           => '#ffffff', // Set default value as needed
+            'sanitize_callback' => array( __CLASS__, 'sanitize_hex_color_or_rgb' ), // Custom sanitize callback
+         )
+         );
+
+         $wp_customize->add_control( 'navbar_background_color_control',
+         array(
+            'label'      => __( 'Navbar Background Color', 'landshop' ),
+            'type'       => 'text',
+            'settings'   => 'navbar_background_color_setting',
+            'priority'   => 80,
+            'section'    => 'landshop_navbar_settings',
+            'description' => __( 'Enter a color code in HEX or RGB format.', 'landshop' ),
+         )
+         );
+
+         // Sticky Background Color Setting
+         $wp_customize->add_setting( 'sticky_background_color_setting',
+         array(
+            'default'           => '#f8f8f8', // Set default value as needed
+            'sanitize_callback' => array( __CLASS__, 'sanitize_hex_color_or_rgb' ), // Custom sanitize callback
+         )
+         );
+
+         $wp_customize->add_control( 'sticky_background_color_control',
+         array(
+            'label'      => __( 'Sticky Background Color', 'landshop' ),
+            'type'       => 'text',
+            'settings'   => 'sticky_background_color_setting',
+            'priority'   => 90,
+            'section'    => 'landshop_navbar_settings',
+            'description' => __( 'Enter a color code in HEX or RGB format.', 'landshop' ),
+         )
+         );
+
+   }
+
+   // Custom sanitize callback function to handle HEX or RGB color codes
+   public static function sanitize_hex_color_or_rgb( $color ) {
+      // Check if it's a valid HEX color
+      if ( preg_match( '/^#([A-Fa-f0-9]{3}){1,2}$/', $color ) ) {
+            return sanitize_hex_color( $color );
+      }
+
+      // Check if it's a valid RGB color
+      if ( preg_match( '/^rgb\(\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)\s*\)$/', $color, $matches ) ) {
+            return 'rgb(' . implode( ',', array_map( 'absint', $matches ) ) . ')';
+      }
+
+      // If not a valid HEX or RGB color, return the default
+      return '';
    }
 
 
@@ -382,6 +456,7 @@ class Landshop_Customize {
       <!--Customizer CSS--> 
       <style type="text/css">
          :root {
+            <?php self::generate_custom_property('--navbar-height', 'navbar_height_setting', 'px'); ?>
             <?php self::generate_custom_property('--primary-color', 'primary_color'); ?>
             <?php self::generate_custom_property('--text-color', 'text_color'); ?>
             <?php self::generate_custom_property('--accent-color', 'accent_color'); ?>
@@ -398,6 +473,8 @@ class Landshop_Customize {
         <?php self::generate_css('p', 'font-size', 'paragraph_font_size_setting'); ?>
         <?php self::generate_css('small', 'font-size', 'small_font_size_setting'); ?>
         <?php self::generate_css('sup, sub', 'font-size', 'sup_sub_font_size_setting'); ?>
+        <?php self::generate_css('body .navbar__area', 'background-color', 'navbar_background_color_setting'); ?>
+        <?php self::generate_css('body.sticky .navbar__area', 'background-color', 'sticky_background_color_setting'); ?>
       </style> 
       <!--/Customizer CSS-->
       <?php
@@ -413,36 +490,39 @@ class Landshop_Customize {
       );
    }
 
-    public static function generate_css( $selector, $style, $mod_name, $prefix='', $postfix='', $echo=true ) {
+   public static function generate_css( $selector, $style, $mod_name, $prefix = '', $postfix = '', $echo = true ) {
       $return = '';
-      $mod = get_theme_mod($mod_name);
-      if ( ! empty( $mod ) ) {
-         $return = sprintf('%s { %s:%s; }',
-            $selector,
-            $style,
-            $prefix.$mod.$postfix
-         );
-         if ( $echo ) {
-            echo $return;
-         }
+      $mod = get_theme_mod( $mod_name );
+      if ( isset( $mod ) && '' !== $mod ) {
+          $return = sprintf( '%s { %s:%s; }',
+              $selector,
+              $style,
+              $prefix . $mod . $postfix
+          );
+          if ( $echo ) {
+              echo $return;
+          }
       }
       return $return;
-    }
+  }
+  
 
-    public static function generate_custom_property($property, $mod_name, $prefix='', $postfix='', $echo=true) {
+    public static function generate_custom_property($property, $mod_name, $postfix='', $echo=true) {
       $return = '';
       $mod    = get_theme_mod($mod_name);
       if (!empty($mod)) {
-         $return = sprintf('%s:%s;',
-            $property,
-            $prefix.$mod.$postfix
-         );
-         if ($echo) {
-            echo $return;
-         }
+          $return = sprintf('%s:%s%s;',
+              $property,
+              $mod,
+              $postfix
+          );
+          if ($echo) {
+              echo $return;
+          }
       }
       return $return;
-   }
+  }
+  
 }
 
 add_action( 'customize_register' , array( 'Landshop_Customize' , 'register' ) );
