@@ -1,5 +1,8 @@
 <?php
+
 class Landshop_Customize {
+
+
    public static function register ( $wp_customize ) {
       $wp_customize->get_setting( 'blogname' )->transport = 'postMessage';
       $wp_customize->get_setting( 'blogdescription' )->transport = 'postMessage';
@@ -14,15 +17,14 @@ class Landshop_Customize {
          'label' => __('Sticky Logo', 'landshop'), // Label displayed in the Customizer
          'section' => 'title_tagline', // Section in which the control will be placed
          'settings' => 'landshop_sticky_logo', // Setting to which this control is linked
-         'priority' => 8, // Priority/order in the section
       )));
 
       // Add a new panel for theme options
       $wp_customize->add_panel( 'landshop_theme_options_panel',
          array(
             'title'       => __( 'Theme Options', 'landshop' ),
-            'priority'    => 0,
             'capability'  => 'edit_theme_options',
+            'priority'    => 0,
          )
       );
 
@@ -30,7 +32,6 @@ class Landshop_Customize {
       $wp_customize->add_section( 'landshop_typography_settings',
          array(
             'title'       => __( 'Typography', 'landshop' ),
-            'priority'    => 10,
             'capability'  => 'edit_theme_options',
             'panel'       => 'landshop_theme_options_panel',
          )
@@ -55,7 +56,7 @@ class Landshop_Customize {
       // H1 Font Size Setting
       $wp_customize->add_setting( 'h1_font_size_setting',
          array(
-            'default'           => '5.61em',
+            'default'           => '3.815em',
             'sanitize_callback' => 'sanitize_text_field',
          )
       );
@@ -66,14 +67,14 @@ class Landshop_Customize {
             'section'     => 'landshop_typography_settings',
             'settings'    => 'h1_font_size_setting',
             'type'        => 'text',
-            'description' => __( 'Enter a value in em units, e.g., 5.61em', 'landshop' ),
+            'description' => __( 'Enter a value in em units, e.g., 3.815em', 'landshop' ),
          )
       );
 
       // H2 Font Size Setting
       $wp_customize->add_setting( 'h2_font_size_setting',
          array(
-            'default'           => '4.209em',
+            'default'           => '3.052em',
             'sanitize_callback' => 'sanitize_text_field',
          )
       );
@@ -84,14 +85,14 @@ class Landshop_Customize {
             'section'     => 'landshop_typography_settings',
             'settings'    => 'h2_font_size_setting',
             'type'        => 'text',
-            'description' => __( 'Enter a value in em units, e.g., 4.209em', 'landshop' ),
+            'description' => __( 'Enter a value in em units, e.g., 3.052em', 'landshop' ),
          )
       );
 
       // H3 Font Size Setting
       $wp_customize->add_setting( 'h3_font_size_setting',
          array(
-            'default'           => '3.157em',
+            'default'           => '2.441em',
             'sanitize_callback' => 'sanitize_text_field',
          )
       );
@@ -102,14 +103,14 @@ class Landshop_Customize {
             'section'     => 'landshop_typography_settings',
             'settings'    => 'h3_font_size_setting',
             'type'        => 'text',
-            'description' => __( 'Enter a value in em units, e.g., 3.157em', 'landshop' ),
+            'description' => __( 'Enter a value in em units, e.g., 2.441em', 'landshop' ),
          )
       );
 
       // H4 Font Size Setting
       $wp_customize->add_setting( 'h4_font_size_setting',
          array(
-            'default'           => '2.369em',
+            'default'           => '1.953em',
             'sanitize_callback' => 'sanitize_text_field',
          )
       );
@@ -120,14 +121,14 @@ class Landshop_Customize {
             'section'     => 'landshop_typography_settings',
             'settings'    => 'h4_font_size_setting',
             'type'        => 'text',
-            'description' => __( 'Enter a value in em units, e.g., 2.369em', 'landshop' ),
+            'description' => __( 'Enter a value in em units, e.g., 1.953em', 'landshop' ),
          )
       );
 
       // H5 Font Size Setting
       $wp_customize->add_setting( 'h5_font_size_setting',
          array(
-            'default'           => '1.777em',
+            'default'           => '1.563em',
             'sanitize_callback' => 'sanitize_text_field',
          )
       );
@@ -138,14 +139,14 @@ class Landshop_Customize {
             'section'     => 'landshop_typography_settings',
             'settings'    => 'h5_font_size_setting',
             'type'        => 'text',
-            'description' => __( 'Enter a value in em units, e.g., 1.777em', 'landshop' ),
+            'description' => __( 'Enter a value in em units, e.g., 1.563em', 'landshop' ),
          )
       );
 
       // H6 Font Size Setting
       $wp_customize->add_setting( 'h6_font_size_setting',
          array(
-            'default'           => '1.333em',
+            'default'           => '1.25em',
             'sanitize_callback' => 'sanitize_text_field',
          )
       );
@@ -156,7 +157,7 @@ class Landshop_Customize {
             'section'     => 'landshop_typography_settings',
             'settings'    => 'h6_font_size_setting',
             'type'        => 'text',
-            'description' => __( 'Enter a value in em units, e.g., 1.333em', 'landshop' ),
+            'description' => __( 'Enter a value in em units, e.g., 1.25em', 'landshop' ),
          )
       );
 
@@ -219,7 +220,6 @@ class Landshop_Customize {
       $wp_customize->add_section( 'landshop_color_settings',
          array(
             'title'       => __( 'Color scheme', 'landshop' ),
-            'priority'    => 10,
             'capability'  => 'edit_theme_options',
             'panel'       => 'landshop_theme_options_panel',
          )
@@ -238,7 +238,6 @@ class Landshop_Customize {
          array(
             'label'      => __( 'Accent Color', 'landshop' ),
             'settings'   => 'accent_color',
-            'priority'   => 0,
             'section'    => 'landshop_color_settings',
          ) 
       ) );
@@ -256,7 +255,23 @@ class Landshop_Customize {
          array(
             'label'      => __( 'Primary Color', 'landshop' ),
             'settings'   => 'primary_color',
-            'priority'   => 0,
+            'section'    => 'landshop_color_settings',
+         ) 
+      ) );
+      $wp_customize->add_setting( 'secondary_color',
+         array(
+            'default'    => '#fff5f2',
+            'type'       => 'theme_mod',
+            'capability' => 'edit_theme_options',
+            'transport'  => 'refresh',
+         ) 
+      );    
+      $wp_customize->add_control( new WP_Customize_Color_Control(
+         $wp_customize,
+         'landshop_secondary_color',
+         array(
+            'label'      => __( 'Secondary Color', 'landshop' ),
+            'settings'   => 'secondary_color',
             'section'    => 'landshop_color_settings',
          ) 
       ) );
@@ -274,7 +289,6 @@ class Landshop_Customize {
          array(
             'label'      => __( 'Text Color', 'landshop' ),
             'settings'   => 'text_color',
-            'priority'   => 0,
             'section'    => 'landshop_color_settings',
          ) 
       ) );
@@ -293,7 +307,6 @@ class Landshop_Customize {
          array(
             'label'      => __( 'Border Color', 'landshop' ),
             'settings'   => 'border_color',
-            'priority'   => 0,
             'section'    => 'landshop_color_settings',
          ) 
       ) );
@@ -304,32 +317,32 @@ class Landshop_Customize {
       $wp_customize->add_section( 'landshop_navbar_settings',
          array(
             'title'       => __( 'Navbar', 'landshop' ),
-            'priority'    => 15,  // Adjust the priority as needed
             'capability'  => 'edit_theme_options',
             'panel'       => 'landshop_theme_options_panel',
          )
       );
 
 
-      // Add control for Elementor Template
-      $wp_customize->add_setting( 'navbar_elementor_template_setting',
-         array(
-            'default'           => 'default',
-            'sanitize_callback' => 'sanitize_text_field',
-         )
-      );
+      if ( is_plugin_active( 'elementor/elementor.php' ) ) {
+         // Add control for Elementor Template
+         $wp_customize->add_setting( 'navbar_elementor_template_setting',
+            array(
+               'default'           => 'default',
+               'sanitize_callback' => 'sanitize_text_field',
+            )
+         );
 
-      $wp_customize->add_control( 'navbar_elementor_template_control',
-         array(
-            'label'      => __( 'Elementor Template for Navbar', 'landshop' ),
-            'settings'   => 'navbar_elementor_template_setting',
-            'priority'   => 40,
-            'section'    => 'landshop_navbar_settings',
-            'type'       => 'select',
-            'choices'    => landshop_get_post_title('elementor_library'), // Call your function to get Elementor library templates
-            'description' => __( 'Select an Elementor template for your Navbar.', 'landshop' ),
-         )
-      );
+         $wp_customize->add_control( 'navbar_elementor_template_control',
+            array(
+               'label'      => __( 'Elementor Template for Navbar', 'landshop' ),
+               'settings'   => 'navbar_elementor_template_setting',
+               'section'    => 'landshop_navbar_settings',
+               'type'       => 'select',
+               'choices'    => landshop_get_post_title('elementor_library'), // Call this function to get Elementor library templates
+               'description' => __( 'Select an Elementor template for your Navbar.', 'landshop' ),
+            )
+         );
+      }
 
         // Sticky Menu Setting
         $wp_customize->add_setting( 'sticky_menu_setting',
@@ -343,7 +356,6 @@ class Landshop_Customize {
             array(
                 'label'      => __( 'Sticky Menu', 'landshop' ),
                 'settings'   => 'sticky_menu_setting',
-                'priority'   => 50,
                 'section'    => 'landshop_navbar_settings',
                 'type'       => 'select',
                 'choices'    => array(
@@ -366,7 +378,6 @@ class Landshop_Customize {
             array(
                 'label'      => __( 'Sticky Offset', 'landshop' ),
                 'settings'   => 'sticky_offset_setting',
-                'priority'   => 60,
                 'section'    => 'landshop_navbar_settings',
                 'type'       => 'number',
                 'input_type' => 'text', // Use 'text' to allow entering numeric values
@@ -386,7 +397,6 @@ class Landshop_Customize {
             array(
                 'label'      => __( 'Navbar Height', 'landshop' ),
                 'settings'   => 'navbar_height_setting',
-                'priority'   => 70,
                 'section'    => 'landshop_navbar_settings',
                 'type'       => 'number',
                 'input_type' => 'text', // Use 'text' to allow entering numeric values
@@ -407,7 +417,6 @@ class Landshop_Customize {
             'label'      => __( 'Navbar Background Color', 'landshop' ),
             'type'       => 'text',
             'settings'   => 'navbar_bg_color_setting',
-            'priority'   => 80,
             'section'    => 'landshop_navbar_settings',
             'description' => __( 'Enter a color code in HEX or RGB format.', 'landshop' ),
          )
@@ -426,46 +435,235 @@ class Landshop_Customize {
                'label'      => __( 'Sticky Background Color', 'landshop' ),
                'type'       => 'text',
                'settings'   => 'sticky_bg_color_setting',
-               'priority'   => 90,
                'section'    => 'landshop_navbar_settings',
                'description' => __( 'Enter a color code in HEX or RGB format.', 'landshop' ),
             )
          );
 
+         // Add a new section for Navbar Settings
+         $wp_customize->add_section( 'landshop_header_settings',
+            array(
+               'title'       => __( 'Header', 'landshop' ),
+               'capability'  => 'edit_theme_options',
+               'panel'       => 'landshop_theme_options_panel',
+            )
+         );
+
+      if ( is_plugin_active( 'elementor/elementor.php' ) ) {
+         // Add control for Elementor Template
+         $wp_customize->add_setting( 'header_elementor_template_setting',
+            array(
+               'default'           => 'default',
+               'sanitize_callback' => 'sanitize_text_field',
+            )
+         );
+
+         $wp_customize->add_control( 'header_elementor_template_control',
+            array(
+               'label'      => __( 'Elementor Template for Header', 'landshop' ),
+               'settings'   => 'header_elementor_template_setting',
+               'section'    => 'landshop_header_settings',
+               'type'       => 'select',
+               'choices'    => landshop_get_post_title('elementor_library'), // Call this function to get Elementor library templates
+               'description' => __( 'Select an Elementor template for your Header.', 'landshop' ),
+            )
+         );
+      }
+      
+      // Add Background Image control
+      $wp_customize->add_setting('header_bg_image', array(
+         'default'           => '',
+         'sanitize_callback' => 'esc_url_raw',
+      ));
+
+      $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'header_bg_image', array(
+         'label'    => __('Header Background Image', 'landshop'),
+         'section'  => 'landshop_header_settings',
+         'settings' => 'header_bg_image',
+      )));
+
+      // Navbar Background Color Setting
+      $wp_customize->add_setting('header_bg_color', array(
+         'default'           => '#fff5f2', // Set default value as needed
+         'sanitize_callback' => 'sanitize_hex_color',
+      ));
+
+      $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'header_bg_color_control', array(
+         'label'      => __('Header Background Color', 'landshop'),
+         'section'    => 'landshop_header_settings',
+         'settings'   => 'header_bg_color',
+         'description' => __('Choose a color for the header background.', 'landshop'),
+      )));
+
+
+      $wp_customize->add_section('landshop_footer_settings', array(
+         'title'       => __('Footer', 'landshop'),
+         'capability'  => 'edit_theme_options',
+         'panel'       => 'landshop_theme_options_panel',
+     ));    
+
+      if (is_plugin_active('elementor/elementor.php')) {
+         // Add control for Elementor Template
+         $wp_customize->add_setting('footer_elementor_template_setting', array(
+            'default'           => 'default',
+            'sanitize_callback' => 'sanitize_text_field',
+         ));
+         $wp_customize->add_control('footer_elementor_template_control', array(
+            'label'         => __('Elementor Template for Footer', 'landshop'),
+            'settings'      => 'footer_elementor_template_setting',
+            'section'       => 'landshop_footer_settings',
+            'type'          => 'select',
+            'choices'       => landshop_get_post_title('elementor_library'), // Ensure this function is defined to get Elementor library templates
+            'description'   => __('Select an Elementor template for your footer.', 'landshop'),
+         ));
+      }
+  
+      // Add a text control for copyrights text in the Footer section
+      $wp_customize->add_setting( 'landshop_copyrights_text',
+         array(
+            'default'           => __('&copy;2024 All rights reserved. Powered by <b>Themectg</b>','landshop'),
+            'sanitize_callback' => 'sanitize_text_field',
+         )
+      );
+
+      $wp_customize->add_control( 'landshop_copyrights_text',
+         array(
+            'label'    => __( 'Copyrights Text', 'landshop' ),
+            'section'  => 'landshop_footer_settings',
+            'type'     => 'textarea',
+         )
+      );
+
+      // Add controls for 404 page settings
+      $wp_customize->add_section('landshop_404_settings', array(
+         'title'      => __('404 Page', 'landshop'),
+         'capability' => 'edit_theme_options',
+         'panel'      => 'landshop_theme_options_panel',
+      ));
+
+      if ( is_plugin_active( 'elementor/elementor.php' ) ) {
+         // Add control for Elementor Template
+         $wp_customize->add_setting( '404_elementor_template_setting',
+            array(
+               'default'           => 'default',
+               'sanitize_callback' => 'sanitize_text_field',
+            )
+         );
+
+         $wp_customize->add_control( '404_elementor_template_control',
+            array(
+               'label'      => __( 'Elementor Template for 404', 'landshop' ),
+               'settings'   => '404_elementor_template_setting',
+               'section'    => 'landshop_404_settings',
+               'type'       => 'select',
+               'choices'    => landshop_get_post_title('elementor_library'), // Call this function to get Elementor library templates
+               'description' => __( 'Select an Elementor template for your 404 page.', 'landshop' ),
+            )
+         );
+      }
+
+      // Control for 404 Image
+      $wp_customize->add_setting('landshop_404_image', array(
+         'default'           => get_theme_file_uri('assets/images/404.png'),
+         'sanitize_callback' => 'esc_url_raw',
+      ));
+
+      $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'landshop_404_image', array(
+         'label'    => __('404 Image', 'landshop'),
+         'section'  => 'landshop_404_settings',
+         'settings' => 'landshop_404_image',
+      )));
+
+      // Control for Page Title
+      $wp_customize->add_setting('landshop_404_title', array(
+         'default'           => __('Oops... Page Not Found!', 'landshop'),
+         'sanitize_callback' => 'sanitize_text_field',
+      ));
+
+      $wp_customize->add_control('landshop_404_title', array(
+         'label'    => __('Page Title', 'landshop'),
+         'section'  => 'landshop_404_settings',
+         'type'     => 'text',
+      ));
+
+      // Control for Page Description
+      $wp_customize->add_setting('landshop_404_description', array(
+         'default'           => __('Please return to the site\'s homepage. It looks like nothing was found at this location. Get in touch to discuss your employee needs today. Please give us a call, drop us an email.', 'landshop'),
+         'sanitize_callback' => 'sanitize_textarea_field',
+      ));
+
+      $wp_customize->add_control('landshop_404_description', array(
+         'label'    => __('Page Description', 'landshop'),
+         'section'  => 'landshop_404_settings',
+         'type'     => 'textarea',
+      ));
+
+      // Control for Page Title
+      $wp_customize->add_setting('landshop_404_button_text', array(
+         'default'           => __('Back to Home', 'landshop'),
+         'sanitize_callback' => 'sanitize_text_field',
+      ));
+
+      $wp_customize->add_control('landshop_404_button_text', array(
+         'label'    => __('Button Text', 'landshop'),
+         'section'  => 'landshop_404_settings',
+         'type'     => 'text',
+      ));
+
+      // Add controls for preloader settings
+      $wp_customize->add_section('landshop_preloader_settings', array(
+         'title'      => __('Preloader', 'landshop'),
+         'capability' => 'edit_theme_options',
+         'panel'      => 'landshop_theme_options_panel',
+      ));
+
+      // Control for Preloader Status (Enable/Disable)
+      $wp_customize->add_setting('landshop_preloader_status', array(
+         'default'           => 'enable', // Set default to enable
+         'sanitize_callback' => 'sanitize_key',
+      ));
+
+      $wp_customize->add_control('landshop_preloader_status', array(
+         'label'    => __('Preloader Status', 'landshop'),
+         'section'  => 'landshop_preloader_settings',
+         'type'     => 'select',
+         'choices'  => array(
+            'enable'  => __('Enable', 'landshop'),
+            'disable' => __('Disable', 'landshop'),
+         ),
+      ));
+
+      // Control for Preloader Image
+      $wp_customize->add_setting('landshop_preloader_image', array(
+         'default'           => get_theme_file_uri('assets/images/preloader.gif'),
+         'sanitize_callback' => 'esc_url_raw',
+      ));
+
+      $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'landshop_preloader_image', array(
+         'label'    => __('Preloader Image', 'landshop'),
+         'section'  => 'landshop_preloader_settings',
+         'settings' => 'landshop_preloader_image',
+      )));
+
+      // Control for Preloader Width
+      $wp_customize->add_setting('preloader_width', array(
+         'default'           => 20, // Set default width in percentage
+         'sanitize_callback' => 'sanitize_text_field',
+      ));
+
+      $wp_customize->add_control('preloader_width', array(
+         'label'       => __('Preloader Width', 'landshop'),
+         'description' => __('Set the width of the preloader in percentage.', 'landshop'),
+         'section'     => 'landshop_preloader_settings',
+         'type'        => 'range',
+         'input_attrs' => array(
+            'min'  => 1,
+            'max'  => 100,
+            'step' => 1,
+         ),
+      ));
    }
-
-
-
-
-   public static function header_output() {
-      ?>
-      <!--Customizer CSS--> 
-      <style type="text/css">
-         :root {
-            <?php self::generate_custom_property('--navbar-height', 'navbar_height_setting', 'px'); ?>
-            <?php self::generate_custom_property('--primary-color', 'primary_color'); ?>
-            <?php self::generate_custom_property('--text-color', 'text_color'); ?>
-            <?php self::generate_custom_property('--accent-color', 'accent_color'); ?>
-            <?php self::generate_custom_property('--border-color', 'border_color'); ?>
-         }
-         
-         <?php self::generate_css('body', 'font-size', 'body_font_size_setting'); ?>
-        <?php self::generate_css('h1', 'font-size', 'h1_font_size_setting'); ?>
-        <?php self::generate_css('h2', 'font-size', 'h2_font_size_setting'); ?>
-        <?php self::generate_css('h3', 'font-size', 'h3_font_size_setting'); ?>
-        <?php self::generate_css('h4', 'font-size', 'h4_font_size_setting'); ?>
-        <?php self::generate_css('h5', 'font-size', 'h5_font_size_setting'); ?>
-        <?php self::generate_css('h6', 'font-size', 'h6_font_size_setting'); ?>
-        <?php self::generate_css('p', 'font-size', 'paragraph_font_size_setting'); ?>
-        <?php self::generate_css('small', 'font-size', 'small_font_size_setting'); ?>
-        <?php self::generate_css('sup, sub', 'font-size', 'sup_sub_font_size_setting'); ?>
-        <?php self::generate_css('body .navbar__area', 'background-color', 'navbar_bg_color_setting'); ?>
-        <?php self::generate_css('body.sticky .navbar__area', 'background-color', 'sticky_bg_color_setting'); ?>
-      </style> 
-      <!--/Customizer CSS-->
-      <?php
-   }
-   
+      
    public static function live_preview() {
       wp_enqueue_script( 
            'landshop-themecustomizer',
@@ -490,9 +688,8 @@ class Landshop_Customize {
           }
       }
       return $return;
-  }
+  } 
   
-
     public static function generate_custom_property($property, $mod_name, $postfix='', $echo=true) {
       $return = '';
       $mod    = get_theme_mod($mod_name);
@@ -508,6 +705,39 @@ class Landshop_Customize {
       }
       return $return;
   }
+
+   public static function header_output() {
+      ?>
+      <!--Customizer CSS--> 
+      <style type="text/css">
+         :root {
+            <?php self::generate_custom_property('--navbar-height', 'navbar_height_setting', 'px'); ?>
+            <?php self::generate_custom_property('--primary-color', 'primary_color'); ?>
+            <?php self::generate_custom_property('--secondary-color', 'secondary_color'); ?>
+            <?php self::generate_custom_property('--text-color', 'text_color'); ?>
+            <?php self::generate_custom_property('--accent-color', 'accent_color'); ?>
+            <?php self::generate_custom_property('--border-color', 'border_color'); ?>
+         }
+         <?php self::generate_css('body', 'font-size', 'body_font_size_setting'); ?>
+         <?php self::generate_css('h1', 'font-size', 'h1_font_size_setting'); ?>
+         <?php self::generate_css('h2', 'font-size', 'h2_font_size_setting'); ?>
+         <?php self::generate_css('h3', 'font-size', 'h3_font_size_setting'); ?>
+         <?php self::generate_css('h4', 'font-size', 'h4_font_size_setting'); ?>
+         <?php self::generate_css('h5', 'font-size', 'h5_font_size_setting'); ?>
+         <?php self::generate_css('h6', 'font-size', 'h6_font_size_setting'); ?>
+         <?php self::generate_css('p', 'font-size', 'paragraph_font_size_setting'); ?>
+         <?php self::generate_css('small', 'font-size', 'small_font_size_setting'); ?>
+         <?php self::generate_css('sup, sub', 'font-size', 'sup_sub_font_size_setting'); ?>
+         <?php self::generate_css('body .navbar__area', 'background-color', 'navbar_bg_color_setting'); ?>
+         <?php self::generate_css('body.sticky .navbar__area', 'background-color', 'sticky_bg_color_setting'); ?>
+         <?php self::generate_css('.header__area', 'background-image', 'header_bg_image', 'url("', '")' ); ?>
+         <?php self::generate_css('.header__area', 'background-color', 'header_bg_color' ); ?>
+         <?php self::generate_css('.preloader .loader__image img', 'width', 'preloader_width', '', '%' ); ?>
+      </style> 
+      <!--/Customizer CSS-->
+      <?php
+   }
+
   
 }
 

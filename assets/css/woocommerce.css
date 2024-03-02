@@ -1969,7 +1969,7 @@ p.woocommerce-customer-details--phone,
         padding: 5px 8px;
     }
 
-    .main-sidebar .widget .widget_title {
+    .main-sidebar .widget .widget__title {
         margin-bottom: 16px;
     }
 }

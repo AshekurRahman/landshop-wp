@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html class="no-js" <?php language_attributes(); ?>>
-
 <head>
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,36 +8,38 @@
 </head>
 
 <body <?php body_class(); ?> data-spy="scroll" data-target=".navbar__area">
-    <?php wp_body_open();
-        if ( class_exists( 'Redux' ) ) {
-            global $landshop_opt;
-        }else{
-            $landshop_opt = array();
-            $landshop_opt['error_image']['url'] = get_theme_file_uri('assets/images/404.png');
-            $landshop_opt['error_title'] = esc_html__('Oops... Page Not Found!','landshop');
-            $landshop_opt['error_desc'] = esc_html__("Please return to the site's homepage, It looks like nothing was found at this location. Get in touch to discuss your employee needs today. Please give us a call, drop us an email.",'landshop');
-        }
-    ?>
-    <section class="error_page">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-8">
-                    <div class="error_image">
-                        <img src="<?php echo esc_url($landshop_opt['error_image']['url']); ?>" alt="<?php esc_attr_e('404','landshop'); ?>">
+    <?php wp_body_open(); ?>
+    <main class="main_wrapper">
+        <div class="page__wrapper">
+        <?php
+            $elementor_template = get_theme_mod('404_elementor_template_setting', 'default');
+        ?>
+        <?php if ($elementor_template === 'default'): ?>
+            <section class="error__section">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-md-8">
+                            <div class="error__image">
+                                <img src="<?php echo esc_url(get_theme_mod('landshop_404_image', get_theme_file_uri('assets/images/404.png'))); ?>" alt="<?php esc_attr_e('404', 'landshop'); ?>">
+                            </div>
+                            <h2 class="error__title"><?php echo esc_html(get_theme_mod('landshop_404_button_text', __('Oops... Page Not Found!', 'landshop'))); ?></h2>
+                            <div class="error__desc">
+                                <p><?php echo esc_html(get_theme_mod('landshop_404_description', __('Please return to the site\'s homepage. It looks like nothing was found at this location. Get in touch to discuss your employee needs today. Please give us a call, drop us an email.', 'landshop'))); ?></p>
+                            </div>
+                            <a href="<?php echo esc_url(home_url('/')) ?>" class="primary__button">
+                                <?php echo esc_html(get_theme_mod('landshop_404_button_text', __('Back to Home', 'landshop'))); ?>
+                            </a>
+                        </div>
                     </div>
-                    <?php if(!empty($landshop_opt['error_title'])): ?>
-                    <h2 class="error-title"><?php echo esc_html($landshop_opt['error_title']); ?></h2>
-                    <?php endif; ?>
-                    <?php if(!empty($landshop_opt['error_desc'])): ?>
-                    <div class="error-desc">
-                        <p><?php echo esc_html($landshop_opt['error_desc']); ?></p>
-                    </div>
-                    <?php endif; ?>
-                    <a href="<?php echo esc_url(home_url('/'))?>" class="primary_button"><?php esc_html_e('Back To Home','landshop'); ?></a>
                 </div>
-            </div>
+            </section>
+        <?php else: ?>
+            <footer class="header__elementor__section">
+                <?php echo \Elementor\Plugin::$instance->frontend->get_builder_content_for_display($elementor_template); ?>
+            </footer>
+        <?php endif; ?>
         </div>
-    </section>
+    </main>
     <?php wp_footer(); ?>
 </body>
 

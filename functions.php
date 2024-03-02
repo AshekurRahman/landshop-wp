@@ -171,7 +171,7 @@ if( !function_exists('landshop_widgets_init') ){
             'description'   => esc_html__( 'This sidebar appears in the blog pages on the website.', 'landshop' ),
             'before_widget' => '<div id="%1$s" class="widget %2$s">',
             'after_widget'  => '</div>',
-            'before_title'  => '<h5 class="widget_title">',
+            'before_title'  => '<h5 class="widget__title">',
             'after_title'   => '</h5>',
         ) );
         
@@ -182,7 +182,7 @@ if( !function_exists('landshop_widgets_init') ){
                 'description'   => esc_html__( 'This sidebar appears in the wooCommerce pages on the website.', 'landshop' ),
                 'before_widget' => '<div id="%1$s" class="widget %2$s">',
                 'after_widget'  => '</div>',
-                'before_title'  => '<h5 class="widget_title">',
+                'before_title'  => '<h5 class="widget__title">',
                 'after_title'   => '</h5>',
             ) );
         }
@@ -194,7 +194,7 @@ if( !function_exists('landshop_widgets_init') ){
                 'description'   => esc_html__( 'This sidebar appears in the toggle navigation menu on the website.', 'landshop' ),
                 'before_widget' => '<div id="%1$s" class="widget %2$s">',
                 'after_widget'  => '</div>',
-                'before_title'  => '<h5 class="widget_title">',
+                'before_title'  => '<h5 class="widget__title">',
                 'after_title'   => '</h5>',
             ) );
         }        
@@ -205,7 +205,7 @@ if( !function_exists('landshop_widgets_init') ){
             'description'   => esc_html__( 'This sidebar appears in the footer on the website.', 'landshop' ),
             'before_widget' => '<div id="%1$s" class="widget footer_widget %2$s col-xl-3 col-lg-4 col-sm-6">',
             'after_widget'  => '</div>',
-            'before_title'  => '<h5 class="widget_title">',
+            'before_title'  => '<h5 class="widget__title">',
             'after_title'   => '</h5>',
         ) );
     }
@@ -300,107 +300,6 @@ function landshop_scripts() {
     
 }
 add_action( 'wp_enqueue_scripts', 'landshop_scripts', 99999999999999999999999999 );
-
-add_action('wp_ajax_load_posts_by_ajax', 'landshop_load_ajax_callback');
-add_action('wp_ajax_nopriv_load_posts_by_ajax', 'landshop_load_ajax_callback');
-function landshop_load_ajax_callback() {
-    check_ajax_referer('load_more_posts', 'security');
-    $paged = $_POST['page'];
-    $args = array(
-        'post_type' => 'post',
-        'post_status' => 'publish',
-        'posts_per_page' => '3',
-        'paged' => $paged,
-    );
-    $blog_posts = new WP_Query( $args );
-    ?>
- 
-    <?php if ( $blog_posts->have_posts() ) : ?>
-        <?php
-            while ( $blog_posts->have_posts() ) : 
-            $blog_posts->the_post(); 
-        ?>
-        <div class="col-lg-4 col-md-6">
-            <div <?php post_class('post__box box-style-2'); ?>>
-                <a href="<?php the_permalink(); ?>" class="thumb">
-                    <?php
-                        the_post_thumbnail('full');
-                    ?>
-                </a>
-                <div class="content"> 
-                    <h4 class="title"><a href="<?php echo get_the_permalink(); ?>"><?php the_title(); ?></a></h4>
-                    <div class="footer_meta_list">
-                        <ul>
-                            <?php if(landshop_get_post_date()): ?>
-                            <li class="date">
-                                <?php echo landshop_get_post_date('Y M D'); ?>
-                            </li>
-                            <?php endif; ?>
-                            <li class="link-arrow">
-                                <a href="<?php echo get_permalink(); ?>"><i class="fa-light fa-arrow-right"></i></a>
-                            </li>
-                        </ul>
-                    </div>                                             
-                </div>
-            </div>
-        </div>
-<?php 
-    endwhile;
-    wp_reset_postdata();    
-    endif;
-
-    wp_die();
-}
-
-
-
-add_action('wp_ajax_load_case_by_ajax', 'landshop_load_posts_ajax_callback');
-add_action('wp_ajax_nopriv_load_case_by_ajax', 'landshop_load_posts_ajax_callback');
-function landshop_load_posts_ajax_callback() {
-    check_ajax_referer('load_more_posts', 'security');
-    $paged = $_POST['page'];
-    $args = array(
-        'post_type' => 'case-studie',
-        'post_status' => 'publish',
-        'posts_per_page' => '3',
-        'paged' => $paged,
-    );
-    $blog_posts = new WP_Query( $args );
-    ?>
- 
-    <?php if ( $blog_posts->have_posts() ) : ?>
-        <?php
-            while ( $blog_posts->have_posts() ) : 
-            $blog_posts->the_post(); 
-        ?>
-        <div class="col-lg-4 col-md-6">
-            <div class="case_studie_box box-4">
-             <?php if(has_post_thumbnail()): ?>
-              <figure class="photo">
-                <?php the_post_thumbnail('full'); ?>
-              </figure>
-              <?php endif; ?>
-              <div class="case_studie_content">
-                <div class="w-100">
-                    <?php
-                    echo get_the_term_list( get_the_ID(), 'case-studie-category', '<div class="cats">', ' ', '</div>' );
-                    ?>
-                    <?php if(get_the_title()): ?>
-                      <h4 class="title">
-                        <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-                      </h4>
-                    <?php endif; ?>
-                </div>
-              </div>
-            </div>
-        </div>
-        <?php 
-    endwhile;
-    wp_reset_postdata();    
-    endif;
-
-    wp_die();
-}
 
 /**
  * Fix skip link focus in IE11.

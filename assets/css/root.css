@@ -1,6 +1,7 @@
 /*----- Root-Variable -----*/
 :root {
     --primary-color: #131313;
+    --secondary-color: #fff5f2;
     --text-color: #505050;
     --accent-color: #FF6B31;
     --border-color: #ededed;
@@ -48,4 +49,37 @@
 .primary__button:not(.outline):hover {
     background-color: var(--accent-color);
     border: 1px solid var(--accent-color);
+}
+
+
+
+/* --- 1. Accent__button --- */
+.accent__button {
+    background-color: white;
+    color: var(--accent-color);
+    border: 1px solid var(--accent-color);
+    padding: 12px 24px;
+    border-radius: 6px;
+    display: inline-block;
+    transition: .3s;
+    font-weight: 500;
+    text-transform: capitalize;
+    box-shadow: 0 0px 0px 0 var(--secondary-color);
+}
+
+.accent__button:hover {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+.accent__button:not(.outline) {
+    background-color: var(--accent-color);
+    border: 1px solid var(--accent-color);
+    color: white;
+}
+
+.accent__button:not(.outline):hover {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
 }

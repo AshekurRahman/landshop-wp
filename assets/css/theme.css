@@ -21,10 +21,6 @@ Table of Contents
     background-color: white;
 }
 
-.navbar__area.default__navbar {
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,.05);
-}
-
 .admin-bar .navbar__area {
     top: 30px;
 }
@@ -33,6 +29,7 @@ body.sticky .navbar__area {
     position: fixed;
     background-color: white;
     min-height: calc(var(--navbar-height) / 1.4);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .05);
 }
 
 body.sticky .navbar__area {
@@ -68,5 +65,394 @@ body.sticky .navbar__area .main__logo {
     margin-right: calc(0px - var(--bs-nav-link-padding-y) * 2);
 }
 
+/* --- 1. Header__Area --- */
+.header__area {
+    padding: 5em 0em;
+    text-align: center;
+}
+
+.header__area .sub__title {
+    font-size: 1.4em;
+    font-weight: 500;
+    color: var(--primary-color);
+}
 
 
+/* --- Post__Box --- */
+.post__box {
+    box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    margin-bottom: 2em;
+    overflow: hidden;
+}
+
+.post__box.sticky {
+    background-color: var(--secondary-color);
+}
+
+.post__box .post__media {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    max-height: 20em;
+    overflow: hidden;
+}
+
+.post__box .post__content {
+    padding: 2.5em;
+}
+
+.post__box .post__title {
+    font-size: 2.4em;
+    margin-bottom: 0.4em;
+}
+
+.post__box .post__desc {
+    margin-bottom: 1.4em;
+}
+
+ul.post__meta {
+    list-style: none;
+    margin: -0.3em -0.8em;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul.post__meta li {
+    margin: 0.3em 0.8em;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    text-transform: capitalize;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+ul.post__meta li>i {
+    color: var(--accent-color);
+    margin-right: 0.7em;
+    line-height: 1em;
+}
+
+ul.post__meta li a {
+    color: currentColor;
+}
+
+ul.post__meta li a:hover {
+    color: var(--accent-color);
+}
+
+.pagination {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -0.5em;
+}
+
+.pagination .page-numbers {
+    width: 2.4em;
+    height: 2.4em;
+    line-height: 2.4em;
+    background-color: #F6F6F6;
+    font-size: 1.2em;
+    font-weight: 500;
+    text-align: center;
+    margin: 0.5em;
+    border-radius: 4px;
+    display: inline-block;
+    color: var(--primary-color);
+    transition: 0.3s;
+}
+
+.pagination .page-numbers.current,
+.pagination .page-numbers:hover {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+/* --- Widget__Section --- */
+
+.main__sidebar .widget {
+    border-radius: 8px;
+    margin-bottom: 2em;
+    overflow: hidden;
+    padding: 2em;
+    background-color: var(--secondary-color);
+}
+
+.main__sidebar .widget .widget__title {
+    font-size: 1.4em;
+    margin-bottom: 1em;
+    display: flex;
+    align-items: center;
+}
+
+.main__sidebar .widget .widget__title:before {
+    content: "";
+    width: 3px;
+    height: 1.2em;
+    margin-right: 0.6em;
+    display: inline-block;
+    background-color: var(--accent-color);
+}
+
+.main__sidebar .widget ol,
+.main__sidebar .widget ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-transform: capitalize;
+}
+
+.main__sidebar .widget li ol,
+.main__sidebar .widget li ul {
+    margin-left: 1.2em;
+    margin-top: 0.5em;
+}
+
+.main__sidebar .widget.widget_archive li a,
+.main__sidebar .widget.widget_categories li a,
+.main__sidebar .widget.widget_pages li a,
+.main__sidebar .widget.widget_nav_menu li a {
+    display: flex;
+    align-items: center;
+}
+
+.main__sidebar .widget.widget_archive li a:after,
+.main__sidebar .widget.widget_categories li a:after,
+.main__sidebar .widget.widget_pages li a:after,
+.main__sidebar .widget.widget_nav_menu li a:after {
+    content: "\f105";
+    font-family: 'Font Awesome';
+    font-weight: 400;
+    margin-left: auto;
+    color: currentColor;
+}
+
+.main__sidebar .widget li {
+    margin-top: 0.8em;
+    padding-top: 0.8em;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.main__sidebar .widget li:first-child {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: none;
+}
+
+.main__sidebar .widget li li {
+    margin-top: 0.8em !important;
+    padding-top: 0.8em !important;
+    border-top: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+
+.main__sidebar .widget a {
+    color: currentColor;
+}
+
+.main__sidebar .widget a:hover {
+    color: var(--accent-color);
+}
+
+.widget.widget_rss a {
+    text-decoration: underline;
+}
+
+/* --- 1. Search__Form --- */
+.search__form {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.search__form .input__control {
+    width: calc(100% - 60px);
+    margin-right: 10px;
+}
+
+.search__form .search_submit {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: var(--accent-color);
+    color: white;
+    border-radius: 5px;
+}
+
+.search__form .search_submit:hover {
+    color: var(--accent-color);
+    background-color: white;
+    box-shadow: 0 4px 16px 0 #ff6b3130;
+}
+
+/* --- 1. Single__Post --- */
+.single__post {
+    display: flex;
+    flex-direction: column;
+}
+
+.single__post .post__title {
+    font-size: 2.6em;
+}
+
+.single__post .post__meta {
+    margin-bottom: 1em;
+}
+
+.post__navigation {
+    display: flex;
+    margin: 2.5em 0;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    padding: 2em 0;
+}
+
+.post__navigation .nav__prev,
+.post__navigation .nav__next {
+    width: 50%;
+}
+
+.post__navigation .nav__next {
+    text-align: right;
+}
+
+.post__navigation .post__title {
+    margin: 0;
+    font-size: 1.4em;
+    line-height: 1.2em;
+}
+
+.post__navigation .nav__label {
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--accent-color);
+    margin-bottom: 0.3em;
+}
+
+/* --- 1. Comments__list --- */
+.comments__list__area .comments__list,
+.comments__list__area .comments__list .children {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.comments__list__area .comments__list .comment {
+    margin-top: 2em;
+    border-top: 1px solid var(--border-color);
+    padding-top: 2em;
+    padding-left: 6.2em;
+    position: relative;
+}
+
+.comments__list__area .comments__list>.comment:first-child {
+    border-top: none;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.comments__list__area .comments__list .comment .comment-author .avatar {
+    position: absolute;
+    left: 0;
+    width: 4.8em;
+    top: 2em;
+    border-radius: 5px;
+    box-shadow: 0 8px 24px 0 var(--secondary-color);
+}
+
+.comments__list__area .comments__list>.comment:first-child .comment-author .avatar {
+    top: 0;
+}
+
+.comments__list__area .comments__list .comment .comment-author .fn {
+    font-weight: 700;
+}
+
+.comments__list__area .comments__list .comment .comment-meta {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 0.7em;
+    justify-content: space-between;
+}
+
+.comments__list__area .comments__list .comment .reply {
+    margin-top: 0.6em;
+    font-weight: 700;
+}
+
+.comments__list__area .comments__list .comment .reply a::before {
+    content: "\f4ad";
+    font-family: 'Font Awesome';
+    font-weight: 300;
+    color: var(--accent-color);
+    margin-right: 0.6em;
+}
+
+.comments__section .comment-respond {
+    margin-top: 2em;
+    background-color: var(--secondary-color);
+    padding: 2.4em;
+    border-radius: 6px;
+}
+
+.comments__section .comment-respond .comment-reply-title {
+    font-size: 2.4em;
+}
+
+.comments__section .comment-respond .comment-reply-title a {
+    font-size: 14px;
+    margin-left: 1em;
+    display: inline-block;
+}
+
+.comment-respond .form-submit {
+    margin-bottom: 0;
+}
+
+
+/* --- 1. Footer__Section --- */
+.footer__section {
+    padding-top: 2em;
+    padding-bottom: 2em;
+    background-color: var(--secondary-color);
+}
+
+/* --- Error__Page --- */
+.error__section {
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3em 0em;
+}
+
+.error__section .error__image {
+    margin-bottom: 2em;
+}
+
+.error__section .error__desc {
+    margin-bottom: 2em;
+}
+
+/* --- Preloader__Style --- */
+.preloader .loader__image {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999999;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.preloader .loader__image img {
+    width: 20%;
+}

@@ -1,113 +1,107 @@
-<?php get_header(); ?>
-
-<?php 
-get_template_part('components/layouts/site_header'); 
-
-	if ( class_exists( 'Redux' ) ) {
-		global $landshop_opt;
-	}else{
-		$landshop_opt = array();
-		$landshop_opt['single_releted_tag'] = '1';
-		$landshop_opt['single_post_share'] = 'false';
-		$landshop_opt['single_post_nav'] = '1';
-		$landshop_opt['single_author_info'] = '1';
-	}	
+<?php
+// Include header and site header
+get_header();
+get_template_part('components/layouts/site_header');
 ?>
-<!-- Post_List_Area-Start -->
-<section class="blog-detials section__padding">
+
+<!-- Post List Area Start -->
+<section class="post__single section__padding">
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-sm-12 <?php echo ( is_active_sidebar( 'main_sidebar' ) ? 'col-lg-8' : '' ); ?>">
-                <div class="<?php echo ( is_active_sidebar( 'main_sidebar' ) ? 'pe-lg-4' : '' ); ?>">
-                    <div class="single_post__box">
-                        <?php 
-                        while(have_posts()):
-                        the_post();
-                        /*
-                         * Include the Post-Format-specific template for the content.
-                         * If you want to override this in a child theme, then include a file
-                         * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-                         */
-                        get_template_part( 'components/post-formats/post', get_post_format() );
-                         // End the loop.
+            <?php
+            // Determine column classes based on sidebar activation
+            $col_classes = is_active_sidebar('main_sidebar') ? 'col-lg-8' : '';
+            $col_classes_sm = 'col-sm-12 ' . $col_classes;
+            $sidebar_classes = is_active_sidebar('main_sidebar') ? 'col-lg-4 mt-5 mt-lg-0' : '';
+            ?>
 
-                        //Populer post view count function
-                        if( function_exists('codexse_set_post_views') ){
-                            codexse_set_post_views(get_the_ID());
-                        }
-                    ?>
-                        <div class="single_tags_share">
-                            <?php if(has_tag() && $landshop_opt['single_releted_tag'] == '1'): ?>
-                            <div class="post_related-tag">
-                                <?php echo get_the_tag_list( '<div class="tags">',' ','</div>'); ?>
-                            </div>
-                            <?php endif; ?>
-                            <?php 
-                            if(function_exists('landshop_post_share_social') && $landshop_opt['single_post_share'] == '1'):
-                                landshop_post_share_social();
-                            endif;
-                        ?>
-                        </div>
+            <div class="<?php echo esc_attr($col_classes_sm); ?>">
+                <div class="<?php echo (is_active_sidebar('main_sidebar') ? 'pe-lg-4' : ''); ?>">
+                    <div class="single__post">
                         <?php
-                        if( !empty(get_the_author_meta('description')) and $landshop_opt['single_author_info'] == '1' ): ?>
-                        <div class="single_author_info">
-                            <?php 
-                                $user_pic = get_avatar_url(get_the_author_meta('ID'), array('size' => 450));
-                                if(!empty($user_pic)){
-                                    printf( '<figure class="author_pic" style="background-image: url(%s);"></figure>', esc_url($user_pic) );  
-                                }
-                            ?>
-                            <div class="author_content">
-                                <h4 class="author_name"><?php esc_html_e('About','landshop'); echo ' '; echo str_replace('_',' ', get_the_author()); ?></h4>
-                                <div class="author_desc">
-                                    <?php echo wpautop(esc_html(get_the_author_meta('description'))); ?>
-                                </div>
-                                <div class="social-link">
-                                    <?php if(!empty(get_the_author_meta('_landshop_user_twitter'))): ?>
-                                    <a href="<?php echo esc_url(get_the_author_meta('_landshop_user_twitter')); ?>"><i class="fab fa-twitter"></i></a>
-                                    <?php endif; ?>
-                                    <?php if(!empty(get_the_author_meta('_landshop_user_facebook'))): ?>
-                                    <a href="<?php echo esc_url(get_the_author_meta('_landshop_user_facebook')); ?>"><i class="fab fa-facebook-f"></i></a>
-                                    <?php endif; ?>
-                                    <?php if(!empty(get_the_author_meta('_landshop_user_linkedin'))): ?>
-                                    <a href="<?php echo esc_url(get_the_author_meta('_landshop_user_linkedin')); ?>"><i class="fab fa-linkedin-in"></i></a>
-                                    <?php endif; ?>
-                                    <?php if(!empty(get_the_author_meta('_landshop_user_instagram'))): ?>
-                                    <a href="<?php echo esc_url(get_the_author_meta('_landshop_user_instagram')); ?>"><i class="fab fa-instagram"></i></a>
-                                    <?php endif; ?>
-                                    <?php if(!empty(get_the_author_meta('_landshop_user_pinterest'))): ?>
-                                    <a href="<?php echo esc_url(get_the_author_meta('_landshop_user_pinterest')); ?>"><i class="fab fa-pinterest-p"></i></a>
-                                    <?php endif; ?>
-                                </div>
-                            </div>
-                        </div>
-                        <?php endif; ?>
-                        <?php if(get_the_post_navigation() && $landshop_opt['single_post_nav'] == '1'): ?>
-                            <div class="post-navigation">
-                                <div class="nav-previous">
-                                    <?php previous_post_link('%link', '<div class="button__content" ><span class="label"><i class="fa-light fa-arrow-left me-2"></i>  Prev Post</span><h4 class="button__title">%title</h4></div>'); ?>
-                                </div>
-                                <div class="nav-next">
-                                    <?php next_post_link('%link', '<div class="button__content" ><span class="label">Next Post <i class="fa-light fa-arrow-right ms-2"></i></span><h4 class="button__title">%title</h4></div>'); ?>
-                                </div>
-                            </div>
+                        // Loop through posts
+                        while (have_posts()) : the_post();
 
-                        <?php endif; ?>
-                        <?php                                                      
-                        // If comments are open or we have at least one comment, load up the comment template.
-                        if ( comments_open() || get_comments_number() ) {
-                            comments_template();
-                        }  
-                    endwhile; 
-                    ?>
+                            // Display post title if it exists
+                            if (get_the_title()) :
+                                echo '<h2 class="post__title">' . esc_html(get_the_title()) . '</h2>';
+                            endif;
+
+                            if (get_the_author() || landshop_get_post_date() || landshop_get_comment_count() || get_the_category_list() || get_the_tag_list()) : ?>
+                                <ul class="post__meta">
+                                    <?php if (get_the_author()) : ?>
+                                        <li class="author"><i class="fa-light fa-user icon"></i><?php the_author(); ?></li>
+                                    <?php endif; ?>
+                                    <?php if ($post_date = landshop_get_post_date()) : ?>
+                                        <li class="date"><i class="fa-light fa-calendar-days icon"></i><?php echo wp_kses_post($post_date); ?></li>
+                                    <?php endif; ?>
+                                    <?php if ($comment_count = landshop_get_comment_count()) : ?>
+                                        <li class="comment"><i class="fa-light fa-comments icon"></i><?php echo wp_kses_post($comment_count); ?></li>
+                                    <?php endif; ?>
+                                    <?php if (get_the_category_list()) : ?>
+                                        <li class="tag"><i class="fa-light fa-folders icon"></i><?php echo get_the_category_list(', &nbsp;', ' '); ?></li>
+                                    <?php endif; ?>
+                                    <?php if (get_the_tag_list()) : ?>
+                                        <li class="tags"><i class="fa-light fa-tags icon"></i><?php echo get_the_tag_list(' ', ', &nbsp;'); ?></li>
+                                    <?php endif; ?>
+
+                                </ul>
+                            <?php endif; ?>
+                            
+
+                            <?php
+                            // Display the post content
+                            the_content(
+                                sprintf(
+                                    esc_html__('Continue reading %s', 'landshop'),
+                                    the_title('<span class="screen-reader-text">', '</span>', false)
+                                )
+                            );
+
+                            // Display page links
+                            wp_link_pages(array(
+                                'before'          => '<div class="pagination"><span class="page-links-title">' . esc_html__('Pages:', 'landshop') . '</span>',
+                                'after'           => '</div>',
+                                'link_before'     => '<span class="page-numbers" >',
+                                'link_after'      => '</span>',
+                                'next_or_number'  => 'number',
+                                'nextpagelink'    => '<i class="fa-light fa-angle-right"></i>',
+                                'previouspagelink' => '<i class="fa-light fa-angle-left"></i>',
+                            ));
+
+                            ?>
+                            <div class="post__navigation">
+                                <div class="nav__prev">
+                                    <?php previous_post_link('%link', '<div class="nav__label">' . __('Prev Post', 'landshop') . '</div> <h4 class="post__title">%title</h4>'); ?>
+                                </div>
+                                <div class="nav__next">
+                                    <?php next_post_link('%link', '<div class="nav__label">' . __('Next Post', 'landshop') . '</div> <h4 class="post__title">%title</h4>'); ?>
+                                </div>
+                            </div>
+                            <?php
+                            // If comments are open or there are comments, display the comment template
+                            if (comments_open() || get_comments_number()) {
+                                comments_template();
+                            }
+
+                        endwhile; // End the post loop
+                        ?>
                     </div>
                 </div>
             </div>
-            <div class="col-sm-12 <?php echo ( is_active_sidebar( 'main_sidebar' ) ? 'col-lg-4 mt-5 mt-lg-0' : '' ); ?>">
-                <?php get_sidebar(); ?>
+
+            <div class="<?php echo esc_attr($sidebar_classes); ?>">
+                <?php
+                // Include the sidebar template
+                get_sidebar();
+                ?>
             </div>
         </div>
     </div>
 </section>
-<!-- Post_List_Area-End -->
-<?php get_footer(); ?>
+<!-- Post List Area End -->
+
+<?php
+// Include the footer template
+get_footer();
+?>

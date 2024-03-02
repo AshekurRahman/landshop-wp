@@ -6,7 +6,7 @@
  */
 if ( is_active_sidebar( 'main_sidebar' )  ) : 
 ?>
-<aside class="sidebar main-sidebar">
+<aside class="sidebar main__sidebar">
    <?php dynamic_sidebar( 'main_sidebar' ); ?>
 </aside>
 <?php endif; ?>

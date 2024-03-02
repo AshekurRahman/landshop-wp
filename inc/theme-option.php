@@ -902,7 +902,7 @@ Redux::setSection( $opt_name, array(
         array(
             'id'       => 'page_header_background',
             'type'     => 'background',
-            'output'   => array( '.site__header' ),
+            'output'   => array( '.header__area' ),
             'title'    => esc_html__( 'Background', 'landshop' ),
             'subtitle' => esc_html__( 'Control the page header background with image, color, etc.', 'landshop' ),
             'default'  => array( 'url' => get_theme_file_uri( 'assets/images/header-bg.jpg' ) ),
@@ -911,14 +911,14 @@ Redux::setSection( $opt_name, array(
             'id'       => 'page_header_overlay',
             'type'     => 'color_rgba',
             'title'    => esc_html__( 'Background Overlay', 'landshop' ),
-            'output'   => array( '.site__header:before' ),
+            'output'   => array( '.header__area:before' ),
             'mode'     => 'background',
             'validate' => 'colorrgba'
         ),
         array(
             'id'             => 'page_header_space',
             'type'           => 'spacing',
-            'output'   => array( '.site__header' ),
+            'output'   => array( '.header__area' ),
             // An array of CSS selectors to apply this font style to
             'mode'           => 'padding',
             // absolute, padding, margin, defaults to padding
@@ -991,7 +991,7 @@ Redux::setSection( $opt_name, array(
             'text-transform'    => true,
             'letter-spacing'=> true, 
             'all_styles'  => true,
-            'output'      => array( '.site__header .page_title' ),
+            'output'      => array( '.header__area .page_title' ),
             'compiler'    => array( 'page_title-compiler' ),
             'units'       => 'px',
             'subtitle'    => esc_html__( 'Typography option with each property can be called individually.', 'landshop' ),
@@ -999,7 +999,7 @@ Redux::setSection( $opt_name, array(
         array(
             'id'             => 'page_title_space',
             'type'           => 'spacing',
-            'output'   => array( '.site__header .page_title' ),
+            'output'   => array( '.header__area .page_title' ),
             // An array of CSS selectors to apply this font style to
             'mode'           => 'margin',
             // absolute, padding, margin, defaults to padding
@@ -1077,7 +1077,7 @@ Redux::setSection( $opt_name, array(
             'text-transform'    => true,
             'letter-spacing'=> true,
             'all_styles'  => true,
-            'output'      => array( '.site__header .sub__title, .site__header .sub__title a' ),
+            'output'      => array( '.header__area .sub__title, .header__area .sub__title a' ),
             'compiler'    => array( 'page-subtitle-compiler' ),
             'units'       => 'px',
             'subtitle'    => esc_html__( 'Typography option with each property can be called individually.', 'landshop' ),
@@ -1085,7 +1085,7 @@ Redux::setSection( $opt_name, array(
         array(
             'id'             => 'page_subtitle_space',
             'type'           => 'spacing',
-            'output'   => array( '.site__header .sub__title' ),
+            'output'   => array( '.header__area .sub__title' ),
             'mode'           => 'margin',
             'all'            => false,
             'right'         => false,
@@ -1828,7 +1828,7 @@ Redux::setSection( $opt_name, array(
             'title'     => esc_html__('Color', 'landshop'),
             'id'        => 'scr_btn_color',
             'type'      => 'color',
-            'output'    => array('.progress-wrap svg.progress-circle path'),
+            'output'    => array('.progress__wrap svg.progress-circle path'),
             'required'  => array('is_scroll_up', '=', '1'),
         ),
     )
