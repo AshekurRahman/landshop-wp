@@ -42,6 +42,10 @@ body.sticky .navbar__area {
     display: block;
 }
 
+.navbar__area .row {
+    min-height: var(--navbar-height);
+}
+
 .logo__text {
     font-family: var(--heading-font-family);
     font-weight: 700;
@@ -61,9 +65,84 @@ body.sticky .navbar__area .main__logo {
     display: none;
 }
 
-.navbar__area .nav_menu .nav {
+.navbar__area .nav__menu .nav {
     margin-right: calc(0px - var(--bs-nav-link-padding-y) * 2);
 }
+
+.nav__menu .nav > li {
+    position: relative;
+}
+
+.nav__menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav__menu .nav li a {
+    color: var(--primary-color);
+}
+
+.nav__menu .nav li:hover > a {
+    color: var(--accent-color);
+}
+
+.mobile__menu__toggle {
+    margin-left: auto;
+    border: 1px solid var(--accent-color);
+    width: 44px;
+    height: 44px;
+    line-height: 42px;
+    background-color: white;
+    color: var(--accent-color);
+    padding: 0px;
+    border-radius: 2px;
+}
+
+.mobile__menu__toggle i {
+    line-height: 1em;
+}
+
+/* --- 1. Mobile__menu__css --- */
+.mobile__menu {
+    border: 1px solid var(--secondary-color);
+    padding: 14px 24px;
+    max-height: 400px;
+    overflow-y: auto;
+    display: none;
+}
+
+.mobile__menu .nav {
+    flex-direction: column;
+}
+
+.mobile__menu .nav li {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.mobile__menu .nav li a {
+    padding: 6px 0px;
+    text-transform: capitalize;
+}
+
+.mobile__menu .nav li ul {
+    list-style: none;
+    margin: 0;
+    padding: 0 0 0 24px;
+    width: 100%;
+    display: none;
+}
+
+.mobile__menu .nav li .collapse__menu {
+    border: none;
+    padding: 0px;
+    margin-left: auto;
+    background-color: var(--se-color);
+}
+
+
 
 /* --- 1. Header__Area --- */
 .header__area {
@@ -100,11 +179,11 @@ body.sticky .navbar__area .main__logo {
 }
 
 .post__box .post__content {
-    padding: 2.5em;
+    padding: 2.3em;
 }
 
 .post__box .post__title {
-    font-size: 2.4em;
+    font-size: 2em;
     margin-bottom: 0.4em;
 }
 
@@ -214,7 +293,7 @@ ul.post__meta li a:hover {
 .main__sidebar .widget.widget_archive li a,
 .main__sidebar .widget.widget_categories li a,
 .main__sidebar .widget.widget_pages li a,
-.main__sidebar .widget.widget_nav_menu li a {
+.main__sidebar .widget.widget_nav__menu li a {
     display: flex;
     align-items: center;
 }
@@ -222,7 +301,7 @@ ul.post__meta li a:hover {
 .main__sidebar .widget.widget_archive li a:after,
 .main__sidebar .widget.widget_categories li a:after,
 .main__sidebar .widget.widget_pages li a:after,
-.main__sidebar .widget.widget_nav_menu li a:after {
+.main__sidebar .widget.widget_nav__menu li a:after {
     content: "\f105";
     font-family: 'Font Awesome';
     font-weight: 400;
@@ -331,6 +410,7 @@ ul.post__meta li a:hover {
     letter-spacing: 0.2em;
     color: var(--accent-color);
     margin-bottom: 0.3em;
+    font-size: .8em;
 }
 
 /* --- 1. Comments__list --- */
@@ -384,6 +464,10 @@ ul.post__meta li a:hover {
     font-weight: 700;
 }
 
+.comments__list__area .comments__list .comment .reply a {
+    color: var(--accent-color);
+}
+
 .comments__list__area .comments__list .comment .reply a::before {
     content: "\f4ad";
     font-family: 'Font Awesome';
@@ -400,7 +484,7 @@ ul.post__meta li a:hover {
 }
 
 .comments__section .comment-respond .comment-reply-title {
-    font-size: 2.4em;
+    font-size: 2em;
 }
 
 .comments__section .comment-respond .comment-reply-title a {

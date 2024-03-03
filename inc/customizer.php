@@ -161,24 +161,6 @@ class Landshop_Customize {
          )
       );
 
-      // Additional Typography Settings
-      $wp_customize->add_setting( 'paragraph_font_size_setting',
-         array(
-            'default'           => '1em',
-            'sanitize_callback' => 'sanitize_text_field',
-         )
-      );
-
-      $wp_customize->add_control( 'paragraph_font_size_control',
-         array(
-            'label'       => __( 'Paragraph Font Size (rem)', 'landshop' ),
-            'section'     => 'landshop_typography_settings',
-            'settings'    => 'paragraph_font_size_setting',
-            'type'        => 'text',
-            'description' => __( 'Enter a value in rem units, e.g., 1em', 'landshop' ),
-         )
-      );
-
       $wp_customize->add_setting( 'small_font_size_setting',
          array(
             'default'           => '0.75em',
@@ -725,7 +707,6 @@ class Landshop_Customize {
          <?php self::generate_css('h4', 'font-size', 'h4_font_size_setting'); ?>
          <?php self::generate_css('h5', 'font-size', 'h5_font_size_setting'); ?>
          <?php self::generate_css('h6', 'font-size', 'h6_font_size_setting'); ?>
-         <?php self::generate_css('p', 'font-size', 'paragraph_font_size_setting'); ?>
          <?php self::generate_css('small', 'font-size', 'small_font_size_setting'); ?>
          <?php self::generate_css('sup, sub', 'font-size', 'sup_sub_font_size_setting'); ?>
          <?php self::generate_css('body .navbar__area', 'background-color', 'navbar_bg_color_setting'); ?>

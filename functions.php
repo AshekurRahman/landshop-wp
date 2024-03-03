@@ -251,9 +251,7 @@ function landshop_scripts() {
 	wp_enqueue_style( 'bootstrap', get_theme_file_uri('/assets/css/bootstrap-min.css'), array(), '5.1.1' );  
 	wp_enqueue_style( 'landshop-root', get_theme_file_uri('/assets/css/root.css'), array(), wp_get_theme()->get( 'Version' )  );	                
 	// Add Normalizer, Used for remove default tag style.
-	wp_enqueue_style( 'normalizer', get_theme_file_uri('/assets/css/normalize.css'), array(), '8.0.1' );
-	// Add slicknav, Used for responsive mobile menu.
-	wp_enqueue_style( 'slicknav', get_theme_file_uri('/assets/css/slicknav.css'), array(), '1.0.10' );             
+	wp_enqueue_style( 'normalizer', get_theme_file_uri('/assets/css/normalize.css'), array(), '8.0.1' );           
 	// Add FontAwesome, Used for font icons.
 	wp_enqueue_style( 'fontawesome', get_theme_file_uri('/assets/css/fontawesome-min.css'), array(), '5.8.1' );
 	if( class_exists( 'WooCommerce' ) ){
@@ -281,8 +279,6 @@ function landshop_scripts() {
 	wp_enqueue_script( 'jquery-fitvids', get_theme_file_uri('/assets/js/fitvids.js'), array('jquery'), '1.1.0', true );    
 	// Add jQuery-Fitvids, Used for responsive Video.
 	wp_enqueue_script( 'jquery-prefixfree', get_theme_file_uri('/assets/js/prefixfree-min.js'), array('jquery'), '1.1.0', true ); 
-	// Add SlickNav, Used for responsive mobile menu.
-	wp_enqueue_script( 'slicknav', get_theme_file_uri('/assets/js/slicknav-min.js'), array('jquery'), '1.0.10', true );
 	wp_enqueue_script( 'animatenumber', get_theme_file_uri('/assets/js/animatenumber-min.js'), array('jquery'), '1.0.0', true );
 	wp_enqueue_script( 'jquery-appear', get_theme_file_uri('/assets/js/jquery-appear.js'), array('jquery'), '0.3.3', true );
 	// Add Bootstrap, Used for default normal effect.
@@ -347,3 +343,5 @@ require get_theme_file_path('/inc/customizer.php');
 
 // OnePage Nav Waker Function.
 require get_theme_file_path('/inc/nav-menu-walker.php');
+
+include_once( ABSPATH . 'wp-admin/includes/plugin.php' );

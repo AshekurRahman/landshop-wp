@@ -11,7 +11,7 @@
     ?>
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="col-3 col-sm-2">
+                    <div class="col-5 col-lg-2">
                         <!--nav__logo-Start-->
                         <div class="nav__logo">
                             <?php
@@ -30,21 +30,32 @@
                         </div>
                         <!--nav__logo-End-->
                     </div>
-                    <div class="col-9 col-sm-10 text-end">
+                    <div class="col-7 col-lg-10 d-flex align-items-center">
                         <!--Nav_Menu-Start-->
-                        <div class="nav_menu" id="nav_menu">
+                        <div class="nav__menu ms-auto">
                             <?php
                                 wp_nav_menu(array(
                                     'theme_location' => 'primary_menu',
                                     'menu_class'     => 'nav d-inline-flex',
                                     'container'      => ' ',
                                     'fallback_cb'    => 'landshop_mainmenu_demo_content',
-                                    'walker'         => new landshop_Nav_Menu_Walker
+                                    'walker'         => new landshop_Desktop_Menu_Walker
                                 ));
                             ?>
                         </div>
                         <!--Nav_Menu-End-->
+                        <button class="mobile__menu__toggle"><i class="fa-regular fa-bars"></i></button>
                     </div>
+                </div>
+                <div class="mobile__menu">
+                    <?php
+                        wp_nav_menu(array(
+                            'theme_location' => 'primary_menu',
+                            'menu_class'     => 'nav',
+                            'container'      => ' ',
+                            'walker'         => new landshop_Mobile_Menu_Walker
+                        ));
+                    ?>
                 </div>
             </div>
     <?php
