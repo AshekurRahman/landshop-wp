@@ -33,9 +33,8 @@ body.sticky .navbar__area {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .05);
 }
 
-
-body.sticky .navbar__area {
-    position: fixed;
+body.sticky.admin-bar .navbar__area {
+    top: 30px;
 }
 
 .navbar__height {
@@ -83,6 +82,10 @@ body.sticky .navbar__area .main__logo {
 
 .nav__menu .nav li a {
     color: var(--primary-color);
+}
+
+.nav__menu .nav li.current-menu-item > a {
+    color: var(--accent-color);
 }
 
 .nav__menu .nav li:hover > a {
@@ -160,6 +163,12 @@ body.sticky .navbar__area .main__logo {
     color: var(--primary-color);
 }
 
+/* --- Page__Wrapper --- */
+.page__wrapper:after {
+    content: "";
+    clear: both;
+    display: block;
+}
 
 /* --- Post__Box --- */
 .post__box {
@@ -389,7 +398,7 @@ ul.post__meta li a:hover {
 
 .post__navigation {
     display: flex;
-    margin: 2.5em 0;
+    margin: 2.5em 0 0;
     border-top: 1px solid var(--border-color);
     border-bottom: 1px solid var(--border-color);
     padding: 2em 0;
@@ -419,6 +428,10 @@ ul.post__meta li a:hover {
 }
 
 /* --- 1. Comments__list --- */
+.comments__section {
+    margin-top: 2.5em;
+}
+
 .comments__list__area .comments__list,
 .comments__list__area .comments__list .children {
     list-style: none;

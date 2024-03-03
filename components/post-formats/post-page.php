@@ -1,4 +1,4 @@
-<div <?php post_class(get_post_type()); ?> >  
+<div <?php post_class('page__wrapper'); ?> >  
 
     <?php
 
