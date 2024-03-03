@@ -11,7 +11,7 @@
     ?>
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="col-5 col-lg-2">
+                    <div class="col-7 col-lg-2">
                         <!--nav__logo-Start-->
                         <div class="nav__logo">
                             <?php
@@ -30,7 +30,7 @@
                         </div>
                         <!--nav__logo-End-->
                     </div>
-                    <div class="col-7 col-lg-10 d-flex align-items-center">
+                    <div class="col-5 col-lg-10 d-flex align-items-center">
                         <!--Nav_Menu-Start-->
                         <div class="nav__menu ms-auto">
                             <?php

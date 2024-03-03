@@ -38,6 +38,7 @@
         transition: .1s;
         padding: 16px 0;
         box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
     }
 
     .nav__menu li ul li a {
@@ -59,15 +60,141 @@
         display: none;
         margin-left: auto;
     }
-    
-    .mobile__menu  {
+
+    .mobile__menu {
         display: none !important;
     }
 
 }
 
+@media only screen and (max-width: 1400px) {
+    .logo__text {
+        font-size: 2em;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .logo__text {
+        font-size: 1.6em;
+    }
+}
+
 @media only screen and (max-width: 992px) {
+
+    /* --- Navbar__CSS --- */
     .navbar__area .nav__menu {
         display: none;
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+    :root {
+        --navbar-height: 80px !important;
+        --section-padding: 80px !important;
+    }
+
+    /* --- Reset__CSS --- */
+    body {
+        font-size: 14px !important;
+    }
+
+    .form-control,
+    select,
+    input[type="text"],
+    input[type="email"],
+    input[type="url"],
+    input[type="password"],
+    input[type="search"],
+    input[type="number"],
+    input[type="tel"],
+    input[type="date"],
+    input[type="month"],
+    input[type="week"],
+    input[type="time"],
+    input[type="datetime"],
+    input[type="datetime-local"],
+    input[type="color"],
+    textarea {
+        padding: 8px 16px;
+    }
+
+    .accent__button,
+    .primary__button {
+        padding: 8px 16px;
+    }
+
+    /* --- Navbar__CSS --- */
+    .logo__text {
+        font-size: 1.8em;
+    }
+
+    /* --- Post__Box__CSS --- */
+    .post__box .post__content {
+        padding: 1.6em;
+    }
+
+    .post__box .post__title {
+        font-size: 1.6em;
+    }
+
+    .post__box .post__desc {
+        margin-bottom: 1em;
+    }
+
+    .single__post .post__title {
+        font-size: 2em;
+    }
+
+    .pagination {
+        margin: -0.3em;
+    }
+
+    .pagination .page-numbers {
+        width: 2em;
+        height: 2em;
+        line-height: 2em;
+        font-size: 1em;
+        margin: 0.3em;
+    }
+
+    /* --- Widget__CSS --- */
+
+    .main__sidebar .widget li {
+        margin-top: 0.4em;
+        padding-top: 0.4em;
+    }
+
+    .main__sidebar .widget li:first-child {
+        margin-top: 0;
+        padding-top: 0;
+        border-top: none;
+    }
+
+    .main__sidebar .widget li li {
+        margin-top: 0.4em !important;
+        padding-top: 0.4em !important;
+    }
+
+    /* --- Single__Post --- */
+    .comments__list__area .comments__list .comment .comment-meta {
+        margin-bottom: 0.4em;
+    }
+
+    .comments__section .comment-respond {
+        padding: 1.8em;
+    }
+
+    .comments__list__area .comment__title, .comments__section .comment-respond .comment-reply-title {
+        font-size: 1.6em;
+        margin-bottom: 0.6em;
+    }
+
+    .error__section .error__title {
+        font-size: 2em;
+    }
+
+    .admin-bar .navbar__area {
+        top: 45px;
     }
 }
