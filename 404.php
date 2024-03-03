@@ -12,9 +12,11 @@
     <main class="main_wrapper">
         <div class="page__wrapper">
         <?php
-            $elementor_template = get_theme_mod('404_elementor_template_setting', 'default');
+            if ( is_plugin_active( 'elementor/elementor.php' ) ) {
+                $elementor_template = get_theme_mod('header_elementor_template_setting', 'default');
+            }
         ?>
-        <?php if ($elementor_template === 'default'): ?>
+        <?php if (empty($elementor_template) || $elementor_template === 'default'): ?>
             <section class="error__section">
                 <div class="container">
                     <div class="row justify-content-center">

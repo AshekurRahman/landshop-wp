@@ -1,7 +1,9 @@
-<?php
+<?php   
+if ( is_plugin_active( 'elementor/elementor.php' ) ) {
     $elementor_template = get_theme_mod('header_elementor_template_setting', 'default');
+}
 ?>
-<?php if ($elementor_template === 'default'): ?>
+<?php if (empty($elementor_template) || $elementor_template === 'default'): ?>
 <!--Site_Header-Start-->
 <section class="header__area <?php echo get_post_type(); ?>">
     <div class="container">
