@@ -1111,7 +1111,7 @@ class Pricing_Table extends Base {
 			<?php endif; ?>
 		</div>
 		<div class="cx-pricing-table-price">
-			<div class="cx-pricing-table-price-tag"><span class="cx-pricing-table-currency"><?php echo esc_html( $currency ); ?></span><span <?php $this->print_render_attribute_string( 'price' ); ?>><?php echo cx_kses_basic( $settings['price'] ); ?></span></div>
+			<div class="cx-pricing-table-price-tag"><span class="cx-pricing-table-currency"><?php echo esc_html( $currency ); ?></span> <span <?php $this->print_render_attribute_string( 'price' ); ?>><?php echo cx_kses_basic( $settings['price'] ); ?></span></div>
 			<?php if ( $settings['period'] ) : ?>
 				<div <?php $this->print_render_attribute_string( 'period' ); ?>><?php echo cx_kses_basic( $settings['period'] ); ?></div>
 			<?php endif; ?>

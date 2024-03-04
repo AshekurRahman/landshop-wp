@@ -15,15 +15,15 @@
         <div class="flex-list">
             <div class="promo-item">
                 <img src="<?php echo CODEXSE_ADDONS_ASSETS; ?>imgs/wizard/ic-cross-domain.svg" alt="">
-                <div class="item-title">Cross domain<br><span class="red">copy</span><span class="blue">paste</span></div>
+                <div class="item-title">Cross domain<br><span class="red">copy</span> <span class="blue">paste</span></div>
             </div>
             <div class="promo-item">
                 <img src="<?php echo CODEXSE_ADDONS_ASSETS; ?>imgs/wizard/ic-live-copy.svg" alt="">
-                <div class="item-title">Codexse<br><span class="red">live</span><span class="blue">copy</span></div>
+                <div class="item-title">Codexse<br><span class="red">live</span> <span class="blue">copy</span></div>
             </div>
             <div class="promo-item">
                 <img src="<?php echo CODEXSE_ADDONS_ASSETS; ?>imgs/wizard/ic-section-nesting.svg" alt="">
-                <div class="item-title">Unlimited<br><span class="red">section</span><span class="blue">Nesting</span></div>
+                <div class="item-title">Unlimited<br><span class="red">section</span> <span class="blue">Nesting</span></div>
             </div>
             <div class="promo-item">
                 <img src="<?php echo CODEXSE_ADDONS_ASSETS; ?>imgs/wizard/ic-conditional-display.svg" alt="">
@@ -31,7 +31,7 @@
             </div>
             <div class="promo-item">
                 <img src="<?php echo CODEXSE_ADDONS_ASSETS; ?>imgs/wizard/ic-particle.svg" alt="">
-                <div class="item-title">codexse<br><span class="red">particle</span><span class="blue">effect</span></div>
+                <div class="item-title">codexse<br><span class="red">particle</span> <span class="blue">effect</span></div>
             </div>
             <div class="promo-item more">
                 <div class="item-title">2+ More...</div>

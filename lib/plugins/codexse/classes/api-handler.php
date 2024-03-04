@@ -63,15 +63,6 @@ class Api_Handler
             }
         ));
 
-        register_rest_route('codexse/v1', '/wizard/preset/pro', array(
-            'methods' => 'GET',
-            'callback' => [__CLASS__,'cx_wizard_get_preset_pro'],
-            'permission_callback' => function () {
-                return current_user_can( 'edit_others_posts' );
-            }
-        ));
-
-
         /* Get Ends */
         register_rest_route('codexse/v1', '/wizard/save', array(
             'methods' => 'POST',
@@ -139,29 +130,6 @@ class Api_Handler
 
         return $response;
     }
-
-    public static function cx_wizard_get_preset_pro(){
-        self::$disabled_widgets = ["image-compare","carousel","skills","gradient-heading","wpform","ninjaform","calderaform","weform","number","flip-box","calendly","pricing-table","gravityforms","news-ticker","bar-chart","twitter-feed","post-tab","taxonomy-list","threesixty-rotation","fluent-form","data-table","social-share","event-calendar","link-hover","image-stack-group"];
-        self::haGetWidgetList();
-
-        self::$disabled_features = ["grid-layer","advanced-tooltip","text-stroke"];
-        self::haGetFeatureList();
-
-        $response = [
-            'info'    => 'Preset data for advanced users',
-            'widgets' => [
-                'all' => self::$catwise_free_widget_map,
-                'disabled' => self::$disabled_widgets
-            ],
-            'features'=>[
-                'all' => self::$featureMap,
-                'disabled' => self::$disabled_features
-            ]
-        ];
-
-        return $response;
-    }
-
 
     public static function cx_wizard_save_data(\WP_REST_Request $request){
         $data = json_decode( $request->get_body() );

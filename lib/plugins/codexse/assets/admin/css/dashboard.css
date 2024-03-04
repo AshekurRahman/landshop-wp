@@ -46,13 +46,13 @@
 }
 .cx-dashboard-btn--save {
 	width: 13em;
-	background-color: #5db429;
+	background-color: #27b59e;
 	color: #fff;
 }
 .cx-dashboard-btn--save:hover,
 .cx-dashboard-btn--save:focus,
 .cx-dashboard-btn--save:active {
-	background-color: #488a20;
+	background-color: #1f9380;
 	color: #fff;
 }
 .cx-dashboard-btn--save:disabled,
@@ -704,14 +704,14 @@
 }
 .cx-action--btn[data-action=enable],
 .cx-action--btn[data-action=enable_feature] {
-	color: #5db429;
+	color: #27b59e;
 }
 .cx-action--btn[data-action=enable]:hover,
 .cx-action--btn[data-action=enable]:focus,
 .cx-action--btn[data-action=enable_feature]:hover,
 .cx-action--btn[data-action=enable_feature]:focus {
-	border-color: #5db429;
-	background-color: #5db429;
+	border-color: #27b59e;
+	background-color: #27b59e;
 	color: #fff;
 }
 .cx-action--btn[data-action=disable],

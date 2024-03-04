@@ -83,14 +83,6 @@ class Dashboard {
                 esc_html__( 'Settings', 'codexse-elementor-addons' )
             )
         ], $links );
-        if ( ! cx_has_pro() ) {
-            $links = array_merge( $links, [
-                sprintf( '<a target="_blank" style="color:#26b59e; font-weight: bold;" href="%s">%s</a>',
-                    'https://codexseaddons.com/go/get-pro',
-                    esc_html__( 'Get Pro', 'codexse-elementor-addons' )
-                )
-            ] );
-        }
         return $links;
     }
 
@@ -121,11 +113,7 @@ class Dashboard {
     public static function save_features_data( $data ) {
         $features = ! empty( $data['features'] ) ? $data['features'] : [];
 
-        /* Check whether Pro is available and allow to disable pro features */
         $widgets_map = self::get_real_features_map();
-        if ( cx_has_pro() ) {
-            $widgets_map = array_merge( $widgets_map, Extensions_Manager::get_pro_features_map() );
-        }
 
         $inactive_features = array_values( array_diff( array_keys( $widgets_map ), $features ) );
 
@@ -270,14 +258,6 @@ class Dashboard {
 
     public static function get_widgets() {
         $widgets_map = self::get_real_widgets_map();
-
-        if ( ! cx_has_pro() ) {
-            $widgets_map = array_merge( $widgets_map, Widgets_Manager::get_pro_widget_map() );
-        }
-        elseif( cx_has_pro() && version_compare( CODEXSE_ADDONS_PRO_VERSION, '2.1.0', '<=' ) ) {
-			$widgets_map = array_merge( $widgets_map, Widgets_Manager::get_pro_widget_map() );
-		}
-
         uksort( $widgets_map, [ __CLASS__, 'sort_widgets' ] );
         return $widgets_map;
     }
@@ -319,9 +299,6 @@ class Dashboard {
 
     public static function get_features() {
         $widgets_map = self::get_real_features_map();
-
-        $widgets_map = array_merge( $widgets_map, Extensions_Manager::get_pro_features_map() );
-
         uksort( $widgets_map, [ __CLASS__, 'sort_widgets' ] );
         return $widgets_map;
     }
@@ -330,7 +307,7 @@ class Dashboard {
 
         $credentail_map = Credentials_Manager::get_credentials_map();
 
-        $credentail_map = array_merge( $credentail_map, Credentials_Manager::get_pro_credentials_map() );
+        //$credentail_map = array_merge( $credentail_map, Credentials_Manager::get_pro_credentials_map() );
 
         return $credentail_map;
     }

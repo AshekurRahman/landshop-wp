@@ -30,7 +30,7 @@ class Assets_Manager {
 		/**
 		 * @see self::fix_pro_assets_loading
 		 */
-		self::fix_pro_assets_loading();
+		//self::fix_pro_assets_loading();
 	}
 
 	/**
@@ -440,7 +440,7 @@ class Assets_Manager {
 		];
 
 		if (!cx_has_pro() && cx_is_elementor_version('>=', '2.9.0')) {
-			$localize_data['placeholder_widgets'] = Widgets_Manager::get_pro_widget_map();
+			//$localize_data['placeholder_widgets'] = Widgets_Manager::get_pro_widget_map();
 		}
 
 		wp_localize_script(

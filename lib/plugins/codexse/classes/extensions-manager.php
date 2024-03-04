@@ -32,12 +32,6 @@ class Extensions_Manager {
 				self::enable_feature( $feature_key );
 			}
 		}
-
-		foreach ( self::get_pro_features_map() as $feature_key => $data ) {
-			if ( in_array( $feature_key, $inactive_features ) ) {
-				self::disable_pro_feature( $feature_key );
-			}
-		}
 	}
 
 	public static function get_features_map() {
@@ -55,40 +49,6 @@ class Extensions_Manager {
 
 	public static function save_inactive_features( $features = [] ) {
 		update_option( self::FEATURES_DB_KEY, $features );
-	}
-
-	/**
-	 * Get the pro features map for dashboard only
-	 *
-	 * @return array
-	 */
-	public static function get_pro_features_map() {
-		return [
-			'display-conditions' => [
-				'title' => __( 'Display Condition', 'codexse-elementor-addons' ),
-				'icon' => 'hm hm-display-condition',
-				'demo' => 'https://codexseaddons.com/display-condition/',
-				'is_pro' => true,
-			],
-			'image-masking' => [
-				'title' => __( 'Image Masking', 'codexse-elementor-addons' ),
-				'icon' => 'hm hm-image-masking',
-				'demo' => 'https://codexseaddons.com/image-masking-demo/',
-				'is_pro' => true,
-			],
-			'codexse-particle-effects' => [
-				'title' => __( 'Codexse Particle Effects', 'codexse-elementor-addons' ),
-				'icon' => 'hm hm-spark',
-				'demo' => 'https://codexseaddons.com/codexse-particle-effect/',
-				'is_pro' => true,
-			],
-			'codexse-preset' => [
-				'title' => __( 'Preset', 'codexse-elementor-addons' ),
-				'icon' => 'hm hm-color-card',
-				'demo' => 'https://codexseaddons.com/presets-demo/',
-				'is_pro' => true,
-			]
-		];
 	}
 
 	/**

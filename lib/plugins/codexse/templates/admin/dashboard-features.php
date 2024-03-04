@@ -18,10 +18,6 @@ $total_features_count = count( $features );
             <p class="f16"><?php printf( esc_html__( 'Here is the list of our all %s features. You can enable or disable features from here to optimize loading speed and Elementor editor experience. %sAfter enabling or disabling any feature make sure to click the Save Changes button.%s', 'codexse-elementor-addons' ), $total_features_count, '<strong>', '</strong>' ); ?></p>
 
             <div class="cx-action-list">
-                <button type="button" class="cx-action--btn" data-filter="*"><?php esc_html_e( 'All', 'codexse-elementor-addons' ); ?></button>
-                <button type="button" class="cx-action--btn" data-filter="free"><?php esc_html_e( 'Free', 'codexse-elementor-addons' ); ?></button>
-                <button type="button" class="cx-action--btn" data-filter="pro"><?php esc_html_e( 'Pro', 'codexse-elementor-addons' ); ?></button>
-                <span class="cx-action--divider">|</span>
                 <button type="button" class="cx-action--btn" data-action="enable_feature"><?php esc_html_e( 'Enable All', 'codexse-elementor-addons' ); ?></button>
                 <button type="button" class="cx-action--btn" data-action="disable_feature"><?php esc_html_e( 'Disable All', 'codexse-elementor-addons' ); ?></button>
             </div>

@@ -358,7 +358,7 @@ class Skills extends Base {
             ?>
             <div class="cx-skill cx-skill--<?php echo esc_attr( $settings['view'] ); ?> elementor-repeater-item-<?php echo $skill['_id']; ?>">
                 <div class="cx-skill-level" data-level="<?php echo esc_attr( $skill['level']['size'] ); ?>">
-                    <div class="cx-skill-info"><span <?php echo $this->get_render_attribute_string( $name_key ); ?>><?php echo esc_html( $skill['name'] ); ?></span><span class="cx-skill-level-text"></span></div>
+                    <div class="cx-skill-info"><span <?php echo $this->get_render_attribute_string( $name_key ); ?>><?php echo esc_html( $skill['name'] ); ?></span> <span class="cx-skill-level-text"></span></div>
                 </div>
             </div>
             <?php
@@ -376,7 +376,7 @@ class Skills extends Base {
             #>
             <div class="cx-skill cx-skill--{{settings.view}} elementor-repeater-item-{{skill._id}}">
                 <div class="cx-skill-level" data-level="{{skill.level.size}}">
-                    <div class="cx-skill-info"><span {{{view.getRenderAttributeString( nameKey )}}}>{{skill.name}}</span><span class="cx-skill-level-text"></span></div>
+                    <div class="cx-skill-info"><span {{{view.getRenderAttributeString( nameKey )}}}>{{skill.name}}</span> <span class="cx-skill-level-text"></span></div>
                 </div>
             </div>
             <# });

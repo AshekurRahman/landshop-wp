@@ -115,7 +115,7 @@ EOF;
 			$btn_txt = '<svg aria-hidden="true" class="progress" width="70" height="70" viewbox="0 0 70 70"> <path class="progress__circle" d="m35,2.5c17.955803,0 32.5,14.544199 32.5,32.5c0,17.955803 -14.544197,32.5 -32.5,32.5c-17.955803,0 -32.5,-14.544197 -32.5,-32.5c0,-17.955801 14.544197,-32.5 32.5,-32.5z" /> <path class="progress__path" d="m35,2.5c17.955803,0 32.5,14.544199 32.5,32.5c0,17.955803 -14.544197,32.5 -32.5,32.5c-17.955803,0 -32.5,-14.544197 -32.5,-32.5c0,-17.955801 14.544197,-32.5 32.5,-32.5z" pathLength=".9" /></svg><span>'.esc_html($btn_txt).'</span>';
 		} elseif ( 'expandable' == $settings['hermosa_effect'] ) {
 			$icon = $settings['icon']['value'] ? $settings['icon']['value'] : 'hm hm-codexseaddons';
-			$btn_txt = '<span class="text">'.esc_html($btn_txt).'</span><span class="icon"><i aria-hidden="true" class="'.esc_attr($icon).'"></i></span>';
+			$btn_txt = '<span class="text">'.esc_html($btn_txt).'</span> <span class="icon"><i aria-hidden="true" class="'.esc_attr($icon).'"></i></span>';
 		}
 
 		$markup = <<<EOF
