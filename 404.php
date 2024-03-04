@@ -13,7 +13,7 @@
         <div class="page__wrapper">
         <?php
             if ( is_plugin_active( 'elementor/elementor.php' ) ) {
-                $elementor_template = get_theme_mod('header_elementor_template_setting', 'default');
+                $elementor_template = get_theme_mod('404_elementor_template_setting', 'default');
             }
         ?>
         <?php if (empty($elementor_template) || $elementor_template === 'default'): ?>

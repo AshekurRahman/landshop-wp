@@ -2,7 +2,7 @@
     $sticky_menu_setting = get_theme_mod('sticky_menu_setting', 'enable');
     $sticky_offset_setting = get_theme_mod('sticky_offset_setting', 100);
     if ( is_plugin_active( 'elementor/elementor.php' ) ) {
-        $elementor_template = get_theme_mod('header_elementor_template_setting', 'default');
+        $elementor_template = get_theme_mod('navbar_elementor_template_setting', 'default');
     }
 ?>
 

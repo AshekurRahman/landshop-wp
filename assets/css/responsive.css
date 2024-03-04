@@ -1,64 +1,8 @@
 /* --- Desktop__Dropdown__Menu --- */
 @media only screen and (min-width: 993px) {
-    .nav__menu .nav>li>a {
-        min-height: var(--navbar-height);
-        display: flex;
-        align-items: center;
-    }
-
-    .nav__menu li {
-        display: flex;
-    }
-
-    .nav__menu li .collapse__menu {
-        border: none;
-        background-color: transparent;
-        padding: 0;
-        margin-left: 8px;
-        font-size: .9em;
-    }
-
-    .nav__menu li li a {
-        display: flex;
-        width: 100%;
-    }
-
-    .nav__menu li li .collapse__menu {
-        margin-left: auto;
-    }
-
-    .nav__menu li ul {
-        position: absolute;
-        left: 0;
-        top: 100%;
-        background-color: white;
-        min-width: 220px;
-        opacity: 0;
-        visibility: hidden;
-        transition: .1s;
-        padding: 16px 0;
-        box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.1);
-        border-radius: 5px;
-    }
-
-    .nav__menu li ul li a {
-        padding: 5px 26px;
-    }
-
-    .nav__menu li li ul {
-        left: 100%;
-        top: 0%;
-    }
-
-    .nav__menu li:hover>ul {
-        opacity: 1;
-        visibility: visible;
-        transition: .3s;
-    }
 
     .mobile__menu__toggle {
         display: none;
-        margin-left: auto;
     }
 
     .mobile__menu {
@@ -76,6 +20,9 @@
 @media only screen and (max-width: 1200px) {
     .logo__text {
         font-size: 1.6em;
+    }
+    .nav__menu .nav>li>a {
+        padding: calc(var(--bs-nav-link-padding-y) / 1.2) calc(var(--bs-nav-link-padding-x) / 1.2);
     }
 }
 
@@ -185,7 +132,8 @@
         padding: 1.8em;
     }
 
-    .comments__list__area .comment__title, .comments__section .comment-respond .comment-reply-title {
+    .comments__list__area .comment__title,
+    .comments__section .comment-respond .comment-reply-title {
         font-size: 1.6em;
         margin-bottom: 0.6em;
     }

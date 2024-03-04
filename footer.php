@@ -1,7 +1,7 @@
 
 				<?php
 					if ( is_plugin_active( 'elementor/elementor.php' ) ) {
-						$elementor_template = get_theme_mod('header_elementor_template_setting', 'default');
+						$elementor_template = get_theme_mod('footer_elementor_template_setting', 'default');
 					}
 				?>
 			</div>
