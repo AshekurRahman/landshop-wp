@@ -64,7 +64,7 @@ defined( 'ABSPATH' ) || exit;
 </script>
 
 <script type="text/template" id="tmpl-haTemplateLibrary__pro-button">
-	<a class="elementor-template-library-template-action elementor-button haTemplateLibrary__pro-button" href="https://codexseaddons.com/pricing/" target="_blank">
+	<a class="elementor-template-library-template-action elementor-button haTemplateLibrary__pro-button" href="https://happyaddons.com/pricing/" target="_blank">
 		<i class="eicon-external-link-square" aria-hidden="true"></i>
 		<span class="elementor-button-title"><?php esc_html_e( 'Get Pro', 'codexse-elementor-addons' ); ?></span>
 	</a>
@@ -143,6 +143,6 @@ defined( 'ABSPATH' ) || exit;
 	<div class="elementor-template-library-blank-message"></div>
 	<div class="elementor-template-library-blank-footer">
 		<?php esc_html_e( 'Want to learn more about the Codexse Library?', 'codexse-elementor-addons' ); ?>
-		<a class="elementor-template-library-blank-footer-link" href="https://codexseaddons.com/docs/codexse-addons-for-elementor/codexse-features/codexse-templates/" target="_blank"><?php echo __( 'Click here', 'codexse-elementor-addons' ); ?></a>
+		<a class="elementor-template-library-blank-footer-link" href="https://happyaddons.com/docs/happy-addons-for-elementor/happy-features/happy-templates/" target="_blank"><?php echo __( 'Click here', 'codexse-elementor-addons' ); ?></a>
 	</div>
 </script>

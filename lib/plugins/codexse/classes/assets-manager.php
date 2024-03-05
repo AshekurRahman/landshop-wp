@@ -504,7 +504,8 @@ class Assets_Manager {
 			flex-basis: 100%;
 		}
 		.elementor-add-new-section .elementor-add-cx-button {
-			background-color: #5636d1;
+			background: rgb(39,181,158);
+			background: linear-gradient(90deg, rgba(39,181,158,1) 0%, rgba(176,239,229,1) 100%);
 			margin-left: 5px;
 			font-size: 20px;
 			color: #fff;

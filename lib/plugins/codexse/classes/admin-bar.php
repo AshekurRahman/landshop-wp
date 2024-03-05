@@ -108,7 +108,7 @@ class Admin_Bar {
 
 		$admin_bar->add_menu( [
 			'id'    => 'codexse-addons',
-			'title' => '<i class="cx cx-codexse-logo"></i>',
+			'title' => '<i class="cx cx-codexseaddons" style="font-size: large; height: 32px; display: flex; align-items: center;"></i>',
 			'href'  => cx_get_dashboard_link(),
 			'meta'  => [
 				'title' => __( 'CodexseAddons', 'codexse-elementor-addons' ),

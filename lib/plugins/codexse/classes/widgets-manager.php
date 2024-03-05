@@ -503,7 +503,7 @@ class Widgets_Manager {
 			'infobox'             => [
 				'cat'       => 'general',
 				'is_active' => true,
-				'demo'      => 'https://codexseaddons.com/go/demo-info-box',
+				'demo'      => 'https://happyaddons.com/go/demo-info-box',
 				'title'     => __('Info Box', 'codexse-elementor-addons'),
 				'icon'      => 'cx cx-info',
 				'css'       => ['btn', 'infobox'],
@@ -516,7 +516,7 @@ class Widgets_Manager {
 			'card'                => [
 				'cat'       => 'creative',
 				'is_active' => false,
-				'demo'      => 'https://codexseaddons.com/go/demo-card',
+				'demo'      => 'https://happyaddons.com/go/demo-card',
 				'title'     => __('Card', 'codexse-elementor-addons'),
 				'icon'      => 'cx cx-card',
 				'css'       => ['btn', 'badge', 'card'],
@@ -529,7 +529,7 @@ class Widgets_Manager {
 			'cf7'                 => [
 				'cat'       => 'forms',
 				'is_active' => true,
-				'demo'      => 'https://codexseaddons.com/go/demo-contact-form7',
+				'demo'      => 'https://happyaddons.com/go/demo-contact-form7',
 				'title'     => __('Contact Form 7', 'codexse-elementor-addons'),
 				'icon'      => 'cx cx-form',
 				'css'       => [],
@@ -542,7 +542,7 @@ class Widgets_Manager {
 			'icon-box'            => [
 				'cat'       => 'general',
 				'is_active' => true,
-				'demo'      => 'https://codexseaddons.com/go/demo-icon-box',
+				'demo'      => 'https://happyaddons.com/go/demo-icon-box',
 				'title'     => __('Icon Box', 'codexse-elementor-addons'),
 				'icon'      => 'cx cx-icon-box',
 				'css'       => ['badge', 'icon-box'],
@@ -555,7 +555,7 @@ class Widgets_Manager {
 			'member'              => [
 				'cat'       => 'general',
 				'is_active' => true,
-				'demo'      => 'https://codexseaddons.com/go/demo-team-member',
+				'demo'      => 'https://happyaddons.com/go/demo-team-member',
 				'title'     => __('Team Member', 'codexse-elementor-addons'),
 				'icon'      => 'cx cx-team-member',
 				'css'       => ['btn', 'member'],
@@ -568,7 +568,7 @@ class Widgets_Manager {
 			'review'              => [
 				'cat'       => 'general',
 				'is_active' => true,
-				'demo'      => 'https://codexseaddons.com/go/demo-review',
+				'demo'      => 'https://happyaddons.com/go/demo-review',
 				'title'     => __('Review', 'codexse-elementor-addons'),
 				'icon'      => 'cx cx-review',
 				'css'       => ['review'],
@@ -581,7 +581,7 @@ class Widgets_Manager {
 			'image-compare'       => [
 				'cat'       => 'general',
 				'is_active' => true,
-				'demo'      => 'https://codexseaddons.com/go/demo-image-compare',
+				'demo'      => 'https://happyaddons.com/go/demo-image-compare',
 				'title'     => __('Image Compare', 'codexse-elementor-addons'),
 				'icon'      => 'cx cx-image-compare',
 				'css'       => ['image-comparison'],
@@ -594,7 +594,7 @@ class Widgets_Manager {
 			'justified-gallery'   => [
 				'cat'       => 'creative',
 				'is_active' => false,
-				'demo'      => 'https://codexseaddons.com/go/demo-justified-grid',
+				'demo'      => 'https://happyaddons.com/go/demo-justified-grid',
 				'title'     => __('Justified Grid', 'codexse-elementor-addons'),
 				'icon'      => 'cx cx-brick-wall',
 				'css'       => ['justified-gallery', 'gallery-filter'],
@@ -607,7 +607,7 @@ class Widgets_Manager {
 			'image-grid'          => [
 				'cat'       => 'general',
 				'is_active' => true,
-				'demo'      => 'https://codexseaddons.com/go/demo-image-grid',
+				'demo'      => 'https://happyaddons.com/go/demo-image-grid',
 				'title'     => __('Image Grid', 'codexse-elementor-addons'),
 				'icon'      => 'cx cx-grid-even',
 				'css'       => ['image-grid', 'gallery-filter'],
@@ -620,7 +620,7 @@ class Widgets_Manager {
 			'slider'              => [
 				'cat'       => 'slider-&-carousel',
 				'is_active' => true,
-				'demo'      => 'https://codexseaddons.com/go/demo-slider',
+				'demo'      => 'https://happyaddons.com/go/demo-slider',
 				'title'     => __('Slider', 'codexse-elementor-addons'),
 				'icon'      => 'cx cx-image-slider',
 				'css'       => ['slider-carousel'],
@@ -633,7 +633,7 @@ class Widgets_Manager {
 			'carousel'            => [
 				'cat'       => 'slider-&-carousel',
 				'is_active' => true,
-				'demo'      => 'https://codexseaddons.com/go/demo-image-carousel',
+				'demo'      => 'https://happyaddons.com/go/demo-image-carousel',
 				'title'     => __('Image Carousel', 'codexse-elementor-addons'),
 				'icon'      => 'cx cx-carousal',
 				'css'       => ['slider-carousel'],
@@ -646,7 +646,7 @@ class Widgets_Manager {
 			'skills'              => [
 				'cat'       => 'general',
 				'is_active' => true,
-				'demo'      => 'https://codexseaddons.com/go/demo-skill-bar',
+				'demo'      => 'https://happyaddons.com/go/demo-skill-bar',
 				'title'     => __('Skill Bars', 'codexse-elementor-addons'),
 				'icon'      => 'cx cx-progress-bar',
 				'css'       => ['skills'],
@@ -659,7 +659,7 @@ class Widgets_Manager {
 			'gradient-heading'    => [
 				'cat'       => 'creative',
 				'is_active' => true,
-				'demo'      => 'https://codexseaddons.com/go/demo-gradient-heading',
+				'demo'      => 'https://happyaddons.com/go/demo-gradient-heading',
 				'title'     => __('Gradient Heading', 'codexse-elementor-addons'),
 				'icon'      => 'cx cx-drag',
 				'css'       => ['gradient-heading'],
@@ -672,7 +672,7 @@ class Widgets_Manager {
 			'wpform'              => [
 				'cat'       => 'forms',
 				'is_active' => true,
-				'demo'      => 'https://codexseaddons.com/go/demo-wpforms',
+				'demo'      => 'https://happyaddons.com/go/demo-wpforms',
 				'title'     => __('WPForms', 'codexse-elementor-addons'),
 				'icon'      => 'cx cx-form',
 				'css'       => [],
@@ -685,7 +685,7 @@ class Widgets_Manager {
 			'ninjaform'           => [
 				'cat'       => 'forms',
 				'is_active' => true,
-				'demo'      => 'https://codexseaddons.com/go/demo-ninja-forms',
+				'demo'      => 'https://happyaddons.com/go/demo-ninja-forms',
 				'title'     => __('Ninja Forms', 'codexse-elementor-addons'),
 				'icon'      => 'cx cx-form',
 				'css'       => [],
@@ -698,7 +698,7 @@ class Widgets_Manager {
 			'calderaform'         => [
 				'cat'       => 'forms',
 				'is_active' => true,
-				'demo'      => 'https://codexseaddons.com/go/demo-caldera-forms',
+				'demo'      => 'https://happyaddons.com/go/demo-caldera-forms',
 				'title'     => __('Caldera Forms', 'codexse-elementor-addons'),
 				'icon'      => 'cx cx-form',
 				'css'       => [],
@@ -711,7 +711,7 @@ class Widgets_Manager {
 			'weform'              => [
 				'cat'       => 'forms',
 				'is_active' => true,
-				'demo'      => 'https://codexseaddons.com/go/demo-weforms',
+				'demo'      => 'https://happyaddons.com/go/demo-weforms',
 				'title'     => __('weForms', 'codexse-elementor-addons'),
 				'icon'      => 'cx cx-form',
 				'css'       => [],
@@ -724,7 +724,7 @@ class Widgets_Manager {
 			'logo-grid'           => [
 				'cat'       => 'general',
 				'is_active' => true,
-				'demo'      => 'https://codexseaddons.com/go/demo-logo-grid',
+				'demo'      => 'https://happyaddons.com/go/demo-logo-grid',
 				'title'     => __('Logo Grid', 'codexse-elementor-addons'),
 				'icon'      => 'cx cx-logo-grid',
 				'css'       => ['logo-grid'],
@@ -737,7 +737,7 @@ class Widgets_Manager {
 			'dual-button'         => [
 				'cat'       => 'general',
 				'is_active' => true,
-				'demo'      => 'https://codexseaddons.com/go/demo-dual-button',
+				'demo'      => 'https://happyaddons.com/go/demo-dual-button',
 				'title'     => __('Dual Button', 'codexse-elementor-addons'),
 				'icon'      => 'cx cx-accordion-horizontal',
 				'css'       => ['dual-btn'],
@@ -750,7 +750,7 @@ class Widgets_Manager {
 			'testimonial'         => [
 				'cat'       => 'general',
 				'is_active' => true,
-				'demo'      => 'https://codexseaddons.com/go/demo-testimonial',
+				'demo'      => 'https://happyaddons.com/go/demo-testimonial',
 				'title'     => __('Testimonial', 'codexse-elementor-addons'),
 				'icon'      => 'cx cx-testimonial',
 				'css'       => ['testimonial'],
@@ -763,7 +763,7 @@ class Widgets_Manager {
 			'number'              => [
 				'cat'       => 'creative',
 				'is_active' => true,
-				'demo'      => 'https://codexseaddons.com/go/demo-number-widget',
+				'demo'      => 'https://happyaddons.com/go/demo-number-widget',
 				'title'     => __('Number', 'codexse-elementor-addons'),
 				'icon'      => 'cx cx-madel',
 				'css'       => ['number'],
@@ -776,7 +776,7 @@ class Widgets_Manager {
 			'flip-box'            => [
 				'cat'       => 'creative',
 				'is_active' => true,
-				'demo'      => 'https://codexseaddons.com/gp/demo-flip-box',
+				'demo'      => 'https://happyaddons.com/gp/demo-flip-box',
 				'title'     => __('Flip Box', 'codexse-elementor-addons'),
 				'icon'      => 'cx cx-flip-card1',
 				'css'       => ['flip-box'],
@@ -789,7 +789,7 @@ class Widgets_Manager {
 			'calendly'            => [
 				'cat'       => 'general',
 				'is_active' => true,
-				'demo'      => 'https://codexseaddons.com/go/demo-calendly',
+				'demo'      => 'https://happyaddons.com/go/demo-calendly',
 				'title'     => __('Calendly', 'codexse-elementor-addons'),
 				'icon'      => 'cx cx-calendar',
 				'css'       => [],
@@ -802,7 +802,7 @@ class Widgets_Manager {
 			'pricing-table'       => [
 				'cat'       => 'marketing',
 				'is_active' => true,
-				'demo'      => 'https://codexseaddons.com/go/demo-pricing-table',
+				'demo'      => 'https://happyaddons.com/go/demo-pricing-table',
 				'title'     => __('Pricing Table', 'codexse-elementor-addons'),
 				'icon'      => 'cx cx-file-cabinet',
 				'css'       => ['pricing-table'],
@@ -815,7 +815,7 @@ class Widgets_Manager {
 			'step-flow'           => [
 				'cat'       => 'general',
 				'is_active' => true,
-				'demo'      => 'https://codexseaddons.com/go/demo-step-flow',
+				'demo'      => 'https://happyaddons.com/go/demo-step-flow',
 				'title'     => __('Step Flow', 'codexse-elementor-addons'),
 				'icon'      => 'cx cx-step-flow',
 				'css'       => ['steps-flow'],

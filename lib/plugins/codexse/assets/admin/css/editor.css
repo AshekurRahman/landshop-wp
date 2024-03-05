@@ -34,20 +34,22 @@
 	-webkit-transition: all .2s;
 	        transition: all .2s;
 }
-.elementor-panel .elementor-element .icon .hm:after {
+.elementor-panel .elementor-element .icon .cx:after {
 	position: absolute;
 	top: 5px;
 	right: 5px;
-	content: "\ead0";
+	content: "\e900";
 	font-size: 15px;
 	opacity: .3;
+	font-family: 'Codexse Icons';
+	font-style: normal;
 }
-.elementor-panel .elementor-element:hover .icon .hm:after,
-.elementor-panel .elementor-element:focus .icon .hm:after {
+.elementor-panel .elementor-element:hover .icon .cx:after,
+.elementor-panel .elementor-element:focus .icon .cx:after {
 	opacity: 1;
 }
-.elementor-panel .elementor-element:hover .icon .hm:after,
-.elementor-panel .elementor-element:focus .icon .hm:after {
+.elementor-panel .elementor-element:hover .icon .cx:after,
+.elementor-panel .elementor-element:focus .icon .cx:after {
 	background-image: -webkit-linear-gradient(315deg, #26b59e 25%, #27b59e 100%);
 	background-image:         linear-gradient(135deg, #26b59e 25%, #27b59e 100%);
 	-webkit-background-clip: text;

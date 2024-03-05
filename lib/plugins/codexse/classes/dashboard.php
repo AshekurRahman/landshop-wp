@@ -323,7 +323,7 @@ class Dashboard {
             'manage_options',
             self::PAGE_SLUG,
             [ __CLASS__, 'render_main' ],
-            cx_get_b64_icon(),
+            CODEXSE_ADDONS_ASSETS.'imgs/admin/logo-icon.png',
             58.5
         );
 

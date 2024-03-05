@@ -23,10 +23,20 @@
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  display: inline-block;
 }
 
-.cx-codexse-logo:before {
+.cx-codexseaddons {  
+  font-size: 1.3em;
+}
+
+.cx-codexseaddons:before {
   content: "\e900";
+  width: 1em;
+  height: 1em;
+  line-height: 1.2em;
+  display: block;
+  transform: translateX(14%);
 }
 
 .cx-3d-rotate:before {
@@ -1883,10 +1893,6 @@
 
 .cx-vespa:before {
   content: "\ead0";
-}
-
-.cx-codexseaddons:before {
-  content: "\ead1";
 }
 
 .cx-brain:before {
