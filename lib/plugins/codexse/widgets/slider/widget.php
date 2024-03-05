@@ -45,7 +45,7 @@ class Slider extends Base {
 	 * @return string Widget icon.
 	 */
 	public function get_icon() {
-		return 'hm hm-image-slider';
+		return 'cx cx-image-slider';
 	}
 
 	public function get_keywords() {

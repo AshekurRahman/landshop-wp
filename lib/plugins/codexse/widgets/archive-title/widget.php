@@ -40,7 +40,7 @@ class Archive_Title extends Base {
 	 * @return string Widget icon.
 	 */
 	public function get_icon() {
-		return 'hm hm-tb-archieve-title';
+		return 'cx cx-tb-archieve-title';
 	}
 
 	public function get_keywords() {

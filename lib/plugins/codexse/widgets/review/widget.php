@@ -43,7 +43,7 @@ class Review extends Base {
 	 * @return string Widget icon.
 	 */
 	public function get_icon() {
-		return 'hm hm-review';
+		return 'cx cx-review';
 	}
 
 	public function get_keywords() {

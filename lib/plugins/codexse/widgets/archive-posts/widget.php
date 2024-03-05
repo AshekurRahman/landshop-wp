@@ -48,7 +48,7 @@ class Archive_Posts extends Base {
      * @return string Widget icon.
      */
     public function get_icon() {
-        return 'hm hm-tb-archieve-content';
+        return 'cx cx-tb-archieve-content';
     }
 
     public function get_keywords() {

@@ -32,7 +32,7 @@ class Creative_Button extends Base {
 	 * Get widget icon.
 	 */
 	public function get_icon() {
-		return 'hm hm-motion-button';
+		return 'cx cx-motion-button';
 	}
 
 	public function get_keywords() {
@@ -209,7 +209,7 @@ class Creative_Button extends Base {
 				'skin'                   => 'inline',
 				'exclude_inline_options' => [ 'svg' ],
 				'default'                => [
-					'value'   => 'hm hm-codexseaddons',
+					'value'   => 'cx cx-codexseaddons',
 					'library' => 'codexse-icon',
 				],
 				'conditions'             => [

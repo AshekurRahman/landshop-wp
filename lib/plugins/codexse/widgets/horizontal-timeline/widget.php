@@ -40,7 +40,7 @@ class Horizontal_Timeline extends Base {
 	 * @return string Widget icon.
 	 */
 	public function get_icon() {
-		return 'hm hm-horizontal-timeline';
+		return 'cx cx-horizontal-timeline';
 	}
 
 	public function get_keywords() {

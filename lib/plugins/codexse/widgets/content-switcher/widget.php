@@ -44,7 +44,7 @@ class Content_Switcher extends Base {
 	 * @return string Widget icon.
 	 */
 	public function get_icon() {
-		return 'hm hm-switcher';
+		return 'cx cx-switcher';
 	}
 
 	public function get_keywords() {

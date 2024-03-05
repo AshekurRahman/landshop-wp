@@ -39,7 +39,7 @@ class LordIcon extends Base {
 	 * @return string Widget icon.
 	 */
 	public function get_icon() {
-		return 'hm hm-icon-box';
+		return 'cx cx-icon-box';
 	}
 
 	public function get_keywords() {

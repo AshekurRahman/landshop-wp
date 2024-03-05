@@ -45,7 +45,7 @@ class News_Ticker extends Base {
 	 *
 	 */
 	public function get_icon () {
-		return 'hm hm-slider';
+		return 'cx cx-slider';
 	}
 
 	public function get_keywords () {

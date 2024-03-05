@@ -35,7 +35,7 @@ class Bar_Chart extends Base {
 	 * @return string Widget icon.
 	 */
 	public function get_icon() {
-		return 'hm hm-graph-bar';
+		return 'cx cx-graph-bar';
 	}
 
 	public function get_keywords() {

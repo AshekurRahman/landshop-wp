@@ -39,7 +39,7 @@ class Twitter_Feed extends Base {
 	 *
 	 */
 	public function get_icon() {
-		return 'hm hm-twitter-feed';
+		return 'cx cx-twitter-feed';
 	}
 
 	public function get_keywords() {

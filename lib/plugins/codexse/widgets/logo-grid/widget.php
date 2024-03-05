@@ -42,7 +42,7 @@ class Logo_Grid extends Base {
      * @return string Widget icon.
      */
     public function get_icon() {
-        return 'hm hm-logo-grid';
+        return 'cx cx-logo-grid';
     }
 
     public function get_keywords() {

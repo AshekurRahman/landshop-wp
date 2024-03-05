@@ -48,7 +48,7 @@ class Card extends Base {
 	 * @return string Widget icon.
 	 */
 	public function get_icon() {
-		return 'hm hm-card';
+		return 'cx cx-card';
 	}
 
 	public function get_keywords() {

@@ -42,7 +42,7 @@ class Author_Meta extends Base {
 	 * @return string Widget icon.
 	 */
 	public function get_icon() {
-		return 'hm hm-tb-author-meta';
+		return 'cx cx-tb-author-meta';
 	}
 
 	public function get_keywords() {

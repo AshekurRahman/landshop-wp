@@ -38,7 +38,7 @@ class Image_Hover_Effect extends Base {
 	 * @return string Widget icon.
 	 */
 	public function get_icon() {
-		return 'hm hm-cursor-hover-click';
+		return 'cx cx-cursor-hover-click';
 	}
 
 	public function get_keywords() {

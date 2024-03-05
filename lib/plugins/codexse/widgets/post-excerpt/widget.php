@@ -39,7 +39,7 @@ class Post_Excerpt extends Base {
 	 * @return string Widget icon.
 	 */
 	public function get_icon() {
-		return 'hm hm-tb-post-excerpt';
+		return 'cx cx-tb-post-excerpt';
 	}
 
 	public function get_keywords() {

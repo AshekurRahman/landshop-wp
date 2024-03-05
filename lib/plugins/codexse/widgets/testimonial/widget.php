@@ -43,7 +43,7 @@ class Testimonial extends Base {
 	 * @return string Widget icon.
 	 */
 	public function get_icon() {
-		return 'hm hm-testimonial';
+		return 'cx cx-testimonial';
 	}
 
 	public function get_keywords() {

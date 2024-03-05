@@ -57,7 +57,7 @@ class Credentials_Manager {
 		return [
 			'advanced_data_table' => [
 				'title' => __('Advanced Data Table', 'codexse-elementor-addons'),
-				'icon' => 'hm hm-data-table',
+				'icon' => 'cx cx-data-table',
 				'fiels' => [
 					[
 						'label' => esc_html__('Google API Key. ', 'codexse-elementor-addons'),
@@ -85,7 +85,7 @@ class Credentials_Manager {
 			],
 			'facebook_feed' => [
 				'title' => __('Facebook Feed', 'codexse-elementor-addons'),
-				'icon' => 'hm hm-facebook',
+				'icon' => 'cx cx-facebook',
 				'fiels' => [
 					[
 						'label' => esc_html__('Page ID. ', 'codexse-elementor-addons'),
@@ -110,7 +110,7 @@ class Credentials_Manager {
 			],
 			'instagram' => [
 				'title' => __('Instagram', 'codexse-elementor-addons'),
-				'icon' => 'hm hm-instagram',
+				'icon' => 'cx cx-instagram',
 				'fiels' => [
 					[
 						'label' => esc_html__('Access Token. ', 'codexse-elementor-addons'),
@@ -136,7 +136,7 @@ class Credentials_Manager {
 		return [
 			'mailchimp' => [
 				'title' => __('MailChimp', 'codexse-elementor-addons'),
-				'icon' => 'hm hm-mail-chimp',
+				'icon' => 'cx cx-mail-chimp',
 				'fiels' => [
 					[
 						'label' => esc_html__('Enter API Key. ', 'codexse-elementor-addons'),
@@ -153,7 +153,7 @@ class Credentials_Manager {
 			],
 			'twitter_feed' => [
 				'title' => __('Twitter Feed', 'codexse-elementor-addons'),
-				'icon' => 'hm hm-twitter-feed',
+				'icon' => 'cx cx-twitter-feed',
 				'fiels' => [
 					[
 						'label' => esc_html__('User Name. (Use @ sign with your Twitter user name)', 'codexse-elementor-addons'),

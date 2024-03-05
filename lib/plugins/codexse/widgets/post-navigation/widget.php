@@ -40,7 +40,7 @@ class Post_Navigation extends Base {
      * @return string Widget icon.
      */
     public function get_icon() {
-        return 'hm hm-breadcrumbs';
+        return 'cx cx-breadcrumbs';
     }
 
     public function get_keywords() {

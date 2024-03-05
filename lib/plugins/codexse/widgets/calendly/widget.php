@@ -39,7 +39,7 @@ class Calendly extends Base {
 	 *
 	 */
 	public function get_icon() {
-		return 'hm hm-calendar';
+		return 'cx cx-calendar';
 	}
 
 	public function get_keywords() {

@@ -42,7 +42,7 @@ class Threesixty_Rotation extends Base {
 	 *
 	 */
 	public function get_icon() {
-		return 'hm hm-3d-rotate';
+		return 'cx cx-3d-rotate';
 	}
 
 	public function get_keywords() {
@@ -604,7 +604,7 @@ class Threesixty_Rotation extends Base {
 			<?php if ('button' === $settings['auto_play'] ) : ?>
 			<div class="cx-threesixty-rotation-autoplay-button">
 				<button class="cx-threesixty-rotation-play">
-					<i aria-hidden="true" class="hm hm-play-button"></i>
+					<i aria-hidden="true" class="cx cx-play-button"></i>
 				</button>
 			</div>
 			<?php endif; ?>

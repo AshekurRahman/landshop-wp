@@ -42,7 +42,7 @@ class Site_Logo extends Base {
 	 * @return string Widget icon.
 	 */
 	public function get_icon() {
-		return 'hm hm-tb-site-logo';
+		return 'cx cx-tb-site-logo';
 	}
 
 	public function get_keywords() {

@@ -46,7 +46,7 @@ class Photo_Stack extends Base
      */
     public function get_icon()
     {
-        return 'hm hm-card';
+        return 'cx cx-card';
     }
 
     public function get_keywords()

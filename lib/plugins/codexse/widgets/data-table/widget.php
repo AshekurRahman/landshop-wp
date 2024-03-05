@@ -43,7 +43,7 @@ class Data_Table extends Base {
 	 *
 	 */
 	public function get_icon() {
-		return 'hm hm-data-table';
+		return 'cx cx-data-table';
 	}
 
 	public function get_keywords() {

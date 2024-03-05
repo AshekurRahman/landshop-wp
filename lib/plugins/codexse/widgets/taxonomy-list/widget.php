@@ -48,7 +48,7 @@ class Taxonomy_List extends Base {
 	 *
 	 */
 	public function get_icon() {
-		return 'hm hm-clip-board';
+		return 'cx cx-clip-board';
 	}
 
 	public function get_keywords() {

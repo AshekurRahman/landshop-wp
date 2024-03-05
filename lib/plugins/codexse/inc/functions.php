@@ -509,7 +509,7 @@ if (!function_exists('cx_get_section_icon')) {
 	 * @return string
 	 */
 	function cx_get_section_icon() {
-		return '<i style="float: right" class="hm hm-codexseaddons cx-section-icon"></i>';
+		return '<i style="float: right" class="cx cx-codexseaddons cx-section-icon"></i>';
 	}
 }
 

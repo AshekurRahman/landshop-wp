@@ -36,7 +36,7 @@ class Justified_Gallery extends Base {
 	}
 
 	public function get_icon() {
-		return 'hm hm-brick-wall';
+		return 'cx cx-brick-wall';
 	}
 
 	public function get_keywords() {

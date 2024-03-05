@@ -49,7 +49,7 @@ class Comparison_Table extends Base {
 	 * @return string Widget icon.
 	 */
 	public function get_icon() {
-		return 'hm hm-scale';
+		return 'cx cx-scale';
 	}
 
 	/**

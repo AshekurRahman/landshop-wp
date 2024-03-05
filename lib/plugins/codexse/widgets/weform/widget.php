@@ -42,7 +42,7 @@ class WeForm extends Base {
      * @return string Widget icon.
      */
     public function get_icon() {
-        return 'hm hm-form';
+        return 'cx cx-form';
     }
 
     public function get_keywords() {

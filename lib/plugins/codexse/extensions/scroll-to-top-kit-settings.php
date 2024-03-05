@@ -20,7 +20,7 @@ class Scroll_To_Top_Kit_Setings extends Tab_Base {
 	}
 
 	public function get_icon() {
-		return 'hm hm-scroll-top';
+		return 'cx cx-scroll-top';
 	}
 
 	public function get_help_url() {

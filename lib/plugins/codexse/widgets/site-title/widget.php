@@ -40,7 +40,7 @@ class Site_Title extends Base {
 	 * @return string Widget icon.
 	 */
 	public function get_icon() {
-		return 'hm hm-tb-site-title';
+		return 'cx cx-tb-site-title';
 	}
 
 	public function get_keywords() {

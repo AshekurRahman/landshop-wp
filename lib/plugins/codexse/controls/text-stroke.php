@@ -87,7 +87,7 @@ class Group_Control_Text_Stroke extends Group_Control_Base {
 		return [
 			'popover' => [
 				'starter_name' => 'cx-text-stroke',
-				'starter_title' => _x( 'Text Stroke ', 'Text Stroke', 'codexse-elementor-addons' ) . '&nbsp;<i style="color: #d5dadf;" class="hm hm-codexseaddons"></i>',
+				'starter_title' => _x( 'Text Stroke ', 'Text Stroke', 'codexse-elementor-addons' ) . '&nbsp;<i style="color: #d5dadf;" class="cx cx-codexseaddons"></i>',
 				'settings' => [
 					'render_type' => 'ui',
 				],

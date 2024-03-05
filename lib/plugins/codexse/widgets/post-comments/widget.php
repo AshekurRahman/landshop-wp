@@ -44,7 +44,7 @@ class Post_Comments extends Base {
 	 * @return string Widget icon.
 	 */
 	public function get_icon() {
-		return 'hm hm-comment-square';
+		return 'cx cx-comment-square';
 	}
 
 	public function get_keywords() {

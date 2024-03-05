@@ -44,7 +44,7 @@ class Post_Featured_Image extends Base {
 	 * @return string Widget icon.
 	 */
 	public function get_icon() {
-		return 'hm hm-tb-featured-image';
+		return 'cx cx-tb-featured-image';
 	}
 
 	public function get_keywords() {

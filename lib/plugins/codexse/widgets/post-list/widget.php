@@ -46,7 +46,7 @@ class Post_List extends Base {
 	 *
 	 */
 	public function get_icon() {
-		return 'hm hm-post-list';
+		return 'cx cx-post-list';
 	}
 
 	public function get_keywords() {

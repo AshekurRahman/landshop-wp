@@ -41,7 +41,7 @@ class Social_Share extends Base {
 	 *
 	 */
 	public function get_icon () {
-		return 'hm hm-share';
+		return 'cx cx-share';
 	}
 
 	public function get_keywords () {

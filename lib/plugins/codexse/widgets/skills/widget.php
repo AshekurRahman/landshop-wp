@@ -42,7 +42,7 @@ class Skills extends Base {
      * @return string Widget icon.
      */
     public function get_icon() {
-        return 'hm hm-progress-bar';
+        return 'cx cx-progress-bar';
     }
 
     public function get_keywords() {

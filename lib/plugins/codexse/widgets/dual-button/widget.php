@@ -41,7 +41,7 @@ class Dual_Button extends Base {
      * @return string Widget icon.
      */
     public function get_icon() {
-        return 'hm hm-accordion-horizontal';
+        return 'cx cx-accordion-horizontal';
     }
 
     public function get_keywords() {
@@ -240,7 +240,7 @@ class Dual_Button extends Base {
                     'fa4compatibility' => 'button_connector_icon',
                     'default' => [
                         'library' => 'codexse-icons',
-                        'value' => 'hm hm-codexseaddons',
+                        'value' => 'cx cx-codexseaddons',
                     ],
                     'condition' => [
                         'button_connector_hide!' => 'yes',

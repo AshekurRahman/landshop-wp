@@ -41,7 +41,7 @@ class Step_Flow extends Base {
 	 * @return string Widget icon.
 	 */
 	public function get_icon() {
-		return 'hm hm-step-flow';
+		return 'cx cx-step-flow';
 	}
 
 	public function get_keywords() {
@@ -69,7 +69,7 @@ class Step_Flow extends Base {
 					'type' => Controls_Manager::ICON,
 					'label_block' => true,
 					'options' => cx_get_codexse_icons(),
-					'default' => 'hm hm-finger-index',
+					'default' => 'cx cx-finger-index',
 				]
 			);
 		} else {
@@ -81,7 +81,7 @@ class Step_Flow extends Base {
 					'fa4compatibility' => 'icon',
 					'label_block' => true,
 					'default' => [
-						'value' => 'hm hm-finger-index',
+						'value' => 'cx cx-finger-index',
 						'library' => 'codexse-icons',
 					]
 				]

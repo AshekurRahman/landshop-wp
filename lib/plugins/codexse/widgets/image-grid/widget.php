@@ -44,7 +44,7 @@ class Image_Grid extends Base {
 	 * @return string Widget icon.
 	 */
 	public function get_icon() {
-		return 'hm hm-grid-even';
+		return 'cx cx-grid-even';
 	}
 
 	public function get_keywords() {

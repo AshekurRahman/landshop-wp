@@ -39,7 +39,7 @@ class Post_Content extends Base {
 	 * @return string Widget icon.
 	 */
 	public function get_icon() {
-		return 'hm hm-tb-post-content';
+		return 'cx cx-tb-post-content';
 	}
 
 	public function get_keywords() {

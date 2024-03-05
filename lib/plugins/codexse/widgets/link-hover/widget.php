@@ -40,7 +40,7 @@ class Link_Hover extends Base {
 	 * @return string Widget icon.
 	 */
 	public function get_icon() {
-		return 'hm hm-animated-link';
+		return 'cx cx-animated-link';
 	}
 
 	public function get_keywords() {

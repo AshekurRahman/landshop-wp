@@ -45,7 +45,7 @@ class Image_Accordion extends Base {
      * @return string Widget icon.
      */
     public function get_icon() {
-        return 'hm hm-slider-image';
+        return 'cx cx-slider-image';
     }
 
     public function get_keywords() {
@@ -204,7 +204,7 @@ class Image_Accordion extends Base {
                 'type'  => Controls_Manager::ICONS,
                 'label_block' => false,
                 'default' => [
-                    'value' => 'hm hm-popup',
+                    'value' => 'cx cx-popup',
                     'library' => 'solid',
                 ],
                 'skin' => 'inline',
@@ -249,7 +249,7 @@ class Image_Accordion extends Base {
                 'type'  => Controls_Manager::ICONS,
                 'label_block' => false,
                 'default' => [
-                    'value' => 'hm hm-link',
+                    'value' => 'cx cx-link',
                     'library' => 'solid',
                 ],
                 'skin' => 'inline',

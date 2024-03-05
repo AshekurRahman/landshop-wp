@@ -43,7 +43,7 @@ class Age_Gate extends Base {
 	 * @return string Widget icon.
 	 */
 	public function get_icon() {
-		return 'hm hm-age-gate';
+		return 'cx cx-age-gate';
 	}
 
 	public function get_keywords() {
@@ -266,7 +266,7 @@ class Age_Gate extends Base {
 				'type' => Controls_Manager::ICONS,
 				'skin' => 'inline',
 				'default' => [
-					'value' => 'hm hm-play-next',
+					'value' => 'cx cx-play-next',
 					'library' => 'codexse-icon',
 				],
 			]

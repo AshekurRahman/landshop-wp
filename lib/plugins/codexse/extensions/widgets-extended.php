@@ -73,7 +73,7 @@ class Widgets_Extended {
 		$widget->add_control(
 			'cx_fixed_size_toggle',
 			[
-				'label' => __( 'Fixed Size', 'codexse-elementor-addons' ) . '<i style="margin-left: 5px;" class="hm hm-codexseaddons"></i>',
+				'label' => __( 'Fixed Size', 'codexse-elementor-addons' ) . '<i style="margin-left: 5px;" class="cx cx-codexseaddons"></i>',
 				'type' => Controls_Manager::POPOVER_TOGGLE,
 				'return_value' => 'yes',
 			]

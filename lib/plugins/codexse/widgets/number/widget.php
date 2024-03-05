@@ -43,7 +43,7 @@ class Number extends Base {
 	 * @return string Widget icon.
 	 */
 	public function get_icon() {
-		return 'hm hm-madel';
+		return 'cx cx-madel';
 	}
 
 	public function get_keywords() {

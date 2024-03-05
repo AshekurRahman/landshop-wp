@@ -43,7 +43,7 @@ class Site_Tagline extends Base {
 	 * @return string Widget icon.
 	 */
 	public function get_icon() {
-		return 'hm hm-tag';
+		return 'cx cx-tag';
 	}
 
 	public function get_keywords() {

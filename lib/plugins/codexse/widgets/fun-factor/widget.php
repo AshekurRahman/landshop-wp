@@ -42,7 +42,7 @@ class Fun_Factor extends Base {
 	 *
 	 */
 	public function get_icon() {
-		return 'hm hm-cross-game';
+		return 'cx cx-cross-game';
 	}
 
 	public function get_keywords() {

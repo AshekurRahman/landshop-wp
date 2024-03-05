@@ -66,7 +66,7 @@ defined( 'ABSPATH' ) || die();
 
             foreach ( $pro_widgets as $widget ) :
                 $title = isset( $widget['title'] ) ? $widget['title'] : 'Widget Title';
-                $icon = isset( $widget['icon'] ) ? $widget['icon'] : 'hm hm-codexseaddons';
+                $icon = isset( $widget['icon'] ) ? $widget['icon'] : 'cx cx-codexseaddons';
                 $demo = isset( $widget['demo'] ) ? $widget['demo'] : 'https://codexseaddons.com/go/get-pro';
                 ?>
                 <div class="cx-col cx-col-4">

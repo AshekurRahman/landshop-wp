@@ -44,7 +44,7 @@ class Post_Tab extends Base {
 	 *
 	 */
 	public function get_icon() {
-		return 'hm hm-post-tab';
+		return 'cx cx-post-tab';
 	}
 
 	public function get_keywords() {

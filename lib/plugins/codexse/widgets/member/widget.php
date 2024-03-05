@@ -50,7 +50,7 @@ class Member extends Base {
 	 * @return string Widget icon.
 	 */
 	public function get_icon() {
-		return 'hm hm-team-member';
+		return 'cx cx-team-member';
 	}
 
 	public function get_keywords() {

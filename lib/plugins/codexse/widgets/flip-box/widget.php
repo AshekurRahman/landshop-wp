@@ -45,7 +45,7 @@ class Flip_Box extends Base {
      * @return string Widget icon.
      */
     public function get_icon() {
-        return 'hm hm-flip-card1';
+        return 'cx cx-flip-card1';
     }
 
     public function get_keywords() {
@@ -119,7 +119,7 @@ class Flip_Box extends Base {
                     'fa4compatibility' => 'front_icon',
                     'label_block' => true,
                     'default' => [
-                        'value' => 'hm hm-home',
+                        'value' => 'cx cx-home',
                         'library' => 'codexse-icons',
                     ],
                     'condition' => [

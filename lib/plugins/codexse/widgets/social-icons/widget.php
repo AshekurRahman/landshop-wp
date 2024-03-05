@@ -40,7 +40,7 @@ class Social_Icons extends Base {
 	 *
 	 */
 	public function get_icon() {
-		return 'hm hm-bond2';
+		return 'cx cx-bond2';
 	}
 
 	public function get_keywords() {

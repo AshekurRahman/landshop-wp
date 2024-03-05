@@ -41,7 +41,7 @@ class Image_Stack_Group extends Base {
 	 * @return string Widget icon.
 	 */
 	public function get_icon() {
-		return 'hm hm-lens';
+		return 'cx cx-lens';
 	}
 
 	public function get_keywords() {

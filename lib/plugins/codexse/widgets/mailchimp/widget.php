@@ -49,7 +49,7 @@ class Mailchimp extends Base {
 	 * @return string Widget icon.
 	 */
 	public function get_icon() {
-		return 'hm hm-mail-chimp';
+		return 'cx cx-mail-chimp';
 	}
 
 	public function get_keywords() {
@@ -276,7 +276,7 @@ class Mailchimp extends Base {
 				'label'     => __( 'Icon', 'codexse-elementor-addons' ),
 				'type'      => Controls_Manager::ICONS,
 				'default'   => [
-					'value'   => 'hm hm-user',
+					'value'   => 'cx cx-user',
 					'library' => 'regular',
 				],
 				'condition' => [
@@ -363,7 +363,7 @@ class Mailchimp extends Base {
 				'label'     => __( 'Icon', 'codexse-elementor-addons' ),
 				'type'      => Controls_Manager::ICONS,
 				'default'   => [
-					'value'   => 'hm hm-user',
+					'value'   => 'cx cx-user',
 					'library' => 'regular',
 				],
 				'condition' => [
@@ -462,7 +462,7 @@ class Mailchimp extends Base {
 				'label'     => __( 'Icon', 'codexse-elementor-addons' ),
 				'type'      => Controls_Manager::ICONS,
 				'default'   => [
-					'value'   => 'hm hm-phone',
+					'value'   => 'cx cx-phone',
 					'library' => 'regular',
 				],
 				'condition' => [
@@ -537,7 +537,7 @@ class Mailchimp extends Base {
 				'label'     => __( 'Icon', 'codexse-elementor-addons' ),
 				'type'      => Controls_Manager::ICONS,
 				'default'   => [
-					'value'   => 'hm hm-envelop',
+					'value'   => 'cx cx-envelop',
 					'library' => 'regular',
 				],
 				'condition' => [
@@ -599,7 +599,7 @@ class Mailchimp extends Base {
 				'label'     => __( 'Icon', 'codexse-elementor-addons' ),
 				'type'      => Controls_Manager::ICONS,
 				'default'   => [
-					'value'   => 'hm hm-tick',
+					'value'   => 'cx cx-tick',
 					'library' => 'regular',
 				],
 				'condition' => [

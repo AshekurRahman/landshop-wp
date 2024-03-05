@@ -43,7 +43,7 @@ class Pricing_Table extends Base {
 	 * @return string Widget icon.
 	 */
 	public function get_icon() {
-		return 'hm hm-file-cabinet';
+		return 'cx cx-file-cabinet';
 	}
 
 	public function get_keywords() {
