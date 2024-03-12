@@ -10,7 +10,7 @@
             <div class="cx_item_feature"
                 v-for="(feature,key) in featureList" :key="feature.slug">
                 <fieldset>
-                <legend>{{makeLabel(feature.is_pro)}}</legend>
+                <!-- <legend>{{makeLabel(feature.is_pro)}}</legend> -->
                     <div class="feature_inner">
                         <div class="feature-title">{{feature.title}}</div>
                         <div class="cx-dashboard-features__item-toggle cx-toggle">
@@ -33,7 +33,7 @@
     
     <cx-nav
     prev="widgets"
-    next="bepro"
+    next="contribute"
     @set-tab="setTab"
     ></cx-nav>
 </div>

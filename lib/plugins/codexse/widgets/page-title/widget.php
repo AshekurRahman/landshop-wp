@@ -209,6 +209,30 @@ class Page_Title extends Base {
             $this->add_render_attribute('title', 'class', 'elementor-size-' . $settings['size']);
         }
 
-        printf('<%1$s %2$s>%3$s</%1$s>', $settings['page_title_tag'], $this->get_render_attribute_string('title'), get_the_title() );
+        printf('<%1$s %2$s>%3$s</%1$s>', $settings['page_title_tag'], $this->get_render_attribute_string('title'), $this->codexse__page__title() );
 	}
+
+	public function codexse__page__title() {
+		$data = '';
+		if (is_home()) {
+			$data .= esc_html__('Blog List', 'codexse-elementor-addons');
+		} elseif (is_single() && 'post' == get_post_type()) {
+			$data .= esc_html__('Post Details', 'codexse-elementor-addons');
+		} elseif (is_single()) {
+			$data .= get_the_title();
+		} elseif (is_search()) {
+			$data .= esc_html__('Search', 'codexse-elementor-addons') . ' : <span class="search_select">' . esc_html(get_search_query()) . '</span>';
+		} elseif (is_archive()) {
+			$data .= class_exists('WooCommerce') && is_shop() ? woocommerce_page_title(false) : get_the_archive_title('', '');
+		} elseif (class_exists('WooCommerce') && is_woocommerce()) {
+			$data .= class_exists('WooCommerce') && is_shop() ? esc_html__('Shop Page', 'codexse-elementor-addons') : woocommerce_page_title(false);
+		} elseif (is_404()) {
+			$data .= esc_html__('Error Page', 'codexse-elementor-addons');
+		} else {
+			$data .= single_post_title('', false);
+		}
+	
+		return empty($data) ? false : wp_kses($data, wp_kses_allowed_html('post'));
+	}
+	
 }

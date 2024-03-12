@@ -23,12 +23,12 @@ class Library_Source extends Source_Base {
 	 *
 	 * Updated api to v2 in version 2.15.0
 	 */
-	const API_TEMPLATES_INFO_URL = 'https://templates.happyaddons.com/wp-json/ha/v2/templates-info';
+	const API_TEMPLATES_INFO_URL = 'https://templates.codexseaddons.com/wp-json/ha/v2/templates-info';
 
 	/**
 	 * Template data api url
 	 */
-	const API_TEMPLATE_DATA_URL = 'https://templates.happyaddons.com/wp-json/ha/v1/templates/';
+	const API_TEMPLATE_DATA_URL = 'https://templates.codexseaddons.com/wp-json/ha/v1/templates/';
 
 	public function get_id() {
 		return 'codexse-library';

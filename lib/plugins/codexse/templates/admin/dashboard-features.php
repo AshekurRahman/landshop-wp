@@ -56,9 +56,6 @@ $total_features_count = count( $features );
                 <span class="cx-dashboard-widgets__item-icon"><i class="<?php echo $icon; ?>"></i></span>
                 <h3 class="cx-dashboard-widgets__item-title">
                     <label for="cx-widget-<?php echo $feature_key; ?>" <?php echo $is_placeholder ? 'data-tooltip="Get pro"' : ''; ?>><?php echo $title; ?></label>
-                    <?php if ( $demo_url ) : ?>
-                        <a href="<?php echo esc_url( $demo_url ); ?>" target="_blank" rel="noopener" data-tooltip="<?php esc_attr_e( 'Click to view demo', 'codexse-elementor-addons' ); ?>" class="cx-dashboard-widgets__item-preview"><i aria-hidden="true" class="eicon-device-desktop"></i></a>
-                    <?php endif; ?>
                 </h3>
                 <div class="cx-dashboard-widgets__item-toggle cx-toggle">
                     <input id="cx-widget-<?php echo $feature_key; ?>" <?php echo $checked; ?> type="checkbox" class="cx-toggle__check cx-feature" name="features[]" value="<?php echo $feature_key; ?>">

@@ -592,7 +592,7 @@
 
 = 2.9.0 - 29 April 2020 =
 
-- New: WPML support for all widgets [Documentation](https://happyaddons.com/docs/happy-addons-for-elementor/happy-features/wpml-support-for-happyaddons-free/)
+- New: WPML support for all widgets [Documentation](https://codexseaddons.com/docs/codexse-addons-for-elementor/codexse-features/wpml-support-for-codexseaddons-free/)
 
 = 2.8.1 - 5 April 2020 =
 

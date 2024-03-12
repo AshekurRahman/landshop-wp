@@ -956,7 +956,7 @@ class Navigation_Menu extends Base {
 			$icon_markup = ob_get_clean();
 
 			$args = array(
-				'items_wrap'    => $icon_markup . '<ul id="%1$s" class="%2$s">%3$s</ul>',
+				'items_wrap'    => $icon_markup . '<ul id="%1$s" class="%2$s m-0">%3$s</ul>',
 				'menu'          => $settings['nav_menu_list'],
 				'fallback_cb'   => '\Codexse_Addons\Elementor\Extension\HANav_Menu_Walker::fallback',
 				'depth'         => 4,
