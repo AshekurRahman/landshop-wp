@@ -30,16 +30,6 @@ function landshop_register_required_plugins() {
             'slug'      => 'contact-form-7',
             'required'  => false
         ),
-        array(
-            'name'      => 'Widget Importer & Exporter',
-            'slug'      => 'widget-importer-exporter',
-            'required'  => false
-        ),
-        array(
-            'name'      => 'Customizer Export/Import',
-            'slug'      => 'customizer-export-import',
-            'required'  => false
-        ),
        array(
             'name'      => 'WooCommerce',
             'slug'      => 'woocommerce',

@@ -83,7 +83,7 @@ class Icon_Box extends Base {
 					'type' => Controls_Manager::ICON,
 					'label_block' => true,
 					'options' => cx_get_codexse_icons(),
-					'default' => 'fa fa-smile-o',
+					'default' => 'fa fa-store',
 					'condition' => [
 						'icon_type' => 'default'
 					],
@@ -167,6 +167,20 @@ class Icon_Box extends Base {
 				'label_block' => true,
 				'default' => __( 'Codexse Icon Box', 'codexse-elementor-addons' ),
 				'placeholder' => __( 'Type Icon Box Title', 'codexse-elementor-addons' ),
+				'dynamic' => [
+					'active' => true,
+				]
+			]
+		);
+
+		$this->add_control(
+			'description',
+			[
+				'label' => __( 'Description', 'codexse-elementor-addons' ),
+				'type' => Controls_Manager::TEXTAREA,
+				'label_block' => true,
+				'default' => __( 'It is a longest estabalished fact that a reader will be a readable content', 'codexse-elementor-addons' ),
+				'placeholder' => __( 'Type Icon Box Description', 'codexse-elementor-addons' ),
 				'dynamic' => [
 					'active' => true,
 				]
@@ -743,6 +757,19 @@ class Icon_Box extends Base {
 			]
 		);
 
+
+		$this->add_responsive_control(
+			'title_margin',
+			[
+				'label' => __( 'Margin', 'codexse-elementor-addons' ),
+				'type' => Controls_Manager::DIMENSIONS,
+				'size_units' => [ 'px', 'em', '%' ],
+				'selectors' => [
+					'{{WRAPPER}} .cx-icon-box-title' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+				],
+			]
+		);
+
 		$this->start_controls_tabs( '_tabs_title' );
 
 		$this->start_controls_tab(
@@ -1057,6 +1084,8 @@ class Icon_Box extends Base {
 
 		$this->add_inline_editing_attributes( 'title', 'basic' );
 		$this->add_render_attribute( 'title', 'class', 'cx-icon-box-title' );
+		$this->add_inline_editing_attributes( 'description', 'basic' );
+		$this->add_render_attribute( 'description', 'class', 'cx-icon-box-description' );
 
 		$this->add_inline_editing_attributes( 'badge_text', 'none' );
 		$this->add_render_attribute( 'badge_text', 'class', 'cx-badge cx-badge--top-right' );
@@ -1118,6 +1147,15 @@ class Icon_Box extends Base {
 				cx_escape_tags( $settings['title_tag'], 'h2' ),
 				$this->get_render_attribute_string( 'title' ),
 				cx_kses_basic( $settings['title' ] )
+				);
+		endif;
+
+
+		if ( $settings['description' ] ) :
+			printf( '<%1$s %2$s><p>%3$s</p></%1$s>',
+				'div',
+				$this->get_render_attribute_string( 'description' ),
+				cx_kses_basic( $settings['description' ] )
 				);
 		endif;
 	}

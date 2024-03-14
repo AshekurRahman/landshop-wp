@@ -11,8 +11,7 @@ use Elementor\Group_Control_Border;
 use Elementor\Group_Control_Box_Shadow;
 use Elementor\Group_Control_Text_Shadow;
 use Elementor\Group_Control_Typography;
-use Elementor\Core\Kits\Documents\Tabs\Global_Colors;
-use Elementor\Core\Kits\Documents\Tabs\Global_Typography;
+use Elementor\Group_Control_Background;
 use Elementor\Repeater;
 use Elementor\Icons_Manager;
 
@@ -64,27 +63,27 @@ class Icon_List extends Base {
 		);
 
 		$this->add_control(
-			'view',
+			'list_layout',
 			[
 				'label' => esc_html__( 'Layout', 'codexse-elementor-addons' ),
 				'type' => Controls_Manager::CHOOSE,
-				'default' => 'traditional',
+				'default' => 'row', // Set your default layout here
 				'options' => [
-					'traditional' => [
-						'title' => esc_html__( 'Default', 'codexse-elementor-addons' ),
+					'column' => [
+						'title' => esc_html__( 'Row', 'codexse-elementor-addons' ),
 						'icon' => 'eicon-editor-list-ul',
 					],
-					'inline' => [
-						'title' => esc_html__( 'Inline', 'codexse-elementor-addons' ),
+					'row' => [
+						'title' => esc_html__( 'Column', 'codexse-elementor-addons' ),
 						'icon' => 'eicon-ellipsis-h',
 					],
 				],
-				'render_type' => 'template',
-				'classes' => 'codexse-control-start-end',
-				'style_transfer' => true,
-				'prefix_class' => 'codexse-icon-list--layout-',
+				'toggle' => true,
+				'selectors' => [
+					'{{WRAPPER}} .codexse-icon-list-items' => 'display: flex; flex-direction: {{VALUE}};',
+				],
 			]
-		);
+		);		
 
 		$repeater = new Repeater();
 
@@ -193,183 +192,137 @@ class Icon_List extends Base {
 			]
 		);
 
-		$this->add_responsive_control(
-			'space_between',
+
+		$this->add_group_control(
+			Group_Control_Background::get_type(),
 			[
-				'label' => esc_html__( 'Space Between', 'codexse-elementor-addons' ),
-				'type' => Controls_Manager::SLIDER,
-				'size_units' => [ 'px', 'em', 'rem', 'custom' ],
-				'range' => [
-					'px' => [
-						'max' => 50,
-					],
-				],
-				'selectors' => [
-					'{{WRAPPER}} .codexse-icon-list-items:not(.codexse-inline-items) .codexse-icon-list-item:not(:last-child)' => 'padding-bottom: calc({{SIZE}}{{UNIT}}/2)',
-					'{{WRAPPER}} .codexse-icon-list-items:not(.codexse-inline-items) .codexse-icon-list-item:not(:first-child)' => 'margin-top: calc({{SIZE}}{{UNIT}}/2)',
-					'{{WRAPPER}} .codexse-icon-list-items.codexse-inline-items .codexse-icon-list-item' => 'margin-right: calc({{SIZE}}{{UNIT}}/2); margin-left: calc({{SIZE}}{{UNIT}}/2)',
-					'{{WRAPPER}} .codexse-icon-list-items.codexse-inline-items' => 'margin-right: calc(-{{SIZE}}{{UNIT}}/2); margin-left: calc(-{{SIZE}}{{UNIT}}/2)',
-					'body.rtl {{WRAPPER}} .codexse-icon-list-items.codexse-inline-items .codexse-icon-list-item:after' => 'left: calc(-{{SIZE}}{{UNIT}}/2)',
-					'body:not(.rtl) {{WRAPPER}} .codexse-icon-list-items.codexse-inline-items .codexse-icon-list-item:after' => 'right: calc(-{{SIZE}}{{UNIT}}/2)',
-				],
+				'name' => 'list_item_background',
+				'label' => esc_html__( 'Background', 'codexse-elementor-addons' ),
+				'types' => [ 'classic', 'gradient' ],
+				'selector' => '{{WRAPPER}} .codexse-icon-list-items  .codexse-icon-list-item',
 			]
 		);
 
-		$this->add_responsive_control(
-			'icon_align',
+		$this->add_group_control(
+			Group_Control_Border::get_type(),
 			[
-				'label' => esc_html__( 'Alignment', 'codexse-elementor-addons' ),
-				'type' => Controls_Manager::CHOOSE,
-				'options' => [
-					'left' => [
-						'title' => esc_html__( 'Left', 'codexse-elementor-addons' ),
-						'icon' => 'eicon-h-align-left',
-					],
-					'center' => [
-						'title' => esc_html__( 'Center', 'codexse-elementor-addons' ),
-						'icon' => 'eicon-h-align-center',
-					],
-					'right' => [
-						'title' => esc_html__( 'Right', 'codexse-elementor-addons' ),
-						'icon' => 'eicon-h-align-right',
-					],
-				],
-				'prefix_class' => 'codexse%s-align-',
+				'name' => 'list_item_border',
+				'label' => esc_html__( 'Border', 'codexse-elementor-addons' ),
+				'selector' => '{{WRAPPER}} .codexse-icon-list-items  .codexse-icon-list-item',
 			]
 		);
 
 		$this->add_control(
-			'divider',
+			'list_item_border_radius',
 			[
-				'label' => esc_html__( 'Divider', 'codexse-elementor-addons' ),
-				'type' => Controls_Manager::SWITCHER,
-				'label_off' => esc_html__( 'Off', 'codexse-elementor-addons' ),
-				'label_on' => esc_html__( 'On', 'codexse-elementor-addons' ),
+				'label' => esc_html__( 'Border Radius', 'codexse-elementor-addons' ),
+				'type' => Controls_Manager::DIMENSIONS,
+				'size_units' => [ 'px', '%', 'em' ],
 				'selectors' => [
-					'{{WRAPPER}} .codexse-icon-list-item:not(:last-child):after' => 'content: ""',
+					'{{WRAPPER}} .codexse-icon-list-items  .codexse-icon-list-item' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 				],
-				'separator' => 'before',
+			]
+		);
+
+		$this->add_group_control(
+			Group_Control_Box_Shadow::get_type(),
+			[
+				'name' => 'list_item_box_shadow',
+				'label' => esc_html__( 'Box Shadow', 'codexse-elementor-addons' ),
+				'selector' => '{{WRAPPER}} .codexse-icon-list-items  .codexse-icon-list-item',
 			]
 		);
 
 		$this->add_control(
-			'divider_style',
+			'list_item_margin',
 			[
-				'label' => esc_html__( 'Style', 'codexse-elementor-addons' ),
-				'type' => Controls_Manager::SELECT,
-				'options' => [
-					'solid' => esc_html__( 'Solid', 'codexse-elementor-addons' ),
-					'double' => esc_html__( 'Double', 'codexse-elementor-addons' ),
-					'dotted' => esc_html__( 'Dotted', 'codexse-elementor-addons' ),
-					'dashed' => esc_html__( 'Dashed', 'codexse-elementor-addons' ),
-				],
-				'default' => 'solid',
-				'condition' => [
-					'divider' => 'yes',
-				],
+				'label' => esc_html__( 'Margin', 'codexse-elementor-addons' ),
+				'type' => Controls_Manager::DIMENSIONS,
+				'size_units' => [ 'px', '%', 'em' ],
 				'selectors' => [
-					'{{WRAPPER}} .codexse-icon-list-items:not(.codexse-inline-items) .codexse-icon-list-item:not(:last-child):after' => 'border-top-style: {{VALUE}}',
-					'{{WRAPPER}} .codexse-icon-list-items.codexse-inline-items .codexse-icon-list-item:not(:last-child):after' => 'border-left-style: {{VALUE}}',
+					'{{WRAPPER}} .codexse-icon-list-items  .codexse-icon-list-item' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 				],
 			]
 		);
 
 		$this->add_control(
-			'divider_weight',
+			'list_item_padding',
 			[
-				'label' => esc_html__( 'Weight', 'codexse-elementor-addons' ),
-				'type' => Controls_Manager::SLIDER,
-				'size_units' => [ 'px', 'em', 'rem', 'custom' ],
-				'default' => [
-					'size' => 1,
-				],
-				'range' => [
-					'px' => [
-						'min' => 1,
-						'max' => 20,
-					],
-				],
-				'condition' => [
-					'divider' => 'yes',
-				],
+				'label' => esc_html__( 'Padding', 'codexse-elementor-addons' ),
+				'type' => Controls_Manager::DIMENSIONS,
+				'size_units' => [ 'px', '%', 'em' ],
 				'selectors' => [
-					'{{WRAPPER}} .codexse-icon-list-items:not(.codexse-inline-items) .codexse-icon-list-item:not(:last-child):after' => 'border-top-width: {{SIZE}}{{UNIT}}',
-					'{{WRAPPER}} .codexse-inline-items .codexse-icon-list-item:not(:last-child):after' => 'border-left-width: {{SIZE}}{{UNIT}}',
+					'{{WRAPPER}} .codexse-icon-list-items  .codexse-icon-list-item' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 				],
 			]
 		);
 
-		$this->add_control(
-			'divider_width',
-			[
-				'label' => esc_html__( 'Width', 'codexse-elementor-addons' ),
-				'type' => Controls_Manager::SLIDER,
-				'size_units' => [ 'px', '%', 'em', 'rem', 'vw', 'custom' ],
-				'default' => [
-					'unit' => '%',
-				],
-				'condition' => [
-					'divider' => 'yes',
-					'view!' => 'inline',
-				],
-				'selectors' => [
-					'{{WRAPPER}} .codexse-icon-list-item:not(:last-child):after' => 'width: {{SIZE}}{{UNIT}}',
-				],
-			]
-		);
-
-		$this->add_control(
-			'divider_height',
-			[
-				'label' => esc_html__( 'Height', 'codexse-elementor-addons' ),
-				'type' => Controls_Manager::SLIDER,
-				'size_units' => [ 'px', '%', 'em', 'rem', 'vh', 'custom' ],
-				'default' => [
-					'unit' => '%',
-				],
-				'range' => [
-					'px' => [
-						'min' => 1,
-						'max' => 100,
-					],
-					'%' => [
-						'min' => 1,
-						'max' => 100,
-					],
-					'vh' => [
-						'min' => 1,
-						'max' => 100,
-					],
-				],
-				'condition' => [
-					'divider' => 'yes',
-					'view' => 'inline',
-				],
-				'selectors' => [
-					'{{WRAPPER}} .codexse-icon-list-item:not(:last-child):after' => 'height: {{SIZE}}{{UNIT}}',
-				],
-			]
-		);
-
-		$this->add_control(
-			'divider_color',
-			[
-				'label' => esc_html__( 'Color', 'codexse-elementor-addons' ),
-				'type' => Controls_Manager::COLOR,
-				'default' => '#ddd',
-				'global' => [
-					'default' => Global_Colors::COLOR_TEXT,
-				],
-				'condition' => [
-					'divider' => 'yes',
-				],
-				'selectors' => [
-					'{{WRAPPER}} .codexse-icon-list-item:not(:last-child):after' => 'border-color: {{VALUE}}',
-				],
-			]
-		);
+        $this->add_responsive_control(
+            'list_item_padding_justify_content',
+            [
+                'label' => esc_html__( 'Justify Content', 'codexse-elementor-addons' ),
+                'type' => Controls_Manager::CHOOSE,
+                'options' => [
+                    'flex-start' => [
+                        'title' => esc_html__( 'Start', 'codexse-elementor-addons' ),
+                        'icon' => 'eicon-h-align-left',
+                    ],
+                    'center' => [
+                        'title' => esc_html__( 'Center', 'codexse-elementor-addons' ),
+                        'icon' => 'eicon-h-align-center',
+                    ],
+                    'flex-end' => [
+                        'title' => esc_html__( 'End', 'codexse-elementor-addons' ),
+                        'icon' => 'eicon-h-align-right',
+                    ],
+                    'space-between' => [
+                        'title' => esc_html__( 'Space Between', 'codexse-elementor-addons' ),
+                        'icon' => 'eicon-justify-space-between-h',
+                    ],
+                    'space-around' => [
+                        'title' => esc_html__( 'Space Around', 'codexse-elementor-addons' ),
+                        'icon' => 'eicon-justify-space-around-h',
+                    ],
+                ],
+                'selectors' => [
+                    '{{WRAPPER}} .codexse-icon-list-items' => 'justify-content: {{VALUE}};',
+                ],
+            ]
+        );
+        
+        $this->add_responsive_control(
+            'list_item_padding_align_items',
+            [
+                'label' => esc_html__( 'Align Items', 'codexse-elementor-addons' ),
+                'type' => Controls_Manager::CHOOSE,
+                'options' => [
+                    'flex-start' => [
+                        'title' => esc_html__( 'Start', 'codexse-elementor-addons' ),
+                        'icon' => 'eicon-v-align-top',
+                    ],
+                    'center' => [
+                        'title' => esc_html__( 'Center', 'codexse-elementor-addons' ),
+                        'icon' => 'eicon-v-align-middle',
+                    ],
+                    'flex-end' => [
+                        'title' => esc_html__( 'End', 'codexse-elementor-addons' ),
+                        'icon' => 'eicon-v-align-bottom',
+                    ],
+                    'stretch' => [
+                        'title' => esc_html__( 'Stretch', 'codexse-elementor-addons' ),
+                        'icon' => 'eicon-align-stretch-v',
+                    ],
+                ],
+                'selectors' => [
+                    '{{WRAPPER}} .codexse-icon-list-items' => 'align-items: {{VALUE}};',
+                ],
+            ]
+        );
+        
+        
 
 		$this->end_controls_section();
+        
 
 		$this->start_controls_section(
 			'section_icon_style',
@@ -378,78 +331,191 @@ class Icon_List extends Base {
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
-
-		$this->start_controls_tabs( 'icon_colors' );
-
+		
+		$this->start_controls_tabs( 'icon_style_tabs' );
+		
+		// Normal Tab
 		$this->start_controls_tab(
-			'icon_colors_normal',
+			'icon_style_normal',
 			[
 				'label' => esc_html__( 'Normal', 'codexse-elementor-addons' ),
 			]
 		);
-
+		
 		$this->add_control(
-			'icon_color',
+			'normal_icon_color',
 			[
 				'label' => esc_html__( 'Color', 'codexse-elementor-addons' ),
 				'type' => Controls_Manager::COLOR,
-				'default' => '',
 				'selectors' => [
-					'{{WRAPPER}} .codexse-icon-list-icon i' => 'color: {{VALUE}};',
-					'{{WRAPPER}} .codexse-icon-list-icon svg' => 'fill: {{VALUE}};',
+					'{{WRAPPER}} .codexse-icon-list-items .codexse-icon-list-item .codexse-icon-list-icon' => 'color: {{VALUE}};',
 				],
-				'global' => [
-					'default' => Global_Colors::COLOR_PRIMARY,
+			]
+		);
+
+		$this->add_responsive_control(
+			'normal_icon_size',
+			[
+				'label' => esc_html__( 'Size', 'codexse-elementor-addons' ),
+				'type' => Controls_Manager::SLIDER,
+				'selectors' => [
+					'{{WRAPPER}} .codexse-icon-list-items .codexse-icon-list-item .codexse-icon-list-icon' => 'font-size: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}} .codexse-icon-list-items .codexse-icon-list-item .codexse-icon-list-icon svg' => 'width: {{SIZE}}{{UNIT}};',
 				],
+			]
+		);
+
+		$this->add_responsive_control(
+			'normal_icon_width',
+			[
+				'label' => esc_html__( 'Width', 'codexse-elementor-addons' ),
+				'type' => Controls_Manager::SLIDER,
+				'selectors' => [
+					'{{WRAPPER}} .codexse-icon-list-items .codexse-icon-list-item .codexse-icon-list-icon' => 'width: {{SIZE}}{{UNIT}};',
+				],
+			]
+		);
+
+		$this->add_responsive_control(
+			'normal_icon_height',
+			[
+				'label' => esc_html__( 'Height', 'codexse-elementor-addons' ),
+				'type' => Controls_Manager::SLIDER,
+				'selectors' => [
+					'{{WRAPPER}} .codexse-icon-list-items .codexse-icon-list-item .codexse-icon-list-icon' => 'height: {{SIZE}}{{UNIT}};',
+				],
+			]
+		);
+
+
+		$this->add_control(
+			'normal_icon_margin',
+			[
+				'label' => esc_html__( 'Margin', 'codexse-elementor-addons' ),
+				'type' => Controls_Manager::DIMENSIONS,
+				'size_units' => [ 'px', '%', 'em' ],
+				'selectors' => [
+					'{{WRAPPER}} .codexse-icon-list-items  .codexse-icon-list-item .codexse-icon-list-icon' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+				],
+			]
+		);
+
+		$this->add_control(
+			'normal_icon_padding',
+			[
+				'label' => esc_html__( 'Padding', 'codexse-elementor-addons' ),
+				'type' => Controls_Manager::DIMENSIONS,
+				'size_units' => [ 'px', '%', 'em' ],
+				'selectors' => [
+					'{{WRAPPER}} .codexse-icon-list-items  .codexse-icon-list-item .codexse-icon-list-icon' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+				],
+			]
+		);
+
+		$this->add_group_control(
+			Group_Control_Border::get_type(),
+			[
+				'name' => 'normal_icon_border',
+				'label' => esc_html__( 'Border', 'codexse-elementor-addons' ),
+				'selector' => '{{WRAPPER}} .codexse-icon-list-items .codexse-icon-list-item .codexse-icon-list-icon',
+			]
+		);
+
+		$this->add_control(
+			'normal_icon_border_radius',
+			[
+				'label' => esc_html__( 'Border Radius', 'codexse-elementor-addons' ),
+				'type' => Controls_Manager::DIMENSIONS,
+				'size_units' => [ 'px', '%', 'em' ],
+				'selectors' => [
+					'{{WRAPPER}} .codexse-icon-list-items .codexse-icon-list-item .codexse-icon-list-icon' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+				],
+			]
+		);
+
+		$this->add_group_control(
+			Group_Control_Box_Shadow::get_type(),
+			[
+				'name' => 'normal_icon_box_shadow',
+				'label' => esc_html__( 'Box Shadow', 'codexse-elementor-addons' ),
+				'selector' => '{{WRAPPER}} .codexse-icon-list-items .codexse-icon-list-item .codexse-icon-list-icon',
+			]
+		);
+
+		$this->add_group_control(
+			Group_Control_Background::get_type(),
+			[
+				'name' => 'normal_icon_background',
+				'label' => esc_html__( 'Background', 'codexse-elementor-addons' ),
+				'types' => [ 'classic', 'gradient' ],
+				'selector' => '{{WRAPPER}} .codexse-icon-list-items .codexse-icon-list-item .codexse-icon-list-icon',
 			]
 		);
 		
-		$this->add_control(
-			'icon_background',
-			[
-				'label' => esc_html__( 'Background Color', 'codexse-elementor-addons' ),
-				'type' => Controls_Manager::COLOR,
-				'selectors' => [
-					'{{WRAPPER}} .codexse-icon-list-icon' => 'background-color: {{VALUE}};',
-				],
-			]
-		);
-
+		// Add more controls for normal state as needed
+		
 		$this->end_controls_tab();
-
+		
+		// Hover Tab
 		$this->start_controls_tab(
-			'icon_colors_hover',
+			'icon_style_hover',
 			[
 				'label' => esc_html__( 'Hover', 'codexse-elementor-addons' ),
 			]
 		);
-
+		
 		$this->add_control(
-			'icon_color_hover',
+			'hover_icon_color',
 			[
-				'label' => esc_html__( 'Color', 'codexse-elementor-addons' ),
+				'label' => esc_html__( 'Hover Color', 'codexse-elementor-addons' ),
 				'type' => Controls_Manager::COLOR,
-				'default' => '',
 				'selectors' => [
-					'{{WRAPPER}} .codexse-icon-list-item:hover .codexse-icon-list-icon i' => 'color: {{VALUE}};',
-					'{{WRAPPER}} .codexse-icon-list-item:hover .codexse-icon-list-icon svg' => 'fill: {{VALUE}};',
+					'{{WRAPPER}} .codexse-icon-list-items .codexse-icon-list-item:hover .codexse-icon-list-icon' => 'color: {{VALUE}};',
 				],
 			]
 		);
 		
-		$this->add_control(
-			'icon_hover_background',
+		$this->add_group_control(
+			Group_Control_Border::get_type(),
 			[
-				'label' => esc_html__( 'Hover Background Color', 'codexse-elementor-addons' ),
-				'type' => Controls_Manager::COLOR,
-				'selectors' => [
-					'{{WRAPPER}} .codexse-icon-list-item:hover .codexse-icon-list-icon' => 'background-color: {{VALUE}};',
-				],
+				'name' => 'hover_icon_border',
+				'label' => esc_html__( 'Border', 'codexse-elementor-addons' ),
+				'selector' => '{{WRAPPER}} .codexse-icon-list-items .codexse-icon-list-item:hover .codexse-icon-list-icon',
 			]
 		);
 
 		$this->add_control(
-			'icon_color_hover_transition',
+			'hover_icon_border_radius',
+			[
+				'label' => esc_html__( 'Border Radius', 'codexse-elementor-addons' ),
+				'type' => Controls_Manager::DIMENSIONS,
+				'size_units' => [ 'px', '%', 'em' ],
+				'selectors' => [
+					'{{WRAPPER}} .codexse-icon-list-items .codexse-icon-list-item:hover .codexse-icon-list-icon' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+				],
+			]
+		);
+
+		$this->add_group_control(
+			Group_Control_Box_Shadow::get_type(),
+			[
+				'name' => 'hover_icon_box_shadow',
+				'label' => esc_html__( 'Box Shadow', 'codexse-elementor-addons' ),
+				'selector' => '{{WRAPPER}} .codexse-icon-list-items .codexse-icon-list-item:hover .codexse-icon-list-icon',
+			]
+		);
+
+		$this->add_group_control(
+			Group_Control_Background::get_type(),
+			[
+				'name' => 'hover_icon_background',
+				'label' => esc_html__( 'Background', 'codexse-elementor-addons' ),
+				'types' => [ 'classic', 'gradient' ],
+				'selector' => '{{WRAPPER}} .codexse-icon-list-items .codexse-icon-list-item:hover .codexse-icon-list-icon',
+			]
+		);
+		$this->add_control(
+			'hover_icon_transition',
 			[
 				'label' => esc_html__( 'Transition Duration', 'codexse-elementor-addons' ),
 				'type' => Controls_Manager::SLIDER,
@@ -459,180 +525,21 @@ class Icon_List extends Base {
 					'size' => 0.3,
 				],
 				'selectors' => [
-					'{{WRAPPER}} .codexse-icon-list-icon i' => 'transition: color {{SIZE}}{{UNIT}}',
-					'{{WRAPPER}} .codexse-icon-list-icon svg' => 'transition: fill {{SIZE}}{{UNIT}}',
+					'{{WRAPPER}} .codexse-icon-list-icon' => 'transition: {{SIZE}}{{UNIT}}',
 				],
 			]
 		);
-
+		
 		$this->end_controls_tab();
-
+		
 		$this->end_controls_tabs();
-
-		// Add the new styling options
-		$this->add_responsive_control(
-			'icon_width',
-			[
-				'label' => esc_html__( 'Width', 'codexse-elementor-addons' ),
-				'type' => Controls_Manager::SLIDER,
-				'size_units' => [ 'px', '%', 'em', 'rem', 'vw', 'custom' ],
-				'default' => [
-					'size' => 24, // Default width value
-				],
-				'selectors' => [
-					'{{WRAPPER}} .codexse-icon-list-icon' => 'width: {{SIZE}}{{UNIT}};',
-				],
-			]
-		);
-
-		$this->add_responsive_control(
-			'icon_height',
-			[
-				'label' => esc_html__( 'Height', 'codexse-elementor-addons' ),
-				'type' => Controls_Manager::SLIDER,
-				'size_units' => [ 'px', '%', 'em', 'rem', 'vw', 'custom' ],
-				'default' => [
-					'size' => 24, // Default height value
-				],
-				'selectors' => [
-					'{{WRAPPER}} .codexse-icon-list-icon' => 'height: {{SIZE}}{{UNIT}};',
-				],
-			]
-		);
-
-		$this->add_responsive_control(
-			'icon_size',
-			[
-				'label' => esc_html__( 'Size', 'codexse-elementor-addons' ),
-				'type' => Controls_Manager::SLIDER,
-				'size_units' => [ 'px', '%', 'em', 'rem', 'vw', 'custom' ],
-				'default' => [
-					'size' => 14,
-				],
-				'range' => [
-					'px' => [
-						'min' => 6,
-					],
-					'%' => [
-						'min' => 6,
-					],
-					'vw' => [
-						'min' => 6,
-					],
-				],
-				'separator' => 'before',
-				'selectors' => [
-					'{{WRAPPER}}' => '--e-icon-list-icon-size: {{SIZE}}{{UNIT}};',
-				],
-			]
-		);
-
-		$this->add_control(
-			'text_indent',
-			[
-				'label' => esc_html__( 'Gap', 'codexse-elementor-addons' ),
-				'type' => Controls_Manager::SLIDER,
-				'size_units' => [ 'px', '%', 'em', 'rem', 'vw', 'custom' ],
-				'range' => [
-					'px' => [
-						'max' => 50,
-					],
-				],
-				'separator' => 'after',
-				'selectors' => [
-					'{{WRAPPER}} .codexse-icon-list-icon' => is_rtl() ? 'margin-left: {{SIZE}}{{UNIT}};' : 'margin-right: {{SIZE}}{{UNIT}};',
-				],
-			]
-		);
-
-		$e_icon_list_icon_css_var = 'var(--e-icon-list-icon-size, 1em)';
-		$e_icon_list_icon_align_left = sprintf( '0 calc(%s * 0.25) 0 0', $e_icon_list_icon_css_var );
-		$e_icon_list_icon_align_center = sprintf( '0 calc(%s * 0.125)', $e_icon_list_icon_css_var );
-		$e_icon_list_icon_align_right = sprintf( '0 0 0 calc(%s * 0.25)', $e_icon_list_icon_css_var );
-
-		$this->add_responsive_control(
-			'icon_self_align',
-			[
-				'label' => esc_html__( 'Horizontal Alignment', 'codexse-elementor-addons' ),
-				'type' => Controls_Manager::CHOOSE,
-				'options' => [
-					'left' => [
-						'title' => esc_html__( 'Left', 'codexse-elementor-addons' ),
-						'icon' => 'eicon-h-align-left',
-					],
-					'center' => [
-						'title' => esc_html__( 'Center', 'codexse-elementor-addons' ),
-						'icon' => 'eicon-h-align-center',
-					],
-					'right' => [
-						'title' => esc_html__( 'Right', 'codexse-elementor-addons' ),
-						'icon' => 'eicon-h-align-right',
-					],
-				],
-				'default' => '',
-				'selectors_dictionary' => [
-					'left' => sprintf( '--e-icon-list-icon-align: left; --e-icon-list-icon-margin: %s;', $e_icon_list_icon_align_left ),
-					'center' => sprintf( '--e-icon-list-icon-align: center; --e-icon-list-icon-margin: %s;', $e_icon_list_icon_align_center ),
-					'right' => sprintf( '--e-icon-list-icon-align: right; --e-icon-list-icon-margin: %s;', $e_icon_list_icon_align_right ),
-				],
-				'selectors' => [
-					'{{WRAPPER}}' => '{{VALUE}}',
-				],
-			]
-		);
-
-		$this->add_responsive_control(
-			'icon_self_vertical_align',
-			[
-				'label' => esc_html__( 'Vertical Alignment', 'codexse-elementor-addons' ),
-				'type' => Controls_Manager::CHOOSE,
-				'options' => [
-					'flex-start' => [
-						'title' => esc_html__( 'Start', 'codexse-elementor-addons' ),
-						'icon' => 'eicon-v-align-top',
-					],
-					'center' => [
-						'title' => esc_html__( 'Center', 'codexse-elementor-addons' ),
-						'icon' => 'eicon-v-align-middle',
-					],
-					'flex-end' => [
-						'title' => esc_html__( 'End', 'codexse-elementor-addons' ),
-						'icon' => 'eicon-v-align-bottom',
-					],
-				],
-				'default' => '',
-				'selectors' => [
-					'{{WRAPPER}}' => '--icon-vertical-align: {{VALUE}};',
-				],
-			]
-		);
-
-		$this->add_responsive_control(
-			'icon_vertical_offset',
-			[
-				'label' => esc_html__( 'Adjust Vertical Position', 'codexse-elementor-addons' ),
-				'type' => Controls_Manager::SLIDER,
-				'size_units' => [ 'px', 'em', 'rem', 'custom' ],
-				'default' => [
-					'size' => 0,
-				],
-				'range' => [
-					'px' => [
-						'min' => -15,
-						'max' => 15,
-					],
-					'em' => [
-						'min' => -1,
-						'max' => 1,
-					],
-				],
-				'selectors' => [
-					'{{WRAPPER}}' => '--icon-vertical-offset: {{SIZE}}{{UNIT}};',
-				],
-			]
-		);
-
+		
 		$this->end_controls_section();
+		
+
+
+
+
 
 		$this->start_controls_section(
 			'section_text_style',
@@ -641,73 +548,53 @@ class Icon_List extends Base {
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
-
+		
+		// Typography
 		$this->add_group_control(
 			Group_Control_Typography::get_type(),
 			[
-				'name' => 'icon_typography',
-				'selector' => '{{WRAPPER}} .codexse-icon-list-item > .codexse-icon-list-text, {{WRAPPER}} .codexse-icon-list-item > a',
-				'global' => [
-					'default' => Global_Typography::TYPOGRAPHY_TEXT,
-				],
+				'name'     => 'text_typography',
+				'label'    => esc_html__( 'Typography', 'codexse-elementor-addons' ),
+				'selector' => '{{WRAPPER}} .codexse-icon-list-items .codexse-icon-list-item .codexse-icon-list-text', // Replace with the actual selector
 			]
 		);
 
+		// Text Shadow
 		$this->add_group_control(
 			Group_Control_Text_Shadow::get_type(),
 			[
-				'name' => 'text_shadow',
-				'selector' => '{{WRAPPER}} .codexse-icon-list-text',
+				'name'     => 'text_text_shadow',
+				'label'    => esc_html__( 'Text Shadow', 'codexse-elementor-addons' ),
+				'selector' => '{{WRAPPER}} .codexse-icon-list-items .codexse-icon-list-item .codexse-icon-list-text', // Replace with the actual selector
 			]
 		);
 
-		$this->start_controls_tabs( 'text_colors' );
-
-		$this->start_controls_tab(
-			'text_colors_normal',
-			[
-				'label' => esc_html__( 'Normal', 'codexse-elementor-addons' ),
-			]
-		);
-
+		// Normal Text Color
 		$this->add_control(
-			'text_color',
+			'normal_text_color',
 			[
-				'label' => esc_html__( 'Color', 'codexse-elementor-addons' ),
-				'type' => Controls_Manager::COLOR,
-				'default' => '',
+				'label'     => esc_html__( 'Text Color', 'codexse-elementor-addons' ),
+				'type'      => Controls_Manager::COLOR,
 				'selectors' => [
-					'{{WRAPPER}} .codexse-icon-list-text' => 'color: {{VALUE}};',
-				],
-				'global' => [
-					'default' => Global_Colors::COLOR_SECONDARY,
+					'{{WRAPPER}} .codexse-icon-list-items .codexse-icon-list-item .codexse-icon-list-text' => 'color: {{VALUE}};',
 				],
 			]
 		);
 
-		$this->end_controls_tab();
-
-		$this->start_controls_tab(
-			'text_colors_hover',
-			[
-				'label' => esc_html__( 'Hover', 'codexse-elementor-addons' ),
-			]
-		);
-
+		// Hover Text Color
 		$this->add_control(
-			'text_color_hover',
+			'hover_text_color',
 			[
-				'label' => esc_html__( 'Color', 'codexse-elementor-addons' ),
-				'type' => Controls_Manager::COLOR,
-				'default' => '',
+				'label'     => esc_html__( 'Hover Text Color', 'codexse-elementor-addons' ),
+				'type'      => Controls_Manager::COLOR,
 				'selectors' => [
-					'{{WRAPPER}} .codexse-icon-list-item:hover .codexse-icon-list-text' => 'color: {{VALUE}};',
+					'{{WRAPPER}} .codexse-icon-list-items .codexse-icon-list-item:hover .codexse-icon-list-text' => 'color: {{VALUE}};',
 				],
 			]
 		);
 
 		$this->add_control(
-			'text_color_hover_transition',
+			'hover_text_transition',
 			[
 				'label' => esc_html__( 'Transition Duration', 'codexse-elementor-addons' ),
 				'type' => Controls_Manager::SLIDER,
@@ -717,14 +604,12 @@ class Icon_List extends Base {
 					'size' => 0.3,
 				],
 				'selectors' => [
-					'{{WRAPPER}} .codexse-icon-list-text' => 'transition: color {{SIZE}}{{UNIT}}',
+					'{{WRAPPER}} .codexse-icon-list-text' => 'transition: {{SIZE}}{{UNIT}}',
 				],
 			]
 		);
 
-		$this->end_controls_tab();
 
-		$this->end_controls_tabs();
 
 		$this->end_controls_section();
 	}
@@ -749,11 +634,6 @@ class Icon_List extends Base {
 
 		$this->add_render_attribute( 'icon_list', 'class', 'codexse-icon-list-items' );
 		$this->add_render_attribute( 'list_item', 'class', 'codexse-icon-list-item' );
-
-		if ( 'inline' === $settings['view'] ) {
-			$this->add_render_attribute( 'icon_list', 'class', 'codexse-inline-items' );
-			$this->add_render_attribute( 'list_item', 'class', 'codexse-inline-item' );
-		}
 		?>
 		<ul <?php $this->print_render_attribute_string( 'icon_list' ); ?>>
 			<?php
@@ -820,11 +700,6 @@ class Icon_List extends Base {
 		<#
 			view.addRenderAttribute( 'icon_list', 'class', 'codexse-icon-list-items' );
 			view.addRenderAttribute( 'list_item', 'class', 'codexse-icon-list-item' );
-
-			if ( 'inline' == settings.view ) {
-				view.addRenderAttribute( 'icon_list', 'class', 'codexse-inline-items' );
-				view.addRenderAttribute( 'list_item', 'class', 'codexse-inline-item' );
-			}
 			var iconsHTML = {},
 				migrated = {};
 		#>
